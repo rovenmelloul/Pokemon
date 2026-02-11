@@ -1,0 +1,1211 @@
+[
+    {
+        "id": 1,
+        "name": "Bulbasaur",
+        "types": [
+            "grass",
+            "poison"
+        ],
+        "base_stats": {
+            "hp": 45,
+            "attack": 49,
+            "defense": 49,
+            "sp_attack": 65,
+            "sp_defense": 65,
+            "speed": 45
+        },
+        "capture_rate": 45,
+        "base_xp": 64,
+        "learnset": [
+            {
+                "move_id": 1,
+                "level": 1
+            },
+            {
+                "move_id": 18,
+                "level": 1
+            },
+            {
+                "move_id": 47,
+                "level": 7
+            },
+            {
+                "move_id": 28,
+                "level": 13
+            },
+            {
+                "move_id": 19,
+                "level": 19
+            },
+            {
+                "move_id": 21,
+                "level": 25
+            },
+            {
+                "move_id": 29,
+                "level": 31
+            },
+            {
+                "move_id": 20,
+                "level": 37
+            }
+        ],
+        "model_id": "pm0001_00"
+    },
+    {
+        "id": 2,
+        "name": "Ivysaur",
+        "types": [
+            "grass",
+            "poison"
+        ],
+        "base_stats": {
+            "hp": 60,
+            "attack": 62,
+            "defense": 63,
+            "sp_attack": 80,
+            "sp_defense": 80,
+            "speed": 60
+        },
+        "capture_rate": 45,
+        "base_xp": 142,
+        "learnset": [
+            {
+                "move_id": 1,
+                "level": 1
+            },
+            {
+                "move_id": 18,
+                "level": 1
+            },
+            {
+                "move_id": 47,
+                "level": 7
+            },
+            {
+                "move_id": 28,
+                "level": 13
+            },
+            {
+                "move_id": 19,
+                "level": 20
+            },
+            {
+                "move_id": 21,
+                "level": 28
+            },
+            {
+                "move_id": 29,
+                "level": 34
+            },
+            {
+                "move_id": 20,
+                "level": 40
+            }
+        ],
+        "model_id": null
+    },
+    {
+        "id": 3,
+        "name": "Venusaur",
+        "types": [
+            "grass",
+            "poison"
+        ],
+        "base_stats": {
+            "hp": 80,
+            "attack": 82,
+            "defense": 83,
+            "sp_attack": 100,
+            "sp_defense": 100,
+            "speed": 80
+        },
+        "capture_rate": 45,
+        "base_xp": 236,
+        "learnset": [
+            {
+                "move_id": 1,
+                "level": 1
+            },
+            {
+                "move_id": 18,
+                "level": 1
+            },
+            {
+                "move_id": 19,
+                "level": 1
+            },
+            {
+                "move_id": 21,
+                "level": 1
+            },
+            {
+                "move_id": 29,
+                "level": 38
+            },
+            {
+                "move_id": 20,
+                "level": 45
+            }
+        ],
+        "model_id": null
+    },
+    {
+        "id": 4,
+        "name": "Charmander",
+        "types": [
+            "fire"
+        ],
+        "base_stats": {
+            "hp": 39,
+            "attack": 52,
+            "defense": 43,
+            "sp_attack": 60,
+            "sp_defense": 50,
+            "speed": 65
+        },
+        "capture_rate": 45,
+        "base_xp": 62,
+        "learnset": [
+            {
+                "move_id": 2,
+                "level": 1
+            },
+            {
+                "move_id": 7,
+                "level": 1
+            },
+            {
+                "move_id": 8,
+                "level": 24
+            },
+            {
+                "move_id": 39,
+                "level": 28
+            },
+            {
+                "move_id": 9,
+                "level": 36
+            }
+        ],
+        "model_id": null
+    },
+    {
+        "id": 5,
+        "name": "Charmeleon",
+        "types": [
+            "fire"
+        ],
+        "base_stats": {
+            "hp": 58,
+            "attack": 64,
+            "defense": 58,
+            "sp_attack": 80,
+            "sp_defense": 65,
+            "speed": 80
+        },
+        "capture_rate": 45,
+        "base_xp": 142,
+        "learnset": [
+            {
+                "move_id": 2,
+                "level": 1
+            },
+            {
+                "move_id": 7,
+                "level": 1
+            },
+            {
+                "move_id": 8,
+                "level": 24
+            },
+            {
+                "move_id": 39,
+                "level": 30
+            },
+            {
+                "move_id": 9,
+                "level": 38
+            }
+        ],
+        "model_id": null
+    },
+    {
+        "id": 6,
+        "name": "Charizard",
+        "types": [
+            "fire",
+            "flying"
+        ],
+        "base_stats": {
+            "hp": 78,
+            "attack": 84,
+            "defense": 78,
+            "sp_attack": 109,
+            "sp_defense": 85,
+            "speed": 100
+        },
+        "capture_rate": 45,
+        "base_xp": 240,
+        "learnset": [
+            {
+                "move_id": 2,
+                "level": 1
+            },
+            {
+                "move_id": 7,
+                "level": 1
+            },
+            {
+                "move_id": 33,
+                "level": 1
+            },
+            {
+                "move_id": 8,
+                "level": 24
+            },
+            {
+                "move_id": 39,
+                "level": 32
+            },
+            {
+                "move_id": 9,
+                "level": 42
+            }
+        ],
+        "model_id": null
+    },
+    {
+        "id": 7,
+        "name": "Squirtle",
+        "types": [
+            "water"
+        ],
+        "base_stats": {
+            "hp": 44,
+            "attack": 48,
+            "defense": 65,
+            "sp_attack": 50,
+            "sp_defense": 64,
+            "speed": 43
+        },
+        "capture_rate": 45,
+        "base_xp": 63,
+        "learnset": [
+            {
+                "move_id": 1,
+                "level": 1
+            },
+            {
+                "move_id": 11,
+                "level": 1
+            },
+            {
+                "move_id": 14,
+                "level": 15
+            },
+            {
+                "move_id": 40,
+                "level": 21
+            },
+            {
+                "move_id": 12,
+                "level": 28
+            },
+            {
+                "move_id": 13,
+                "level": 36
+            }
+        ],
+        "model_id": null
+    },
+    {
+        "id": 8,
+        "name": "Wartortle",
+        "types": [
+            "water"
+        ],
+        "base_stats": {
+            "hp": 59,
+            "attack": 63,
+            "defense": 80,
+            "sp_attack": 65,
+            "sp_defense": 80,
+            "speed": 58
+        },
+        "capture_rate": 45,
+        "base_xp": 142,
+        "learnset": [
+            {
+                "move_id": 1,
+                "level": 1
+            },
+            {
+                "move_id": 11,
+                "level": 1
+            },
+            {
+                "move_id": 14,
+                "level": 15
+            },
+            {
+                "move_id": 40,
+                "level": 21
+            },
+            {
+                "move_id": 12,
+                "level": 30
+            },
+            {
+                "move_id": 13,
+                "level": 40
+            }
+        ],
+        "model_id": null
+    },
+    {
+        "id": 9,
+        "name": "Blastoise",
+        "types": [
+            "water"
+        ],
+        "base_stats": {
+            "hp": 79,
+            "attack": 83,
+            "defense": 100,
+            "sp_attack": 85,
+            "sp_defense": 105,
+            "speed": 78
+        },
+        "capture_rate": 45,
+        "base_xp": 239,
+        "learnset": [
+            {
+                "move_id": 1,
+                "level": 1
+            },
+            {
+                "move_id": 11,
+                "level": 1
+            },
+            {
+                "move_id": 14,
+                "level": 1
+            },
+            {
+                "move_id": 12,
+                "level": 1
+            },
+            {
+                "move_id": 22,
+                "level": 35
+            },
+            {
+                "move_id": 13,
+                "level": 42
+            },
+            {
+                "move_id": 43,
+                "level": 48
+            }
+        ],
+        "model_id": null
+    },
+    {
+        "id": 10,
+        "name": "Pikachu",
+        "types": [
+            "electric"
+        ],
+        "base_stats": {
+            "hp": 35,
+            "attack": 55,
+            "defense": 40,
+            "sp_attack": 50,
+            "sp_defense": 50,
+            "speed": 90
+        },
+        "capture_rate": 190,
+        "base_xp": 112,
+        "learnset": [
+            {
+                "move_id": 15,
+                "level": 1
+            },
+            {
+                "move_id": 4,
+                "level": 1
+            },
+            {
+                "move_id": 49,
+                "level": 10
+            },
+            {
+                "move_id": 16,
+                "level": 26
+            },
+            {
+                "move_id": 42,
+                "level": 33
+            },
+            {
+                "move_id": 17,
+                "level": 42
+            }
+        ],
+        "model_id": null
+    },
+    {
+        "id": 11,
+        "name": "Raichu",
+        "types": [
+            "electric"
+        ],
+        "base_stats": {
+            "hp": 60,
+            "attack": 90,
+            "defense": 55,
+            "sp_attack": 90,
+            "sp_defense": 80,
+            "speed": 110
+        },
+        "capture_rate": 75,
+        "base_xp": 218,
+        "learnset": [
+            {
+                "move_id": 15,
+                "level": 1
+            },
+            {
+                "move_id": 4,
+                "level": 1
+            },
+            {
+                "move_id": 16,
+                "level": 1
+            },
+            {
+                "move_id": 17,
+                "level": 1
+            }
+        ],
+        "model_id": null
+    },
+    {
+        "id": 12,
+        "name": "Pidgey",
+        "types": [
+            "normal",
+            "flying"
+        ],
+        "base_stats": {
+            "hp": 40,
+            "attack": 45,
+            "defense": 40,
+            "sp_attack": 35,
+            "sp_defense": 35,
+            "speed": 56
+        },
+        "capture_rate": 255,
+        "base_xp": 50,
+        "learnset": [
+            {
+                "move_id": 1,
+                "level": 1
+            },
+            {
+                "move_id": 32,
+                "level": 9
+            },
+            {
+                "move_id": 4,
+                "level": 13
+            },
+            {
+                "move_id": 33,
+                "level": 25
+            }
+        ],
+        "model_id": null
+    },
+    {
+        "id": 13,
+        "name": "Rattata",
+        "types": [
+            "normal"
+        ],
+        "base_stats": {
+            "hp": 30,
+            "attack": 56,
+            "defense": 35,
+            "sp_attack": 25,
+            "sp_defense": 35,
+            "speed": 72
+        },
+        "capture_rate": 255,
+        "base_xp": 51,
+        "learnset": [
+            {
+                "move_id": 1,
+                "level": 1
+            },
+            {
+                "move_id": 4,
+                "level": 7
+            },
+            {
+                "move_id": 40,
+                "level": 13
+            },
+            {
+                "move_id": 6,
+                "level": 20
+            },
+            {
+                "move_id": 41,
+                "level": 27
+            }
+        ],
+        "model_id": null
+    },
+    {
+        "id": 14,
+        "name": "Geodude",
+        "types": [
+            "rock",
+            "ground"
+        ],
+        "base_stats": {
+            "hp": 40,
+            "attack": 80,
+            "defense": 100,
+            "sp_attack": 30,
+            "sp_defense": 30,
+            "speed": 20
+        },
+        "capture_rate": 255,
+        "base_xp": 60,
+        "learnset": [
+            {
+                "move_id": 1,
+                "level": 1
+            },
+            {
+                "move_id": 37,
+                "level": 12
+            },
+            {
+                "move_id": 30,
+                "level": 22
+            },
+            {
+                "move_id": 6,
+                "level": 28
+            }
+        ],
+        "model_id": null
+    },
+    {
+        "id": 15,
+        "name": "Machop",
+        "types": [
+            "fighting"
+        ],
+        "base_stats": {
+            "hp": 70,
+            "attack": 80,
+            "defense": 50,
+            "sp_attack": 35,
+            "sp_defense": 35,
+            "speed": 35
+        },
+        "capture_rate": 180,
+        "base_xp": 61,
+        "learnset": [
+            {
+                "move_id": 25,
+                "level": 1
+            },
+            {
+                "move_id": 26,
+                "level": 1
+            },
+            {
+                "move_id": 6,
+                "level": 19
+            },
+            {
+                "move_id": 27,
+                "level": 34
+            }
+        ],
+        "model_id": null
+    },
+    {
+        "id": 16,
+        "name": "Abra",
+        "types": [
+            "psychic"
+        ],
+        "base_stats": {
+            "hp": 25,
+            "attack": 20,
+            "defense": 15,
+            "sp_attack": 105,
+            "sp_defense": 55,
+            "speed": 90
+        },
+        "capture_rate": 200,
+        "base_xp": 62,
+        "learnset": [
+            {
+                "move_id": 35,
+                "level": 1
+            },
+            {
+                "move_id": 34,
+                "level": 16
+            }
+        ],
+        "model_id": null
+    },
+    {
+        "id": 17,
+        "name": "Kadabra",
+        "types": [
+            "psychic"
+        ],
+        "base_stats": {
+            "hp": 40,
+            "attack": 35,
+            "defense": 30,
+            "sp_attack": 120,
+            "sp_defense": 70,
+            "speed": 105
+        },
+        "capture_rate": 100,
+        "base_xp": 140,
+        "learnset": [
+            {
+                "move_id": 35,
+                "level": 1
+            },
+            {
+                "move_id": 34,
+                "level": 16
+            },
+            {
+                "move_id": 38,
+                "level": 28
+            }
+        ],
+        "model_id": null
+    },
+    {
+        "id": 18,
+        "name": "Gastly",
+        "types": [
+            "ghost",
+            "poison"
+        ],
+        "base_stats": {
+            "hp": 30,
+            "attack": 35,
+            "defense": 30,
+            "sp_attack": 100,
+            "sp_defense": 35,
+            "speed": 80
+        },
+        "capture_rate": 190,
+        "base_xp": 62,
+        "learnset": [
+            {
+                "move_id": 38,
+                "level": 1
+            },
+            {
+                "move_id": 28,
+                "level": 1
+            },
+            {
+                "move_id": 50,
+                "level": 8
+            },
+            {
+                "move_id": 29,
+                "level": 28
+            }
+        ],
+        "model_id": null
+    },
+    {
+        "id": 19,
+        "name": "Haunter",
+        "types": [
+            "ghost",
+            "poison"
+        ],
+        "base_stats": {
+            "hp": 45,
+            "attack": 50,
+            "defense": 45,
+            "sp_attack": 115,
+            "sp_defense": 55,
+            "speed": 95
+        },
+        "capture_rate": 90,
+        "base_xp": 142,
+        "learnset": [
+            {
+                "move_id": 38,
+                "level": 1
+            },
+            {
+                "move_id": 28,
+                "level": 1
+            },
+            {
+                "move_id": 50,
+                "level": 8
+            },
+            {
+                "move_id": 29,
+                "level": 30
+            },
+            {
+                "move_id": 40,
+                "level": 36
+            }
+        ],
+        "model_id": null
+    },
+    {
+        "id": 20,
+        "name": "Gengar",
+        "types": [
+            "ghost",
+            "poison"
+        ],
+        "base_stats": {
+            "hp": 60,
+            "attack": 65,
+            "defense": 60,
+            "sp_attack": 130,
+            "sp_defense": 75,
+            "speed": 110
+        },
+        "capture_rate": 45,
+        "base_xp": 225,
+        "learnset": [
+            {
+                "move_id": 38,
+                "level": 1
+            },
+            {
+                "move_id": 28,
+                "level": 1
+            },
+            {
+                "move_id": 29,
+                "level": 1
+            },
+            {
+                "move_id": 40,
+                "level": 1
+            }
+        ],
+        "model_id": null
+    },
+    {
+        "id": 21,
+        "name": "Eevee",
+        "types": [
+            "normal"
+        ],
+        "base_stats": {
+            "hp": 55,
+            "attack": 55,
+            "defense": 50,
+            "sp_attack": 45,
+            "sp_defense": 65,
+            "speed": 55
+        },
+        "capture_rate": 45,
+        "base_xp": 65,
+        "learnset": [
+            {
+                "move_id": 1,
+                "level": 1
+            },
+            {
+                "move_id": 4,
+                "level": 10
+            },
+            {
+                "move_id": 40,
+                "level": 17
+            },
+            {
+                "move_id": 6,
+                "level": 25
+            }
+        ],
+        "model_id": null
+    },
+    {
+        "id": 22,
+        "name": "Jigglypuff",
+        "types": [
+            "normal",
+            "fairy"
+        ],
+        "base_stats": {
+            "hp": 115,
+            "attack": 45,
+            "defense": 20,
+            "sp_attack": 45,
+            "sp_defense": 25,
+            "speed": 20
+        },
+        "capture_rate": 170,
+        "base_xp": 95,
+        "learnset": [
+            {
+                "move_id": 3,
+                "level": 1
+            },
+            {
+                "move_id": 48,
+                "level": 9
+            },
+            {
+                "move_id": 6,
+                "level": 17
+            },
+            {
+                "move_id": 44,
+                "level": 25
+            },
+            {
+                "move_id": 45,
+                "level": 32
+            }
+        ],
+        "model_id": null
+    },
+    {
+        "id": 23,
+        "name": "Magikarp",
+        "types": [
+            "water"
+        ],
+        "base_stats": {
+            "hp": 20,
+            "attack": 10,
+            "defense": 55,
+            "sp_attack": 15,
+            "sp_defense": 20,
+            "speed": 80
+        },
+        "capture_rate": 255,
+        "base_xp": 40,
+        "learnset": [
+            {
+                "move_id": 1,
+                "level": 1
+            }
+        ],
+        "model_id": null
+    },
+    {
+        "id": 24,
+        "name": "Gyarados",
+        "types": [
+            "water",
+            "flying"
+        ],
+        "base_stats": {
+            "hp": 95,
+            "attack": 125,
+            "defense": 79,
+            "sp_attack": 60,
+            "sp_defense": 100,
+            "speed": 81
+        },
+        "capture_rate": 45,
+        "base_xp": 189,
+        "learnset": [
+            {
+                "move_id": 40,
+                "level": 1
+            },
+            {
+                "move_id": 13,
+                "level": 1
+            },
+            {
+                "move_id": 41,
+                "level": 24
+            },
+            {
+                "move_id": 30,
+                "level": 30
+            },
+            {
+                "move_id": 22,
+                "level": 36
+            },
+            {
+                "move_id": 5,
+                "level": 44
+            }
+        ],
+        "model_id": null
+    },
+    {
+        "id": 25,
+        "name": "Snorlax",
+        "types": [
+            "normal"
+        ],
+        "base_stats": {
+            "hp": 160,
+            "attack": 110,
+            "defense": 65,
+            "sp_attack": 65,
+            "sp_defense": 110,
+            "speed": 30
+        },
+        "capture_rate": 25,
+        "base_xp": 189,
+        "learnset": [
+            {
+                "move_id": 1,
+                "level": 1
+            },
+            {
+                "move_id": 6,
+                "level": 12
+            },
+            {
+                "move_id": 40,
+                "level": 17
+            },
+            {
+                "move_id": 22,
+                "level": 25
+            },
+            {
+                "move_id": 30,
+                "level": 33
+            },
+            {
+                "move_id": 5,
+                "level": 44
+            }
+        ],
+        "model_id": null
+    },
+    {
+        "id": 26,
+        "name": "Dratini",
+        "types": [
+            "dragon"
+        ],
+        "base_stats": {
+            "hp": 41,
+            "attack": 64,
+            "defense": 45,
+            "sp_attack": 50,
+            "sp_defense": 50,
+            "speed": 50
+        },
+        "capture_rate": 45,
+        "base_xp": 60,
+        "learnset": [
+            {
+                "move_id": 1,
+                "level": 1
+            },
+            {
+                "move_id": 49,
+                "level": 11
+            },
+            {
+                "move_id": 39,
+                "level": 21
+            },
+            {
+                "move_id": 46,
+                "level": 31
+            }
+        ],
+        "model_id": null
+    },
+    {
+        "id": 27,
+        "name": "Dragonair",
+        "types": [
+            "dragon"
+        ],
+        "base_stats": {
+            "hp": 61,
+            "attack": 84,
+            "defense": 65,
+            "sp_attack": 70,
+            "sp_defense": 70,
+            "speed": 70
+        },
+        "capture_rate": 45,
+        "base_xp": 147,
+        "learnset": [
+            {
+                "move_id": 1,
+                "level": 1
+            },
+            {
+                "move_id": 49,
+                "level": 11
+            },
+            {
+                "move_id": 39,
+                "level": 21
+            },
+            {
+                "move_id": 46,
+                "level": 33
+            },
+            {
+                "move_id": 5,
+                "level": 41
+            }
+        ],
+        "model_id": null
+    },
+    {
+        "id": 28,
+        "name": "Dragonite",
+        "types": [
+            "dragon",
+            "flying"
+        ],
+        "base_stats": {
+            "hp": 91,
+            "attack": 134,
+            "defense": 95,
+            "sp_attack": 100,
+            "sp_defense": 100,
+            "speed": 80
+        },
+        "capture_rate": 45,
+        "base_xp": 270,
+        "learnset": [
+            {
+                "move_id": 1,
+                "level": 1
+            },
+            {
+                "move_id": 39,
+                "level": 1
+            },
+            {
+                "move_id": 32,
+                "level": 1
+            },
+            {
+                "move_id": 46,
+                "level": 33
+            },
+            {
+                "move_id": 5,
+                "level": 46
+            },
+            {
+                "move_id": 10,
+                "level": 52
+            }
+        ],
+        "model_id": null
+    },
+    {
+        "id": 29,
+        "name": "Onix",
+        "types": [
+            "rock",
+            "ground"
+        ],
+        "base_stats": {
+            "hp": 35,
+            "attack": 45,
+            "defense": 160,
+            "sp_attack": 30,
+            "sp_defense": 45,
+            "speed": 70
+        },
+        "capture_rate": 45,
+        "base_xp": 77,
+        "learnset": [
+            {
+                "move_id": 1,
+                "level": 1
+            },
+            {
+                "move_id": 37,
+                "level": 12
+            },
+            {
+                "move_id": 31,
+                "level": 19
+            },
+            {
+                "move_id": 6,
+                "level": 25
+            },
+            {
+                "move_id": 30,
+                "level": 33
+            },
+            {
+                "move_id": 42,
+                "level": 40
+            }
+        ],
+        "model_id": null
+    },
+    {
+        "id": 30,
+        "name": "Vulpix",
+        "types": [
+            "fire"
+        ],
+        "base_stats": {
+            "hp": 38,
+            "attack": 41,
+            "defense": 40,
+            "sp_attack": 50,
+            "sp_defense": 65,
+            "speed": 65
+        },
+        "capture_rate": 190,
+        "base_xp": 60,
+        "learnset": [
+            {
+                "move_id": 7,
+                "level": 1
+            },
+            {
+                "move_id": 4,
+                "level": 9
+            },
+            {
+                "move_id": 8,
+                "level": 18
+            },
+            {
+                "move_id": 9,
+                "level": 31
+            }
+        ],
+        "model_id": null
+    }
+]
