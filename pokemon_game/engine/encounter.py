@@ -12,10 +12,10 @@ ENCOUNTER_ZONES = {
         "encounter_rate": 0.15,  # 15% de chance par pas dans l'herbe
         "level_range": (3, 7),
         "pokemon_table": [
-            {"id": 16, "weight": 40},  # Pidgey
-            {"id": 19, "weight": 40},  # Rattata
-            {"id": 37, "weight": 15},  # Vulpix
-            {"id": 25, "weight": 5},   # Pikachu
+            {"id": 12, "weight": 40},  # Pidgey
+            {"id": 13, "weight": 40},  # Rattata
+            {"id": 30, "weight": 15},  # Vulpix
+            {"id": 10, "weight": 5},   # Pikachu
         ]
     },
     "route_2": {
@@ -23,12 +23,12 @@ ENCOUNTER_ZONES = {
         "encounter_rate": 0.20,
         "level_range": (5, 12),
         "pokemon_table": [
-            {"id": 16, "weight": 25},  # Pidgey
-            {"id": 19, "weight": 20},  # Rattata
-            {"id": 74, "weight": 20},  # Geodude
-            {"id": 66, "weight": 15},  # Machop
-            {"id": 63, "weight": 10},  # Abra
-            {"id": 92, "weight": 10},  # Gastly
+            {"id": 12, "weight": 25},  # Pidgey
+            {"id": 13, "weight": 20},  # Rattata
+            {"id": 14, "weight": 20},  # Geodude
+            {"id": 15, "weight": 15},  # Machop
+            {"id": 16, "weight": 10},  # Abra
+            {"id": 18, "weight": 10},  # Gastly
         ]
     },
     "water_cave": {
@@ -36,11 +36,11 @@ ENCOUNTER_ZONES = {
         "encounter_rate": 0.25,
         "level_range": (10, 20),
         "pokemon_table": [
-            {"id": 129, "weight": 30}, # Magikarp
-            {"id": 74, "weight": 25},  # Geodude
-            {"id": 95, "weight": 20},  # Onix
-            {"id": 92, "weight": 15},  # Gastly
-            {"id": 147, "weight": 10}, # Dratini
+            {"id": 23, "weight": 30},  # Magikarp
+            {"id": 14, "weight": 25},  # Geodude
+            {"id": 29, "weight": 20},  # Onix
+            {"id": 18, "weight": 15},  # Gastly
+            {"id": 26, "weight": 10},  # Dratini
         ]
     }
 }

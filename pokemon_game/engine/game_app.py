@@ -20,6 +20,7 @@ from engine.battle_scene import BattleScene
 from engine.encounter import EncounterSystem
 from ui.hud import ExplorationHUD
 from ui.main_menu import MainMenu
+from ui.pokedex_ui import PokedexUI
 
 
 # Configuration Panda3D
@@ -48,15 +49,17 @@ class GameApp(ShowBase):
             Pokemon.create(1, 15),   # Bulbasaur
             Pokemon.create(4, 15),   # Charmander
             Pokemon.create(7, 15),   # Squirtle
-            Pokemon.create(25, 15),  # Pikachu
-            Pokemon.create(92, 14),  # Gastly
-            Pokemon.create(133, 14), # Eevee
+            Pokemon.create(10, 15),  # Pikachu
+            Pokemon.create(18, 14),  # Gastly
+            Pokemon.create(21, 14),  # Eevee
         ]
         
-        # Pokédex
+        # Pokédex (Data + UI)
         self.pokedex = Pokedex()
         for p in self.team_player:
             self.pokedex.mark_caught(p.id)
+        
+        self.pokedex_ui = None  # UI instanciée à la demande
         
         # Scènes
         self.map_scene = None
@@ -112,6 +115,9 @@ class GameApp(ShowBase):
         if self.main_menu:
             self.main_menu.cleanup()
             self.main_menu = None
+        if self.pokedex_ui:
+            self.pokedex_ui.cleanup()
+            self.pokedex_ui = None
 
     # ─────────── Exploration ───────────
 
@@ -238,15 +244,35 @@ class GameApp(ShowBase):
 
     def _show_pokedex_from_menu(self):
         """Affiche le Pokédex depuis le menu principal."""
-        pokedex_text = self.pokedex.display()
-        print(pokedex_text)
         if self.main_menu:
-            self.main_menu.show_message("📖 Pokédex affiché dans la console !")
+            self.main_menu.cleanup()
+            self.main_menu = None
+            
+        self._create_pokedex_ui(on_close=self._show_main_menu)
 
     def _show_pokedex_ingame(self):
         """Affiche le Pokédex en jeu."""
         if self.state_manager.is_state(GameState.EXPLORATION):
-            print(self.pokedex.display())
+            if self.map_scene:
+                self.map_scene.pause_controls()
+            self._create_pokedex_ui(on_close=self._close_pokedex_ingame)
+
+    def _create_pokedex_ui(self, on_close):
+        """Crée et affiche l'UI Pokédex."""
+        if self.pokedex_ui:
+            self.pokedex_ui.cleanup()
+        
+        self.pokedex_ui = PokedexUI(self, self.pokedex, on_close)
+        self.pokedex_ui.show()
+
+    def _close_pokedex_ingame(self):
+        """Ferme le Pokédex en jeu et reprend l'exploration."""
+        if self.pokedex_ui:
+            self.pokedex_ui.cleanup()
+            self.pokedex_ui = None
+        
+        if self.map_scene:
+            self.map_scene.resume_controls()
 
     # ─────────── Actions Menu ───────────
 
