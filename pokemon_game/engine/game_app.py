@@ -1,9 +1,10 @@
 """
 game_app.py — Application Panda3D principale.
-Gère les transitions entre exploration et combat.
+Gère le menu principal et les transitions entre exploration et combat.
 """
 import sys
 import os
+import random
 
 # Assurer que le dossier pokemon_game est dans le path
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
@@ -18,6 +19,7 @@ from engine.map_scene import MapScene
 from engine.battle_scene import BattleScene
 from engine.encounter import EncounterSystem
 from ui.hud import ExplorationHUD
+from ui.main_menu import MainMenu
 
 
 # Configuration Panda3D
@@ -29,7 +31,7 @@ loadPrcFileData("", "show-frame-rate-meter #t")
 class GameApp(ShowBase):
     """
     Application principale du jeu Pokémon.
-    Gère les scènes (exploration, combat) et les transitions.
+    Démarre sur le menu principal, gère les scènes et les transitions.
     """
 
     def __init__(self):
@@ -60,25 +62,75 @@ class GameApp(ShowBase):
         self.map_scene = None
         self.battle_scene = None
         self.hud = None
+        self.main_menu = None
         
         # Background
-        self.setBackgroundColor(Vec4(0.4, 0.6, 0.8, 1))
+        self.setBackgroundColor(Vec4(0.05, 0.05, 0.12, 1))
         
-        # Démarrer en exploration
-        self._start_exploration()
+        # Afficher le menu principal
+        self._show_main_menu()
+
+    # ─────────── Menu Principal ───────────
+
+    def _show_main_menu(self):
+        """Affiche le menu principal."""
+        self.state_manager.change_state(GameState.MAIN_MENU)
         
-        # Contrôles globaux
-        self.accept("escape", self._toggle_pause)
-        self.accept("p", self._show_pokedex)
+        # Nettoyer les scènes précédentes
+        self._cleanup_all_scenes()
+        
+        # Repositionner la caméra par défaut
+        self.camera.reparentTo(self.render)
+        self.camera.setPos(0, -10, 5)
+        self.camera.lookAt(0, 0, 0)
+        
+        # Créer le menu
+        self.main_menu = MainMenu(self, {
+            "exploration": self._start_exploration,
+            "wild_battle": self._start_wild_battle,
+            "trainer_battle": self._start_trainer_battle,
+            "pokedex": self._show_pokedex_from_menu,
+            "heal": self._heal_team,
+            "quit": self._quit_game,
+        })
+        self.main_menu.setup()
+        
+        # Contrôle Échap → quitter depuis le menu
+        self.accept("escape", self._quit_game)
+
+    def _cleanup_all_scenes(self):
+        """Nettoie toutes les scènes actives."""
+        if self.battle_scene:
+            self.battle_scene.cleanup()
+            self.battle_scene = None
+        if self.map_scene:
+            self.map_scene.cleanup()
+            self.map_scene = None
+        if self.hud:
+            self.hud.cleanup()
+            self.hud = None
+        if self.main_menu:
+            self.main_menu.cleanup()
+            self.main_menu = None
+
+    # ─────────── Exploration ───────────
 
     def _start_exploration(self):
         """Lance la scène d'exploration."""
         self.state_manager.change_state(GameState.EXPLORATION)
         
+        # Nettoyer le menu
+        if self.main_menu:
+            self.main_menu.cleanup()
+            self.main_menu = None
+        
         # Nettoyer la scène de combat si elle existe
         if self.battle_scene:
             self.battle_scene.cleanup()
             self.battle_scene = None
+        
+        # Background exploration
+        self.setBackgroundColor(Vec4(0.4, 0.6, 0.8, 1))
         
         # Créer la map
         self.map_scene = MapScene(
@@ -90,21 +142,66 @@ class GameApp(ShowBase):
         # HUD
         self.hud = ExplorationHUD(self, self.team_player)
         self.hud.setup()
+        
+        # Échap → retour au menu
+        self.accept("escape", self._return_to_menu)
+        self.accept("p", self._show_pokedex_ingame)
+
+    def _return_to_menu(self):
+        """Retourne au menu principal depuis l'exploration."""
+        self._show_main_menu()
+
+    # ─────────── Combats ───────────
 
     def _on_wild_encounter(self, wild_pokemon: Pokemon):
-        """Déclenché quand on rencontre un Pokémon sauvage."""
+        """Déclenché quand on rencontre un Pokémon sauvage en exploration."""
         self._start_battle([wild_pokemon], is_wild=True)
+
+    def _start_wild_battle(self):
+        """Lance un combat sauvage aléatoire depuis le menu."""
+        # Nettoyer le menu
+        if self.main_menu:
+            self.main_menu.cleanup()
+            self.main_menu = None
+        
+        wild_ids = [12, 13, 14, 23, 30]
+        wild_id = random.choice(wild_ids)
+        wild_level = random.randint(
+            max(5, self.team_player[0].level - 5),
+            self.team_player[0].level + 2
+        )
+        wild = Pokemon.create(wild_id, wild_level)
+        self._start_battle([wild], is_wild=True)
+
+    def _start_trainer_battle(self):
+        """Lance un combat dresseur depuis le menu."""
+        # Nettoyer le menu
+        if self.main_menu:
+            self.main_menu.cleanup()
+            self.main_menu = None
+        
+        team_enemy = [
+            Pokemon.create(15, 16),  # Machop
+            Pokemon.create(14, 16),  # Geodude
+            Pokemon.create(29, 17),  # Onix
+        ]
+        self._start_battle(team_enemy, is_wild=False)
 
     def _start_battle(self, enemy_team: list[Pokemon], is_wild: bool = True):
         """Lance un combat."""
         self.state_manager.change_state(GameState.BATTLE)
         
+        # Background combat
+        self.setBackgroundColor(Vec4(0.4, 0.6, 0.8, 1))
+        
         # Pause l'exploration
         if self.map_scene:
             self.map_scene.pause_controls()
             self.map_scene.cleanup()
+            self.map_scene = None
         if self.hud:
             self.hud.cleanup()
+            self.hud = None
         
         # Créer la scène de combat
         self.battle_scene = BattleScene(
@@ -116,33 +213,51 @@ class GameApp(ShowBase):
             on_battle_end=self._on_battle_end
         )
         self.battle_scene.setup()
+        
+        # Pas d'Échap pendant le combat
+        self.ignore("escape")
 
     def _on_battle_end(self, winner: str):
         """Callback de fin de combat."""
-        # Petit délai avant de retourner à l'exploration
         from direct.interval.IntervalGlobal import Sequence, Wait, Func
         
         seq = Sequence(
             Wait(2.0),
-            Func(self._return_to_exploration)
+            Func(self._return_to_menu_after_battle)
         )
         seq.start()
 
-    def _return_to_exploration(self):
-        """Retourne à l'exploration après un combat."""
+    def _return_to_menu_after_battle(self):
+        """Retourne au menu principal après un combat."""
         if self.battle_scene:
             self.battle_scene.cleanup()
             self.battle_scene = None
-        self._start_exploration()
+        self._show_main_menu()
 
-    def _toggle_pause(self):
-        """Toggle pause."""
-        if self.state_manager.is_state(GameState.EXPLORATION):
-            print("  Menu Pause - Appuyez sur Échap pour reprendre")
-        elif self.state_manager.is_state(GameState.BATTLE):
-            pass  # Pas de pause en combat
+    # ─────────── Pokédex ───────────
 
-    def _show_pokedex(self):
-        """Affiche le Pokédex."""
+    def _show_pokedex_from_menu(self):
+        """Affiche le Pokédex depuis le menu principal."""
+        pokedex_text = self.pokedex.display()
+        print(pokedex_text)
+        if self.main_menu:
+            self.main_menu.show_message("📖 Pokédex affiché dans la console !")
+
+    def _show_pokedex_ingame(self):
+        """Affiche le Pokédex en jeu."""
         if self.state_manager.is_state(GameState.EXPLORATION):
             print(self.pokedex.display())
+
+    # ─────────── Actions Menu ───────────
+
+    def _heal_team(self):
+        """Soigne toute l'équipe."""
+        for p in self.team_player:
+            p.full_restore()
+        if self.main_menu:
+            self.main_menu.show_message("✅ Toute l'équipe est soignée !")
+
+    def _quit_game(self):
+        """Quitte le jeu."""
+        print("\n  👋 À bientôt, Dresseur !")
+        self.userExit()
