@@ -111,12 +111,30 @@ def get_move_data(move_id_or_name: str | int) -> dict:
     Récupère un move (format moves.json).
     """
     data = _get_json(f"{BASE_URL}/move/{move_id_or_name}")
-    return {
+    move_data = {
         "id": data.get("id"),
         "name": _format_name(data.get("name")),
         "type": data.get("type", {}).get("name"),
         "category": data.get("damage_class", {}).get("name"),
-        "power": data.get("power"),
-        "accuracy": data.get("accuracy"),
-        "pp": data.get("pp"),
+        "power": data.get("power") or 0,
+        "accuracy": data.get("accuracy") or 100,
+        "pp": data.get("pp") or 10,
     }
+
+    # Priority
+    if data.get("priority", 0) != 0:
+        move_data["priority"] = data["priority"]
+
+    # Effet de statut
+    ailment = data.get("meta", {}).get("ailment", {}).get("name", "")
+    effect_map = {
+        "poison": "poison",
+        "burn": "burn",
+        "paralysis": "paralysis",
+        "sleep": "sleep",
+        "freeze": "freeze",
+    }
+    if ailment in effect_map:
+        move_data["effect"] = effect_map[ailment]
+
+    return move_data

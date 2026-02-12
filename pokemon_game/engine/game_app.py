@@ -48,9 +48,9 @@ class GameApp(ShowBase):
             Pokemon.create(1, 15),   # Bulbasaur
             Pokemon.create(4, 15),   # Charmander
             Pokemon.create(7, 15),   # Squirtle
-            Pokemon.create(10, 15),  # Pikachu
-            Pokemon.create(18, 14),  # Gastly
-            Pokemon.create(21, 14),  # Eevee
+            Pokemon.create(25, 15),  # Pikachu
+            Pokemon.create(92, 14),  # Gastly
+            Pokemon.create(133, 14), # Eevee
         ]
         
         # Pokédex

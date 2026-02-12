@@ -71,12 +71,12 @@ class MainMenu:
 
         # Définition des boutons
         menu_items = [
-            ("🌿  Exploration", "exploration", (0.2, 0.6, 0.3, 1)),
-            ("⚔️  Combat Sauvage", "wild_battle", (0.8, 0.3, 0.2, 1)),
-            ("🏋️  Combat Dresseur", "trainer_battle", (0.7, 0.4, 0.2, 1)),
-            ("📖  Pokédex", "pokedex", (0.3, 0.4, 0.7, 1)),
-            ("💊  Soigner l'équipe", "heal", (0.2, 0.7, 0.5, 1)),
-            ("🚪  Quitter", "quit", (0.5, 0.5, 0.5, 1)),
+            ("Exploration", "exploration", (0.2, 0.6, 0.3, 1)),
+            ("Combat Sauvage", "wild_battle", (0.8, 0.3, 0.2, 1)),
+            ("Combat Dresseur", "trainer_battle", (0.7, 0.4, 0.2, 1)),
+            ("Pokedex", "pokedex", (0.3, 0.4, 0.7, 1)),
+            ("Soigner l'equipe", "heal", (0.2, 0.7, 0.5, 1)),
+            ("Quitter", "quit", (0.5, 0.5, 0.5, 1)),
         ]
 
         for i, (label, key, color) in enumerate(menu_items):

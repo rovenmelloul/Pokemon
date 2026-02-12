@@ -222,9 +222,9 @@ def main():
         Pokemon.create(1, 15),   # Bulbasaur Lv.15
         Pokemon.create(4, 15),   # Charmander Lv.15
         Pokemon.create(7, 15),   # Squirtle Lv.15
-        Pokemon.create(10, 15),  # Pikachu Lv.15
-        Pokemon.create(18, 14),  # Gastly Lv.14
-        Pokemon.create(21, 14),  # Eevee Lv.14
+        Pokemon.create(25, 15),  # Pikachu Lv.15
+        Pokemon.create(92, 14),  # Gastly Lv.14
+        Pokemon.create(133, 14), # Eevee Lv.14
     ]
     
     # Pokédex
@@ -254,7 +254,7 @@ def main():
         if choice == "1":
             # Combat sauvage
             import random
-            wild_ids = [12, 13, 14, 23, 30]  # Pokémons sauvages courants
+            wild_ids = [16, 19, 74, 129, 37]  # Pokémons sauvages courants (Pidgey, Rattata, Geodude, Magikarp, Vulpix)
             wild_id = random.choice(wild_ids)
             wild_level = random.randint(
                 max(5, team_player[0].level - 5),
@@ -267,9 +267,9 @@ def main():
         elif choice == "2":
             # Combat dresseur
             team_enemy = [
-                Pokemon.create(15, 16),  # Machop
-                Pokemon.create(14, 16),  # Geodude
-                Pokemon.create(29, 17),  # Onix
+                Pokemon.create(66, 16),  # Machop
+                Pokemon.create(74, 16),  # Geodude
+                Pokemon.create(95, 17),  # Onix
             ]
             run_battle(team_player, team_enemy, pokedex, is_wild=False)
         
