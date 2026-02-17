@@ -1,7 +1,9 @@
 import requests
+import sqlite3
 
 pockemon_interface = {
     "id_pokemon": None | int,
+    "lvl":None | int,
     "name": None | str,
     "type": None | list,
     "height": None | int,
@@ -10,9 +12,11 @@ pockemon_interface = {
     "base_experience": None | int,
     "level_evolution": None | int,
     "description": None | str,
+    "animation_path": None,
 }
 
 def get_pokemon_data(pokemon_name: str) -> dict:
+    #TODO: For all meta names take all poke info and insert to data base
     url = f"https://pokeapi.co/api/v2/pokemon/{pokemon_name}"
     response = requests.get(url)
     if response.status_code == 200:
