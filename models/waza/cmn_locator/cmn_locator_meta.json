@@ -1,0 +1,42 @@
+{
+  "materials": [
+    {
+      "name": "dummy_Shader",
+      "shader_group": "FxDefault01",
+      "render_layer": 0,
+      "shader_index": 0,
+      "texture_maps": [],
+      "colors": [
+        {
+          "name": "ConstantColor01",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        }
+      ],
+      "values": [
+        {
+          "name": "ConstantAlpha01",
+          "value": 1.0
+        }
+      ],
+      "switches": [],
+      "textures_used": [],
+      "used_texture": null,
+      "used_sampler": null
+    }
+  ],
+  "meshes": [
+    {
+      "index": 0,
+      "num_vertices": 4,
+      "num_faces": 2,
+      "material_indices": [
+        0
+      ]
+    }
+  ],
+  "texture_names": [],
+  "hidden_materials": [],
+  "outline_materials": []
+}

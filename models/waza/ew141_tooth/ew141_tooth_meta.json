@@ -1,0 +1,135 @@
+{
+  "materials": [
+    {
+      "name": "ShaderfxShader1",
+      "shader_group": "FxMulti01",
+      "render_layer": 0,
+      "shader_index": 0,
+      "texture_maps": [
+        {
+          "sampler": "Tex01WRAP",
+          "texture": "fxmt_0_laser001_m.png",
+          "tex_index": 0
+        }
+      ],
+      "colors": [
+        {
+          "name": "ConstantColor01",
+          "r": 0.4722,
+          "g": 0.5239,
+          "b": 0.5723
+        },
+        {
+          "name": "FresnelColor",
+          "r": 0.488,
+          "g": 0.7157,
+          "b": 0.5672
+        }
+      ],
+      "values": [
+        {
+          "name": "Tex01_Rot_Volume",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01TranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01TranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01Rotate",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01ScaleU",
+          "value": 1.0
+        },
+        {
+          "name": "Tex01ScaleV",
+          "value": 1.0
+        },
+        {
+          "name": "Tex01_Alpha",
+          "value": 0.0
+        },
+        {
+          "name": "Alpha_Power",
+          "value": 1.0
+        },
+        {
+          "name": "Alpha_Multiply",
+          "value": 1.0
+        },
+        {
+          "name": "Emissive_Intensity",
+          "value": 1.0
+        },
+        {
+          "name": "Def0_OneMin1_FreCol",
+          "value": 0.0
+        },
+        {
+          "name": "FresnelPowerCol",
+          "value": 5.185185
+        },
+        {
+          "name": "FresnelStrengthCol",
+          "value": 40.0
+        },
+        {
+          "name": "A_or_1A_Tex01_Alpha",
+          "value": 0.0
+        },
+        {
+          "name": "OutLineID",
+          "value": 0.0
+        },
+        {
+          "name": "ProgID",
+          "value": 0.0
+        }
+      ],
+      "switches": [
+        {
+          "name": "OutLineIDEnable",
+          "value": false
+        }
+      ],
+      "textures_used": [
+        {
+          "sampler": "Tex01WRAP",
+          "texture": "fxmt_0_laser001_m.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "fxmt_0_laser001_m.png",
+      "used_sampler": "Tex01WRAP"
+    }
+  ],
+  "meshes": [
+    {
+      "index": 0,
+      "num_vertices": 3608,
+      "num_faces": 2178,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 1,
+      "num_vertices": 2778,
+      "num_faces": 2178,
+      "material_indices": [
+        0
+      ]
+    }
+  ],
+  "texture_names": [
+    "fxmt_0_laser001_m"
+  ],
+  "hidden_materials": [],
+  "outline_materials": []
+}

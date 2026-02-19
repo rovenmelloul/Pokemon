@@ -1,0 +1,109 @@
+{
+  "materials": [
+    {
+      "name": "box",
+      "shader_group": "Manual",
+      "render_layer": 0,
+      "shader_index": 0,
+      "texture_maps": [
+        {
+          "sampler": "LightTableTex",
+          "texture": "fxmt_cmn_lt002_m_lta.png",
+          "tex_index": 0
+        }
+      ],
+      "colors": [
+        {
+          "name": "ConstantColor01",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "OutLineCol",
+          "r": 0.0637,
+          "g": 0.0637,
+          "b": 0.0637
+        },
+        {
+          "name": "Shadow_Color",
+          "r": 0.214,
+          "g": 0.214,
+          "b": 0.214
+        }
+      ],
+      "values": [
+        {
+          "name": "ConstantAlpha01",
+          "value": 1.0
+        },
+        {
+          "name": "OutLineID",
+          "value": 0.0
+        },
+        {
+          "name": "ProgID",
+          "value": 0.0
+        },
+        {
+          "name": "ShadowRange",
+          "value": 1.0
+        }
+      ],
+      "switches": [
+        {
+          "name": "NormalEdgeEnable",
+          "value": true
+        },
+        {
+          "name": "OutLineIDEnable",
+          "value": false
+        },
+        {
+          "name": "OutLineColFixed",
+          "value": true
+        }
+      ],
+      "textures_used": [
+        {
+          "sampler": "LightTableTex",
+          "texture": "fxmt_cmn_lt002_m_lta.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "fxmt_cmn_lt002_m_lta.png",
+      "used_sampler": "LightTableTex"
+    }
+  ],
+  "meshes": [
+    {
+      "index": 0,
+      "num_vertices": 64,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 1,
+      "num_vertices": 216,
+      "num_faces": 156,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "num_vertices": 573,
+      "num_faces": 592,
+      "material_indices": [
+        0
+      ]
+    }
+  ],
+  "texture_names": [
+    "fxmt_cmn_lt002_m_lta"
+  ],
+  "hidden_materials": [],
+  "outline_materials": []
+}

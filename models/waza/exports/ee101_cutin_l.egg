@@ -1,0 +1,89 @@
+<CoordinateSystem> { Y-Up }
+
+<Comment> { "Pokemon SwSh: ee101_cutin_l" }
+
+<Material> cmn_white_mat {
+  <Scalar> diffr { 1.0000 }
+  <Scalar> diffg { 1.0000 }
+  <Scalar> diffb { 1.0000 }
+}
+<Texture> cmn_white_mat_tex {
+  "cmn_white_tex01.png"
+  <Scalar> envtype { modulate }
+  <Scalar> format { rgb }
+  <Scalar> wrapu { repeat }
+  <Scalar> wrapv { repeat }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear }
+  <Scalar> alpha { off }
+}
+
+<Group> ee101_cutin_l {
+  <Dart> { 1 }
+
+  <Joint> ee101_cutin_l {
+    <Transform> {
+      <Matrix4> {
+        1.00000000 0.00000000 0.00000000 0.00000000
+        0.00000000 1.00000000 0.00000000 0.00000000
+        0.00000000 0.00000000 1.00000000 0.00000000
+        0.00000000 0.00000000 0.00000000 1.00000000
+      }
+    }
+    <Joint> Origin {
+      <Transform> {
+        <Matrix4> {
+          1.00000000 0.00000000 0.00000000 0.00000000
+          0.00000000 1.00000000 0.00000000 0.00000000
+          0.00000000 0.00000000 1.00000000 0.00000000
+          0.00000000 0.00000000 0.00000000 1.00000000
+        }
+      }
+      <Joint> cutin_l {
+        <Transform> {
+          <Matrix4> {
+            128.30279541 0.00000000 0.00000000 0.00000000
+            0.00000000 0.00004028 128.30279541 0.00000000
+            0.00000000 -74.48483276 0.00002338 0.00000000
+            0.00000000 0.00000000 97.76274872 1.00000000
+          }
+        }
+      }
+    }
+  }
+
+  <VertexPool> vpool_0 {
+    <Vertex> 0 {
+      0.500000 -0.000000 0.500000
+      <Normal> { 0.000000 -1.000000 -0.000000 }
+      <UV> { 1.000000 0.000000 }
+    }
+    <Vertex> 1 {
+      0.166667 -0.000000 0.500000
+      <Normal> { 0.000000 -1.000000 -0.000000 }
+      <UV> { 0.666667 0.000000 }
+    }
+    <Vertex> 2 {
+      0.500000 0.000000 -0.500000
+      <Normal> { 0.000000 -1.000000 -0.000000 }
+      <UV> { 1.000000 1.000000 }
+    }
+    <Vertex> 3 {
+      -0.166667 0.000000 -0.500000
+      <Normal> { 0.000000 -1.000000 -0.000000 }
+      <UV> { 0.333333 1.000000 }
+    }
+  }
+
+  <Polygon> {
+    <MRef> { cmn_white_mat }
+    <TRef> { cmn_white_mat_tex }
+    <VertexRef> { 0 1 2 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { cmn_white_mat }
+    <TRef> { cmn_white_mat_tex }
+    <VertexRef> { 2 1 3 <Ref> { vpool_0 } }
+  }
+
+}

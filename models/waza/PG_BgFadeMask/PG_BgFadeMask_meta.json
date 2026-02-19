@@ -1,0 +1,66 @@
+{
+  "materials": [
+    {
+      "name": "M_Mask",
+      "shader_group": "FxBgFadeMask",
+      "render_layer": 0,
+      "shader_index": 0,
+      "texture_maps": [
+        {
+          "sampler": "LightTableTex",
+          "texture": "fxmt_3_white202_a.png",
+          "tex_index": 0
+        }
+      ],
+      "colors": [
+        {
+          "name": "ConstantColor01",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "Shadow_Color",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        }
+      ],
+      "values": [
+        {
+          "name": "ConstantAlpha01",
+          "value": 1.0
+        },
+        {
+          "name": "ShadowRange",
+          "value": 1.0
+        }
+      ],
+      "switches": [],
+      "textures_used": [
+        {
+          "sampler": "LightTableTex",
+          "texture": "fxmt_3_white202_a.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "fxmt_3_white202_a.png",
+      "used_sampler": "LightTableTex"
+    }
+  ],
+  "meshes": [
+    {
+      "index": 0,
+      "num_vertices": 4,
+      "num_faces": 2,
+      "material_indices": [
+        0
+      ]
+    }
+  ],
+  "texture_names": [
+    "fxmt_3_white202_a"
+  ],
+  "hidden_materials": [],
+  "outline_materials": []
+}

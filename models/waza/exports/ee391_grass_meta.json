@@ -1,0 +1,324 @@
+{
+  "materials": [
+    {
+      "name": "weed_b",
+      "shader_group": "FxDefault01",
+      "render_layer": 0,
+      "shader_index": 0,
+      "texture_maps": [
+        {
+          "sampler": "Tex01WRAP",
+          "texture": "common_grassweeds01_01.png",
+          "tex_index": 0
+        }
+      ],
+      "colors": [
+        {
+          "name": "OutLineCol",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "Tex01_Multiply_Color",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        }
+      ],
+      "values": [
+        {
+          "name": "Tex01TranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01TranslateV",
+          "value": 1.0
+        },
+        {
+          "name": "Tex01Rotate",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01ScaleU",
+          "value": 1.0
+        },
+        {
+          "name": "Tex01ScaleV",
+          "value": 0.5
+        },
+        {
+          "name": "R0_A1_Tex01_Alpha",
+          "value": 1.0
+        },
+        {
+          "name": "OutLineID",
+          "value": 0.0
+        },
+        {
+          "name": "ProgID",
+          "value": 0.0
+        }
+      ],
+      "switches": [
+        {
+          "name": "NormalEdgeEnable",
+          "value": false
+        },
+        {
+          "name": "OutLineIDEnable",
+          "value": false
+        },
+        {
+          "name": "OutLineColFixed",
+          "value": false
+        }
+      ],
+      "textures_used": [
+        {
+          "sampler": "Tex01WRAP",
+          "texture": "common_grassweeds01_01.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "common_grassweeds01_01.png",
+      "used_sampler": "Tex01WRAP"
+    },
+    {
+      "name": "weed_a",
+      "shader_group": "FxDefault01",
+      "render_layer": 0,
+      "shader_index": 1,
+      "texture_maps": [
+        {
+          "sampler": "Tex01WRAP",
+          "texture": "common_grassweeds02_01.png",
+          "tex_index": 1
+        }
+      ],
+      "colors": [
+        {
+          "name": "OutLineCol",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "Tex01_Multiply_Color",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        }
+      ],
+      "values": [
+        {
+          "name": "Tex01TranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01TranslateV",
+          "value": 1.0
+        },
+        {
+          "name": "Tex01Rotate",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01ScaleU",
+          "value": 1.0
+        },
+        {
+          "name": "Tex01ScaleV",
+          "value": 0.5
+        },
+        {
+          "name": "R0_A1_Tex01_Alpha",
+          "value": 1.0
+        },
+        {
+          "name": "OutLineID",
+          "value": 0.0
+        },
+        {
+          "name": "ProgID",
+          "value": 0.0
+        }
+      ],
+      "switches": [
+        {
+          "name": "NormalEdgeEnable",
+          "value": false
+        },
+        {
+          "name": "OutLineIDEnable",
+          "value": false
+        },
+        {
+          "name": "OutLineColFixed",
+          "value": false
+        }
+      ],
+      "textures_used": [
+        {
+          "sampler": "Tex01WRAP",
+          "texture": "common_grassweeds02_01.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "common_grassweeds02_01.png",
+      "used_sampler": "Tex01WRAP"
+    }
+  ],
+  "meshes": [
+    {
+      "index": 0,
+      "num_vertices": 121,
+      "num_faces": 200,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 1,
+      "num_vertices": 121,
+      "num_faces": 200,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "num_vertices": 121,
+      "num_faces": 200,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "num_vertices": 121,
+      "num_faces": 200,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 4,
+      "num_vertices": 121,
+      "num_faces": 200,
+      "material_indices": [
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "num_vertices": 121,
+      "num_faces": 200,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 6,
+      "num_vertices": 121,
+      "num_faces": 200,
+      "material_indices": [
+        1
+      ]
+    },
+    {
+      "index": 7,
+      "num_vertices": 121,
+      "num_faces": 200,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 8,
+      "num_vertices": 121,
+      "num_faces": 200,
+      "material_indices": [
+        1
+      ]
+    },
+    {
+      "index": 9,
+      "num_vertices": 121,
+      "num_faces": 200,
+      "material_indices": [
+        1
+      ]
+    },
+    {
+      "index": 10,
+      "num_vertices": 121,
+      "num_faces": 200,
+      "material_indices": [
+        1
+      ]
+    },
+    {
+      "index": 11,
+      "num_vertices": 121,
+      "num_faces": 200,
+      "material_indices": [
+        1
+      ]
+    },
+    {
+      "index": 12,
+      "num_vertices": 121,
+      "num_faces": 200,
+      "material_indices": [
+        1
+      ]
+    },
+    {
+      "index": 13,
+      "num_vertices": 121,
+      "num_faces": 200,
+      "material_indices": [
+        1
+      ]
+    },
+    {
+      "index": 14,
+      "num_vertices": 121,
+      "num_faces": 200,
+      "material_indices": [
+        1
+      ]
+    },
+    {
+      "index": 15,
+      "num_vertices": 121,
+      "num_faces": 200,
+      "material_indices": [
+        1
+      ]
+    },
+    {
+      "index": 16,
+      "num_vertices": 121,
+      "num_faces": 200,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 17,
+      "num_vertices": 121,
+      "num_faces": 200,
+      "material_indices": [
+        1
+      ]
+    }
+  ],
+  "texture_names": [
+    "common_grassweeds01_01",
+    "common_grassweeds02_01"
+  ],
+  "hidden_materials": [],
+  "outline_materials": []
+}

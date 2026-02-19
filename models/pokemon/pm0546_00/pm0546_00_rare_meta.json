@@ -1,0 +1,2865 @@
+{
+  "materials": [
+    {
+      "name": "BodyBuffron",
+      "shader_group": "PokeDefaultShader",
+      "render_layer": 0,
+      "shader_index": 0,
+      "texture_maps": [
+        {
+          "sampler": "Col0Tex",
+          "texture": "pm0546_00_Body_col_rare.png",
+          "tex_index": 0
+        },
+        {
+          "sampler": "EmissionMaskTex",
+          "texture": "dummy_col.png",
+          "tex_index": 1
+        },
+        {
+          "sampler": "LyCol0Tex",
+          "texture": "dummy_col.png",
+          "tex_index": 1
+        },
+        {
+          "sampler": "AmbientTex",
+          "texture": "pm0546_00_Body_amb.png",
+          "tex_index": 2
+        },
+        {
+          "sampler": "NormalMapTex",
+          "texture": "pm0546_00_Body_nor.png",
+          "tex_index": 3
+        },
+        {
+          "sampler": "LightTblTex",
+          "texture": "Default_lta.png",
+          "tex_index": 4
+        },
+        {
+          "sampler": "SphereMapTex",
+          "texture": "dummy_col.png",
+          "tex_index": 1
+        },
+        {
+          "sampler": "EffectTex",
+          "texture": "projection_effect_col.png",
+          "tex_index": 5
+        }
+      ],
+      "colors": [
+        {
+          "name": "ConstantColor0",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "ConstantColorSd0",
+          "r": 0.6167,
+          "g": 0.71,
+          "b": 0.5155
+        },
+        {
+          "name": "ConstantColor1",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "ConstantColorSd1",
+          "r": 0.71,
+          "g": 0.6627,
+          "b": 0.426
+        },
+        {
+          "name": "L1ConstantColor0",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "L1AddColor0",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "L1ConstantColor1",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "L1AddColor1",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "L1ConstantColorSd0",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "L1ConstantColorSd1",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "DeepShadowColor",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "SpecularColor",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "SphereMapColor",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "RimColor",
+          "r": 0.4751,
+          "g": 0.5,
+          "b": 0.3135
+        },
+        {
+          "name": "RimColorShadow",
+          "r": 0.4366,
+          "g": 0.4398,
+          "b": 0.3449
+        },
+        {
+          "name": "EffectColor01",
+          "r": 1.0,
+          "g": 0.0,
+          "b": 1.0
+        },
+        {
+          "name": "ConstantColor",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "OnGameColor",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "OutLineCol",
+          "r": 0.4398,
+          "g": 0.4236,
+          "b": 0.3621
+        }
+      ],
+      "values": [
+        {
+          "name": "ColorUVScaleU",
+          "value": 2.0
+        },
+        {
+          "name": "ColorUVScaleV",
+          "value": 1.0
+        },
+        {
+          "name": "ColorUVTranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "ColorBaseU",
+          "value": 0.0
+        },
+        {
+          "name": "ColorUVTranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "ColorBaseV",
+          "value": 0.0
+        },
+        {
+          "name": "ConstantColor0Val",
+          "value": 1.0
+        },
+        {
+          "name": "Layer1UVScaleU",
+          "value": 1.0
+        },
+        {
+          "name": "Layer1UVScaleV",
+          "value": 1.0
+        },
+        {
+          "name": "Layer1UVTranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "Layer1BaseU",
+          "value": 0.0
+        },
+        {
+          "name": "Layer1UVTranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "Layer1BaseV",
+          "value": 0.0
+        },
+        {
+          "name": "EmissionMaskVal",
+          "value": 1.0
+        },
+        {
+          "name": "ConstantColorSd0Val",
+          "value": 1.0
+        },
+        {
+          "name": "ConstantColor1Val",
+          "value": 1.0
+        },
+        {
+          "name": "ConstantColorSd1Val",
+          "value": 1.0
+        },
+        {
+          "name": "ColorLerpValue",
+          "value": 1.0
+        },
+        {
+          "name": "L1ConstantColor0Val",
+          "value": 1.0
+        },
+        {
+          "name": "L1AddColor0Val",
+          "value": 0.0
+        },
+        {
+          "name": "L1ConstantColor1Val",
+          "value": 1.0
+        },
+        {
+          "name": "L1AddColor1Val",
+          "value": 0.0
+        },
+        {
+          "name": "L1ConstantColorSd0Val",
+          "value": 1.0
+        },
+        {
+          "name": "L1ConstantColorSd1Val",
+          "value": 1.0
+        },
+        {
+          "name": "Layer1OverLerpValue",
+          "value": 1.0
+        },
+        {
+          "name": "NormalMapUVScaleU",
+          "value": 1.0
+        },
+        {
+          "name": "NormalMapUVScaleV",
+          "value": 1.0
+        },
+        {
+          "name": "LightTblIndex",
+          "value": 9.0
+        },
+        {
+          "name": "LightMul",
+          "value": 1.0
+        },
+        {
+          "name": "SpecularPower",
+          "value": 6.0
+        },
+        {
+          "name": "SpecularScale",
+          "value": 0.25
+        },
+        {
+          "name": "SphereMapColorVal",
+          "value": 1.0
+        },
+        {
+          "name": "RimColorVal",
+          "value": 1.0
+        },
+        {
+          "name": "RimPower",
+          "value": 8.0
+        },
+        {
+          "name": "RimStrength",
+          "value": 8.0
+        },
+        {
+          "name": "Def0_OneMin1_FreCol",
+          "value": 1.0
+        },
+        {
+          "name": "DistortionIntensity",
+          "value": 1.0
+        },
+        {
+          "name": "Sin01",
+          "value": 4.0
+        },
+        {
+          "name": "ScaleUV",
+          "value": 1.0
+        },
+        {
+          "name": "EffectTexTranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "EffectTexTranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "EffectTexRotate",
+          "value": 0.0
+        },
+        {
+          "name": "EffectTexScaleU",
+          "value": 8.0
+        },
+        {
+          "name": "EffectTexScaleV",
+          "value": 5.0
+        },
+        {
+          "name": "EffectColPower",
+          "value": 1.0
+        },
+        {
+          "name": "OnGameEmissionVal",
+          "value": 1.0
+        },
+        {
+          "name": "ConstantColorVal",
+          "value": 1.0
+        },
+        {
+          "name": "ConstantAlpha",
+          "value": 1.0
+        },
+        {
+          "name": "OnGameColorVal",
+          "value": 1.0
+        },
+        {
+          "name": "OnGameAlpha",
+          "value": 1.0
+        },
+        {
+          "name": "OutLineID",
+          "value": 1.0
+        },
+        {
+          "name": "ProgID",
+          "value": 0.0
+        }
+      ],
+      "switches": [
+        {
+          "name": "useColorTex",
+          "value": true
+        },
+        {
+          "name": "SwitchEmissionMaskTexUV",
+          "value": false
+        },
+        {
+          "name": "EmissionMaskUse",
+          "value": false
+        },
+        {
+          "name": "SwitchPriority",
+          "value": false
+        },
+        {
+          "name": "Layer1Enable",
+          "value": false
+        },
+        {
+          "name": "SwitchAmbientTexUV",
+          "value": false
+        },
+        {
+          "name": "AmbientMapEnable",
+          "value": true
+        },
+        {
+          "name": "SwitchNormalMapUV",
+          "value": false
+        },
+        {
+          "name": "NormalMapEnable",
+          "value": true
+        },
+        {
+          "name": "LightTableEnable",
+          "value": true
+        },
+        {
+          "name": "SpecularMaskEnable",
+          "value": false
+        },
+        {
+          "name": "BaseColorAddEnable",
+          "value": true
+        },
+        {
+          "name": "SphereMapEnable",
+          "value": false
+        },
+        {
+          "name": "SphereMaskEnable",
+          "value": false
+        },
+        {
+          "name": "RimMaskEnable",
+          "value": false
+        },
+        {
+          "name": "alphaShell",
+          "value": false
+        },
+        {
+          "name": "EffectVal",
+          "value": true
+        },
+        {
+          "name": "NormalEdgeEnable",
+          "value": true
+        },
+        {
+          "name": "OutLineIDEnable",
+          "value": true
+        },
+        {
+          "name": "OutLineColFixed",
+          "value": false
+        }
+      ],
+      "textures_used": [
+        {
+          "sampler": "Col0Tex",
+          "texture": "pm0546_00_Body_col_rare.png",
+          "envtype": "modulate"
+        },
+        {
+          "sampler": "NormalMapTex",
+          "texture": "pm0546_00_Body_nor.png",
+          "envtype": "normal"
+        }
+      ],
+      "used_texture": "pm0546_00_Body_col_rare.png",
+      "used_sampler": "Col0Tex"
+    },
+    {
+      "name": "Body00",
+      "shader_group": "PokeDefaultShader",
+      "render_layer": 0,
+      "shader_index": 1,
+      "texture_maps": [
+        {
+          "sampler": "Col0Tex",
+          "texture": "pm0546_00_Body_col_rare.png",
+          "tex_index": 0
+        },
+        {
+          "sampler": "EmissionMaskTex",
+          "texture": "dummy_col.png",
+          "tex_index": 1
+        },
+        {
+          "sampler": "LyCol0Tex",
+          "texture": "dummy_col.png",
+          "tex_index": 1
+        },
+        {
+          "sampler": "AmbientTex",
+          "texture": "pm0546_00_Body_amb.png",
+          "tex_index": 2
+        },
+        {
+          "sampler": "NormalMapTex",
+          "texture": "pm0546_00_Body_nor.png",
+          "tex_index": 3
+        },
+        {
+          "sampler": "LightTblTex",
+          "texture": "Default_lta.png",
+          "tex_index": 4
+        },
+        {
+          "sampler": "SphereMapTex",
+          "texture": "dummy_col.png",
+          "tex_index": 1
+        },
+        {
+          "sampler": "EffectTex",
+          "texture": "projection_effect_col.png",
+          "tex_index": 5
+        }
+      ],
+      "colors": [
+        {
+          "name": "ConstantColor0",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "ConstantColorSd0",
+          "r": 0.75,
+          "g": 0.75,
+          "b": 0.75
+        },
+        {
+          "name": "ConstantColor1",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "ConstantColorSd1",
+          "r": 0.75,
+          "g": 0.75,
+          "b": 0.75
+        },
+        {
+          "name": "L1ConstantColor0",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "L1AddColor0",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "L1ConstantColor1",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "L1AddColor1",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "L1ConstantColorSd0",
+          "r": 0.5457,
+          "g": 0.5457,
+          "b": 0.5457
+        },
+        {
+          "name": "L1ConstantColorSd1",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "DeepShadowColor",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "SpecularColor",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "SphereMapColor",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "RimColor",
+          "r": 0.574,
+          "g": 0.574,
+          "b": 0.574
+        },
+        {
+          "name": "RimColorShadow",
+          "r": 0.435,
+          "g": 0.435,
+          "b": 0.435
+        },
+        {
+          "name": "EffectColor01",
+          "r": 1.0,
+          "g": 0.0,
+          "b": 1.0
+        },
+        {
+          "name": "ConstantColor",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "OnGameColor",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "OutLineCol",
+          "r": 0.384,
+          "g": 0.384,
+          "b": 0.384
+        }
+      ],
+      "values": [
+        {
+          "name": "ColorUVScaleU",
+          "value": 2.0
+        },
+        {
+          "name": "ColorUVScaleV",
+          "value": 1.0
+        },
+        {
+          "name": "ColorUVTranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "ColorBaseU",
+          "value": 0.0
+        },
+        {
+          "name": "ColorUVTranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "ColorBaseV",
+          "value": 0.0
+        },
+        {
+          "name": "ConstantColor0Val",
+          "value": 1.0
+        },
+        {
+          "name": "Layer1UVScaleU",
+          "value": 1.0
+        },
+        {
+          "name": "Layer1UVScaleV",
+          "value": 1.0
+        },
+        {
+          "name": "Layer1UVTranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "Layer1BaseU",
+          "value": 0.0
+        },
+        {
+          "name": "Layer1UVTranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "Layer1BaseV",
+          "value": 0.0
+        },
+        {
+          "name": "EmissionMaskVal",
+          "value": 1.0
+        },
+        {
+          "name": "ConstantColorSd0Val",
+          "value": 1.0
+        },
+        {
+          "name": "ConstantColor1Val",
+          "value": 1.0
+        },
+        {
+          "name": "ConstantColorSd1Val",
+          "value": 1.0
+        },
+        {
+          "name": "ColorLerpValue",
+          "value": 1.0
+        },
+        {
+          "name": "L1ConstantColor0Val",
+          "value": 1.0
+        },
+        {
+          "name": "L1AddColor0Val",
+          "value": 0.0
+        },
+        {
+          "name": "L1ConstantColor1Val",
+          "value": 1.0
+        },
+        {
+          "name": "L1AddColor1Val",
+          "value": 0.0
+        },
+        {
+          "name": "L1ConstantColorSd0Val",
+          "value": 1.0
+        },
+        {
+          "name": "L1ConstantColorSd1Val",
+          "value": 1.0
+        },
+        {
+          "name": "Layer1OverLerpValue",
+          "value": 1.0
+        },
+        {
+          "name": "NormalMapUVScaleU",
+          "value": 1.0
+        },
+        {
+          "name": "NormalMapUVScaleV",
+          "value": 1.0
+        },
+        {
+          "name": "LightTblIndex",
+          "value": 5.0
+        },
+        {
+          "name": "LightMul",
+          "value": 1.0
+        },
+        {
+          "name": "SpecularPower",
+          "value": 6.0
+        },
+        {
+          "name": "SpecularScale",
+          "value": 0.25
+        },
+        {
+          "name": "SphereMapColorVal",
+          "value": 1.0
+        },
+        {
+          "name": "RimColorVal",
+          "value": 1.0
+        },
+        {
+          "name": "RimPower",
+          "value": 8.0
+        },
+        {
+          "name": "RimStrength",
+          "value": 8.0
+        },
+        {
+          "name": "Def0_OneMin1_FreCol",
+          "value": 1.0
+        },
+        {
+          "name": "DistortionIntensity",
+          "value": 1.0
+        },
+        {
+          "name": "Sin01",
+          "value": 4.0
+        },
+        {
+          "name": "ScaleUV",
+          "value": 1.0
+        },
+        {
+          "name": "EffectTexTranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "EffectTexTranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "EffectTexRotate",
+          "value": 0.0
+        },
+        {
+          "name": "EffectTexScaleU",
+          "value": 8.0
+        },
+        {
+          "name": "EffectTexScaleV",
+          "value": 5.0
+        },
+        {
+          "name": "EffectColPower",
+          "value": 1.0
+        },
+        {
+          "name": "OnGameEmissionVal",
+          "value": 1.0
+        },
+        {
+          "name": "ConstantColorVal",
+          "value": 1.0
+        },
+        {
+          "name": "ConstantAlpha",
+          "value": 1.0
+        },
+        {
+          "name": "OnGameColorVal",
+          "value": 1.0
+        },
+        {
+          "name": "OnGameAlpha",
+          "value": 1.0
+        },
+        {
+          "name": "OutLineID",
+          "value": 0.0
+        },
+        {
+          "name": "ProgID",
+          "value": 0.0
+        }
+      ],
+      "switches": [
+        {
+          "name": "useColorTex",
+          "value": true
+        },
+        {
+          "name": "SwitchEmissionMaskTexUV",
+          "value": false
+        },
+        {
+          "name": "EmissionMaskUse",
+          "value": false
+        },
+        {
+          "name": "SwitchPriority",
+          "value": false
+        },
+        {
+          "name": "Layer1Enable",
+          "value": false
+        },
+        {
+          "name": "SwitchAmbientTexUV",
+          "value": false
+        },
+        {
+          "name": "AmbientMapEnable",
+          "value": true
+        },
+        {
+          "name": "SwitchNormalMapUV",
+          "value": false
+        },
+        {
+          "name": "NormalMapEnable",
+          "value": true
+        },
+        {
+          "name": "LightTableEnable",
+          "value": true
+        },
+        {
+          "name": "SpecularMaskEnable",
+          "value": false
+        },
+        {
+          "name": "BaseColorAddEnable",
+          "value": true
+        },
+        {
+          "name": "SphereMapEnable",
+          "value": false
+        },
+        {
+          "name": "SphereMaskEnable",
+          "value": false
+        },
+        {
+          "name": "RimMaskEnable",
+          "value": false
+        },
+        {
+          "name": "alphaShell",
+          "value": false
+        },
+        {
+          "name": "EffectVal",
+          "value": true
+        },
+        {
+          "name": "NormalEdgeEnable",
+          "value": true
+        },
+        {
+          "name": "OutLineIDEnable",
+          "value": false
+        },
+        {
+          "name": "OutLineColFixed",
+          "value": false
+        }
+      ],
+      "textures_used": [
+        {
+          "sampler": "Col0Tex",
+          "texture": "pm0546_00_Body_col_rare.png",
+          "envtype": "modulate"
+        },
+        {
+          "sampler": "NormalMapTex",
+          "texture": "pm0546_00_Body_nor.png",
+          "envtype": "normal"
+        }
+      ],
+      "used_texture": "pm0546_00_Body_col_rare.png",
+      "used_sampler": "Col0Tex"
+    },
+    {
+      "name": "REye",
+      "shader_group": "PokeDefaultShader",
+      "render_layer": 0,
+      "shader_index": 2,
+      "texture_maps": [
+        {
+          "sampler": "Col0Tex",
+          "texture": "pm0546_00_Eye_col_rare.png",
+          "tex_index": 6
+        },
+        {
+          "sampler": "EmissionMaskTex",
+          "texture": "dummy_col.png",
+          "tex_index": 1
+        },
+        {
+          "sampler": "LyCol0Tex",
+          "texture": "dummy_col.png",
+          "tex_index": 1
+        },
+        {
+          "sampler": "AmbientTex",
+          "texture": "pm0546_00_Eye_amb.png",
+          "tex_index": 7
+        },
+        {
+          "sampler": "NormalMapTex",
+          "texture": "pm0546_00_Eye_nor.png",
+          "tex_index": 8
+        },
+        {
+          "sampler": "LightTblTex",
+          "texture": "Default_lta.png",
+          "tex_index": 4
+        },
+        {
+          "sampler": "SphereMapTex",
+          "texture": "dummy_col.png",
+          "tex_index": 1
+        },
+        {
+          "sampler": "EffectTex",
+          "texture": "projection_effect_col.png",
+          "tex_index": 5
+        }
+      ],
+      "colors": [
+        {
+          "name": "ConstantColor0",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "ConstantColorSd0",
+          "r": 0.75,
+          "g": 0.75,
+          "b": 0.75
+        },
+        {
+          "name": "ConstantColor1",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "ConstantColorSd1",
+          "r": 0.75,
+          "g": 0.75,
+          "b": 0.75
+        },
+        {
+          "name": "L1ConstantColor0",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "L1AddColor0",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "L1ConstantColor1",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "L1AddColor1",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "L1ConstantColorSd0",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "L1ConstantColorSd1",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "DeepShadowColor",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "SpecularColor",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "SphereMapColor",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "RimColor",
+          "r": 0.574,
+          "g": 0.574,
+          "b": 0.574
+        },
+        {
+          "name": "RimColorShadow",
+          "r": 0.435,
+          "g": 0.435,
+          "b": 0.435
+        },
+        {
+          "name": "EffectColor01",
+          "r": 1.0,
+          "g": 0.0,
+          "b": 1.0
+        },
+        {
+          "name": "ConstantColor",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "OnGameColor",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "OutLineCol",
+          "r": 0.384,
+          "g": 0.384,
+          "b": 0.384
+        }
+      ],
+      "values": [
+        {
+          "name": "ColorUVScaleU",
+          "value": 2.0
+        },
+        {
+          "name": "ColorUVScaleV",
+          "value": 1.0
+        },
+        {
+          "name": "ColorUVTranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "ColorBaseU",
+          "value": -0.5
+        },
+        {
+          "name": "ColorUVTranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "ColorBaseV",
+          "value": 0.0
+        },
+        {
+          "name": "ConstantColor0Val",
+          "value": 1.0
+        },
+        {
+          "name": "Layer1UVScaleU",
+          "value": 1.0
+        },
+        {
+          "name": "Layer1UVScaleV",
+          "value": 1.0
+        },
+        {
+          "name": "Layer1UVTranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "Layer1BaseU",
+          "value": 0.0
+        },
+        {
+          "name": "Layer1UVTranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "Layer1BaseV",
+          "value": 0.0
+        },
+        {
+          "name": "EmissionMaskVal",
+          "value": 1.0
+        },
+        {
+          "name": "ConstantColorSd0Val",
+          "value": 1.0
+        },
+        {
+          "name": "ConstantColor1Val",
+          "value": 1.0
+        },
+        {
+          "name": "ConstantColorSd1Val",
+          "value": 1.0
+        },
+        {
+          "name": "ColorLerpValue",
+          "value": 1.0
+        },
+        {
+          "name": "L1ConstantColor0Val",
+          "value": 1.0
+        },
+        {
+          "name": "L1AddColor0Val",
+          "value": 0.0
+        },
+        {
+          "name": "L1ConstantColor1Val",
+          "value": 1.0
+        },
+        {
+          "name": "L1AddColor1Val",
+          "value": 0.0
+        },
+        {
+          "name": "L1ConstantColorSd0Val",
+          "value": 1.0
+        },
+        {
+          "name": "L1ConstantColorSd1Val",
+          "value": 1.0
+        },
+        {
+          "name": "Layer1OverLerpValue",
+          "value": 1.0
+        },
+        {
+          "name": "NormalMapUVScaleU",
+          "value": 2.0
+        },
+        {
+          "name": "NormalMapUVScaleV",
+          "value": 4.0
+        },
+        {
+          "name": "LightTblIndex",
+          "value": 5.0
+        },
+        {
+          "name": "LightMul",
+          "value": 1.0
+        },
+        {
+          "name": "SpecularPower",
+          "value": 6.0
+        },
+        {
+          "name": "SpecularScale",
+          "value": 0.25
+        },
+        {
+          "name": "SphereMapColorVal",
+          "value": 1.0
+        },
+        {
+          "name": "RimColorVal",
+          "value": 1.0
+        },
+        {
+          "name": "RimPower",
+          "value": 8.0
+        },
+        {
+          "name": "RimStrength",
+          "value": 8.0
+        },
+        {
+          "name": "Def0_OneMin1_FreCol",
+          "value": 1.0
+        },
+        {
+          "name": "DistortionIntensity",
+          "value": 1.0
+        },
+        {
+          "name": "Sin01",
+          "value": 4.0
+        },
+        {
+          "name": "ScaleUV",
+          "value": 1.0
+        },
+        {
+          "name": "EffectTexTranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "EffectTexTranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "EffectTexRotate",
+          "value": 0.0
+        },
+        {
+          "name": "EffectTexScaleU",
+          "value": 8.0
+        },
+        {
+          "name": "EffectTexScaleV",
+          "value": 5.0
+        },
+        {
+          "name": "EffectColPower",
+          "value": 1.0
+        },
+        {
+          "name": "OnGameEmissionVal",
+          "value": 1.0
+        },
+        {
+          "name": "ConstantColorVal",
+          "value": 1.0
+        },
+        {
+          "name": "ConstantAlpha",
+          "value": 1.0
+        },
+        {
+          "name": "OnGameColorVal",
+          "value": 1.0
+        },
+        {
+          "name": "OnGameAlpha",
+          "value": 1.0
+        },
+        {
+          "name": "OutLineID",
+          "value": 0.0
+        },
+        {
+          "name": "ProgID",
+          "value": 0.0
+        }
+      ],
+      "switches": [
+        {
+          "name": "useColorTex",
+          "value": true
+        },
+        {
+          "name": "SwitchEmissionMaskTexUV",
+          "value": false
+        },
+        {
+          "name": "EmissionMaskUse",
+          "value": false
+        },
+        {
+          "name": "SwitchPriority",
+          "value": false
+        },
+        {
+          "name": "Layer1Enable",
+          "value": false
+        },
+        {
+          "name": "SwitchAmbientTexUV",
+          "value": false
+        },
+        {
+          "name": "AmbientMapEnable",
+          "value": true
+        },
+        {
+          "name": "SwitchNormalMapUV",
+          "value": false
+        },
+        {
+          "name": "NormalMapEnable",
+          "value": true
+        },
+        {
+          "name": "LightTableEnable",
+          "value": true
+        },
+        {
+          "name": "SpecularMaskEnable",
+          "value": false
+        },
+        {
+          "name": "BaseColorAddEnable",
+          "value": true
+        },
+        {
+          "name": "SphereMapEnable",
+          "value": false
+        },
+        {
+          "name": "SphereMaskEnable",
+          "value": false
+        },
+        {
+          "name": "RimMaskEnable",
+          "value": false
+        },
+        {
+          "name": "alphaShell",
+          "value": false
+        },
+        {
+          "name": "EffectVal",
+          "value": true
+        },
+        {
+          "name": "NormalEdgeEnable",
+          "value": true
+        },
+        {
+          "name": "OutLineIDEnable",
+          "value": false
+        },
+        {
+          "name": "OutLineColFixed",
+          "value": false
+        }
+      ],
+      "textures_used": [
+        {
+          "sampler": "Col0Tex",
+          "texture": "pm0546_00_Eye_col_rare.png",
+          "envtype": "modulate"
+        },
+        {
+          "sampler": "NormalMapTex",
+          "texture": "pm0546_00_Eye_nor.png",
+          "envtype": "normal"
+        }
+      ],
+      "used_texture": "pm0546_00_Eye_col_rare.png",
+      "used_sampler": "Col0Tex"
+    },
+    {
+      "name": "LEye",
+      "shader_group": "PokeDefaultShader",
+      "render_layer": 0,
+      "shader_index": 3,
+      "texture_maps": [
+        {
+          "sampler": "Col0Tex",
+          "texture": "pm0546_00_Eye_col_rare.png",
+          "tex_index": 6
+        },
+        {
+          "sampler": "EmissionMaskTex",
+          "texture": "dummy_col.png",
+          "tex_index": 1
+        },
+        {
+          "sampler": "LyCol0Tex",
+          "texture": "dummy_col.png",
+          "tex_index": 1
+        },
+        {
+          "sampler": "AmbientTex",
+          "texture": "pm0546_00_Eye_amb.png",
+          "tex_index": 7
+        },
+        {
+          "sampler": "NormalMapTex",
+          "texture": "pm0546_00_Eye_nor.png",
+          "tex_index": 8
+        },
+        {
+          "sampler": "LightTblTex",
+          "texture": "Default_lta.png",
+          "tex_index": 4
+        },
+        {
+          "sampler": "SphereMapTex",
+          "texture": "dummy_col.png",
+          "tex_index": 1
+        },
+        {
+          "sampler": "EffectTex",
+          "texture": "projection_effect_col.png",
+          "tex_index": 5
+        }
+      ],
+      "colors": [
+        {
+          "name": "ConstantColor0",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "ConstantColorSd0",
+          "r": 0.75,
+          "g": 0.75,
+          "b": 0.75
+        },
+        {
+          "name": "ConstantColor1",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "ConstantColorSd1",
+          "r": 0.75,
+          "g": 0.75,
+          "b": 0.75
+        },
+        {
+          "name": "L1ConstantColor0",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "L1AddColor0",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "L1ConstantColor1",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "L1AddColor1",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "L1ConstantColorSd0",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "L1ConstantColorSd1",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "DeepShadowColor",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "SpecularColor",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "SphereMapColor",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "RimColor",
+          "r": 0.574,
+          "g": 0.574,
+          "b": 0.574
+        },
+        {
+          "name": "RimColorShadow",
+          "r": 0.435,
+          "g": 0.435,
+          "b": 0.435
+        },
+        {
+          "name": "EffectColor01",
+          "r": 1.0,
+          "g": 0.0,
+          "b": 1.0
+        },
+        {
+          "name": "ConstantColor",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "OnGameColor",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "OutLineCol",
+          "r": 0.384,
+          "g": 0.384,
+          "b": 0.384
+        }
+      ],
+      "values": [
+        {
+          "name": "ColorUVScaleU",
+          "value": 2.0
+        },
+        {
+          "name": "ColorUVScaleV",
+          "value": 1.0
+        },
+        {
+          "name": "ColorUVTranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "ColorBaseU",
+          "value": -0.5
+        },
+        {
+          "name": "ColorUVTranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "ColorBaseV",
+          "value": 0.0
+        },
+        {
+          "name": "ConstantColor0Val",
+          "value": 1.0
+        },
+        {
+          "name": "Layer1UVScaleU",
+          "value": 1.0
+        },
+        {
+          "name": "Layer1UVScaleV",
+          "value": 1.0
+        },
+        {
+          "name": "Layer1UVTranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "Layer1BaseU",
+          "value": 0.0
+        },
+        {
+          "name": "Layer1UVTranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "Layer1BaseV",
+          "value": 0.0
+        },
+        {
+          "name": "EmissionMaskVal",
+          "value": 1.0
+        },
+        {
+          "name": "ConstantColorSd0Val",
+          "value": 1.0
+        },
+        {
+          "name": "ConstantColor1Val",
+          "value": 1.0
+        },
+        {
+          "name": "ConstantColorSd1Val",
+          "value": 1.0
+        },
+        {
+          "name": "ColorLerpValue",
+          "value": 1.0
+        },
+        {
+          "name": "L1ConstantColor0Val",
+          "value": 1.0
+        },
+        {
+          "name": "L1AddColor0Val",
+          "value": 0.0
+        },
+        {
+          "name": "L1ConstantColor1Val",
+          "value": 1.0
+        },
+        {
+          "name": "L1AddColor1Val",
+          "value": 0.0
+        },
+        {
+          "name": "L1ConstantColorSd0Val",
+          "value": 1.0
+        },
+        {
+          "name": "L1ConstantColorSd1Val",
+          "value": 1.0
+        },
+        {
+          "name": "Layer1OverLerpValue",
+          "value": 1.0
+        },
+        {
+          "name": "NormalMapUVScaleU",
+          "value": 2.0
+        },
+        {
+          "name": "NormalMapUVScaleV",
+          "value": 4.0
+        },
+        {
+          "name": "LightTblIndex",
+          "value": 5.0
+        },
+        {
+          "name": "LightMul",
+          "value": 1.0
+        },
+        {
+          "name": "SpecularPower",
+          "value": 6.0
+        },
+        {
+          "name": "SpecularScale",
+          "value": 0.25
+        },
+        {
+          "name": "SphereMapColorVal",
+          "value": 1.0
+        },
+        {
+          "name": "RimColorVal",
+          "value": 1.0
+        },
+        {
+          "name": "RimPower",
+          "value": 8.0
+        },
+        {
+          "name": "RimStrength",
+          "value": 8.0
+        },
+        {
+          "name": "Def0_OneMin1_FreCol",
+          "value": 1.0
+        },
+        {
+          "name": "DistortionIntensity",
+          "value": 1.0
+        },
+        {
+          "name": "Sin01",
+          "value": 4.0
+        },
+        {
+          "name": "ScaleUV",
+          "value": 1.0
+        },
+        {
+          "name": "EffectTexTranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "EffectTexTranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "EffectTexRotate",
+          "value": 0.0
+        },
+        {
+          "name": "EffectTexScaleU",
+          "value": 8.0
+        },
+        {
+          "name": "EffectTexScaleV",
+          "value": 5.0
+        },
+        {
+          "name": "EffectColPower",
+          "value": 1.0
+        },
+        {
+          "name": "OnGameEmissionVal",
+          "value": 1.0
+        },
+        {
+          "name": "ConstantColorVal",
+          "value": 1.0
+        },
+        {
+          "name": "ConstantAlpha",
+          "value": 1.0
+        },
+        {
+          "name": "OnGameColorVal",
+          "value": 1.0
+        },
+        {
+          "name": "OnGameAlpha",
+          "value": 1.0
+        },
+        {
+          "name": "OutLineID",
+          "value": 0.0
+        },
+        {
+          "name": "ProgID",
+          "value": 0.0
+        }
+      ],
+      "switches": [
+        {
+          "name": "useColorTex",
+          "value": true
+        },
+        {
+          "name": "SwitchEmissionMaskTexUV",
+          "value": false
+        },
+        {
+          "name": "EmissionMaskUse",
+          "value": false
+        },
+        {
+          "name": "SwitchPriority",
+          "value": false
+        },
+        {
+          "name": "Layer1Enable",
+          "value": false
+        },
+        {
+          "name": "SwitchAmbientTexUV",
+          "value": false
+        },
+        {
+          "name": "AmbientMapEnable",
+          "value": true
+        },
+        {
+          "name": "SwitchNormalMapUV",
+          "value": false
+        },
+        {
+          "name": "NormalMapEnable",
+          "value": true
+        },
+        {
+          "name": "LightTableEnable",
+          "value": true
+        },
+        {
+          "name": "SpecularMaskEnable",
+          "value": false
+        },
+        {
+          "name": "BaseColorAddEnable",
+          "value": true
+        },
+        {
+          "name": "SphereMapEnable",
+          "value": false
+        },
+        {
+          "name": "SphereMaskEnable",
+          "value": false
+        },
+        {
+          "name": "RimMaskEnable",
+          "value": false
+        },
+        {
+          "name": "alphaShell",
+          "value": false
+        },
+        {
+          "name": "EffectVal",
+          "value": true
+        },
+        {
+          "name": "NormalEdgeEnable",
+          "value": true
+        },
+        {
+          "name": "OutLineIDEnable",
+          "value": false
+        },
+        {
+          "name": "OutLineColFixed",
+          "value": false
+        }
+      ],
+      "textures_used": [
+        {
+          "sampler": "Col0Tex",
+          "texture": "pm0546_00_Eye_col_rare.png",
+          "envtype": "modulate"
+        },
+        {
+          "sampler": "NormalMapTex",
+          "texture": "pm0546_00_Eye_nor.png",
+          "envtype": "normal"
+        }
+      ],
+      "used_texture": "pm0546_00_Eye_col_rare.png",
+      "used_sampler": "Col0Tex"
+    },
+    {
+      "name": "Body01",
+      "shader_group": "PokeDefaultShader",
+      "render_layer": 0,
+      "shader_index": 4,
+      "texture_maps": [
+        {
+          "sampler": "Col0Tex",
+          "texture": "pm0546_00_Body_col_rare.png",
+          "tex_index": 0
+        },
+        {
+          "sampler": "EmissionMaskTex",
+          "texture": "dummy_col.png",
+          "tex_index": 1
+        },
+        {
+          "sampler": "LyCol0Tex",
+          "texture": "dummy_col.png",
+          "tex_index": 1
+        },
+        {
+          "sampler": "AmbientTex",
+          "texture": "pm0546_00_Body_amb.png",
+          "tex_index": 2
+        },
+        {
+          "sampler": "NormalMapTex",
+          "texture": "pm0546_00_Body_nor.png",
+          "tex_index": 3
+        },
+        {
+          "sampler": "LightTblTex",
+          "texture": "Default_lta.png",
+          "tex_index": 4
+        },
+        {
+          "sampler": "SphereMapTex",
+          "texture": "dummy_col.png",
+          "tex_index": 1
+        },
+        {
+          "sampler": "EffectTex",
+          "texture": "projection_effect_col.png",
+          "tex_index": 5
+        }
+      ],
+      "colors": [
+        {
+          "name": "ConstantColor0",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "ConstantColorSd0",
+          "r": 0.7195,
+          "g": 0.77,
+          "b": 0.6645
+        },
+        {
+          "name": "ConstantColor1",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "ConstantColorSd1",
+          "r": 0.77,
+          "g": 0.6945,
+          "b": 0.589
+        },
+        {
+          "name": "L1ConstantColor0",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "L1AddColor0",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "L1ConstantColor1",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "L1AddColor1",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "L1ConstantColorSd0",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "L1ConstantColorSd1",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "DeepShadowColor",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "SpecularColor",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "SphereMapColor",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "RimColor",
+          "r": 0.1651,
+          "g": 0.4019,
+          "b": 0.0451
+        },
+        {
+          "name": "RimColorShadow",
+          "r": 0.1418,
+          "g": 0.2831,
+          "b": 0.0582
+        },
+        {
+          "name": "EffectColor01",
+          "r": 1.0,
+          "g": 0.0,
+          "b": 1.0
+        },
+        {
+          "name": "ConstantColor",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "OnGameColor",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "OutLineCol",
+          "r": 0.5778,
+          "g": 0.6444,
+          "b": 0.5113
+        }
+      ],
+      "values": [
+        {
+          "name": "ColorUVScaleU",
+          "value": 2.0
+        },
+        {
+          "name": "ColorUVScaleV",
+          "value": 1.0
+        },
+        {
+          "name": "ColorUVTranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "ColorBaseU",
+          "value": 0.0
+        },
+        {
+          "name": "ColorUVTranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "ColorBaseV",
+          "value": 0.0
+        },
+        {
+          "name": "ConstantColor0Val",
+          "value": 1.0
+        },
+        {
+          "name": "Layer1UVScaleU",
+          "value": 1.0
+        },
+        {
+          "name": "Layer1UVScaleV",
+          "value": 1.0
+        },
+        {
+          "name": "Layer1UVTranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "Layer1BaseU",
+          "value": 0.0
+        },
+        {
+          "name": "Layer1UVTranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "Layer1BaseV",
+          "value": 0.0
+        },
+        {
+          "name": "EmissionMaskVal",
+          "value": 1.0
+        },
+        {
+          "name": "ConstantColorSd0Val",
+          "value": 1.0
+        },
+        {
+          "name": "ConstantColor1Val",
+          "value": 1.0
+        },
+        {
+          "name": "ConstantColorSd1Val",
+          "value": 1.0
+        },
+        {
+          "name": "ColorLerpValue",
+          "value": 1.0
+        },
+        {
+          "name": "L1ConstantColor0Val",
+          "value": 1.0
+        },
+        {
+          "name": "L1AddColor0Val",
+          "value": 0.0
+        },
+        {
+          "name": "L1ConstantColor1Val",
+          "value": 1.0
+        },
+        {
+          "name": "L1AddColor1Val",
+          "value": 0.0
+        },
+        {
+          "name": "L1ConstantColorSd0Val",
+          "value": 1.0
+        },
+        {
+          "name": "L1ConstantColorSd1Val",
+          "value": 1.0
+        },
+        {
+          "name": "Layer1OverLerpValue",
+          "value": 1.0
+        },
+        {
+          "name": "NormalMapUVScaleU",
+          "value": 1.0
+        },
+        {
+          "name": "NormalMapUVScaleV",
+          "value": 1.0
+        },
+        {
+          "name": "LightTblIndex",
+          "value": 5.0
+        },
+        {
+          "name": "LightMul",
+          "value": 1.0
+        },
+        {
+          "name": "SpecularPower",
+          "value": 6.0
+        },
+        {
+          "name": "SpecularScale",
+          "value": 0.25
+        },
+        {
+          "name": "SphereMapColorVal",
+          "value": 1.0
+        },
+        {
+          "name": "RimColorVal",
+          "value": 1.0
+        },
+        {
+          "name": "RimPower",
+          "value": 8.0
+        },
+        {
+          "name": "RimStrength",
+          "value": 8.0
+        },
+        {
+          "name": "Def0_OneMin1_FreCol",
+          "value": 1.0
+        },
+        {
+          "name": "DistortionIntensity",
+          "value": 1.0
+        },
+        {
+          "name": "Sin01",
+          "value": 4.0
+        },
+        {
+          "name": "ScaleUV",
+          "value": 1.0
+        },
+        {
+          "name": "EffectTexTranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "EffectTexTranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "EffectTexRotate",
+          "value": 0.0
+        },
+        {
+          "name": "EffectTexScaleU",
+          "value": 8.0
+        },
+        {
+          "name": "EffectTexScaleV",
+          "value": 5.0
+        },
+        {
+          "name": "EffectColPower",
+          "value": 1.0
+        },
+        {
+          "name": "OnGameEmissionVal",
+          "value": 1.0
+        },
+        {
+          "name": "ConstantColorVal",
+          "value": 1.0
+        },
+        {
+          "name": "ConstantAlpha",
+          "value": 1.0
+        },
+        {
+          "name": "OnGameColorVal",
+          "value": 1.0
+        },
+        {
+          "name": "OnGameAlpha",
+          "value": 1.0
+        },
+        {
+          "name": "OutLineID",
+          "value": 0.0
+        },
+        {
+          "name": "ProgID",
+          "value": 0.0
+        }
+      ],
+      "switches": [
+        {
+          "name": "useColorTex",
+          "value": true
+        },
+        {
+          "name": "SwitchEmissionMaskTexUV",
+          "value": false
+        },
+        {
+          "name": "EmissionMaskUse",
+          "value": false
+        },
+        {
+          "name": "SwitchPriority",
+          "value": false
+        },
+        {
+          "name": "Layer1Enable",
+          "value": false
+        },
+        {
+          "name": "SwitchAmbientTexUV",
+          "value": false
+        },
+        {
+          "name": "AmbientMapEnable",
+          "value": true
+        },
+        {
+          "name": "SwitchNormalMapUV",
+          "value": false
+        },
+        {
+          "name": "NormalMapEnable",
+          "value": true
+        },
+        {
+          "name": "LightTableEnable",
+          "value": true
+        },
+        {
+          "name": "SpecularMaskEnable",
+          "value": false
+        },
+        {
+          "name": "BaseColorAddEnable",
+          "value": true
+        },
+        {
+          "name": "SphereMapEnable",
+          "value": false
+        },
+        {
+          "name": "SphereMaskEnable",
+          "value": false
+        },
+        {
+          "name": "RimMaskEnable",
+          "value": false
+        },
+        {
+          "name": "alphaShell",
+          "value": false
+        },
+        {
+          "name": "EffectVal",
+          "value": true
+        },
+        {
+          "name": "NormalEdgeEnable",
+          "value": true
+        },
+        {
+          "name": "OutLineIDEnable",
+          "value": false
+        },
+        {
+          "name": "OutLineColFixed",
+          "value": false
+        }
+      ],
+      "textures_used": [
+        {
+          "sampler": "Col0Tex",
+          "texture": "pm0546_00_Body_col_rare.png",
+          "envtype": "modulate"
+        },
+        {
+          "sampler": "NormalMapTex",
+          "texture": "pm0546_00_Body_nor.png",
+          "envtype": "normal"
+        }
+      ],
+      "used_texture": "pm0546_00_Body_col_rare.png",
+      "used_sampler": "Col0Tex"
+    },
+    {
+      "name": "BodyVco",
+      "shader_group": "PokeDefaultShader",
+      "render_layer": 0,
+      "shader_index": 5,
+      "texture_maps": [
+        {
+          "sampler": "Col0Tex",
+          "texture": "pm0546_00_Body_col_rare.png",
+          "tex_index": 0
+        },
+        {
+          "sampler": "EmissionMaskTex",
+          "texture": "pm0546_00_Body_emi.png",
+          "tex_index": 9
+        },
+        {
+          "sampler": "LyCol0Tex",
+          "texture": "dummy_col.png",
+          "tex_index": 1
+        },
+        {
+          "sampler": "AmbientTex",
+          "texture": "pm0546_00_Body_amb.png",
+          "tex_index": 2
+        },
+        {
+          "sampler": "NormalMapTex",
+          "texture": "pm0546_00_Body_nor.png",
+          "tex_index": 3
+        },
+        {
+          "sampler": "LightTblTex",
+          "texture": "Default_lta.png",
+          "tex_index": 4
+        },
+        {
+          "sampler": "SphereMapTex",
+          "texture": "dummy_col.png",
+          "tex_index": 1
+        },
+        {
+          "sampler": "EffectTex",
+          "texture": "projection_effect_col.png",
+          "tex_index": 5
+        }
+      ],
+      "colors": [
+        {
+          "name": "ConstantColor0",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "ConstantColorSd0",
+          "r": 0.7195,
+          "g": 0.77,
+          "b": 0.6645
+        },
+        {
+          "name": "ConstantColor1",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "ConstantColorSd1",
+          "r": 0.77,
+          "g": 0.6945,
+          "b": 0.589
+        },
+        {
+          "name": "L1ConstantColor0",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "L1AddColor0",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "L1ConstantColor1",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "L1AddColor1",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "L1ConstantColorSd0",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "L1ConstantColorSd1",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "DeepShadowColor",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "SpecularColor",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "SphereMapColor",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "RimColor",
+          "r": 0.1651,
+          "g": 0.4019,
+          "b": 0.0451
+        },
+        {
+          "name": "RimColorShadow",
+          "r": 0.1418,
+          "g": 0.2831,
+          "b": 0.0582
+        },
+        {
+          "name": "EffectColor01",
+          "r": 1.0,
+          "g": 0.0,
+          "b": 1.0
+        },
+        {
+          "name": "ConstantColor",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "OnGameColor",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "OutLineCol",
+          "r": 0.7304,
+          "g": 0.76,
+          "b": 0.7007
+        }
+      ],
+      "values": [
+        {
+          "name": "ColorUVScaleU",
+          "value": 2.0
+        },
+        {
+          "name": "ColorUVScaleV",
+          "value": 1.0
+        },
+        {
+          "name": "ColorUVTranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "ColorBaseU",
+          "value": 0.0
+        },
+        {
+          "name": "ColorUVTranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "ColorBaseV",
+          "value": 0.0
+        },
+        {
+          "name": "ConstantColor0Val",
+          "value": 1.0
+        },
+        {
+          "name": "Layer1UVScaleU",
+          "value": 1.0
+        },
+        {
+          "name": "Layer1UVScaleV",
+          "value": 1.0
+        },
+        {
+          "name": "Layer1UVTranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "Layer1BaseU",
+          "value": 0.0
+        },
+        {
+          "name": "Layer1UVTranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "Layer1BaseV",
+          "value": 0.0
+        },
+        {
+          "name": "EmissionMaskVal",
+          "value": 1.0
+        },
+        {
+          "name": "ConstantColorSd0Val",
+          "value": 1.0
+        },
+        {
+          "name": "ConstantColor1Val",
+          "value": 1.0
+        },
+        {
+          "name": "ConstantColorSd1Val",
+          "value": 1.0
+        },
+        {
+          "name": "ColorLerpValue",
+          "value": 1.0
+        },
+        {
+          "name": "L1ConstantColor0Val",
+          "value": 1.0
+        },
+        {
+          "name": "L1AddColor0Val",
+          "value": 0.0
+        },
+        {
+          "name": "L1ConstantColor1Val",
+          "value": 1.0
+        },
+        {
+          "name": "L1AddColor1Val",
+          "value": 0.0
+        },
+        {
+          "name": "L1ConstantColorSd0Val",
+          "value": 1.0
+        },
+        {
+          "name": "L1ConstantColorSd1Val",
+          "value": 1.0
+        },
+        {
+          "name": "Layer1OverLerpValue",
+          "value": 1.0
+        },
+        {
+          "name": "NormalMapUVScaleU",
+          "value": 1.0
+        },
+        {
+          "name": "NormalMapUVScaleV",
+          "value": 1.0
+        },
+        {
+          "name": "LightTblIndex",
+          "value": 5.0
+        },
+        {
+          "name": "LightMul",
+          "value": 1.0
+        },
+        {
+          "name": "SpecularPower",
+          "value": 6.0
+        },
+        {
+          "name": "SpecularScale",
+          "value": 0.25
+        },
+        {
+          "name": "SphereMapColorVal",
+          "value": 1.0
+        },
+        {
+          "name": "RimColorVal",
+          "value": 1.0
+        },
+        {
+          "name": "RimPower",
+          "value": 8.0
+        },
+        {
+          "name": "RimStrength",
+          "value": 8.0
+        },
+        {
+          "name": "Def0_OneMin1_FreCol",
+          "value": 1.0
+        },
+        {
+          "name": "DistortionIntensity",
+          "value": 1.0
+        },
+        {
+          "name": "Sin01",
+          "value": 4.0
+        },
+        {
+          "name": "ScaleUV",
+          "value": 1.0
+        },
+        {
+          "name": "EffectTexTranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "EffectTexTranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "EffectTexRotate",
+          "value": 0.0
+        },
+        {
+          "name": "EffectTexScaleU",
+          "value": 8.0
+        },
+        {
+          "name": "EffectTexScaleV",
+          "value": 5.0
+        },
+        {
+          "name": "EffectColPower",
+          "value": 1.0
+        },
+        {
+          "name": "OnGameEmissionVal",
+          "value": 1.0
+        },
+        {
+          "name": "ConstantColorVal",
+          "value": 1.0
+        },
+        {
+          "name": "ConstantAlpha",
+          "value": 1.0
+        },
+        {
+          "name": "OnGameColorVal",
+          "value": 1.0
+        },
+        {
+          "name": "OnGameAlpha",
+          "value": 1.0
+        },
+        {
+          "name": "OutLineID",
+          "value": 0.0
+        },
+        {
+          "name": "ProgID",
+          "value": 0.0
+        }
+      ],
+      "switches": [
+        {
+          "name": "useColorTex",
+          "value": true
+        },
+        {
+          "name": "SwitchEmissionMaskTexUV",
+          "value": false
+        },
+        {
+          "name": "EmissionMaskUse",
+          "value": false
+        },
+        {
+          "name": "SwitchPriority",
+          "value": false
+        },
+        {
+          "name": "Layer1Enable",
+          "value": false
+        },
+        {
+          "name": "SwitchAmbientTexUV",
+          "value": false
+        },
+        {
+          "name": "AmbientMapEnable",
+          "value": true
+        },
+        {
+          "name": "SwitchNormalMapUV",
+          "value": false
+        },
+        {
+          "name": "NormalMapEnable",
+          "value": true
+        },
+        {
+          "name": "LightTableEnable",
+          "value": true
+        },
+        {
+          "name": "SpecularMaskEnable",
+          "value": false
+        },
+        {
+          "name": "BaseColorAddEnable",
+          "value": true
+        },
+        {
+          "name": "SphereMapEnable",
+          "value": false
+        },
+        {
+          "name": "SphereMaskEnable",
+          "value": false
+        },
+        {
+          "name": "RimMaskEnable",
+          "value": true
+        },
+        {
+          "name": "alphaShell",
+          "value": false
+        },
+        {
+          "name": "EffectVal",
+          "value": true
+        },
+        {
+          "name": "NormalEdgeEnable",
+          "value": false
+        },
+        {
+          "name": "OutLineIDEnable",
+          "value": false
+        },
+        {
+          "name": "OutLineColFixed",
+          "value": false
+        }
+      ],
+      "textures_used": [
+        {
+          "sampler": "Col0Tex",
+          "texture": "pm0546_00_Body_col_rare.png",
+          "envtype": "modulate"
+        },
+        {
+          "sampler": "NormalMapTex",
+          "texture": "pm0546_00_Body_nor.png",
+          "envtype": "normal"
+        }
+      ],
+      "used_texture": "pm0546_00_Body_col_rare.png",
+      "used_sampler": "Col0Tex"
+    }
+  ],
+  "meshes": [
+    {
+      "index": 0,
+      "num_vertices": 1634,
+      "num_faces": 3160,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 1,
+      "num_vertices": 1015,
+      "num_faces": 1536,
+      "material_indices": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "index": 2,
+      "num_vertices": 270,
+      "num_faces": 410,
+      "material_indices": [
+        5
+      ]
+    }
+  ],
+  "texture_names": [
+    "pm0546_00_Body_col_rare",
+    "dummy_col",
+    "pm0546_00_Body_amb",
+    "pm0546_00_Body_nor",
+    "Default_lta",
+    "projection_effect_col",
+    "pm0546_00_Eye_col_rare",
+    "pm0546_00_Eye_amb",
+    "pm0546_00_Eye_nor",
+    "pm0546_00_Body_emi"
+  ]
+}

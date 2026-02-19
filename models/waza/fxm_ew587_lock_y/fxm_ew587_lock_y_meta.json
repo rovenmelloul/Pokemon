@@ -1,0 +1,187 @@
+{
+  "materials": [
+    {
+      "name": "ShaderfxShader2",
+      "shader_group": "Manual",
+      "render_layer": 0,
+      "shader_index": 0,
+      "texture_maps": [
+        {
+          "sampler": "LightTableTex",
+          "texture": "fxmt_cmn_lt001_m_lta.png",
+          "tex_index": 0
+        }
+      ],
+      "colors": [
+        {
+          "name": "FresnelColor",
+          "r": 1.0,
+          "g": 0.55,
+          "b": 0.9281
+        },
+        {
+          "name": "OutLineCol",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "Shadow_Color",
+          "r": 0.214,
+          "g": 0.214,
+          "b": 0.214
+        },
+        {
+          "name": "ConstantColor01",
+          "r": 1.0,
+          "g": 0.389,
+          "b": 0.72
+        }
+      ],
+      "values": [
+        {
+          "name": "Def0_OneMin1_FreCol",
+          "value": 0.0
+        },
+        {
+          "name": "FresnelPowerCol",
+          "value": 4.0
+        },
+        {
+          "name": "FresnelStrengthCol",
+          "value": 8.0
+        },
+        {
+          "name": "OutLineID",
+          "value": 0.0
+        },
+        {
+          "name": "ProgID",
+          "value": 0.0
+        },
+        {
+          "name": "ShadowRange",
+          "value": 0.3
+        },
+        {
+          "name": "ConstantAlpha01",
+          "value": 1.0
+        }
+      ],
+      "switches": [
+        {
+          "name": "NormalEdgeEnable",
+          "value": false
+        },
+        {
+          "name": "OutLineIDEnable",
+          "value": false
+        },
+        {
+          "name": "OutLineColFixed",
+          "value": false
+        }
+      ],
+      "textures_used": [
+        {
+          "sampler": "LightTableTex",
+          "texture": "fxmt_cmn_lt001_m_lta.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "fxmt_cmn_lt001_m_lta.png",
+      "used_sampler": "LightTableTex"
+    },
+    {
+      "name": "ShaderfxShader1",
+      "shader_group": "Manual",
+      "render_layer": 0,
+      "shader_index": 1,
+      "texture_maps": [],
+      "colors": [
+        {
+          "name": "ConstantColor01",
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0
+        },
+        {
+          "name": "OutLineCol",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        }
+      ],
+      "values": [
+        {
+          "name": "OutLineID",
+          "value": 0.0
+        },
+        {
+          "name": "ProgID",
+          "value": 0.0
+        },
+        {
+          "name": "ConstantAlpha01",
+          "value": 1.0
+        }
+      ],
+      "switches": [
+        {
+          "name": "NormalEdgeEnable",
+          "value": false
+        },
+        {
+          "name": "OutLineIDEnable",
+          "value": false
+        },
+        {
+          "name": "OutLineColFixed",
+          "value": false
+        }
+      ],
+      "textures_used": [],
+      "used_texture": null,
+      "used_sampler": null
+    }
+  ],
+  "meshes": [
+    {
+      "index": 0,
+      "num_vertices": 108,
+      "num_faces": 150,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 1,
+      "num_vertices": 221,
+      "num_faces": 352,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "num_vertices": 76,
+      "num_faces": 72,
+      "material_indices": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "num_vertices": 24,
+      "num_faces": 12,
+      "material_indices": [
+        1
+      ]
+    }
+  ],
+  "texture_names": [
+    "fxmt_cmn_lt001_m_lta"
+  ],
+  "hidden_materials": [],
+  "outline_materials": []
+}

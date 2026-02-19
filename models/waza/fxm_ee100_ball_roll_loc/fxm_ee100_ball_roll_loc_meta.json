@@ -1,0 +1,69 @@
+{
+  "materials": [
+    {
+      "name": "sh_dammy",
+      "shader_group": "Manual",
+      "render_layer": 0,
+      "shader_index": 0,
+      "texture_maps": [],
+      "colors": [
+        {
+          "name": "ConstantColor01",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "OutLineCol",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        }
+      ],
+      "values": [
+        {
+          "name": "ConstantAlpha01",
+          "value": 1.0
+        },
+        {
+          "name": "OutLineID",
+          "value": 0.0
+        },
+        {
+          "name": "ProgID",
+          "value": 0.0
+        }
+      ],
+      "switches": [
+        {
+          "name": "NormalEdgeEnable",
+          "value": false
+        },
+        {
+          "name": "OutLineIDEnable",
+          "value": false
+        },
+        {
+          "name": "OutLineColFixed",
+          "value": false
+        }
+      ],
+      "textures_used": [],
+      "used_texture": null,
+      "used_sampler": null
+    }
+  ],
+  "meshes": [
+    {
+      "index": 0,
+      "num_vertices": 4,
+      "num_faces": 2,
+      "material_indices": [
+        0
+      ]
+    }
+  ],
+  "texture_names": [],
+  "hidden_materials": [],
+  "outline_materials": []
+}

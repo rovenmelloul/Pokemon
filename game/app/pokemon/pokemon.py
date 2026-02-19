@@ -1,13 +1,92 @@
 import json
-from direct.showbase.ShowBase import ShowBase
-from direct.actor.Actor import Actor
-from panda3d.core import (
-    Point3, VBase3, TextNode, BillboardEffect,
-    AmbientLight, DirectionalLight, VBase4, NodePath,
-    CardMaker, TextureStage, TransparencyAttrib, 
-)
+import os
 import math
 import random
+from pathlib import Path
+
+from direct.showbase.ShowBase import ShowBase
+from direct.actor.Actor import Actor
+from direct.interval.IntervalGlobal import (
+    Sequence, Parallel, LerpPosInterval, LerpColorScaleInterval, Func,
+)
+from panda3d.core import (
+    Point3, VBase3, VBase4, TextNode, BillboardEffect,
+    AmbientLight, DirectionalLight, NodePath,
+    CardMaker, TextureStage, TransparencyAttrib,
+    PNMImage, Texture,
+)
+
+from sdk import Pokemon as SDKPokemon
+from sdk import AnimationController
+
+SHINY_CHANCE = 1 / 3
+
+# Absolute path to models/pokemon/ (one level above game/)
+# Path.resolve() returns the true on-disk casing on Windows, which Panda3D requires.
+_MODELS_BASE = str(Path(os.path.dirname(__file__), '..', '..', '..', 'models', 'pokemon').resolve())
+
+# --- Shared procedural textures (created once, reused by all instances) ---
+_circle_tex = None
+_sparkle_tex = None
+
+
+def _get_circle_texture():
+    """Blue ring + subtle fill, Pokemon-Go style."""
+    global _circle_tex
+    if _circle_tex is not None:
+        return _circle_tex
+    size = 128
+    img = PNMImage(size, size, 4)
+    img.fill(0, 0, 0)
+    img.alphaFill(0)
+    cx = cy = size / 2.0
+    outer_r = size / 2.0 - 2
+    ring_w = 5.0
+    inner_r = outer_r - ring_w
+    for y in range(size):
+        for x in range(size):
+            dist = math.sqrt((x - cx) ** 2 + (y - cy) ** 2)
+            if dist <= outer_r:
+                if dist >= inner_r:
+                    # Ring band with soft edges
+                    edge = min(1.0, (outer_r - dist) * 2)
+                    inner_edge = min(1.0, (dist - inner_r) * 2)
+                    alpha = 0.75 * edge * inner_edge
+                    img.setXelA(x, y, 0.2, 0.6, 1.0, alpha)
+                else:
+                    # Subtle fill
+                    img.setXelA(x, y, 0.15, 0.5, 0.95, 0.07)
+    _circle_tex = Texture("ground_circle")
+    _circle_tex.load(img)
+    return _circle_tex
+
+
+def _get_sparkle_texture():
+    """4-pointed star sparkle for shiny Pokemon."""
+    global _sparkle_tex
+    if _sparkle_tex is not None:
+        return _sparkle_tex
+    size = 32
+    img = PNMImage(size, size, 4)
+    img.fill(0, 0, 0)
+    img.alphaFill(0)
+    cx = cy = size / 2.0
+    for y in range(size):
+        for x in range(size):
+            dx = abs(x - cx) / cx
+            dy = abs(y - cy) / cy
+            # Cross shape (4-pointed star)
+            star_h = max(0, 1.0 - dx * 4) * max(0, 1.0 - dy * 1.5)
+            star_v = max(0, 1.0 - dy * 4) * max(0, 1.0 - dx * 1.5)
+            # Soft glow behind
+            glow = max(0, 1.0 - math.sqrt(dx * dx + dy * dy) * 1.8)
+            val = min(1.0, max(star_h, star_v) + glow * 0.25)
+            if val > 0.01:
+                img.setXelA(x, y, 1.0, 0.93, 0.3, val)
+    _sparkle_tex = Texture("sparkle")
+    _sparkle_tex.load(img)
+    return _sparkle_tex
+
 
 pockemon_interface = {
     "id_pokemon": None | int,
@@ -31,51 +110,124 @@ with open(json_all_info_path, "r") as f:
 class Pokemon:
     def __init__(self, show_base: ShowBase, **kwargs):
         self.show_base = show_base
-        
-        
-        #POKEMON DATA 
-        self.id_pokemon = kwargs.get("id_pokemon", None)        
+
+        #POKEMON DATA
+        self.id_pokemon = kwargs.get("id_pokemon", None)
         self.lvl = kwargs.get("lvl", None)
-         
-        self.random_galar_dex = random.randint(1, 397) - 1
+
+        self.random_galar_dex = random.randint(0, len(json_all_info) - 1)
         self.name = json_all_info[self.random_galar_dex]["name"]
-         
+
         self.type = json_all_info[self.random_galar_dex]["pokemon_data_from_api"]["type"] if "pokemon_data_from_api" in json_all_info[self.random_galar_dex] and "type" in json_all_info[self.random_galar_dex]["pokemon_data_from_api"] else None
-        
+
         self.height = kwargs.get("height", None)
         self.weight = kwargs.get("weight", None)
         self.abilities = kwargs.get("abilities", None)
         self.base_experience = kwargs.get("base_experience", None)
         self.level_evolution = kwargs.get("level_evolution", None)
         self.description = kwargs.get("description", None)
-        
-        # ------------ ANIMATION DATA -------------
+
+        # ------------ MODEL / ANIMATION DATA -------------
         self.model_folder = json_all_info[self.random_galar_dex]["model_folder"] if "model_folder" in json_all_info[self.random_galar_dex] else None
-        self.anims = {
-            "idle":   f"models/pokemon/{self.model_folder}/anims/{self.model_folder}_fi20_walk01.egg",
-            "attack": f"models/pokemon/{self.model_folder}/anims/{self.model_folder}_ba01_landA01.egg",
-        }
-        
+        self.is_shiny = random.random() < SHINY_CHANCE
+
         self.lvl_board = {
             "low": "game\\gui\\src\\sprites\\title_for_low_lvl_pokemons.png",
             "average": "game\\gui\\src\\sprites\\title_for_avarage_lvl_pokemons.png",
             "high": "game\\gui\\src\\sprites\\title_for_high_lvl_pokemons.png",
         }
-        
+
         # ------------ POSITION DATA -------------
-        self.start_position = (random.randint(-5000, 5000), random.randint(-5000, 5000), 0)
+        self.start_position = (random.randint(-80, 80), random.randint(-80, 80), 0)
+
+        self.sdk_pokemon = None
+        self.anim_ctrl = None
         self.animated_character = self._load_model()
         self.animated_character.reparentTo(self.show_base.render)
 
-        self.velocity = Point3(0)
-        self.next_change_time = 0
-        self.is_moving = False
         self.name_container = None
-        # ------------ POSITION DATA -------------
+        self._ground_circle = None
+        self._sparkle_task_name = None
+        self._next_sparkle_time = 0
+
     def _load_model(self):
-        actor = Actor(f"models/pokemon/{self.model_folder}/{self.model_folder}.egg", self.anims)
-        actor.pose("idle", 0)
-        return actor
+        model_dir = os.path.join(_MODELS_BASE, self.model_folder)
+        self.sdk_pokemon = SDKPokemon(
+            self.show_base, model_dir,
+            use_shiny=self.is_shiny, auto_center=False)
+        self.anim_ctrl = AnimationController(
+            self.show_base, self.sdk_pokemon, auto_idle=True)
+        return self.sdk_pokemon.actor
+
+    def _create_ground_circle(self):
+        """Blue circle under the Pokemon (Pokemon Go style), sized to model."""
+        tex = _get_circle_texture()
+        cm = CardMaker("ground_circle")
+        cm.setFrame(-1, 1, -1, 1)
+        self._ground_circle = self.animated_character.attachNewNode(cm.generate())
+        self._ground_circle.setTexture(tex)
+        self._ground_circle.setTransparency(TransparencyAttrib.MAlpha)
+        self._ground_circle.setP(-90)       # flat on ground
+        self._ground_circle.setPos(0, 0, 1) # just above feet in local space
+        # Base radius 40, multiplied by model height / 100
+        # e.g. height 400 -> *4, height 50 -> /2
+        bounds = self.animated_character.getTightBounds()
+        if bounds:
+            bmin, bmax = bounds
+            sx = abs(bmax.getX() - bmin.getX())
+            sy = abs(bmax.getY() - bmin.getY())
+            sz = abs(bmax.getZ() - bmin.getZ())
+            footprint = max(sx, sy, sz)
+            multiplier = max(footprint / 60.0, 0.4)
+        else:
+            multiplier = 1.0
+        self._ground_circle.setScale(80 * multiplier)
+        self._ground_circle.setLightOff()
+        self._ground_circle.setDepthWrite(False)
+        self._ground_circle.setBin("transparent", 10)
+
+    def _shiny_sparkle_task(self, task):
+        """Periodically spawn golden star sparkles around shiny Pokemon."""
+        if task.time >= self._next_sparkle_time:
+            self._spawn_sparkle()
+            self._next_sparkle_time = task.time + random.uniform(0.3, 1.0)
+        return task.cont
+
+    def _spawn_sparkle(self):
+        """Create a single sparkle that floats up and fades out."""
+        tex = _get_sparkle_texture()
+        cm = CardMaker("sparkle")
+        s = random.uniform(0.25, 0.6)
+        cm.setFrame(-s, s, -s, s)
+        sparkle = self.show_base.render.attachNewNode(cm.generate())
+        sparkle.setTexture(tex)
+        sparkle.setTransparency(TransparencyAttrib.MAlpha)
+        sparkle.setBillboardPointEye()
+        sparkle.setLightOff()
+        sparkle.setDepthWrite(False)
+        sparkle.setBin("fixed", 20)
+
+        pos = self.animated_character.getPos(self.show_base.render)
+        start = Point3(
+            pos.x + random.uniform(-1.5, 1.5),
+            pos.y + random.uniform(-1.5, 1.5),
+            pos.z + random.uniform(0.5, 3.5),
+        )
+        sparkle.setPos(start)
+
+        duration = random.uniform(0.8, 1.5)
+        end_pos = start + Point3(
+            random.uniform(-0.3, 0.3),
+            random.uniform(-0.3, 0.3),
+            random.uniform(1.5, 3.0),
+        )
+        Sequence(
+            Parallel(
+                LerpPosInterval(sparkle, duration, end_pos),
+                LerpColorScaleInterval(sparkle, duration, VBase4(1, 1, 1, 0)),
+            ),
+            Func(sparkle.removeNode),
+        ).start()
 
     def spawn_random_pokemon(self):
         self.id_pokemon = random.randint(1, 898)
@@ -93,10 +245,11 @@ class Pokemon:
         self.animated_character.setPos(self.start_position)
         self.animated_character.setScale(0.05)
 
-        self.velocity = Point3(0)
-        self.next_change_time = 0
-        self.is_moving = False
-        self.animated_character.pose("idle", 0)
+        idle = self.anim_ctrl.find_idle()
+        if idle:
+            self.anim_ctrl.play(idle, loop=True)
+
+        self._create_ground_circle()
 
     def draw_name_tag(self):
         from panda3d.core import CardMaker, TransparencyAttrib
@@ -116,6 +269,8 @@ class Pokemon:
         # Text
         text_node = TextNode('name_text')
         full_text = self.name
+        if self.is_shiny:
+            full_text = "[*] " + full_text
         if self.lvl is not None:
             full_text += f"\nLv.{self.lvl}"
         if hasattr(self, 'type_') and self.type_:
@@ -123,7 +278,10 @@ class Pokemon:
 
         text_node.setText(full_text)
         text_node.setAlign(TextNode.ACenter)
-        text_node.setTextColor(1, 1, 1, 1)
+        if self.is_shiny:
+            text_node.setTextColor(1, 0.84, 0, 1)  # Gold
+        else:
+            text_node.setTextColor(1, 1, 1, 1)
 
         text_np = self.name_container.attachNewNode(text_node)
         text_np.setPos(0, 0, 0)
@@ -136,66 +294,22 @@ class Pokemon:
             badge_np = self.name_container.attachNewNode(cm.generate())
             badge_np.setTexture(badge_tex)
             badge_np.setTransparency(TransparencyAttrib.MAlpha)
-            badge_np.setPos(-5.0, 0, 0)          
-            badge_np.setScale(2.3)            
+            badge_np.setPos(-5.0, 0, 0)
+            badge_np.setScale(2.3)
 
-        self.show_base.taskMgr.add(self.move_randomly_task, "move_randomly_task")
-        self.show_base.taskMgr.add(self.update_name_tag_task, "update_name_tag_task")
+        self.show_base.taskMgr.add(self.update_name_tag_task, f"name_tag_{id(self)}")
+
+        # Shiny sparkle effect
+        if self.is_shiny:
+            self._sparkle_task_name = f"shiny_sparkle_{id(self)}"
+            self._next_sparkle_time = 0
+            self.show_base.taskMgr.add(
+                self._shiny_sparkle_task, self._sparkle_task_name)
 
     def update_name_tag_task(self, task):
         if self.name_container:
             char_pos = self.animated_character.getPos(self.show_base.render)
             self.name_container.setPos(char_pos + Point3(0, 0, 4.8))
-        return task.cont
-
-    def move_randomly_task(self, task):
-        dt = globalClock.getDt()
-        pos = self.animated_character.getPos()
-
-        new_pos = Point3(pos + self.velocity * dt)
-
-        bounds = 100.0
-        if new_pos.x < -bounds:
-            self.velocity.x = -self.velocity.x
-            new_pos.x = -bounds + 5
-        elif new_pos.x > bounds:
-            self.velocity.x = -self.velocity.x
-            new_pos.x = bounds - 5
-
-        if new_pos.y < -bounds:
-            self.velocity.y = -self.velocity.y
-            new_pos.y = -bounds + 5
-        elif new_pos.y > bounds:
-            self.velocity.y = -self.velocity.y
-            new_pos.y = bounds - 5
-
-        self.animated_character.setPos(new_pos)
-
-        speed = self.velocity.length()
-        if speed > 0.01:
-            angle = math.degrees(math.atan2(self.velocity.y, self.velocity.x))
-            self.animated_character.setH(angle)
-            if not self.is_moving:
-                self.animated_character.loop("idle")
-                self.is_moving = True
-        else:
-            if self.is_moving:
-                self.animated_character.pose("happy", 0)
-                self.is_moving = False
-
-        if task.time >= self.next_change_time:
-            if random.random() < 0.35:
-                self.velocity = Point3(0)
-            else:
-                angle = random.uniform(0, 360)
-                speed = random.uniform(0.5, 1.4)
-                self.velocity = Point3(
-                    speed * math.cos(math.radians(angle)),
-                    speed * math.sin(math.radians(angle)),
-                    0
-                )
-            self.next_change_time = task.time + random.uniform(1.0, 3.0)
-
         return task.cont
 
     def get_info(self):
@@ -213,3 +327,18 @@ class Pokemon:
             "animation_path": self.animation_path,
         }
 
+    def destroy(self):
+        if self._sparkle_task_name:
+            self.show_base.taskMgr.remove(self._sparkle_task_name)
+        if self.anim_ctrl:
+            self.anim_ctrl.destroy()
+            self.anim_ctrl = None
+        if self.sdk_pokemon:
+            self.sdk_pokemon.destroy()
+            self.sdk_pokemon = None
+        if self._ground_circle:
+            self._ground_circle.removeNode()
+            self._ground_circle = None
+        if self.name_container:
+            self.name_container.removeNode()
+            self.name_container = None

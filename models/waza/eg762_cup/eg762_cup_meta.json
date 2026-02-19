@@ -1,0 +1,137 @@
+{
+  "materials": [
+    {
+      "name": "mt_cup",
+      "shader_group": "FxDefault01",
+      "render_layer": 0,
+      "shader_index": 0,
+      "texture_maps": [
+        {
+          "sampler": "LightTableTex",
+          "texture": "fxmt_cmn_sdw001_m_lta.png",
+          "tex_index": 0
+        },
+        {
+          "sampler": "Tex01WRAP",
+          "texture": "fxmt_eg762_teaset_o.png",
+          "tex_index": 1
+        }
+      ],
+      "colors": [
+        {
+          "name": "FresnelColor",
+          "r": 0.214,
+          "g": 0.0,
+          "b": 1.0
+        },
+        {
+          "name": "Shadow_Color",
+          "r": 0.214,
+          "g": 0.214,
+          "b": 0.214
+        },
+        {
+          "name": "OutLineCol",
+          "r": 0.3515,
+          "g": 0.3515,
+          "b": 0.3515
+        },
+        {
+          "name": "Tex01_Multiply_Color",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        }
+      ],
+      "values": [
+        {
+          "name": "OutLineID",
+          "value": 0.0
+        },
+        {
+          "name": "ProgID",
+          "value": 0.0
+        },
+        {
+          "name": "Def0_OneMin1_FreCol",
+          "value": 0.0
+        },
+        {
+          "name": "FresnelPowerCol",
+          "value": 5.0
+        },
+        {
+          "name": "FresnelStrengthCol",
+          "value": 3.0
+        },
+        {
+          "name": "ShadowRange",
+          "value": 1.0
+        },
+        {
+          "name": "Tex01TranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01TranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01Rotate",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01ScaleU",
+          "value": 1.0
+        },
+        {
+          "name": "Tex01ScaleV",
+          "value": 1.0
+        },
+        {
+          "name": "R0_A1_Tex01_Alpha",
+          "value": 1.0
+        }
+      ],
+      "switches": [
+        {
+          "name": "OutLineIDEnable",
+          "value": false
+        },
+        {
+          "name": "NormalEdgeEnable",
+          "value": true
+        },
+        {
+          "name": "OutLineColFixed",
+          "value": false
+        }
+      ],
+      "textures_used": [
+        {
+          "sampler": "LightTableTex",
+          "texture": "fxmt_cmn_sdw001_m_lta.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "fxmt_cmn_sdw001_m_lta.png",
+      "used_sampler": "LightTableTex"
+    }
+  ],
+  "meshes": [
+    {
+      "index": 0,
+      "num_vertices": 389,
+      "num_faces": 616,
+      "material_indices": [
+        0
+      ]
+    }
+  ],
+  "texture_names": [
+    "fxmt_cmn_sdw001_m_lta",
+    "fxmt_eg762_teaset_o"
+  ],
+  "hidden_materials": [],
+  "outline_materials": []
+}

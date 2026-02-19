@@ -1,0 +1,66 @@
+{
+  "materials": [
+    {
+      "name": "PG_coneMT",
+      "shader_group": "FxDefault01",
+      "render_layer": 0,
+      "shader_index": 0,
+      "texture_maps": [
+        {
+          "sampler": "LightTableTex",
+          "texture": "fxmt_cmn_lt001_m_lu8.png",
+          "tex_index": 0
+        }
+      ],
+      "colors": [
+        {
+          "name": "ConstantColor01",
+          "r": 0.0,
+          "g": 0.4481,
+          "b": 1.0
+        },
+        {
+          "name": "Shadow_Color",
+          "r": 0.5071,
+          "g": 0.5071,
+          "b": 0.5071
+        }
+      ],
+      "values": [
+        {
+          "name": "ConstantAlpha01",
+          "value": 1.0
+        },
+        {
+          "name": "ShadowRange",
+          "value": 1.0
+        }
+      ],
+      "switches": [],
+      "textures_used": [
+        {
+          "sampler": "LightTableTex",
+          "texture": "fxmt_cmn_lt001_m_lu8.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "fxmt_cmn_lt001_m_lu8.png",
+      "used_sampler": "LightTableTex"
+    }
+  ],
+  "meshes": [
+    {
+      "index": 0,
+      "num_vertices": 79,
+      "num_faces": 112,
+      "material_indices": [
+        0
+      ]
+    }
+  ],
+  "texture_names": [
+    "fxmt_cmn_lt001_m_lu8"
+  ],
+  "hidden_materials": [],
+  "outline_materials": []
+}

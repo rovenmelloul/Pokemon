@@ -1,0 +1,165 @@
+{
+  "materials": [
+    {
+      "name": "tail_MT",
+      "shader_group": "FxMulti01",
+      "render_layer": 0,
+      "shader_index": 0,
+      "texture_maps": [
+        {
+          "sampler": "Tex02WRAP",
+          "texture": "fxmt_3_flow007_m.png",
+          "tex_index": 0
+        },
+        {
+          "sampler": "Tex01CLAMP",
+          "texture": "fxmt_ew280_shock_m.png",
+          "tex_index": 1
+        }
+      ],
+      "colors": [
+        {
+          "name": "ConstantColor03",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "OutLineCol",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        }
+      ],
+      "values": [
+        {
+          "name": "Tex01_Rot_Volume",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01TranslateU",
+          "value": 0.15
+        },
+        {
+          "name": "Tex01TranslateV",
+          "value": 0.333333
+        },
+        {
+          "name": "Tex01Rotate",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01ScaleU",
+          "value": 1.5
+        },
+        {
+          "name": "Tex01ScaleV",
+          "value": 1.0
+        },
+        {
+          "name": "A_or_1A_Tex01_Alpha",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01_Alpha",
+          "value": 1.0
+        },
+        {
+          "name": "Alpha_Power",
+          "value": 1.0
+        },
+        {
+          "name": "Alpha_Multiply",
+          "value": 1.0
+        },
+        {
+          "name": "Emissive_Intensity",
+          "value": 1.0
+        },
+        {
+          "name": "Tex02_Rot_Volume",
+          "value": 0.0
+        },
+        {
+          "name": "Tex02TranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "Tex02TranslateV",
+          "value": 1.6
+        },
+        {
+          "name": "Tex02Rotate",
+          "value": 0.0
+        },
+        {
+          "name": "Tex02ScaleU",
+          "value": 0.5
+        },
+        {
+          "name": "Tex02ScaleV",
+          "value": 0.5
+        },
+        {
+          "name": "A_or_1A_Tex02_Alpha",
+          "value": 0.0
+        },
+        {
+          "name": "Tex02_Alpha",
+          "value": 1.0
+        },
+        {
+          "name": "R0_A1_Tex02_Alpha",
+          "value": 0.0
+        },
+        {
+          "name": "OutLineID",
+          "value": 0.0
+        },
+        {
+          "name": "ProgID",
+          "value": 0.0
+        }
+      ],
+      "switches": [
+        {
+          "name": "NormalEdgeEnable",
+          "value": false
+        },
+        {
+          "name": "OutLineIDEnable",
+          "value": false
+        },
+        {
+          "name": "OutLineColFixed",
+          "value": false
+        }
+      ],
+      "textures_used": [
+        {
+          "sampler": "Tex02WRAP",
+          "texture": "fxmt_3_flow007_m.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "fxmt_3_flow007_m.png",
+      "used_sampler": "Tex02WRAP"
+    }
+  ],
+  "meshes": [
+    {
+      "index": 0,
+      "num_vertices": 55,
+      "num_faces": 80,
+      "material_indices": [
+        0
+      ]
+    }
+  ],
+  "texture_names": [
+    "fxmt_3_flow007_m",
+    "fxmt_ew280_shock_m"
+  ],
+  "hidden_materials": [],
+  "outline_materials": []
+}

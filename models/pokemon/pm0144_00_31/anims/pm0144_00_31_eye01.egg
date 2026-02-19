@@ -1,0 +1,1610 @@
+<CoordinateSystem> { Y-Up }
+
+<Comment> { "Animation: pm0144_00_31_eye01, 161 frames @ 60 FPS" }
+
+<Table> {
+  <Bundle> pm0144_00_31 {
+    <Table> "<skeleton>" {
+      <Table> pm0144_00_31 {
+        <Xfm$Anim> xform {
+          <Scalar> order { srpht }
+          <Scalar> fps { 60 }
+          <Scalar> contents { ijkhprxyz }
+          <V> {
+            1.000000 1.000000 1.000000 0.002747 0.002747 -0.002747 0.000000 0.000000 0.000000
+          }
+        }
+        <Table> Origin {
+          <Xfm$Anim> xform {
+            <Scalar> order { srpht }
+            <Scalar> fps { 60 }
+            <Scalar> contents { ijkhprxyz }
+            <V> {
+              1.000000 1.000000 1.000000 0.002747 0.002747 -0.002747 0.000000 0.000000 0.000000
+            }
+          }
+          <Table> Waist {
+            <Xfm$Anim> xform {
+              <Scalar> order { srpht }
+              <Scalar> fps { 60 }
+              <Scalar> contents { ijkhprxyz }
+              <V> {
+                1.000000 1.000000 1.000000 0.000000 -0.000000 -89.999985 0.000000 81.014091 1.402630
+              }
+            }
+            <Table> Spine {
+              <Xfm$Anim> xform {
+                <Scalar> order { srpht }
+                <Scalar> fps { 60 }
+                <Scalar> contents { ijkhprxyz }
+                <V> {
+                  1.000000 1.000000 1.000000 -11.628639 -0.000000 -0.000000 0.001000 0.000000 -0.000000
+                }
+              }
+              <Table> Neck1 {
+                <Xfm$Anim> xform {
+                  <Scalar> order { srpht }
+                  <Scalar> fps { 60 }
+                  <Scalar> contents { ijkhprxyz }
+                  <V> {
+                    1.000000 1.000000 1.000000 11.006727 -0.000000 -0.000000 24.149500 -0.000000 -0.000000
+                  }
+                }
+                <Table> Neck2 {
+                  <Xfm$Anim> xform {
+                    <Scalar> order { srpht }
+                    <Scalar> fps { 60 }
+                    <Scalar> contents { ijkhprxyz }
+                    <V> {
+                      1.000000 1.000000 1.000000 1.325141 -0.000000 -0.000000 10.029690 -0.000000 0.000000
+                    }
+                  }
+                  <Table> Head {
+                    <Xfm$Anim> xform {
+                      <Scalar> order { srpht }
+                      <Scalar> fps { 60 }
+                      <Scalar> contents { ijkhprxyz }
+                      <V> {
+                        1.000000 1.000000 1.000000 -0.703231 -0.000000 -0.000000 10.715730 0.000000 -0.000000
+                      }
+                    }
+                    <Table> Hair {
+                      <Xfm$Anim> xform {
+                        <Scalar> order { srpht }
+                        <Scalar> fps { 60 }
+                        <Scalar> contents { ijkhprxyz }
+                        <V> {
+                          1.000000 1.000000 1.000000 72.125877 -0.000000 -0.000000 13.852070 -0.000000 6.858295
+                        }
+                      }
+                      <Table> EffHorn01 {
+                        <Xfm$Anim> xform {
+                          <Scalar> order { srpht }
+                          <Scalar> fps { 60 }
+                          <Scalar> contents { ijkhprxyz }
+                          <V> {
+                            1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 41.599998 -0.000000 -0.500000
+                          }
+                        }
+                      }
+                    }
+                    <Table> LFeelerA1 {
+                      <Xfm$Anim> xform {
+                        <Scalar> order { srpht }
+                        <Scalar> fps { 60 }
+                        <Scalar> contents { ijkhprxyz }
+                        <V> {
+                          1.000000 1.000000 1.000000 -10.774875 58.862545 89.451324 3.968530 -11.466750 4.218849
+                        }
+                      }
+                      <Table> LFeelerA2 {
+                        <Xfm$Anim> xform {
+                          <Scalar> order { srpht }
+                          <Scalar> fps { 60 }
+                          <Scalar> contents { ijkhprxyz }
+                          <V> {
+                            1.000000 1.000000 1.000000 7.486444 -2.584775 -18.943296 13.597600 0.000000 -0.000000
+                          }
+                        }
+                      }
+                    }
+                    <Table> RFeelerA1 {
+                      <Xfm$Anim> xform {
+                        <Scalar> order { srpht }
+                        <Scalar> fps { 60 }
+                        <Scalar> contents { ijkhprxyz }
+                        <V> {
+                          1.000000 1.000000 1.000000 -10.774875 -58.862545 -89.451324 3.968075 11.466700 4.218871
+                        }
+                      }
+                      <Table> RFeelerA2 {
+                        <Xfm$Anim> xform {
+                          <Scalar> order { srpht }
+                          <Scalar> fps { 60 }
+                          <Scalar> contents { ijkhprxyz }
+                          <V> {
+                            1.000000 1.000000 1.000000 7.486444 2.584775 18.943296 13.597730 -0.000334 0.000038
+                          }
+                        }
+                      }
+                    }
+                    <Table> RootJaw {
+                      <Xfm$Anim> xform {
+                        <Scalar> order { srpht }
+                        <Scalar> fps { 60 }
+                        <Scalar> contents { ijkhprxyz }
+                        <V> {
+                          1.000000 1.000000 1.000000 90.000023 0.000019 180.000000 2.441023 0.000000 6.822640
+                        }
+                      }
+                      <Table> UpperJaw {
+                        <Xfm$Anim> xform {
+                          <Scalar> order { srpht }
+                          <Scalar> fps { 60 }
+                          <Scalar> contents { ijkhprxyz }
+                          <V> {
+                            1.000000 1.000000 1.000000 22.689650 -0.000000 -0.000000 3.086587 -0.000000 -0.000000
+                          }
+                        }
+                      }
+                      <Table> LowerJaw {
+                        <Xfm$Anim> xform {
+                          <Scalar> order { srpht }
+                          <Scalar> fps { 60 }
+                          <Scalar> contents { ijkhprxyz }
+                          <V> {
+                            1.000000 1.000000 1.000000 -156.873627 -0.000019 -180.000000 1.188683 -0.000000 -0.439297
+                          }
+                        }
+                      }
+                    }
+                    <Table> EffMouth01 {
+                      <Xfm$Anim> xform {
+                        <Scalar> order { srpht }
+                        <Scalar> fps { 60 }
+                        <Scalar> contents { ijkhprxyz }
+                        <V> {
+                          1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 -3.500000 -0.000000 16.000000
+                        }
+                      }
+                    }
+                    <Table> EffOverHead01 {
+                      <Xfm$Anim> xform {
+                        <Scalar> order { srpht }
+                        <Scalar> fps { 60 }
+                        <Scalar> contents { ijkhprxyz }
+                        <V> {
+                          1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 23.000000 -0.000000 0.000000
+                        }
+                      }
+                    }
+                    <Table> EffEye01 {
+                      <Xfm$Anim> xform {
+                        <Scalar> order { srpht }
+                        <Scalar> fps { 60 }
+                        <Scalar> contents { ijkhprxyz }
+                        <V> {
+                          1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 3.000000 4.700000 11.500000
+                        }
+                      }
+                    }
+                    <Table> EffEye02 {
+                      <Xfm$Anim> xform {
+                        <Scalar> order { srpht }
+                        <Scalar> fps { 60 }
+                        <Scalar> contents { ijkhprxyz }
+                        <V> {
+                          1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 3.000000 -4.700000 11.500000
+                        }
+                      }
+                    }
+                    <Table> EffHeadCenter01 {
+                      <Xfm$Anim> xform {
+                        <Scalar> order { srpht }
+                        <Scalar> fps { 60 }
+                        <Scalar> contents { ijkhprxyz }
+                        <V> {
+                          1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 6.600000 -0.000000 0.500000
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              <Table> LShoulder {
+                <Xfm$Anim> xform {
+                  <Scalar> order { srpht }
+                  <Scalar> fps { 60 }
+                  <Scalar> contents { ijkhprxyz }
+                  <V> {
+                    1.000000 1.000000 1.000000 10.215745 15.153997 72.661537 15.428710 -0.337991 2.561044
+                  }
+                }
+                <Table> LArm {
+                  <Xfm$Anim> xform {
+                    <Scalar> order { srpht }
+                    <Scalar> fps { 60 }
+                    <Scalar> contents { ijkhprxyz }
+                    <V> {
+                      1.000000 1.000000 1.000000 -14.127766 -5.825276 5.963147 12.408550 0.000000 -0.000000
+                    }
+                  }
+                  <Table> LForeArm {
+                    <Xfm$Anim> xform {
+                      <Scalar> order { srpht }
+                      <Scalar> fps { 60 }
+                      <Scalar> contents { ijkhprxyz }
+                      <V> {
+                        1.000000 1.000000 1.000000 0.000051 0.000089 -29.814032 38.765751 -0.000000 0.000000
+                      }
+                    }
+                    <Table> LHand {
+                      <Xfm$Anim> xform {
+                        <Scalar> order { srpht }
+                        <Scalar> fps { 60 }
+                        <Scalar> contents { ijkhprxyz }
+                        <V> {
+                          1.000000 1.000000 1.000000 2.334793 2.244536 44.034145 53.658741 0.000000 -0.000000
+                        }
+                      }
+                      <Table> LFingerA1 {
+                        <Xfm$Anim> xform {
+                          <Scalar> order { srpht }
+                          <Scalar> fps { 60 }
+                          <Scalar> contents { ijkhprxyz }
+                          <V> {
+                            1.000000 1.000000 1.000000 -3.197192 0.000000 14.495301 26.482260 -0.000000 -0.000000
+                          }
+                        }
+                        <Table> LFingerA2 {
+                          <Xfm$Anim> xform {
+                            <Scalar> order { srpht }
+                            <Scalar> fps { 60 }
+                            <Scalar> contents { ijkhprxyz }
+                            <V> {
+                              1.000000 1.000000 1.000000 0.000000 -0.000000 3.403317 17.607710 -0.000000 0.000000
+                            }
+                          }
+                          <Table> LFingerA3 {
+                            <Xfm$Anim> xform {
+                              <Scalar> order { srpht }
+                              <Scalar> fps { 60 }
+                              <Scalar> contents { ijkhprxyz }
+                              <V> {
+                                1.000000 1.000000 1.000000 0.000000 -0.000000 -3.664647 29.392111 0.000000 -0.000000
+                              }
+                            }
+                            <Table> LFingerA4 {
+                              <Xfm$Anim> xform {
+                                <Scalar> order { srpht }
+                                <Scalar> fps { 60 }
+                                <Scalar> contents { ijkhprxyz }
+                                <V> {
+                                  1.000000 1.000000 1.000000 0.000000 -0.000000 -39.019630 37.832039 -0.000000 -0.000000
+                                }
+                              }
+                            }
+                            <Table> EffAttack02_01 {
+                              <Xfm$Anim> xform {
+                                <Scalar> order { srpht }
+                                <Scalar> fps { 60 }
+                                <Scalar> contents { ijkhprxyz }
+                                <V> {
+                                  1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 22.600000 0.000000 -6.000000
+                                }
+                              }
+                            }
+                            <Table> EffAttack02_02 {
+                              <Xfm$Anim> xform {
+                                <Scalar> order { srpht }
+                                <Scalar> fps { 60 }
+                                <Scalar> contents { ijkhprxyz }
+                                <V> {
+                                  1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 22.600000 0.000000 6.000000
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                      <Table> LFingerB1 {
+                        <Xfm$Anim> xform {
+                          <Scalar> order { srpht }
+                          <Scalar> fps { 60 }
+                          <Scalar> contents { ijkhprxyz }
+                          <V> {
+                            1.000000 1.000000 1.000000 -3.197193 0.000000 36.133350 28.256411 -1.057380 0.099103
+                          }
+                        }
+                        <Table> LFingerB2 {
+                          <Xfm$Anim> xform {
+                            <Scalar> order { srpht }
+                            <Scalar> fps { 60 }
+                            <Scalar> contents { ijkhprxyz }
+                            <V> {
+                              1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 19.592190 0.000000 0.000000
+                            }
+                          }
+                          <Table> LFingerB3 {
+                            <Xfm$Anim> xform {
+                              <Scalar> order { srpht }
+                              <Scalar> fps { 60 }
+                              <Scalar> contents { ijkhprxyz }
+                              <V> {
+                                1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 25.750019 -0.000000 0.000000
+                              }
+                            }
+                          }
+                        }
+                      }
+                      <Table> LFingerC1 {
+                        <Xfm$Anim> xform {
+                          <Scalar> order { srpht }
+                          <Scalar> fps { 60 }
+                          <Scalar> contents { ijkhprxyz }
+                          <V> {
+                            1.000000 1.000000 1.000000 -3.197192 0.000000 47.106091 16.452049 1.289216 -0.560283
+                          }
+                        }
+                        <Table> LFingerC2 {
+                          <Xfm$Anim> xform {
+                            <Scalar> order { srpht }
+                            <Scalar> fps { 60 }
+                            <Scalar> contents { ijkhprxyz }
+                            <V> {
+                              1.000000 1.000000 1.000000 0.000000 -0.000000 -0.343990 26.674999 0.000000 -0.000000
+                            }
+                          }
+                          <Table> LFingerC3 {
+                            <Xfm$Anim> xform {
+                              <Scalar> order { srpht }
+                              <Scalar> fps { 60 }
+                              <Scalar> contents { ijkhprxyz }
+                              <V> {
+                                1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 23.056000 0.000000 0.000000
+                              }
+                            }
+                          }
+                        }
+                      }
+                      <Table> LFingerD1 {
+                        <Xfm$Anim> xform {
+                          <Scalar> order { srpht }
+                          <Scalar> fps { 60 }
+                          <Scalar> contents { ijkhprxyz }
+                          <V> {
+                            1.000000 1.000000 1.000000 -3.197192 0.000000 55.451508 6.910679 1.023053 -1.093259
+                          }
+                        }
+                        <Table> LFingerD2 {
+                          <Xfm$Anim> xform {
+                            <Scalar> order { srpht }
+                            <Scalar> fps { 60 }
+                            <Scalar> contents { ijkhprxyz }
+                            <V> {
+                              1.000000 1.000000 1.000000 0.000000 -0.000000 -3.023298 30.053909 -0.000000 -0.000000
+                            }
+                          }
+                          <Table> LFingerD3 {
+                            <Xfm$Anim> xform {
+                              <Scalar> order { srpht }
+                              <Scalar> fps { 60 }
+                              <Scalar> contents { ijkhprxyz }
+                              <V> {
+                                1.000000 1.000000 1.000000 0.000000 -0.000000 1.723215 22.675711 -0.000000 -0.000000
+                              }
+                            }
+                          }
+                        }
+                      }
+                      <Table> LFingerE1 {
+                        <Xfm$Anim> xform {
+                          <Scalar> order { srpht }
+                          <Scalar> fps { 60 }
+                          <Scalar> contents { ijkhprxyz }
+                          <V> {
+                            1.000000 1.000000 1.000000 -3.197192 -0.000000 60.152943 -2.498665 -2.053900 -1.618860
+                          }
+                        }
+                        <Table> LFingerE2 {
+                          <Xfm$Anim> xform {
+                            <Scalar> order { srpht }
+                            <Scalar> fps { 60 }
+                            <Scalar> contents { ijkhprxyz }
+                            <V> {
+                              1.000000 1.000000 1.000000 0.000000 -0.000000 -2.765905 30.986660 0.000000 -0.000000
+                            }
+                          }
+                          <Table> LFingerE3 {
+                            <Xfm$Anim> xform {
+                              <Scalar> order { srpht }
+                              <Scalar> fps { 60 }
+                              <Scalar> contents { ijkhprxyz }
+                              <V> {
+                                1.000000 1.000000 1.000000 0.000000 -0.000000 -1.040817 18.971760 -0.000000 -0.000000
+                              }
+                            }
+                          }
+                        }
+                      }
+                      <Table> EffHand02 {
+                        <Xfm$Anim> xform {
+                          <Scalar> order { srpht }
+                          <Scalar> fps { 60 }
+                          <Scalar> contents { ijkhprxyz }
+                          <V> {
+                            1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 9.000000 -0.000000 4.000000
+                          }
+                        }
+                      }
+                    }
+                    <Table> LFeelerB1 {
+                      <Xfm$Anim> xform {
+                        <Scalar> order { srpht }
+                        <Scalar> fps { 60 }
+                        <Scalar> contents { ijkhprxyz }
+                        <V> {
+                          1.000000 1.000000 1.000000 0.036826 0.021000 111.643639 41.497688 0.049303 -1.659941
+                        }
+                      }
+                      <Table> LFeelerB2 {
+                        <Xfm$Anim> xform {
+                          <Scalar> order { srpht }
+                          <Scalar> fps { 60 }
+                          <Scalar> contents { ijkhprxyz }
+                          <V> {
+                            1.000000 1.000000 1.000000 0.000000 -0.000000 -4.882389 28.322359 -0.000000 0.000000
+                          }
+                        }
+                        <Table> LFeelerB3 {
+                          <Xfm$Anim> xform {
+                            <Scalar> order { srpht }
+                            <Scalar> fps { 60 }
+                            <Scalar> contents { ijkhprxyz }
+                            <V> {
+                              1.000000 1.000000 1.000000 0.000000 -0.000000 -3.748428 16.167589 -0.000000 0.000000
+                            }
+                          }
+                        }
+                      }
+                    }
+                    <Table> LFeelerC1 {
+                      <Xfm$Anim> xform {
+                        <Scalar> order { srpht }
+                        <Scalar> fps { 60 }
+                        <Scalar> contents { ijkhprxyz }
+                        <V> {
+                          1.000000 1.000000 1.000000 0.036826 0.021000 114.612572 29.681000 -0.003296 -1.652365
+                        }
+                      }
+                      <Table> LFeelerC2 {
+                        <Xfm$Anim> xform {
+                          <Scalar> order { srpht }
+                          <Scalar> fps { 60 }
+                          <Scalar> contents { ijkhprxyz }
+                          <V> {
+                            1.000000 1.000000 1.000000 0.000000 -0.000000 -6.391327 23.555201 -0.000000 0.000000
+                          }
+                        }
+                        <Table> LFeelerC3 {
+                          <Xfm$Anim> xform {
+                            <Scalar> order { srpht }
+                            <Scalar> fps { 60 }
+                            <Scalar> contents { ijkhprxyz }
+                            <V> {
+                              1.000000 1.000000 1.000000 0.000000 -0.000000 -3.934403 15.270930 0.000000 -0.000000
+                            }
+                          }
+                        }
+                      }
+                    }
+                    <Table> LFeelerD1 {
+                      <Xfm$Anim> xform {
+                        <Scalar> order { srpht }
+                        <Scalar> fps { 60 }
+                        <Scalar> contents { ijkhprxyz }
+                        <V> {
+                          1.000000 1.000000 1.000000 0.036826 0.021000 116.789078 17.207260 -0.500884 -1.644530
+                        }
+                      }
+                      <Table> LFeelerD2 {
+                        <Xfm$Anim> xform {
+                          <Scalar> order { srpht }
+                          <Scalar> fps { 60 }
+                          <Scalar> contents { ijkhprxyz }
+                          <V> {
+                            1.000000 1.000000 1.000000 0.000000 -0.000000 -4.928794 18.247320 -0.000000 0.000000
+                          }
+                        }
+                        <Table> LFeelerD3 {
+                          <Xfm$Anim> xform {
+                            <Scalar> order { srpht }
+                            <Scalar> fps { 60 }
+                            <Scalar> contents { ijkhprxyz }
+                            <V> {
+                              1.000000 1.000000 1.000000 0.000000 -0.000000 -6.129383 13.262240 0.000000 0.000000
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                  <Table> LFeelerE1 {
+                    <Xfm$Anim> xform {
+                      <Scalar> order { srpht }
+                      <Scalar> fps { 60 }
+                      <Scalar> contents { ijkhprxyz }
+                      <V> {
+                        1.000000 1.000000 1.000000 0.042444 -0.000000 88.743370 42.386070 3.592124 -1.445177
+                      }
+                    }
+                    <Table> LFeelerE2 {
+                      <Xfm$Anim> xform {
+                        <Scalar> order { srpht }
+                        <Scalar> fps { 60 }
+                        <Scalar> contents { ijkhprxyz }
+                        <V> {
+                          1.000000 1.000000 1.000000 0.000000 -0.000000 -5.587453 14.793760 -0.000000 -0.000000
+                        }
+                      }
+                    }
+                  }
+                  <Table> LFeelerF1 {
+                    <Xfm$Anim> xform {
+                      <Scalar> order { srpht }
+                      <Scalar> fps { 60 }
+                      <Scalar> contents { ijkhprxyz }
+                      <V> {
+                        1.000000 1.000000 1.000000 0.042444 -0.000000 87.123955 30.392860 2.813951 -1.436293
+                      }
+                    }
+                    <Table> LFeelerF2 {
+                      <Xfm$Anim> xform {
+                        <Scalar> order { srpht }
+                        <Scalar> fps { 60 }
+                        <Scalar> contents { ijkhprxyz }
+                        <V> {
+                          1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 13.868530 0.000000 0.000000
+                        }
+                      }
+                    }
+                  }
+                  <Table> LFeelerG1 {
+                    <Xfm$Anim> xform {
+                      <Scalar> order { srpht }
+                      <Scalar> fps { 60 }
+                      <Scalar> contents { ijkhprxyz }
+                      <V> {
+                        1.000000 1.000000 1.000000 0.042444 -0.000000 87.123955 18.936760 3.568776 -1.427806
+                      }
+                    }
+                    <Table> LFeelerG2 {
+                      <Xfm$Anim> xform {
+                        <Scalar> order { srpht }
+                        <Scalar> fps { 60 }
+                        <Scalar> contents { ijkhprxyz }
+                        <V> {
+                          1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 14.791610 -0.000000 -0.000000
+                        }
+                      }
+                    }
+                  }
+                  <Table> LFeelerH1 {
+                    <Xfm$Anim> xform {
+                      <Scalar> order { srpht }
+                      <Scalar> fps { 60 }
+                      <Scalar> contents { ijkhprxyz }
+                      <V> {
+                        1.000000 1.000000 1.000000 0.042444 -0.000000 87.123955 7.784381 3.046641 -1.419545
+                      }
+                    }
+                    <Table> LFeelerH2 {
+                      <Xfm$Anim> xform {
+                        <Scalar> order { srpht }
+                        <Scalar> fps { 60 }
+                        <Scalar> contents { ijkhprxyz }
+                        <V> {
+                          1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 14.577820 0.000000 -0.000000
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              <Table> RShoulder {
+                <Xfm$Anim> xform {
+                  <Scalar> order { srpht }
+                  <Scalar> fps { 60 }
+                  <Scalar> contents { ijkhprxyz }
+                  <V> {
+                    1.000000 1.000000 1.000000 10.215745 -15.153997 -72.661537 15.428710 0.337991 2.561040
+                  }
+                }
+                <Table> RArm {
+                  <Xfm$Anim> xform {
+                    <Scalar> order { srpht }
+                    <Scalar> fps { 60 }
+                    <Scalar> contents { ijkhprxyz }
+                    <V> {
+                      1.000000 1.000000 1.000000 -14.127766 5.825276 -5.963147 12.408530 -0.000039 -0.000002
+                    }
+                  }
+                  <Table> RForeArm {
+                    <Xfm$Anim> xform {
+                      <Scalar> order { srpht }
+                      <Scalar> fps { 60 }
+                      <Scalar> contents { ijkhprxyz }
+                      <V> {
+                        1.000000 1.000000 1.000000 0.000051 -0.000089 29.814032 38.765709 0.000157 0.000003
+                      }
+                    }
+                    <Table> RHand {
+                      <Xfm$Anim> xform {
+                        <Scalar> order { srpht }
+                        <Scalar> fps { 60 }
+                        <Scalar> contents { ijkhprxyz }
+                        <V> {
+                          1.000000 1.000000 1.000000 2.334793 -2.244536 -44.034145 53.659050 -0.000267 -0.000009
+                        }
+                      }
+                      <Table> RFingerA1 {
+                        <Xfm$Anim> xform {
+                          <Scalar> order { srpht }
+                          <Scalar> fps { 60 }
+                          <Scalar> contents { ijkhprxyz }
+                          <V> {
+                            1.000000 1.000000 1.000000 -3.197192 -0.000000 -14.495301 26.482531 0.000740 0.000019
+                          }
+                        }
+                        <Table> RFingerA2 {
+                          <Xfm$Anim> xform {
+                            <Scalar> order { srpht }
+                            <Scalar> fps { 60 }
+                            <Scalar> contents { ijkhprxyz }
+                            <V> {
+                              1.000000 1.000000 1.000000 0.000000 -0.000000 -3.403317 17.607321 -0.000051 -0.000000
+                            }
+                          }
+                          <Table> RFingerA3 {
+                            <Xfm$Anim> xform {
+                              <Scalar> order { srpht }
+                              <Scalar> fps { 60 }
+                              <Scalar> contents { ijkhprxyz }
+                              <V> {
+                                1.000000 1.000000 1.000000 0.000000 -0.000000 3.664647 29.392139 -0.000696 -0.000000
+                              }
+                            }
+                            <Table> RFingerA4 {
+                              <Xfm$Anim> xform {
+                                <Scalar> order { srpht }
+                                <Scalar> fps { 60 }
+                                <Scalar> contents { ijkhprxyz }
+                                <V> {
+                                  1.000000 1.000000 1.000000 0.000000 -0.000000 39.019630 37.832199 0.000780 -0.000000
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                      <Table> RFingerB1 {
+                        <Xfm$Anim> xform {
+                          <Scalar> order { srpht }
+                          <Scalar> fps { 60 }
+                          <Scalar> contents { ijkhprxyz }
+                          <V> {
+                            1.000000 1.000000 1.000000 -3.197193 -0.000000 -36.133350 28.256090 1.057467 0.099089
+                          }
+                        }
+                        <Table> RFingerB2 {
+                          <Xfm$Anim> xform {
+                            <Scalar> order { srpht }
+                            <Scalar> fps { 60 }
+                            <Scalar> contents { ijkhprxyz }
+                            <V> {
+                              1.000000 1.000000 1.000000 0.000000 -0.000001 -0.000000 19.592381 -0.000034 -0.000000
+                            }
+                          }
+                          <Table> RFingerB3 {
+                            <Xfm$Anim> xform {
+                              <Scalar> order { srpht }
+                              <Scalar> fps { 60 }
+                              <Scalar> contents { ijkhprxyz }
+                              <V> {
+                                1.000000 1.000000 1.000000 0.000000 -0.000001 -0.000000 25.749990 0.000402 0.000000
+                              }
+                            }
+                          }
+                        }
+                      }
+                      <Table> RFingerC1 {
+                        <Xfm$Anim> xform {
+                          <Scalar> order { srpht }
+                          <Scalar> fps { 60 }
+                          <Scalar> contents { ijkhprxyz }
+                          <V> {
+                            1.000000 1.000000 1.000000 -3.197192 -0.000000 -47.106091 16.452120 -1.289165 -0.560275
+                          }
+                        }
+                        <Table> RFingerC2 {
+                          <Xfm$Anim> xform {
+                            <Scalar> order { srpht }
+                            <Scalar> fps { 60 }
+                            <Scalar> contents { ijkhprxyz }
+                            <V> {
+                              1.000000 1.000000 1.000000 0.000000 -0.000000 0.343990 26.674999 0.000007 -0.000000
+                            }
+                          }
+                          <Table> RFingerC3 {
+                            <Xfm$Anim> xform {
+                              <Scalar> order { srpht }
+                              <Scalar> fps { 60 }
+                              <Scalar> contents { ijkhprxyz }
+                              <V> {
+                                1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 23.056000 0.000373 -0.000000
+                              }
+                            }
+                          }
+                        }
+                      }
+                      <Table> RFingerD1 {
+                        <Xfm$Anim> xform {
+                          <Scalar> order { srpht }
+                          <Scalar> fps { 60 }
+                          <Scalar> contents { ijkhprxyz }
+                          <V> {
+                            1.000000 1.000000 1.000000 -3.197192 -0.000000 -55.451508 6.910642 -1.022555 -1.093257
+                          }
+                        }
+                        <Table> RFingerD2 {
+                          <Xfm$Anim> xform {
+                            <Scalar> order { srpht }
+                            <Scalar> fps { 60 }
+                            <Scalar> contents { ijkhprxyz }
+                            <V> {
+                              1.000000 1.000000 1.000000 0.000000 -0.000001 3.023298 30.053970 -0.000421 -0.000000
+                            }
+                          }
+                          <Table> RFingerD3 {
+                            <Xfm$Anim> xform {
+                              <Scalar> order { srpht }
+                              <Scalar> fps { 60 }
+                              <Scalar> contents { ijkhprxyz }
+                              <V> {
+                                1.000000 1.000000 1.000000 -0.000000 -0.000002 -1.723215 22.675220 -0.000000 0.000000
+                              }
+                            }
+                          }
+                        }
+                      }
+                      <Table> RFingerE1 {
+                        <Xfm$Anim> xform {
+                          <Scalar> order { srpht }
+                          <Scalar> fps { 60 }
+                          <Scalar> contents { ijkhprxyz }
+                          <V> {
+                            1.000000 1.000000 1.000000 -3.197192 -0.000000 -60.152943 -2.498655 2.054167 -1.618856
+                          }
+                        }
+                        <Table> RFingerE2 {
+                          <Xfm$Anim> xform {
+                            <Scalar> order { srpht }
+                            <Scalar> fps { 60 }
+                            <Scalar> contents { ijkhprxyz }
+                            <V> {
+                              1.000000 1.000000 1.000000 0.000000 -0.000000 2.765905 30.986719 -0.000000 -0.000000
+                            }
+                          }
+                          <Table> RFingerE3 {
+                            <Xfm$Anim> xform {
+                              <Scalar> order { srpht }
+                              <Scalar> fps { 60 }
+                              <Scalar> contents { ijkhprxyz }
+                              <V> {
+                                1.000000 1.000000 1.000000 0.000000 -0.000001 1.040817 18.971569 0.000000 -0.000000
+                              }
+                            }
+                          }
+                        }
+                      }
+                      <Table> EffHand01 {
+                        <Xfm$Anim> xform {
+                          <Scalar> order { srpht }
+                          <Scalar> fps { 60 }
+                          <Scalar> contents { ijkhprxyz }
+                          <V> {
+                            1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 9.000000 -0.000000 4.000000
+                          }
+                        }
+                      }
+                    }
+                    <Table> RFeelerB1 {
+                      <Xfm$Anim> xform {
+                        <Scalar> order { srpht }
+                        <Scalar> fps { 60 }
+                        <Scalar> contents { ijkhprxyz }
+                        <V> {
+                          1.000000 1.000000 1.000000 0.036826 -0.021000 -111.643639 41.498020 -0.049613 -1.659945
+                        }
+                      }
+                      <Table> RFeelerB2 {
+                        <Xfm$Anim> xform {
+                          <Scalar> order { srpht }
+                          <Scalar> fps { 60 }
+                          <Scalar> contents { ijkhprxyz }
+                          <V> {
+                            1.000000 1.000000 1.000000 0.000000 -0.000002 4.882389 28.322590 0.000041 -0.000000
+                          }
+                        }
+                        <Table> RFeelerB3 {
+                          <Xfm$Anim> xform {
+                            <Scalar> order { srpht }
+                            <Scalar> fps { 60 }
+                            <Scalar> contents { ijkhprxyz }
+                            <V> {
+                              1.000000 1.000000 1.000000 0.000000 -0.000002 3.748428 16.167681 0.000048 0.000000
+                            }
+                          }
+                        }
+                      }
+                    }
+                    <Table> RFeelerC1 {
+                      <Xfm$Anim> xform {
+                        <Scalar> order { srpht }
+                        <Scalar> fps { 60 }
+                        <Scalar> contents { ijkhprxyz }
+                        <V> {
+                          1.000000 1.000000 1.000000 0.036826 -0.021000 -114.612572 29.680799 0.003531 -1.652369
+                        }
+                      }
+                      <Table> RFeelerC2 {
+                        <Xfm$Anim> xform {
+                          <Scalar> order { srpht }
+                          <Scalar> fps { 60 }
+                          <Scalar> contents { ijkhprxyz }
+                          <V> {
+                            1.000000 1.000000 1.000000 0.000000 -0.000000 6.391327 23.555120 -0.000055 -0.000000
+                          }
+                        }
+                        <Table> RFeelerC3 {
+                          <Xfm$Anim> xform {
+                            <Scalar> order { srpht }
+                            <Scalar> fps { 60 }
+                            <Scalar> contents { ijkhprxyz }
+                            <V> {
+                              1.000000 1.000000 1.000000 0.000000 -0.000000 3.934403 15.270640 -0.000136 0.000000
+                            }
+                          }
+                        }
+                      }
+                    }
+                    <Table> RFeelerD1 {
+                      <Xfm$Anim> xform {
+                        <Scalar> order { srpht }
+                        <Scalar> fps { 60 }
+                        <Scalar> contents { ijkhprxyz }
+                        <V> {
+                          1.000000 1.000000 1.000000 0.036826 -0.021000 -116.789078 17.207670 0.500461 -1.644534
+                        }
+                      }
+                      <Table> RFeelerD2 {
+                        <Xfm$Anim> xform {
+                          <Scalar> order { srpht }
+                          <Scalar> fps { 60 }
+                          <Scalar> contents { ijkhprxyz }
+                          <V> {
+                            1.000000 1.000000 1.000000 0.000000 -0.000000 4.928794 18.247810 0.000074 -0.000000
+                          }
+                        }
+                        <Table> RFeelerD3 {
+                          <Xfm$Anim> xform {
+                            <Scalar> order { srpht }
+                            <Scalar> fps { 60 }
+                            <Scalar> contents { ijkhprxyz }
+                            <V> {
+                              1.000000 1.000000 1.000000 0.000000 -0.000000 6.129383 13.262220 0.000028 0.000000
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                  <Table> RFeelerE1 {
+                    <Xfm$Anim> xform {
+                      <Scalar> order { srpht }
+                      <Scalar> fps { 60 }
+                      <Scalar> contents { ijkhprxyz }
+                      <V> {
+                        1.000000 1.000000 1.000000 0.042444 0.000000 -88.743370 42.386059 -3.591908 -1.445179
+                      }
+                    }
+                    <Table> RFeelerE2 {
+                      <Xfm$Anim> xform {
+                        <Scalar> order { srpht }
+                        <Scalar> fps { 60 }
+                        <Scalar> contents { ijkhprxyz }
+                        <V> {
+                          1.000000 1.000000 1.000000 0.000000 -0.000001 5.587453 14.793550 -0.000044 -0.000000
+                        }
+                      }
+                    }
+                  }
+                  <Table> RFeelerF1 {
+                    <Xfm$Anim> xform {
+                      <Scalar> order { srpht }
+                      <Scalar> fps { 60 }
+                      <Scalar> contents { ijkhprxyz }
+                      <V> {
+                        1.000000 1.000000 1.000000 0.042444 0.000000 -87.123955 30.392969 -2.814387 -1.436295
+                      }
+                    }
+                    <Table> RFeelerF2 {
+                      <Xfm$Anim> xform {
+                        <Scalar> order { srpht }
+                        <Scalar> fps { 60 }
+                        <Scalar> contents { ijkhprxyz }
+                        <V> {
+                          1.000000 1.000000 1.000000 0.000000 -0.000001 -0.000000 13.869040 0.000116 -0.000000
+                        }
+                      }
+                    }
+                  }
+                  <Table> RFeelerG1 {
+                    <Xfm$Anim> xform {
+                      <Scalar> order { srpht }
+                      <Scalar> fps { 60 }
+                      <Scalar> contents { ijkhprxyz }
+                      <V> {
+                        1.000000 1.000000 1.000000 0.042444 0.000000 -87.123955 18.936831 -3.569231 -1.427809
+                      }
+                    }
+                    <Table> RFeelerG2 {
+                      <Xfm$Anim> xform {
+                        <Scalar> order { srpht }
+                        <Scalar> fps { 60 }
+                        <Scalar> contents { ijkhprxyz }
+                        <V> {
+                          1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 14.792070 0.000063 -0.000000
+                        }
+                      }
+                    }
+                  }
+                  <Table> RFeelerH1 {
+                    <Xfm$Anim> xform {
+                      <Scalar> order { srpht }
+                      <Scalar> fps { 60 }
+                      <Scalar> contents { ijkhprxyz }
+                      <V> {
+                        1.000000 1.000000 1.000000 0.042444 0.000000 -87.123955 7.784299 -3.046180 -1.419547
+                      }
+                    }
+                    <Table> RFeelerH2 {
+                      <Xfm$Anim> xform {
+                        <Scalar> order { srpht }
+                        <Scalar> fps { 60 }
+                        <Scalar> contents { ijkhprxyz }
+                        <V> {
+                          1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 14.577400 -0.000141 -0.000000
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              <Table> EffCenter01 {
+                <Xfm$Anim> xform {
+                  <Scalar> order { srpht }
+                  <Scalar> fps { 60 }
+                  <Scalar> contents { ijkhprxyz }
+                  <V> {
+                    1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 0.000000 -0.000000 0.000000
+                  }
+                }
+              }
+            }
+            <Table> Hips {
+              <Xfm$Anim> xform {
+                <Scalar> order { srpht }
+                <Scalar> fps { 60 }
+                <Scalar> contents { ijkhprxyz }
+                <V> {
+                  1.000000 1.000000 1.000000 -0.000000 -0.000000 179.999985 -0.001000 0.000000 -0.000000
+                }
+              }
+              <Table> LThigh {
+                <Xfm$Anim> xform {
+                  <Scalar> order { srpht }
+                  <Scalar> fps { 60 }
+                  <Scalar> contents { ijkhprxyz }
+                  <V> {
+                    1.000000 1.000000 1.000000 4.636168 -0.000000 -0.000000 15.258900 12.000000 -7.777143
+                  }
+                }
+                <Table> LLeg {
+                  <Xfm$Anim> xform {
+                    <Scalar> order { srpht }
+                    <Scalar> fps { 60 }
+                    <Scalar> contents { ijkhprxyz }
+                    <V> {
+                      1.000000 1.000000 1.000000 -17.164755 -0.000000 -0.000000 33.722191 -0.000000 -0.000000
+                    }
+                  }
+                  <Table> LFoot {
+                    <Xfm$Anim> xform {
+                      <Scalar> order { srpht }
+                      <Scalar> fps { 60 }
+                      <Scalar> contents { ijkhprxyz }
+                      <V> {
+                        1.000000 1.000000 1.000000 -77.471397 -0.000000 -0.000000 26.508070 -0.000000 0.000000
+                      }
+                    }
+                    <Table> LToeA1 {
+                      <Xfm$Anim> xform {
+                        <Scalar> order { srpht }
+                        <Scalar> fps { 60 }
+                        <Scalar> contents { ijkhprxyz }
+                        <V> {
+                          1.000000 1.000000 1.000000 -172.100677 -3.374224 157.012009 5.708638 -4.292620 -4.360619
+                        }
+                      }
+                      <Table> LToeA2 {
+                        <Xfm$Anim> xform {
+                          <Scalar> order { srpht }
+                          <Scalar> fps { 60 }
+                          <Scalar> contents { ijkhprxyz }
+                          <V> {
+                            1.000000 1.000000 1.000000 9.632403 1.436614 8.400953 8.213362 -0.000001 -0.000003
+                          }
+                        }
+                        <Table> LToeA3 {
+                          <Xfm$Anim> xform {
+                            <Scalar> order { srpht }
+                            <Scalar> fps { 60 }
+                            <Scalar> contents { ijkhprxyz }
+                            <V> {
+                              1.000000 1.000000 1.000000 -17.050026 -0.011979 0.040111 6.546336 0.000003 -0.000000
+                            }
+                          }
+                        }
+                      }
+                    }
+                    <Table> LToeB1 {
+                      <Xfm$Anim> xform {
+                        <Scalar> order { srpht }
+                        <Scalar> fps { 60 }
+                        <Scalar> contents { ijkhprxyz }
+                        <V> {
+                          1.000000 1.000000 1.000000 -173.912170 0.000019 -180.000000 7.015194 0.006610 -4.671271
+                        }
+                      }
+                      <Table> LToeB2 {
+                        <Xfm$Anim> xform {
+                          <Scalar> order { srpht }
+                          <Scalar> fps { 60 }
+                          <Scalar> contents { ijkhprxyz }
+                          <V> {
+                            1.000000 1.000000 1.000000 8.464328 -0.000000 -0.000000 8.555098 0.000000 0.000000
+                          }
+                        }
+                        <Table> LToeB3 {
+                          <Xfm$Anim> xform {
+                            <Scalar> order { srpht }
+                            <Scalar> fps { 60 }
+                            <Scalar> contents { ijkhprxyz }
+                            <V> {
+                              1.000000 1.000000 1.000000 -16.346331 -0.000000 -0.000000 8.038365 0.000000 -0.000000
+                            }
+                          }
+                        }
+                      }
+                      <Table> EffAttack01_01 {
+                        <Xfm$Anim> xform {
+                          <Scalar> order { srpht }
+                          <Scalar> fps { 60 }
+                          <Scalar> contents { ijkhprxyz }
+                          <V> {
+                            1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 0.000000 -0.000000 6.900000
+                          }
+                        }
+                      }
+                    }
+                    <Table> LToeC1 {
+                      <Xfm$Anim> xform {
+                        <Scalar> order { srpht }
+                        <Scalar> fps { 60 }
+                        <Scalar> contents { ijkhprxyz }
+                        <V> {
+                          1.000000 1.000000 1.000000 -172.100677 3.374224 -157.012009 5.708641 4.292619 -4.360617
+                        }
+                      }
+                      <Table> LToeC2 {
+                        <Xfm$Anim> xform {
+                          <Scalar> order { srpht }
+                          <Scalar> fps { 60 }
+                          <Scalar> contents { ijkhprxyz }
+                          <V> {
+                            1.000000 1.000000 1.000000 9.632403 -1.436614 -8.400953 8.213358 -0.000000 0.000000
+                          }
+                        }
+                        <Table> LToeC3 {
+                          <Xfm$Anim> xform {
+                            <Scalar> order { srpht }
+                            <Scalar> fps { 60 }
+                            <Scalar> contents { ijkhprxyz }
+                            <V> {
+                              1.000000 1.000000 1.000000 -17.050026 0.011979 -0.040111 6.546357 0.000000 -0.000000
+                            }
+                          }
+                        }
+                      }
+                    }
+                    <Table> LToeD1 {
+                      <Xfm$Anim> xform {
+                        <Scalar> order { srpht }
+                        <Scalar> fps { 60 }
+                        <Scalar> contents { ijkhprxyz }
+                        <V> {
+                          1.000000 1.000000 1.000000 175.359283 -0.000000 -0.000000 -3.552180 0.000000 -5.045170
+                        }
+                      }
+                      <Table> LToeD2 {
+                        <Xfm$Anim> xform {
+                          <Scalar> order { srpht }
+                          <Scalar> fps { 60 }
+                          <Scalar> contents { ijkhprxyz }
+                          <V> {
+                            1.000000 1.000000 1.000000 -12.972431 -0.000000 -0.000000 6.492432 -0.000000 -0.000000
+                          }
+                        }
+                      }
+                    }
+                    <Table> EffFoot02 {
+                      <Xfm$Anim> xform {
+                        <Scalar> order { srpht }
+                        <Scalar> fps { 60 }
+                        <Scalar> contents { ijkhprxyz }
+                        <V> {
+                          1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 3.900000 0.000000 -8.400000
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              <Table> RThigh {
+                <Xfm$Anim> xform {
+                  <Scalar> order { srpht }
+                  <Scalar> fps { 60 }
+                  <Scalar> contents { ijkhprxyz }
+                  <V> {
+                    1.000000 1.000000 1.000000 4.636168 -0.000000 -0.000000 15.258890 -12.000000 -7.777141
+                  }
+                }
+                <Table> RLeg {
+                  <Xfm$Anim> xform {
+                    <Scalar> order { srpht }
+                    <Scalar> fps { 60 }
+                    <Scalar> contents { ijkhprxyz }
+                    <V> {
+                      1.000000 1.000000 1.000000 -17.164755 -0.000000 -0.000000 33.722240 0.000000 0.000006
+                    }
+                  }
+                  <Table> RFoot {
+                    <Xfm$Anim> xform {
+                      <Scalar> order { srpht }
+                      <Scalar> fps { 60 }
+                      <Scalar> contents { ijkhprxyz }
+                      <V> {
+                        1.000000 1.000000 1.000000 -77.471397 -0.000000 -0.000000 26.508020 0.000000 0.000004
+                      }
+                    }
+                    <Table> RToeA1 {
+                      <Xfm$Anim> xform {
+                        <Scalar> order { srpht }
+                        <Scalar> fps { 60 }
+                        <Scalar> contents { ijkhprxyz }
+                        <V> {
+                          1.000000 1.000000 1.000000 -172.100677 3.374224 -157.012009 5.708640 4.292620 -4.360620
+                        }
+                      }
+                      <Table> RToeA2 {
+                        <Xfm$Anim> xform {
+                          <Scalar> order { srpht }
+                          <Scalar> fps { 60 }
+                          <Scalar> contents { ijkhprxyz }
+                          <V> {
+                            1.000000 1.000000 1.000000 9.632403 -1.436614 -8.400953 8.213362 0.000001 -0.000003
+                          }
+                        }
+                        <Table> RToeA3 {
+                          <Xfm$Anim> xform {
+                            <Scalar> order { srpht }
+                            <Scalar> fps { 60 }
+                            <Scalar> contents { ijkhprxyz }
+                            <V> {
+                              1.000000 1.000000 1.000000 -17.050026 0.011979 -0.040111 6.546336 -0.000003 -0.000000
+                            }
+                          }
+                        }
+                      }
+                    }
+                    <Table> RToeB1 {
+                      <Xfm$Anim> xform {
+                        <Scalar> order { srpht }
+                        <Scalar> fps { 60 }
+                        <Scalar> contents { ijkhprxyz }
+                        <V> {
+                          1.000000 1.000000 1.000000 -173.912170 -0.000019 180.000000 7.015200 -0.006600 -4.671270
+                        }
+                      }
+                      <Table> RToeB2 {
+                        <Xfm$Anim> xform {
+                          <Scalar> order { srpht }
+                          <Scalar> fps { 60 }
+                          <Scalar> contents { ijkhprxyz }
+                          <V> {
+                            1.000000 1.000000 1.000000 8.464328 -0.000000 -0.000000 8.555057 0.000000 0.000006
+                          }
+                        }
+                        <Table> RToeB3 {
+                          <Xfm$Anim> xform {
+                            <Scalar> order { srpht }
+                            <Scalar> fps { 60 }
+                            <Scalar> contents { ijkhprxyz }
+                            <V> {
+                              1.000000 1.000000 1.000000 -16.346331 -0.000000 -0.000000 8.038413 0.000000 0.000005
+                            }
+                          }
+                        }
+                      }
+                    }
+                    <Table> RToeC1 {
+                      <Xfm$Anim> xform {
+                        <Scalar> order { srpht }
+                        <Scalar> fps { 60 }
+                        <Scalar> contents { ijkhprxyz }
+                        <V> {
+                          1.000000 1.000000 1.000000 -172.100677 -3.374224 157.012009 5.708640 -4.292600 -4.360620
+                        }
+                      }
+                      <Table> RToeC2 {
+                        <Xfm$Anim> xform {
+                          <Scalar> order { srpht }
+                          <Scalar> fps { 60 }
+                          <Scalar> contents { ijkhprxyz }
+                          <V> {
+                            1.000000 1.000000 1.000000 9.632403 1.436614 8.400953 8.213374 0.000026 -0.000005
+                          }
+                        }
+                        <Table> RToeC3 {
+                          <Xfm$Anim> xform {
+                            <Scalar> order { srpht }
+                            <Scalar> fps { 60 }
+                            <Scalar> contents { ijkhprxyz }
+                            <V> {
+                              1.000000 1.000000 1.000000 -17.050026 -0.011979 0.040111 6.546329 -0.000026 0.000000
+                            }
+                          }
+                        }
+                      }
+                    }
+                    <Table> RToeD1 {
+                      <Xfm$Anim> xform {
+                        <Scalar> order { srpht }
+                        <Scalar> fps { 60 }
+                        <Scalar> contents { ijkhprxyz }
+                        <V> {
+                          1.000000 1.000000 1.000000 175.359283 -0.000000 -0.000000 -3.552180 0.000000 -5.045170
+                        }
+                      }
+                      <Table> RToeD2 {
+                        <Xfm$Anim> xform {
+                          <Scalar> order { srpht }
+                          <Scalar> fps { 60 }
+                          <Scalar> contents { ijkhprxyz }
+                          <V> {
+                            1.000000 1.000000 1.000000 -12.972431 -0.000000 -0.000000 6.492395 0.000000 0.000004
+                          }
+                        }
+                      }
+                    }
+                    <Table> EffFoot01 {
+                      <Xfm$Anim> xform {
+                        <Scalar> order { srpht }
+                        <Scalar> fps { 60 }
+                        <Scalar> contents { ijkhprxyz }
+                        <V> {
+                          1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 3.900000 0.000000 -8.400000
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              <Table> Tail01 {
+                <Xfm$Anim> xform {
+                  <Scalar> order { srpht }
+                  <Scalar> fps { 60 }
+                  <Scalar> contents { ijkhprxyz }
+                  <V> {
+                    1.000000 1.000000 1.000000 40.961060 -0.000000 -0.000000 9.606288 0.000000 -5.469864
+                  }
+                }
+                <Table> Tail02 {
+                  <Xfm$Anim> xform {
+                    <Scalar> order { srpht }
+                    <Scalar> fps { 60 }
+                    <Scalar> contents { ijkhprxyz }
+                    <V> {
+                      1.000000 1.000000 1.000000 10.550221 -0.000000 -0.000000 16.540110 -0.000000 0.000000
+                    }
+                  }
+                  <Table> Tail03 {
+                    <Xfm$Anim> xform {
+                      <Scalar> order { srpht }
+                      <Scalar> fps { 60 }
+                      <Scalar> contents { ijkhprxyz }
+                      <V> {
+                        1.000000 1.000000 1.000000 13.825049 -0.000000 -0.000000 19.299641 0.000000 0.000000
+                      }
+                    }
+                    <Table> Tail04 {
+                      <Xfm$Anim> xform {
+                        <Scalar> order { srpht }
+                        <Scalar> fps { 60 }
+                        <Scalar> contents { ijkhprxyz }
+                        <V> {
+                          1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 20.778111 -0.000000 -0.000000
+                        }
+                      }
+                      <Table> Tail05 {
+                        <Xfm$Anim> xform {
+                          <Scalar> order { srpht }
+                          <Scalar> fps { 60 }
+                          <Scalar> contents { ijkhprxyz }
+                          <V> {
+                            1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 27.050810 -0.000000 -0.000000
+                          }
+                        }
+                        <Table> Tail06 {
+                          <Xfm$Anim> xform {
+                            <Scalar> order { srpht }
+                            <Scalar> fps { 60 }
+                            <Scalar> contents { ijkhprxyz }
+                            <V> {
+                              1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 25.883169 -0.000000 0.000000
+                            }
+                          }
+                          <Table> Tail07 {
+                            <Xfm$Anim> xform {
+                              <Scalar> order { srpht }
+                              <Scalar> fps { 60 }
+                              <Scalar> contents { ijkhprxyz }
+                              <V> {
+                                1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 26.910170 -0.000000 0.000000
+                              }
+                            }
+                            <Table> Tail08 {
+                              <Xfm$Anim> xform {
+                                <Scalar> order { srpht }
+                                <Scalar> fps { 60 }
+                                <Scalar> contents { ijkhprxyz }
+                                <V> {
+                                  1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 26.800220 -0.000000 0.000000
+                                }
+                              }
+                              <Table> Tail09 {
+                                <Xfm$Anim> xform {
+                                  <Scalar> order { srpht }
+                                  <Scalar> fps { 60 }
+                                  <Scalar> contents { ijkhprxyz }
+                                  <V> {
+                                    1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 26.409241 -0.000000 -0.000000
+                                  }
+                                }
+                                <Table> Tail10 {
+                                  <Xfm$Anim> xform {
+                                    <Scalar> order { srpht }
+                                    <Scalar> fps { 60 }
+                                    <Scalar> contents { ijkhprxyz }
+                                    <V> {
+                                      1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 26.189159 -0.000000 0.000000
+                                    }
+                                  }
+                                  <Table> Tail11 {
+                                    <Xfm$Anim> xform {
+                                      <Scalar> order { srpht }
+                                      <Scalar> fps { 60 }
+                                      <Scalar> contents { ijkhprxyz }
+                                      <V> {
+                                        1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 22.856581 -0.000000 0.000000
+                                      }
+                                    }
+                                    <Table> Tail12 {
+                                      <Xfm$Anim> xform {
+                                        <Scalar> order { srpht }
+                                        <Scalar> fps { 60 }
+                                        <Scalar> contents { ijkhprxyz }
+                                        <V> {
+                                          1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 22.237499 -0.000000 0.000000
+                                        }
+                                      }
+                                      <Table> Tail13 {
+                                        <Xfm$Anim> xform {
+                                          <Scalar> order { srpht }
+                                          <Scalar> fps { 60 }
+                                          <Scalar> contents { ijkhprxyz }
+                                          <V> {
+                                            1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 22.202299 -0.000000 0.000000
+                                          }
+                                        }
+                                        <Table> Tail14 {
+                                          <Xfm$Anim> xform {
+                                            <Scalar> order { srpht }
+                                            <Scalar> fps { 60 }
+                                            <Scalar> contents { ijkhprxyz }
+                                            <V> {
+                                              1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 20.905170 -0.000000 0.000000
+                                            }
+                                          }
+                                          <Table> Tail15 {
+                                            <Xfm$Anim> xform {
+                                              <Scalar> order { srpht }
+                                              <Scalar> fps { 60 }
+                                              <Scalar> contents { ijkhprxyz }
+                                              <V> {
+                                                1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 19.790661 -0.000000 -0.000000
+                                              }
+                                            }
+                                            <Table> Tail16 {
+                                              <Xfm$Anim> xform {
+                                                <Scalar> order { srpht }
+                                                <Scalar> fps { 60 }
+                                                <Scalar> contents { ijkhprxyz }
+                                                <V> {
+                                                  1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 19.382481 -0.000000 -0.000000
+                                                }
+                                              }
+                                              <Table> Tail17 {
+                                                <Xfm$Anim> xform {
+                                                  <Scalar> order { srpht }
+                                                  <Scalar> fps { 60 }
+                                                  <Scalar> contents { ijkhprxyz }
+                                                  <V> {
+                                                    1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 19.045931 -0.000000 0.000000
+                                                  }
+                                                }
+                                                <Table> Tail18 {
+                                                  <Xfm$Anim> xform {
+                                                    <Scalar> order { srpht }
+                                                    <Scalar> fps { 60 }
+                                                    <Scalar> contents { ijkhprxyz }
+                                                    <V> {
+                                                      1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 19.123840 -0.000000 -0.000000
+                                                    }
+                                                  }
+                                                  <Table> Tail19 {
+                                                    <Xfm$Anim> xform {
+                                                      <Scalar> order { srpht }
+                                                      <Scalar> fps { 60 }
+                                                      <Scalar> contents { ijkhprxyz }
+                                                      <V> {
+                                                        1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 19.118860 -0.000000 0.000000
+                                                      }
+                                                    }
+                                                    <Table> Tail20 {
+                                                      <Xfm$Anim> xform {
+                                                        <Scalar> order { srpht }
+                                                        <Scalar> fps { 60 }
+                                                        <Scalar> contents { ijkhprxyz }
+                                                        <V> {
+                                                          1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 18.783270 -0.000000 0.000000
+                                                        }
+                                                      }
+                                                      <Table> EffTail01 {
+                                                        <Xfm$Anim> xform {
+                                                          <Scalar> order { srpht }
+                                                          <Scalar> fps { 60 }
+                                                          <Scalar> contents { ijkhprxyz }
+                                                          <V> {
+                                                            1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 15.900000 0.000000 -0.000000
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          <Table> EffShoot01_01 {
+            <Xfm$Anim> xform {
+              <Scalar> order { srpht }
+              <Scalar> fps { 60 }
+              <Scalar> contents { ijkhprxyz }
+              <V> {
+                1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 6.000000 208.399994 137.699997
+              }
+            }
+          }
+          <Table> EffShoot02_01 {
+            <Xfm$Anim> xform {
+              <Scalar> order { srpht }
+              <Scalar> fps { 60 }
+              <Scalar> contents { ijkhprxyz }
+              <V> {
+                1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 0.000000 229.199997 33.200001
+              }
+            }
+          }
+          <Table> EffFront01 {
+            <Xfm$Anim> xform {
+              <Scalar> order { srpht }
+              <Scalar> fps { 60 }
+              <Scalar> contents { ijkhprxyz }
+              <V> {
+                1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 0.000000 188.399994 59.799999
+              }
+            }
+          }
+          <Table> EffGcloud01 {
+            <Xfm$Anim> xform {
+              <Scalar> order { srpht }
+              <Scalar> fps { 60 }
+              <Scalar> contents { ijkhprxyz }
+              <V> {
+                1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 0.000000 325.000000 -7.000000
+              }
+            }
+          }
+        }
+        <Table> pm0144_00_31_BodySkin {
+          <Xfm$Anim> xform {
+            <Scalar> order { srpht }
+            <Scalar> fps { 60 }
+            <Scalar> contents { ijkhprxyz }
+            <V> {
+              1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 0.000000 0.000000 0.000000
+            }
+          }
+        }
+        <Table> TraGroup {
+          <Xfm$Anim> xform {
+            <Scalar> order { srpht }
+            <Scalar> fps { 60 }
+            <Scalar> contents { ijkhprxyz }
+            <V> {
+              1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 0.000000 0.000000 0.000000
+            }
+          }
+          <Table> pm0144_00_31_EyeSkin {
+            <Xfm$Anim> xform {
+              <Scalar> order { srpht }
+              <Scalar> fps { 60 }
+              <Scalar> contents { ijkhprxyz }
+              <V> {
+                1.000000 1.000000 1.000000 0.000000 -0.000000 -0.000000 0.000000 0.000000 0.000000
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

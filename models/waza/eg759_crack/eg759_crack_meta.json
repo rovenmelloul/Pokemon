@@ -1,0 +1,471 @@
+{
+  "materials": [
+    {
+      "name": "ShaderfxShader2",
+      "shader_group": "FxDefault01",
+      "render_layer": 0,
+      "shader_index": 0,
+      "texture_maps": [
+        {
+          "sampler": "LightTableTex",
+          "texture": "fxmt_cmn_ht002_m_lta.png",
+          "tex_index": 0
+        }
+      ],
+      "colors": [
+        {
+          "name": "OutLineCol",
+          "r": 0.0274,
+          "g": 0.0277,
+          "b": 0.0139
+        },
+        {
+          "name": "Shadow_Color",
+          "r": 0.0242,
+          "g": 0.0242,
+          "b": 0.0242
+        },
+        {
+          "name": "ConstantColor01",
+          "r": 0.0437,
+          "g": 0.0446,
+          "b": 0.0237
+        },
+        {
+          "name": "FresnelColor",
+          "r": 25.314,
+          "g": 25.314,
+          "b": 0.214
+        }
+      ],
+      "values": [
+        {
+          "name": "OutLineID",
+          "value": 0.0
+        },
+        {
+          "name": "ProgID",
+          "value": 0.0
+        },
+        {
+          "name": "ShadowRange",
+          "value": 0.6
+        },
+        {
+          "name": "ConstantAlpha01",
+          "value": 1.0
+        },
+        {
+          "name": "Def0_OneMin1_FreCol",
+          "value": 0.0
+        },
+        {
+          "name": "FresnelPowerCol",
+          "value": 32.0
+        },
+        {
+          "name": "FresnelStrengthCol",
+          "value": 0.0
+        }
+      ],
+      "switches": [
+        {
+          "name": "NormalEdgeEnable",
+          "value": true
+        },
+        {
+          "name": "OutLineIDEnable",
+          "value": false
+        },
+        {
+          "name": "OutLineColFixed",
+          "value": true
+        }
+      ],
+      "textures_used": [
+        {
+          "sampler": "LightTableTex",
+          "texture": "fxmt_cmn_ht002_m_lta.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "fxmt_cmn_ht002_m_lta.png",
+      "used_sampler": "LightTableTex"
+    }
+  ],
+  "meshes": [
+    {
+      "index": 0,
+      "num_vertices": 55,
+      "num_faces": 42,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 1,
+      "num_vertices": 101,
+      "num_faces": 82,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "num_vertices": 54,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "num_vertices": 62,
+      "num_faces": 44,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 4,
+      "num_vertices": 120,
+      "num_faces": 82,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 5,
+      "num_vertices": 113,
+      "num_faces": 78,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 6,
+      "num_vertices": 77,
+      "num_faces": 50,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 7,
+      "num_vertices": 55,
+      "num_faces": 38,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 8,
+      "num_vertices": 98,
+      "num_faces": 72,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 9,
+      "num_vertices": 68,
+      "num_faces": 48,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 10,
+      "num_vertices": 71,
+      "num_faces": 52,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 11,
+      "num_vertices": 97,
+      "num_faces": 74,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 12,
+      "num_vertices": 105,
+      "num_faces": 86,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 13,
+      "num_vertices": 83,
+      "num_faces": 62,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 14,
+      "num_vertices": 79,
+      "num_faces": 58,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 15,
+      "num_vertices": 104,
+      "num_faces": 74,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 16,
+      "num_vertices": 76,
+      "num_faces": 50,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 17,
+      "num_vertices": 64,
+      "num_faces": 50,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 18,
+      "num_vertices": 62,
+      "num_faces": 48,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 19,
+      "num_vertices": 108,
+      "num_faces": 86,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 20,
+      "num_vertices": 64,
+      "num_faces": 44,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 21,
+      "num_vertices": 85,
+      "num_faces": 66,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 22,
+      "num_vertices": 69,
+      "num_faces": 50,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 23,
+      "num_vertices": 97,
+      "num_faces": 82,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 24,
+      "num_vertices": 55,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 25,
+      "num_vertices": 66,
+      "num_faces": 48,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 26,
+      "num_vertices": 93,
+      "num_faces": 70,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 27,
+      "num_vertices": 60,
+      "num_faces": 32,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 28,
+      "num_vertices": 85,
+      "num_faces": 54,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 29,
+      "num_vertices": 109,
+      "num_faces": 86,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 30,
+      "num_vertices": 102,
+      "num_faces": 80,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 31,
+      "num_vertices": 85,
+      "num_faces": 54,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 32,
+      "num_vertices": 87,
+      "num_faces": 66,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 33,
+      "num_vertices": 110,
+      "num_faces": 86,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 34,
+      "num_vertices": 84,
+      "num_faces": 62,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 35,
+      "num_vertices": 101,
+      "num_faces": 64,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 36,
+      "num_vertices": 112,
+      "num_faces": 80,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 37,
+      "num_vertices": 138,
+      "num_faces": 104,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 38,
+      "num_vertices": 47,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 39,
+      "num_vertices": 56,
+      "num_faces": 40,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 40,
+      "num_vertices": 113,
+      "num_faces": 74,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 41,
+      "num_vertices": 53,
+      "num_faces": 48,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 42,
+      "num_vertices": 66,
+      "num_faces": 52,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 43,
+      "num_vertices": 88,
+      "num_faces": 64,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 44,
+      "num_vertices": 62,
+      "num_faces": 44,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 45,
+      "num_vertices": 102,
+      "num_faces": 66,
+      "material_indices": [
+        0
+      ]
+    }
+  ],
+  "texture_names": [
+    "fxmt_cmn_ht002_m_lta"
+  ],
+  "hidden_materials": [],
+  "outline_materials": []
+}

@@ -1,0 +1,269 @@
+{
+  "materials": [
+    {
+      "name": "sh_base_top01",
+      "shader_group": "FxDefault01",
+      "render_layer": 0,
+      "shader_index": 0,
+      "texture_maps": [
+        {
+          "sampler": "LightTableTex",
+          "texture": "fxmt_cmn_ht003_m_lta.png",
+          "tex_index": 0
+        },
+        {
+          "sampler": "Tex01WRAP",
+          "texture": "fxmt_3_floor204.png",
+          "tex_index": 1
+        },
+        {
+          "sampler": "Tex02WRAP",
+          "texture": "fxmt_3_cloud007_m.png",
+          "tex_index": 2
+        },
+        {
+          "sampler": "AddTexWRAP",
+          "texture": "fxmt_3_cloud010_m.png",
+          "tex_index": 3
+        }
+      ],
+      "colors": [
+        {
+          "name": "Shadow_Color",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "Tex01_Multiply_Color",
+          "r": 0.274,
+          "g": 0.2245,
+          "b": 0.1784
+        },
+        {
+          "name": "Tex02_Multiply_Color",
+          "r": 0.049,
+          "g": 0.025,
+          "b": 0.0059
+        },
+        {
+          "name": "AddTex_SubColor",
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0
+        },
+        {
+          "name": "AddTex_BaseColor",
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0
+        }
+      ],
+      "values": [
+        {
+          "name": "ShadowRange",
+          "value": 1.0
+        },
+        {
+          "name": "Tex01TranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01TranslateV",
+          "value": 1.5
+        },
+        {
+          "name": "Tex01Rotate",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01ScaleU",
+          "value": 4.0
+        },
+        {
+          "name": "Tex01ScaleV",
+          "value": 4.0
+        },
+        {
+          "name": "R0_A1_Tex01_Alpha",
+          "value": 0.0
+        },
+        {
+          "name": "Tex02TranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "Tex02TranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "Tex02Rotate",
+          "value": 30.0
+        },
+        {
+          "name": "Tex02ScaleU",
+          "value": 3.0
+        },
+        {
+          "name": "Tex02ScaleV",
+          "value": 4.0
+        },
+        {
+          "name": "R0_A1_Tex02_Alpha",
+          "value": 0.0
+        },
+        {
+          "name": "Tex02ColorScale",
+          "value": 1.0
+        },
+        {
+          "name": "AddTexTranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "AddTexTranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "AddTexRotate",
+          "value": 0.0
+        },
+        {
+          "name": "AddTexScaleU",
+          "value": 1.0
+        },
+        {
+          "name": "AddTexScaleV",
+          "value": 1.0
+        },
+        {
+          "name": "AddTexColorScale",
+          "value": 1.0
+        },
+        {
+          "name": "Tex0_R1_AddCol",
+          "value": 1.0
+        }
+      ],
+      "switches": [],
+      "textures_used": [
+        {
+          "sampler": "LightTableTex",
+          "texture": "fxmt_cmn_ht003_m_lta.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "fxmt_cmn_ht003_m_lta.png",
+      "used_sampler": "LightTableTex"
+    },
+    {
+      "name": "sh_dome03",
+      "shader_group": "FxDefault02",
+      "render_layer": 0,
+      "shader_index": 1,
+      "texture_maps": [
+        {
+          "sampler": "Tex01WRAP",
+          "texture": "fxmt_0_mask003_m.png",
+          "tex_index": 4
+        },
+        {
+          "sampler": "LightTableTex",
+          "texture": "fxmt_cmn_ht003_m_lta.png",
+          "tex_index": 0
+        }
+      ],
+      "colors": [
+        {
+          "name": "Shadow_Color",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "ConstantColor01",
+          "r": 0.1934,
+          "g": 0.1462,
+          "b": 0.0162
+        },
+        {
+          "name": "ConstantColor02",
+          "r": 0.0393,
+          "g": 0.0141,
+          "b": 0.0
+        }
+      ],
+      "values": [
+        {
+          "name": "Tex01TranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01TranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01Rotate",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01ScaleU",
+          "value": 1.0
+        },
+        {
+          "name": "Tex01ScaleV",
+          "value": 1.0
+        },
+        {
+          "name": "R0_A1_Tex01_Alpha",
+          "value": 0.0
+        },
+        {
+          "name": "ShadowRange",
+          "value": 1.0
+        },
+        {
+          "name": "Main0_Sub1_Tex1",
+          "value": 0.0
+        }
+      ],
+      "switches": [],
+      "textures_used": [
+        {
+          "sampler": "Tex01WRAP",
+          "texture": "fxmt_0_mask003_m.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "fxmt_0_mask003_m.png",
+      "used_sampler": "Tex01WRAP"
+    }
+  ],
+  "meshes": [
+    {
+      "index": 0,
+      "num_vertices": 65,
+      "num_faces": 112,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 1,
+      "num_vertices": 237,
+      "num_faces": 208,
+      "material_indices": [
+        1
+      ]
+    }
+  ],
+  "texture_names": [
+    "fxmt_cmn_ht003_m_lta",
+    "fxmt_3_floor204",
+    "fxmt_3_cloud007_m",
+    "fxmt_3_cloud010_m",
+    "fxmt_0_mask003_m"
+  ],
+  "hidden_materials": [],
+  "outline_materials": []
+}

@@ -1,0 +1,87 @@
+{
+  "materials": [
+    {
+      "name": "ShaderfxShader1",
+      "shader_group": "Manual",
+      "render_layer": 0,
+      "shader_index": 0,
+      "texture_maps": [],
+      "colors": [
+        {
+          "name": "ConstantColor01",
+          "r": 0.425,
+          "g": 0.0344,
+          "b": 0.0344
+        },
+        {
+          "name": "OutLineCol",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "FresnelColor",
+          "r": 0.2704,
+          "g": 0.2704,
+          "b": 0.2704
+        }
+      ],
+      "values": [
+        {
+          "name": "ConstantAlpha01",
+          "value": 1.0
+        },
+        {
+          "name": "OutLineID",
+          "value": 0.0
+        },
+        {
+          "name": "ProgID",
+          "value": 0.0
+        },
+        {
+          "name": "Def0_OneMin1_FreCol",
+          "value": 0.0
+        },
+        {
+          "name": "FresnelPowerCol",
+          "value": 4.5
+        },
+        {
+          "name": "FresnelStrengthCol",
+          "value": 3.686239
+        }
+      ],
+      "switches": [
+        {
+          "name": "NormalEdgeEnable",
+          "value": false
+        },
+        {
+          "name": "OutLineIDEnable",
+          "value": false
+        },
+        {
+          "name": "OutLineColFixed",
+          "value": false
+        }
+      ],
+      "textures_used": [],
+      "used_texture": null,
+      "used_sampler": null
+    }
+  ],
+  "meshes": [
+    {
+      "index": 0,
+      "num_vertices": 68,
+      "num_faces": 64,
+      "material_indices": [
+        0
+      ]
+    }
+  ],
+  "texture_names": [],
+  "hidden_materials": [],
+  "outline_materials": []
+}

@@ -1,0 +1,111 @@
+{
+  "materials": [
+    {
+      "name": "sh_hand",
+      "shader_group": "FxDefault01",
+      "render_layer": 0,
+      "shader_index": 0,
+      "texture_maps": [
+        {
+          "sampler": "LightTableTex",
+          "texture": "fxmt_cmn_lt001_m_lta.png",
+          "tex_index": 0
+        }
+      ],
+      "colors": [
+        {
+          "name": "Shadow_Color",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "FresnelColor",
+          "r": 1.0,
+          "g": 0.8758,
+          "b": 0.0
+        },
+        {
+          "name": "ConstantColor01",
+          "r": 1.0,
+          "g": 0.4751,
+          "b": 0.0
+        },
+        {
+          "name": "OutLineCol",
+          "r": 1.0,
+          "g": 0.5638,
+          "b": 0.0
+        }
+      ],
+      "values": [
+        {
+          "name": "ShadowRange",
+          "value": 1.0
+        },
+        {
+          "name": "ConstantAlpha01",
+          "value": 1.0
+        },
+        {
+          "name": "Def0_OneMin1_FreCol",
+          "value": 0.0
+        },
+        {
+          "name": "FresnelPowerCol",
+          "value": 2.0
+        },
+        {
+          "name": "FresnelStrengthCol",
+          "value": 1.0
+        },
+        {
+          "name": "OutLineID",
+          "value": 0.0
+        },
+        {
+          "name": "ProgID",
+          "value": 0.0
+        }
+      ],
+      "switches": [
+        {
+          "name": "NormalEdgeEnable",
+          "value": true
+        },
+        {
+          "name": "OutLineIDEnable",
+          "value": true
+        },
+        {
+          "name": "OutLineColFixed",
+          "value": true
+        }
+      ],
+      "textures_used": [
+        {
+          "sampler": "LightTableTex",
+          "texture": "fxmt_cmn_lt001_m_lta.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "fxmt_cmn_lt001_m_lta.png",
+      "used_sampler": "LightTableTex"
+    }
+  ],
+  "meshes": [
+    {
+      "index": 0,
+      "num_vertices": 494,
+      "num_faces": 926,
+      "material_indices": [
+        0
+      ]
+    }
+  ],
+  "texture_names": [
+    "fxmt_cmn_lt001_m_lta"
+  ],
+  "hidden_materials": [],
+  "outline_materials": []
+}

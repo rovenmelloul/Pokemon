@@ -1,0 +1,864 @@
+<CoordinateSystem> { Y-Up }
+
+<Comment> { "Pokemon SwSh: ew523_floor" }
+
+<Material> ShaderfxShader1 {
+  <Scalar> diffr { 1.0000 }
+  <Scalar> diffg { 1.0000 }
+  <Scalar> diffb { 1.0000 }
+}
+<Texture> ShaderfxShader1_tex {
+  "fxmt_ew523_floor.png"
+  <Scalar> envtype { modulate }
+  <Scalar> format { rgb }
+  <Scalar> wrapu { repeat }
+  <Scalar> wrapv { repeat }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear }
+  <Scalar> alpha { off }
+}
+
+<Group> ew523_floor {
+  <Dart> { 1 }
+
+  <Joint> Top {
+    <Transform> {
+      <Matrix4> {
+        1.00000000 0.00000000 0.00000000 0.00000000
+        0.00000000 1.00000000 0.00000000 0.00000000
+        0.00000000 0.00000000 1.00000000 0.00000000
+        0.00000000 0.00000000 0.00000000 1.00000000
+      }
+    }
+    <Joint> Origin {
+      <Transform> {
+        <Matrix4> {
+          1.00000000 0.00000000 0.00000000 0.00000000
+          0.00000000 1.00000000 0.00000000 0.00000000
+          0.00000000 0.00000000 1.00000000 0.00000000
+          0.00000000 0.00000000 0.00000000 1.00000000
+        }
+      }
+      <Joint> pCylinder1 {
+        <Transform> {
+          <Matrix4> {
+            1.00000000 0.00000000 0.00000000 0.00000000
+            0.00000000 1.00000000 0.00000000 0.00000000
+            0.00000000 0.00000000 1.00000000 0.00000000
+            0.00000000 0.00000000 0.00000000 1.00000000
+          }
+        }
+      }
+    }
+  }
+
+  <VertexPool> vpool_0 {
+    <Vertex> 0 {
+      57.620319 0.000000 -38.500622
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.915657 0.777733 }
+    }
+    <Vertex> 1 {
+      38.413551 0.000000 -25.667080
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.777104 0.685155 }
+    }
+    <Vertex> 2 {
+      64.036324 0.000000 -26.524670
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.961940 0.691342 }
+    }
+    <Vertex> 3 {
+      41.309299 0.000000 -17.110849
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.797993 0.623433 }
+    }
+    <Vertex> 4 {
+      31.616770 0.000000 -31.616739
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.728074 0.728074 }
+    }
+    <Vertex> 5 {
+      49.011280 0.000000 -49.011230
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.853553 0.853553 }
+    }
+    <Vertex> 6 {
+      0.000001 0.000000 -0.000000
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.500000 0.500000 }
+    }
+    <Vertex> 7 {
+      38.500679 0.000000 -57.620270
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.777733 0.915657 }
+    }
+    <Vertex> 8 {
+      25.667120 0.000000 -38.413521
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.685155 0.777104 }
+    }
+    <Vertex> 9 {
+      17.110889 0.000000 -41.309269
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.623433 0.797994 }
+    }
+    <Vertex> 10 {
+      26.524731 0.000000 -64.036278
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.691342 0.961940 }
+    }
+    <Vertex> 11 {
+      13.519670 0.000000 -67.967758
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.597527 0.990300 }
+    }
+    <Vertex> 12 {
+      9.013111 0.000000 -45.311840
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.565018 0.826867 }
+    }
+    <Vertex> 13 {
+      0.000023 0.000000 -44.712841
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.500000 0.822546 }
+    }
+    <Vertex> 14 {
+      0.000035 0.000000 -69.312378
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.500000 1.000000 }
+    }
+    <Vertex> 15 {
+      -13.519600 0.000000 -67.967773
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.402473 0.990300 }
+    }
+    <Vertex> 16 {
+      -9.013064 0.000000 -45.311852
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.434982 0.826867 }
+    }
+    <Vertex> 17 {
+      -17.110849 0.000000 -41.309292
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.376567 0.797994 }
+    }
+    <Vertex> 18 {
+      -26.524670 0.000000 -64.036301
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.308659 0.961940 }
+    }
+    <Vertex> 19 {
+      -38.500629 0.000000 -57.620319
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.222267 0.915657 }
+    }
+    <Vertex> 20 {
+      -25.667080 0.000000 -38.413540
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.314845 0.777105 }
+    }
+    <Vertex> 21 {
+      -31.616739 0.000000 -31.616770
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.271926 0.728075 }
+    }
+    <Vertex> 22 {
+      -49.011238 0.000000 -49.011280
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.146447 0.853554 }
+    }
+    <Vertex> 23 {
+      -57.620281 0.000000 -38.500679
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.084344 0.777733 }
+    }
+    <Vertex> 24 {
+      -38.413521 0.000000 -25.667120
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.222896 0.685156 }
+    }
+    <Vertex> 25 {
+      -41.309280 0.000000 -17.110880
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.202007 0.623433 }
+    }
+    <Vertex> 26 {
+      -64.036293 0.000000 -26.524731
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.038060 0.691342 }
+    }
+    <Vertex> 27 {
+      -67.967773 0.000000 -13.519660
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.009700 0.597527 }
+    }
+    <Vertex> 28 {
+      -45.311852 0.000000 -9.013104
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.173133 0.565018 }
+    }
+    <Vertex> 29 {
+      -44.712841 0.000000 -0.000016
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.177454 0.500000 }
+    }
+    <Vertex> 30 {
+      -69.312393 0.000000 -0.000025
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.000000 0.500000 }
+    }
+    <Vertex> 31 {
+      -67.967773 0.000000 13.519610
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.009700 0.402473 }
+    }
+    <Vertex> 32 {
+      -45.311852 0.000000 9.013072
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.173133 0.434982 }
+    }
+    <Vertex> 33 {
+      -41.309292 0.000000 17.110849
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.202007 0.376567 }
+    }
+    <Vertex> 34 {
+      -64.036301 0.000000 26.524679
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.038060 0.308659 }
+    }
+    <Vertex> 35 {
+      -57.620312 0.000000 38.500629
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.084343 0.222267 }
+    }
+    <Vertex> 36 {
+      -38.413540 0.000000 25.667089
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.222896 0.314845 }
+    }
+    <Vertex> 37 {
+      -31.616760 0.000000 31.616751
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.271926 0.271926 }
+    }
+    <Vertex> 38 {
+      -49.011269 0.000000 49.011250
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.146446 0.146447 }
+    }
+    <Vertex> 39 {
+      -38.500660 0.000000 57.620289
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.222267 0.084344 }
+    }
+    <Vertex> 40 {
+      -25.667110 0.000000 38.413528
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.314845 0.222896 }
+    }
+    <Vertex> 41 {
+      -17.110870 0.000000 41.309280
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.376567 0.202007 }
+    }
+    <Vertex> 42 {
+      -26.524710 0.000000 64.036293
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.308658 0.038060 }
+    }
+    <Vertex> 43 {
+      -13.519640 0.000000 67.967773
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.402473 0.009700 }
+    }
+    <Vertex> 44 {
+      -9.013096 0.000000 45.311852
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.434982 0.173133 }
+    }
+    <Vertex> 45 {
+      -0.000007 0.000000 44.712841
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.500000 0.177454 }
+    }
+    <Vertex> 46 {
+      -0.000011 0.000000 69.312393
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.500000 0.000000 }
+    }
+    <Vertex> 47 {
+      13.519620 0.000000 67.967773
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.597527 0.009700 }
+    }
+    <Vertex> 48 {
+      9.013081 0.000000 45.311852
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.565018 0.173133 }
+    }
+    <Vertex> 49 {
+      17.110861 0.000000 41.309292
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.623433 0.202007 }
+    }
+    <Vertex> 50 {
+      26.524691 0.000000 64.036293
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.691342 0.038060 }
+    }
+    <Vertex> 51 {
+      38.500641 0.000000 57.620300
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.777733 0.084343 }
+    }
+    <Vertex> 52 {
+      25.667101 0.000000 38.413540
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.685155 0.222896 }
+    }
+    <Vertex> 53 {
+      31.616751 0.000000 31.616760
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.728074 0.271926 }
+    }
+    <Vertex> 54 {
+      49.011250 0.000000 49.011261
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.853553 0.146447 }
+    }
+    <Vertex> 55 {
+      57.620289 0.000000 38.500660
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.915656 0.222267 }
+    }
+    <Vertex> 56 {
+      38.413528 0.000000 25.667101
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.777104 0.314845 }
+    }
+    <Vertex> 57 {
+      41.309280 0.000000 17.110870
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.797993 0.376567 }
+    }
+    <Vertex> 58 {
+      64.036293 0.000000 26.524700
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.961940 0.308658 }
+    }
+    <Vertex> 59 {
+      67.967773 0.000000 13.519630
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.990300 0.402473 }
+    }
+    <Vertex> 60 {
+      45.311852 0.000000 9.013088
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.826867 0.434982 }
+    }
+    <Vertex> 61 {
+      44.712841 0.000000 0.000006
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.822546 0.500000 }
+    }
+    <Vertex> 62 {
+      69.312393 0.000000 0.000005
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 1.000000 0.500000 }
+    }
+    <Vertex> 63 {
+      67.967789 0.000000 -13.519610
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.990300 0.597527 }
+    }
+    <Vertex> 64 {
+      45.311859 0.000000 -9.013075
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.826867 0.565018 }
+    }
+  }
+
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 0 1 2 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 2 1 3 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 4 1 5 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 5 1 0 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 3 1 6 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 6 1 4 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 7 8 5 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 5 8 4 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 9 8 10 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 10 8 7 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 4 8 6 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 6 8 9 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 11 12 10 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 10 12 9 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 13 12 14 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 14 12 11 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 9 12 6 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 6 12 13 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 15 16 14 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 14 16 13 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 17 16 18 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 18 16 15 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 13 16 6 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 6 16 17 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 19 20 18 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 18 20 17 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 21 20 22 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 22 20 19 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 17 20 6 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 6 20 21 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 23 24 22 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 22 24 21 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 25 24 26 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 26 24 23 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 21 24 6 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 6 24 25 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 27 28 26 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 26 28 25 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 29 28 30 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 30 28 27 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 25 28 6 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 6 28 29 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 31 32 30 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 30 32 29 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 33 32 34 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 34 32 31 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 29 32 6 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 6 32 33 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 35 36 34 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 34 36 33 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 37 36 38 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 38 36 35 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 33 36 6 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 6 36 37 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 39 40 38 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 38 40 37 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 41 40 42 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 42 40 39 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 37 40 6 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 6 40 41 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 43 44 42 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 42 44 41 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 45 44 46 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 46 44 43 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 41 44 6 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 6 44 45 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 47 48 46 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 46 48 45 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 49 48 50 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 50 48 47 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 45 48 6 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 6 48 49 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 51 52 50 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 50 52 49 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 53 52 54 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 54 52 51 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 49 52 6 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 6 52 53 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 55 56 54 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 54 56 53 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 57 56 58 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 58 56 55 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 53 56 6 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 6 56 57 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 59 60 58 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 58 60 57 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 61 60 62 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 62 60 59 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 57 60 6 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 6 60 61 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 63 64 62 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 62 64 61 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 3 64 2 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 2 64 63 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 61 64 6 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { ShaderfxShader1 }
+    <TRef> { ShaderfxShader1_tex }
+    <VertexRef> { 6 64 3 <Ref> { vpool_0 } }
+  }
+
+}

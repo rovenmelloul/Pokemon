@@ -1,0 +1,240 @@
+{
+  "materials": [
+    {
+      "name": "shell00",
+      "shader_group": "FxDefault01",
+      "render_layer": 0,
+      "shader_index": 0,
+      "texture_maps": [
+        {
+          "sampler": "Tex01WRAP",
+          "texture": "fxmt_3_shell204_a.png",
+          "tex_index": 0
+        },
+        {
+          "sampler": "LightTableTex",
+          "texture": "fxmt_cmn_lt002_m_lta.png",
+          "tex_index": 1
+        },
+        {
+          "sampler": "HighLightTableTex",
+          "texture": "fxmt_cmn_ht001_m_lta.png",
+          "tex_index": 2
+        }
+      ],
+      "colors": [
+        {
+          "name": "Shadow_Color",
+          "r": 0.4626,
+          "g": 0.4626,
+          "b": 0.4626
+        },
+        {
+          "name": "HighLight_Color",
+          "r": 0.289,
+          "g": 0.1341,
+          "b": 0.4276
+        },
+        {
+          "name": "FresnelColor",
+          "r": 0.933,
+          "g": 0.432,
+          "b": 0.8594
+        },
+        {
+          "name": "Tex01_Multiply_Color",
+          "r": 0.7071,
+          "g": 0.7071,
+          "b": 0.7071
+        }
+      ],
+      "values": [
+        {
+          "name": "Tex01TranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01TranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01Rotate",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01ScaleU",
+          "value": 1.0
+        },
+        {
+          "name": "Tex01ScaleV",
+          "value": 1.0
+        },
+        {
+          "name": "ShadowRange",
+          "value": 1.080645
+        },
+        {
+          "name": "HighLightRange",
+          "value": 1.225806
+        },
+        {
+          "name": "Def0_OneMin1_FreCol",
+          "value": 0.0
+        },
+        {
+          "name": "FresnelPowerCol",
+          "value": 25.977011
+        },
+        {
+          "name": "FresnelStrengthCol",
+          "value": 53.195404
+        },
+        {
+          "name": "R0_A1_Tex01_Alpha",
+          "value": 0.0
+        }
+      ],
+      "switches": [],
+      "textures_used": [
+        {
+          "sampler": "Tex01WRAP",
+          "texture": "fxmt_3_shell204_a.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "fxmt_3_shell204_a.png",
+      "used_sampler": "Tex01WRAP"
+    },
+    {
+      "name": "shell01",
+      "shader_group": "FxDefault01",
+      "render_layer": 0,
+      "shader_index": 1,
+      "texture_maps": [
+        {
+          "sampler": "Tex01WRAP",
+          "texture": "fxmt_3_shell204_a.png",
+          "tex_index": 0
+        },
+        {
+          "sampler": "LightTableTex",
+          "texture": "fxmt_cmn_lt002_m_lta.png",
+          "tex_index": 1
+        }
+      ],
+      "colors": [
+        {
+          "name": "Shadow_Color",
+          "r": 0.7143,
+          "g": 0.6022,
+          "b": 0.6978
+        },
+        {
+          "name": "FresnelColor",
+          "r": 0.3857,
+          "g": 0.1963,
+          "b": 0.0681
+        },
+        {
+          "name": "Tex01_Multiply_Color",
+          "r": 0.629,
+          "g": 0.5152,
+          "b": 0.6123
+        }
+      ],
+      "values": [
+        {
+          "name": "Tex01TranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01TranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01Rotate",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01ScaleU",
+          "value": 1.0
+        },
+        {
+          "name": "Tex01ScaleV",
+          "value": 1.0
+        },
+        {
+          "name": "ShadowRange",
+          "value": 0.767033
+        },
+        {
+          "name": "Def0_OneMin1_FreCol",
+          "value": 1.0
+        },
+        {
+          "name": "FresnelPowerCol",
+          "value": 2.0
+        },
+        {
+          "name": "FresnelStrengthCol",
+          "value": 1.0
+        },
+        {
+          "name": "R0_A1_Tex01_Alpha",
+          "value": 0.0
+        }
+      ],
+      "switches": [],
+      "textures_used": [
+        {
+          "sampler": "Tex01WRAP",
+          "texture": "fxmt_3_shell204_a.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "fxmt_3_shell204_a.png",
+      "used_sampler": "Tex01WRAP"
+    }
+  ],
+  "meshes": [
+    {
+      "index": 0,
+      "num_vertices": 609,
+      "num_faces": 896,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 1,
+      "num_vertices": 400,
+      "num_faces": 700,
+      "material_indices": [
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "num_vertices": 601,
+      "num_faces": 893,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "num_vertices": 398,
+      "num_faces": 695,
+      "material_indices": [
+        1
+      ]
+    }
+  ],
+  "texture_names": [
+    "fxmt_3_shell204_a",
+    "fxmt_cmn_lt002_m_lta",
+    "fxmt_cmn_ht001_m_lta"
+  ],
+  "hidden_materials": [],
+  "outline_materials": []
+}

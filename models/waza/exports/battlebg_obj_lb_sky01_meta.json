@@ -1,0 +1,372 @@
+{
+  "materials": [
+    {
+      "name": "battlebg_obj_lb_sky01_lightning01_eo_tp",
+      "shader_group": "FieldDefaultShader",
+      "render_layer": 0,
+      "shader_index": 0,
+      "texture_maps": [
+        {
+          "sampler": "BaseColor0",
+          "texture": "battlebg_obj_lb_sky01_lightning01_alb.png",
+          "tex_index": 0
+        }
+      ],
+      "colors": [],
+      "values": [
+        {
+          "name": "TranslateU0",
+          "value": 0.0
+        },
+        {
+          "name": "TranslateV0",
+          "value": 0.0
+        },
+        {
+          "name": "RotateUV0",
+          "value": 0.0
+        },
+        {
+          "name": "ScaleU0",
+          "value": 1.0
+        },
+        {
+          "name": "ScaleV0",
+          "value": 1.0
+        },
+        {
+          "name": "EmissionIntensity",
+          "value": 2.0
+        },
+        {
+          "name": "OpacityScale",
+          "value": 1.0
+        }
+      ],
+      "switches": [],
+      "textures_used": [
+        {
+          "sampler": "BaseColor0",
+          "texture": "battlebg_obj_lb_sky01_lightning01_alb.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "battlebg_obj_lb_sky01_lightning01_alb.png",
+      "used_sampler": "BaseColor0"
+    },
+    {
+      "name": "battlebg_obj_lb_sky01_cloud00",
+      "shader_group": "FieldDefaultShader",
+      "render_layer": 0,
+      "shader_index": 1,
+      "texture_maps": [
+        {
+          "sampler": "BaseColor0",
+          "texture": "battlebg_obj_lb_sky01_cloud01_alb.png",
+          "tex_index": 1
+        },
+        {
+          "sampler": "BaseColor1",
+          "texture": "battlebg_obj_lb_sky01_cloud02_alb.png",
+          "tex_index": 2
+        }
+      ],
+      "colors": [],
+      "values": [
+        {
+          "name": "EmissionIntensity",
+          "value": 1.0
+        },
+        {
+          "name": "TranslateU0",
+          "value": -2.0
+        },
+        {
+          "name": "TranslateV0",
+          "value": 0.0
+        },
+        {
+          "name": "RotateUV0",
+          "value": 0.0
+        },
+        {
+          "name": "ScaleU0",
+          "value": 1.0
+        },
+        {
+          "name": "ScaleV0",
+          "value": 1.0
+        },
+        {
+          "name": "OpacityScale",
+          "value": 1.0
+        },
+        {
+          "name": "LayerMaskPower",
+          "value": 1.0
+        },
+        {
+          "name": "LayerMaskScale",
+          "value": 1.0
+        },
+        {
+          "name": "TranslateU1",
+          "value": -8.0
+        },
+        {
+          "name": "TranslateV1",
+          "value": 0.0
+        },
+        {
+          "name": "RotateUV1",
+          "value": 0.0
+        },
+        {
+          "name": "ScaleU1",
+          "value": 1.0
+        },
+        {
+          "name": "ScaleV1",
+          "value": 1.0
+        }
+      ],
+      "switches": [],
+      "textures_used": [
+        {
+          "sampler": "BaseColor0",
+          "texture": "battlebg_obj_lb_sky01_cloud01_alb.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "battlebg_obj_lb_sky01_cloud01_alb.png",
+      "used_sampler": "BaseColor0"
+    },
+    {
+      "name": "battlebg_obj_lb_sky01_dawn01",
+      "shader_group": "FieldDefaultShader",
+      "render_layer": 0,
+      "shader_index": 2,
+      "texture_maps": [
+        {
+          "sampler": "BaseColor0",
+          "texture": "battlebg_obj_lb_sky01_dawn01_alb.png",
+          "tex_index": 3
+        },
+        {
+          "sampler": "BaseColor1",
+          "texture": "battlebg_obj_lb_sky01_star01_alb.png",
+          "tex_index": 4
+        }
+      ],
+      "colors": [],
+      "values": [
+        {
+          "name": "TranslateU0",
+          "value": 0.0
+        },
+        {
+          "name": "TranslateV0",
+          "value": 0.0
+        },
+        {
+          "name": "RotateUV0",
+          "value": 0.0
+        },
+        {
+          "name": "ScaleU0",
+          "value": 1.0
+        },
+        {
+          "name": "ScaleV0",
+          "value": 1.0
+        },
+        {
+          "name": "EmissionIntensity",
+          "value": 2.0
+        },
+        {
+          "name": "OpacityScale",
+          "value": 1.0
+        },
+        {
+          "name": "TranslateU1",
+          "value": 0.0
+        },
+        {
+          "name": "TranslateV1",
+          "value": 0.0
+        },
+        {
+          "name": "RotateUV1",
+          "value": 0.0
+        },
+        {
+          "name": "ScaleU1",
+          "value": 1.0
+        },
+        {
+          "name": "ScaleV1",
+          "value": 1.0
+        },
+        {
+          "name": "LayerMaskPower",
+          "value": 1.0
+        },
+        {
+          "name": "LayerMaskScale",
+          "value": 1.0
+        }
+      ],
+      "switches": [],
+      "textures_used": [
+        {
+          "sampler": "BaseColor0",
+          "texture": "battlebg_obj_lb_sky01_dawn01_alb.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "battlebg_obj_lb_sky01_dawn01_alb.png",
+      "used_sampler": "BaseColor0"
+    }
+  ],
+  "meshes": [
+    {
+      "index": 0,
+      "num_vertices": 4,
+      "num_faces": 2,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 1,
+      "num_vertices": 4,
+      "num_faces": 2,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "num_vertices": 4,
+      "num_faces": 2,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "num_vertices": 4,
+      "num_faces": 2,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 4,
+      "num_vertices": 4,
+      "num_faces": 2,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 5,
+      "num_vertices": 4,
+      "num_faces": 2,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 6,
+      "num_vertices": 4,
+      "num_faces": 2,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 7,
+      "num_vertices": 4,
+      "num_faces": 2,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 8,
+      "num_vertices": 4,
+      "num_faces": 2,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 9,
+      "num_vertices": 4,
+      "num_faces": 2,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 10,
+      "num_vertices": 4,
+      "num_faces": 2,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 11,
+      "num_vertices": 4,
+      "num_faces": 2,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 12,
+      "num_vertices": 4,
+      "num_faces": 2,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 13,
+      "num_vertices": 4,
+      "num_faces": 2,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 14,
+      "num_vertices": 4,
+      "num_faces": 2,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 15,
+      "num_vertices": 1136,
+      "num_faces": 1680,
+      "material_indices": [
+        1,
+        2
+      ]
+    }
+  ],
+  "texture_names": [
+    "battlebg_obj_lb_sky01_lightning01_alb",
+    "battlebg_obj_lb_sky01_cloud01_alb",
+    "battlebg_obj_lb_sky01_cloud02_alb",
+    "battlebg_obj_lb_sky01_dawn01_alb",
+    "battlebg_obj_lb_sky01_star01_alb"
+  ],
+  "hidden_materials": [],
+  "outline_materials": []
+}

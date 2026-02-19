@@ -1,0 +1,277 @@
+{
+  "materials": [
+    {
+      "name": "rock_MT",
+      "shader_group": "CharaDefaultShader",
+      "render_layer": 0,
+      "shader_index": 0,
+      "texture_maps": [
+        {
+          "sampler": "L0ColTex",
+          "texture": "digda_rock00.png",
+          "tex_index": 0
+        },
+        {
+          "sampler": "L1ColTex",
+          "texture": "chara_d_alpha.png",
+          "tex_index": 1
+        },
+        {
+          "sampler": "AmbientTex",
+          "texture": "chara_d_ambient.png",
+          "tex_index": 2
+        },
+        {
+          "sampler": "NormalMap",
+          "texture": "chara_d_white.png",
+          "tex_index": 3
+        },
+        {
+          "sampler": "LightTblTex",
+          "texture": "chara_lta_00.png",
+          "tex_index": 4
+        },
+        {
+          "sampler": "SpecularMap",
+          "texture": "chara_spc_20.png",
+          "tex_index": 5
+        },
+        {
+          "sampler": "SphereMap",
+          "texture": "chara_d_white.png",
+          "tex_index": 3
+        },
+        {
+          "sampler": "EmissionMask",
+          "texture": "chara_d_white.png",
+          "tex_index": 3
+        }
+      ],
+      "colors": [
+        {
+          "name": "DeepShadowColor",
+          "r": 0.4892,
+          "g": 0.5214,
+          "b": 0.6994
+        },
+        {
+          "name": "RimColorShadow",
+          "r": 0.1225,
+          "g": 0.1622,
+          "b": 0.4563
+        },
+        {
+          "name": "ConstantColor",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "ConstantColor0",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "ConstantColorSd0",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "ShadowColor",
+          "r": 0.325,
+          "g": 0.325,
+          "b": 0.325
+        },
+        {
+          "name": "L1ConstantColor0",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "L1ConstantColorSd0",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "L1ShadowColor",
+          "r": 0.4854,
+          "g": 0.4854,
+          "b": 0.4854
+        },
+        {
+          "name": "SpecularColor",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "SphereMapColor",
+          "r": 0.9857,
+          "g": 0.9857,
+          "b": 0.9857
+        },
+        {
+          "name": "RimColor",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 0.6121
+        },
+        {
+          "name": "OnGameColor",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        }
+      ],
+      "values": [
+        {
+          "name": "L0UVTranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "L0UVBaseU",
+          "value": 0.0
+        },
+        {
+          "name": "L0UVTranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "L0UVBaseV",
+          "value": 0.0
+        },
+        {
+          "name": "RimLimit",
+          "value": 1.5
+        },
+        {
+          "name": "LightMul",
+          "value": 1.4
+        },
+        {
+          "name": "RimColorVal",
+          "value": 1.0
+        },
+        {
+          "name": "RimStrength",
+          "value": 6.0
+        },
+        {
+          "name": "ConstantColorVal",
+          "value": 1.0
+        },
+        {
+          "name": "ConstantAlpha",
+          "value": 1.0
+        },
+        {
+          "name": "SpecularScale",
+          "value": 2.5
+        },
+        {
+          "name": "EmissionMaskVal",
+          "value": 0.0
+        },
+        {
+          "name": "SpecularPower",
+          "value": 3.0
+        },
+        {
+          "name": "SphereMapColorVal",
+          "value": 1.0
+        },
+        {
+          "name": "RimPower",
+          "value": 6.0
+        },
+        {
+          "name": "ApplyLightingVal",
+          "value": 0.0
+        },
+        {
+          "name": "OnGameEmissionVal",
+          "value": 1.0
+        },
+        {
+          "name": "OnGameColorVal",
+          "value": 1.0
+        },
+        {
+          "name": "OnGameAlpha",
+          "value": 1.0
+        }
+      ],
+      "switches": [
+        {
+          "name": "L0UseColTex",
+          "value": true
+        },
+        {
+          "name": "L1UseColTex",
+          "value": false
+        },
+        {
+          "name": "AmbientMapEnable",
+          "value": true
+        },
+        {
+          "name": "NormalMapEnable",
+          "value": false
+        },
+        {
+          "name": "LightTableEnable",
+          "value": true
+        },
+        {
+          "name": "SpecularMapEnable",
+          "value": true
+        },
+        {
+          "name": "SphereMapEnable",
+          "value": false
+        },
+        {
+          "name": "EmissionMaskUse",
+          "value": false
+        },
+        {
+          "name": "BaseColorAddEnable",
+          "value": true
+        }
+      ],
+      "textures_used": [
+        {
+          "sampler": "L0ColTex",
+          "texture": "digda_rock00.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "digda_rock00.png",
+      "used_sampler": "L0ColTex"
+    }
+  ],
+  "meshes": [
+    {
+      "index": 0,
+      "num_vertices": 880,
+      "num_faces": 897,
+      "material_indices": [
+        0
+      ]
+    }
+  ],
+  "texture_names": [
+    "digda_rock00",
+    "chara_d_alpha",
+    "chara_d_ambient",
+    "chara_d_white",
+    "chara_lta_00",
+    "chara_spc_20"
+  ],
+  "hidden_materials": [],
+  "outline_materials": []
+}

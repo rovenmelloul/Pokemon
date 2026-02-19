@@ -1,0 +1,118 @@
+{
+  "materials": [
+    {
+      "name": "ShaderfxShader1",
+      "shader_group": "FxDefault01",
+      "render_layer": 0,
+      "shader_index": 0,
+      "texture_maps": [
+        {
+          "sampler": "Tex01CLAMP",
+          "texture": "fxmt_0_cube001_m.png",
+          "tex_index": 0
+        },
+        {
+          "sampler": "LightTableTex",
+          "texture": "fxmt_cmn_lt002_m_lta.png",
+          "tex_index": 1
+        },
+        {
+          "sampler": "HighLightTableTex",
+          "texture": "fxmt_cmn_ht201_a_lta.png",
+          "tex_index": 2
+        }
+      ],
+      "colors": [
+        {
+          "name": "Shadow_Color",
+          "r": 0.2862,
+          "g": 0.2862,
+          "b": 0.2862
+        },
+        {
+          "name": "ConstantColor01",
+          "r": 0.3463,
+          "g": 0.3463,
+          "b": 0.3463
+        },
+        {
+          "name": "ConstantColor02",
+          "r": 0.0318,
+          "g": 0.0318,
+          "b": 0.0318
+        },
+        {
+          "name": "HighLight_Color",
+          "r": 0.4417,
+          "g": 0.4417,
+          "b": 0.4417
+        }
+      ],
+      "values": [
+        {
+          "name": "Tex01TranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01TranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01Rotate",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01ScaleU",
+          "value": 1.0
+        },
+        {
+          "name": "Tex01ScaleV",
+          "value": 1.0
+        },
+        {
+          "name": "R0_A1_Tex01_Alpha",
+          "value": 0.0
+        },
+        {
+          "name": "ShadowRange",
+          "value": 1.0
+        },
+        {
+          "name": "Main0_Sub1_Tex1",
+          "value": 0.0
+        },
+        {
+          "name": "HighLightRange",
+          "value": 1.0
+        }
+      ],
+      "switches": [],
+      "textures_used": [
+        {
+          "sampler": "Tex01CLAMP",
+          "texture": "fxmt_0_cube001_m.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "fxmt_0_cube001_m.png",
+      "used_sampler": "Tex01CLAMP"
+    }
+  ],
+  "meshes": [
+    {
+      "index": 0,
+      "num_vertices": 1068,
+      "num_faces": 576,
+      "material_indices": [
+        0
+      ]
+    }
+  ],
+  "texture_names": [
+    "fxmt_0_cube001_m",
+    "fxmt_cmn_lt002_m_lta",
+    "fxmt_cmn_ht201_a_lta"
+  ],
+  "hidden_materials": [],
+  "outline_materials": []
+}
