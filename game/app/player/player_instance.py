@@ -10,7 +10,6 @@ class Player(PlayerMove, ShowBase):
         PlayerMove.__init__(self)
         
         self.start_position = (-8, 42, 0)
-        self.scene = self.show_base.loader.loadModel("models/environment")
         
         self.anims = {
             "idle": "models/pm0001_00/anims/pm0001_00_fi20_walk01.egg",
@@ -48,10 +47,6 @@ class Player(PlayerMove, ShowBase):
 
     def spawn_self(self):
         self.control_node.setPos(self.start_position)
-        
-        self.scene.reparentTo(self.show_base.render)
-        self.scene.setScale(5)
-        self.scene.setPos(-50, -50, -1)  
 
     def mouse_rotation_task(self, task):
         if self.show_base.mouseWatcherNode.hasMouse():
