@@ -9,6 +9,9 @@ from panda3d.core import (
 import math
 import random
 
+from ..battle_system import CapturePokemon
+from ..battle_system import Battle
+
 pockemon_interface = {
     "id_pokemon": None | int,
     "lvl": None | int,
@@ -32,12 +35,11 @@ class Pokemon:
     def __init__(self, show_base: ShowBase, **kwargs):
         self.show_base = show_base
         
-        
         #POKEMON DATA 
         self.id_pokemon = kwargs.get("id_pokemon", None)        
         self.lvl = kwargs.get("lvl", None)
          
-        self.random_galar_dex = random.randint(1, 397) - 1
+        self.random_galar_dex = random.randint(2, 300) - 1
         self.name = json_all_info[self.random_galar_dex]["name"]
          
         self.type = json_all_info[self.random_galar_dex]["pokemon_data_from_api"]["type"] if "pokemon_data_from_api" in json_all_info[self.random_galar_dex] and "type" in json_all_info[self.random_galar_dex]["pokemon_data_from_api"] else None
@@ -49,13 +51,16 @@ class Pokemon:
         self.level_evolution = kwargs.get("level_evolution", None)
         self.description = kwargs.get("description", None)
         
+        
+        
         # ------------ ANIMATION DATA -------------
         self.model_folder = json_all_info[self.random_galar_dex]["model_folder"] if "model_folder" in json_all_info[self.random_galar_dex] else None
         self.anims = {
             "idle":   f"models/pokemon/{self.model_folder}/anims/{self.model_folder}_fi20_walk01.egg",
             "attack": f"models/pokemon/{self.model_folder}/anims/{self.model_folder}_ba01_landA01.egg",
+            "wait": f"models/pokemon/{self.model_folder}/anims/{self.model_folder}_ba10_waitA01.egg"
         }
-        
+          
         self.lvl_board = {
             "low": "game\\gui\\src\\sprites\\title_for_low_lvl_pokemons.png",
             "average": "game\\gui\\src\\sprites\\title_for_avarage_lvl_pokemons.png",
@@ -141,6 +146,7 @@ class Pokemon:
 
         self.show_base.taskMgr.add(self.move_randomly_task, "move_randomly_task")
         self.show_base.taskMgr.add(self.update_name_tag_task, "update_name_tag_task")
+        self.show_base.taskMgr.add(self.collision_with_player_task, "collision_with_player_task", extraArgs=[self.show_base.render.find("**/playerControl")], appendTask=True)
 
     def update_name_tag_task(self, task):
         if self.name_container:
@@ -195,8 +201,21 @@ class Pokemon:
                     0
                 )
             self.next_change_time = task.time + random.uniform(1.0, 3.0)
-
         return task.cont
+    
+    def collision_with_player_task(self, player_node, task):
+        pokemon_pos = self.animated_character.getPos()
+        player_pos  = player_node.getPos()
+
+        direction = pokemon_pos - player_pos
+        distance = direction.length()
+
+        if distance < 8.0 and distance > 0.001:   
+            print(f"Collision push with {self.name}! dist={distance:.2f}")
+            #battle = Battle(self.show_base, player_node, self)
+            capture = CapturePokemon(self.show_base, player_node, self)
+        return task.cont
+
 
     def get_info(self):
         return {

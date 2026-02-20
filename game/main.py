@@ -22,7 +22,5 @@ class MyApp(ShowBase):
             pokemon.spawn_random_pokemon()
             pokemon.draw_name_tag()
         
-    
-
 app = MyApp()
 app.run()
