@@ -5,13 +5,11 @@ from pathlib import Path
 from .movement import PlayerMove
 from direct.showbase.ShowBase import ShowBase
 from direct.actor.Actor import Actor
-from panda3d.core import Point3, VBase3, KeyboardButton, MouseWatcher
+from panda3d.core import Point3, VBase3, MouseButton
 
 from sdk import Pokemon as SDKPokemon
 from sdk import AnimationController
 
-# Absolute path to models/pokemon/ (one level above game/)
-# Path.resolve() returns the true on-disk casing on Windows, which Panda3D requires.
 _MODELS_BASE = str(Path(os.path.dirname(__file__), '..', '..', '..', 'models', 'pokemon').resolve())
 
 class Player(PlayerMove, ShowBase):
@@ -19,15 +17,14 @@ class Player(PlayerMove, ShowBase):
         self.show_base = show_base
         PlayerMove.__init__(self)
 
-        self.start_position = (-8, 42, 0)
+        self.start_position = (0, 0, 0)
 
         self.sdk_pokemon = None
         self.anim_ctrl = None
         self.animated_character = self._load_model()
 
-        self.key_map = {"forward": False, "backward": False, "left": False, "right": False, "attack": False}
+        self.key_map = {"forward": False, "backward": False, "left": False, "right": False}
         self.speed = 40
-        self.turn_speed = 120
 
         self.control_node = self.show_base.render.attachNewNode("playerControl")
 
@@ -36,17 +33,33 @@ class Player(PlayerMove, ShowBase):
         self.animated_character.setPos(0, 0, 0)
         self.animated_character.setH(180)
 
+        # Camera orbit
+        self.heading = 0
+        self.pitch = -45
+        self.cam_dist = 22
+        self.cam_dist_min = 8
+        self.cam_dist_max = 80
+        self._last_mouse = None
+
         self.show_base.camera.reparentTo(self.control_node)
-        self.show_base.camera.setPos(0, -12, 6)
-        self.show_base.camera.lookAt(self.animated_character)
+        self._update_camera_orbit()
 
         self.show_base.disableMouse()
 
-        self.heading = 0
-        self.pitch = -15
-
         self.show_base.taskMgr.add(self.update_camera_and_movement, "update_task")
         self.show_base.taskMgr.add(self.mouse_rotation_task, "mouse_rotation_task")
+
+    def _update_camera_orbit(self):
+        pitch_rad = math.radians(-self.pitch)
+        cy = -self.cam_dist * math.cos(pitch_rad)
+        cz = self.cam_dist * math.sin(pitch_rad)
+        self.show_base.camera.setPos(0, cy, max(cz, 1.5))
+        self.show_base.camera.lookAt(self.control_node, Point3(0, 0, 1.5))
+
+    def _zoom(self, direction):
+        self.cam_dist += direction * 3
+        self.cam_dist = max(self.cam_dist_min, min(self.cam_dist_max, self.cam_dist))
+        self._update_camera_orbit()
 
     def _load_model(self):
         model_dir = os.path.join(_MODELS_BASE, "pm0001_00")
@@ -61,19 +74,30 @@ class Player(PlayerMove, ShowBase):
         self.control_node.setPos(self.start_position)
 
     def mouse_rotation_task(self, task):
-        if self.show_base.mouseWatcherNode.hasMouse():
-            mx = self.show_base.mouseWatcherNode.getMouseX()
-            my = self.show_base.mouseWatcherNode.getMouseY()
+        mw = self.show_base.mouseWatcherNode
+        if not mw.hasMouse():
+            self._last_mouse = None
+            return task.cont
 
-            sensitivity = 80
+        mx = mw.getMouseX()
+        my = mw.getMouseY()
 
-            self.heading -= mx * sensitivity * globalClock.getDt()
-            self.pitch -= my * sensitivity * 0.7 * globalClock.getDt()
+        if mw.isButtonDown(MouseButton.three()):
+            if self._last_mouse is not None:
+                dx = mx - self._last_mouse[0]
+                dy = my - self._last_mouse[1]
 
-            self.pitch = max(-60, min(-5, self.pitch))
+                sensitivity = 500
+                self.heading -= dx * sensitivity
+                self.pitch -= dy * sensitivity * 0.7
+                self.pitch = max(-85, min(-5, self.pitch))
 
-            self.control_node.setH(self.heading)
-            self.show_base.camera.setP(self.pitch)
+                self.control_node.setH(self.heading)
+                self._update_camera_orbit()
+
+            self._last_mouse = (mx, my)
+        else:
+            self._last_mouse = None
 
         return task.cont
 
@@ -101,11 +125,7 @@ class Player(PlayerMove, ShowBase):
             self.control_node.setY(self.control_node.getY() + dy * self.speed * dt)
 
         moving = any(self.key_map[k] for k in ("forward", "backward", "left", "right"))
-        if self.key_map.get("attack"):
-            atk = self.anim_ctrl.find_attack_anim("physical")
-            if atk and self.anim_ctrl.current_anim != atk:
-                self.anim_ctrl.play(atk, loop=False)
-        elif moving:
+        if moving:
             walk = self.anim_ctrl.find_anim("fi20", "walk")
             if walk and self.anim_ctrl.current_anim != walk:
                 self.anim_ctrl.play(walk, loop=True)
@@ -125,8 +145,10 @@ class Player(PlayerMove, ShowBase):
         self.show_base.accept("a-up", self.set_key, ["left", False])
         self.show_base.accept("d", self.set_key, ["right", True])
         self.show_base.accept("d-up", self.set_key, ["right", False])
-        self.show_base.accept("f", self.set_key, ["attack", True])
-        self.show_base.accept("f-up", self.set_key, ["attack", False])
+
+        # Zoom
+        self.show_base.accept("wheel_up", self._zoom, [-1])
+        self.show_base.accept("wheel_down", self._zoom, [1])
 
     def set_key(self, key, value):
         self.key_map[key] = value

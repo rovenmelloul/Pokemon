@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyc
+
+# Tile cache
+tile_cache/
+
+# Sprites cache (downloaded at runtime)
+game/data/sprites/
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Models (large binary assets)
+game/models/
+
+# Database
+db/
+
+# Temporary files
+tmp_*.json
