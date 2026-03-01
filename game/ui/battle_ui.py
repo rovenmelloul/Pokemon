@@ -1,5 +1,5 @@
 """
-BattleUI -- Battle user interface (HP bars, action menus, messages).
+BattleUI -- Interface de combat (barres PV, menus, messages).
 """
 from panda3d.core import Vec4, TextNode, TransparencyAttrib, CardMaker
 from direct.gui.DirectGui import (
@@ -24,6 +24,7 @@ class BattleUI:
         self.player_hp_bar = None
         self.enemy_hp_bar = None
         self.player_hp_text = None
+        self.enemy_hp_text = None
         self.player_name_text = None
         self.enemy_name_text = None
         self.message_text = None
@@ -42,7 +43,7 @@ class BattleUI:
         )
         poke = self.battle.active_player
         self.player_name_text = DirectLabel(
-            text=f"{poke.name}  Lv.{poke.level}",
+            text=f"{poke.name}  Nv.{poke.level}",
             text_fg=(1, 1, 1, 1), text_scale=0.05,
             text_align=TextNode.ALeft,
             frameColor=(0, 0, 0, 0),
@@ -68,16 +69,16 @@ class BattleUI:
     def _create_enemy_info(self):
         self.enemy_info_frame = DirectFrame(
             frameColor=(0.1, 0.1, 0.1, 0.8),
-            frameSize=(-0.5, 0.5, -0.12, 0.12),
+            frameSize=(-0.5, 0.5, -0.15, 0.15),
             pos=(-0.85, 0, 0.65)
         )
         poke = self.battle.active_enemy
         self.enemy_name_text = DirectLabel(
-            text=f"{poke.name}  Lv.{poke.level}",
+            text=f"{poke.name}  Nv.{poke.level}",
             text_fg=(1, 1, 1, 1), text_scale=0.05,
             text_align=TextNode.ALeft,
             frameColor=(0, 0, 0, 0),
-            pos=(-0.45, 0, 0.04),
+            pos=(-0.45, 0, 0.07),
             parent=self.enemy_info_frame
         )
         self.enemy_hp_bar = DirectWaitBar(
@@ -85,7 +86,14 @@ class BattleUI:
             barColor=(0.2, 0.8, 0.2, 1),
             frameColor=(0.3, 0.3, 0.3, 1),
             frameSize=(-0.4, 0.4, -0.01, 0.03),
-            pos=(0, 0, -0.04),
+            pos=(0, 0, -0.02),
+            parent=self.enemy_info_frame
+        )
+        self.enemy_hp_text = DirectLabel(
+            text=f"{poke.current_hp} / {poke.stats['hp']}",
+            text_fg=(1, 1, 1, 1), text_scale=0.04,
+            frameColor=(0, 0, 0, 0),
+            pos=(0, 0, -0.08),
             parent=self.enemy_info_frame
         )
 
@@ -120,25 +128,19 @@ class BattleUI:
             "text_fg": (1, 1, 1, 1),
         }
         DirectButton(
-            text="Attack", frameColor=(0.8, 0.3, 0.2, 1),
+            text="Attaque", frameColor=(0.8, 0.3, 0.2, 1),
             pos=(-0.25, 0, 0.15), command=self.show_move_menu,
             parent=self.action_frame, **btn_style
         )
         DirectButton(
-            text="Switch", frameColor=(0.2, 0.5, 0.8, 1),
+            text="Changer", frameColor=(0.2, 0.5, 0.8, 1),
             pos=(0.25, 0, 0.15), command=self.show_switch_menu,
             parent=self.action_frame, **btn_style
         )
         if self.battle.is_wild:
             DirectButton(
-                text="Capture", frameColor=(0.8, 0.6, 0.2, 1),
-                pos=(-0.25, 0, 0.02),
-                command=lambda: self.scene.on_capture(),
-                parent=self.action_frame, **btn_style
-            )
-            DirectButton(
-                text="Run", frameColor=(0.5, 0.5, 0.5, 1),
-                pos=(0.25, 0, 0.02),
+                text="Fuite", frameColor=(0.5, 0.5, 0.5, 1),
+                pos=(0, 0, 0.02),
                 command=lambda: self.scene.on_run(),
                 parent=self.action_frame, **btn_style
             )
@@ -183,7 +185,7 @@ class BattleUI:
                 parent=self.move_frame
             )
         DirectButton(
-            text="<- Back", text_scale=0.04, text_fg=(1, 1, 1, 1),
+            text="<- Retour", text_scale=0.04, text_fg=(1, 1, 1, 1),
             frameColor=(0.4, 0.4, 0.4, 1),
             frameSize=(-0.2, 0.2, -0.04, 0.04),
             pos=(0, 0, -0.2), command=self.show_action_menu,
@@ -197,7 +199,7 @@ class BattleUI:
             frameSize=(-0.8, 0.8, -0.4, 0.4),
             pos=(0, 0, 0)
         )
-        label = "Choose a Pokemon!" if forced else "Choose a Pokemon"
+        label = "Choisissez un Pokemon !" if forced else "Choisissez un Pokemon"
         DirectLabel(
             text=label, text_fg=(1, 1, 1, 1), text_scale=0.06,
             frameColor=(0, 0, 0, 0), pos=(0, 0, 0.3),
@@ -205,14 +207,14 @@ class BattleUI:
         )
         for i, poke in enumerate(self.battle.team_player):
             y = 0.15 - i * 0.1
-            status = "K.O." if poke.is_fainted() else f"HP:{poke.current_hp}/{poke.stats['hp']}"
+            status = "K.O." if poke.is_fainted() else f"PV:{poke.current_hp}/{poke.stats['hp']}"
             is_active = poke is self.battle.active_player
             color = ((0.3, 0.3, 0.3, 1) if poke.is_fainted()
                      else (0.2, 0.5, 0.8, 1) if is_active
                      else (0.3, 0.6, 0.3, 1))
             idx = i
             btn = DirectButton(
-                text=f"{poke.name} Lv.{poke.level} - {status}",
+                text=f"{poke.name} Nv.{poke.level} - {status}",
                 text_scale=0.04, text_fg=(1, 1, 1, 1),
                 frameColor=color,
                 frameSize=(-0.6, 0.6, -0.03, 0.05),
@@ -224,7 +226,7 @@ class BattleUI:
                 btn["state"] = 0
         if not forced:
             DirectButton(
-                text="<- Back", text_scale=0.04, text_fg=(1, 1, 1, 1),
+                text="<- Retour", text_scale=0.04, text_fg=(1, 1, 1, 1),
                 frameColor=(0.4, 0.4, 0.4, 1),
                 frameSize=(-0.2, 0.2, -0.04, 0.04),
                 pos=(0, 0, -0.3), command=self.show_action_menu,
@@ -250,7 +252,7 @@ class BattleUI:
         p = self.battle.active_player
         e = self.battle.active_enemy
         if self.player_name_text:
-            self.player_name_text["text"] = f"{p.name}  Lv.{p.level}"
+            self.player_name_text["text"] = f"{p.name}  Nv.{p.level}"
         if self.player_hp_bar:
             self.player_hp_bar["range"] = p.stats["hp"]
             self.player_hp_bar["value"] = p.current_hp
@@ -264,7 +266,7 @@ class BattleUI:
         if self.player_hp_text:
             self.player_hp_text["text"] = f"{p.current_hp} / {p.stats['hp']}"
         if self.enemy_name_text:
-            self.enemy_name_text["text"] = f"{e.name}  Lv.{e.level}"
+            self.enemy_name_text["text"] = f"{e.name}  Nv.{e.level}"
         if self.enemy_hp_bar:
             self.enemy_hp_bar["range"] = e.stats["hp"]
             self.enemy_hp_bar["value"] = e.current_hp
@@ -275,6 +277,8 @@ class BattleUI:
                 self.enemy_hp_bar["barColor"] = (0.9, 0.7, 0.1, 1)
             else:
                 self.enemy_hp_bar["barColor"] = (0.9, 0.2, 0.1, 1)
+        if self.enemy_hp_text:
+            self.enemy_hp_text["text"] = f"{e.current_hp} / {e.stats['hp']}"
 
     def _hide_all_menus(self):
         if self.action_frame:

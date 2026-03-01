@@ -3,15 +3,17 @@ from enum import Enum
 
 
 class GameState(Enum):
+    MENU = "menu"
     EXPLORATION = "exploration"
     BATTLE = "battle"
     POKEDEX = "pokedex"
+    TEAM = "team"
     PAUSE = "pause"
 
 
 class StateManager:
     def __init__(self):
-        self.current_state = GameState.EXPLORATION
+        self.current_state = GameState.MENU
         self.previous_state = None
         self._listeners = {}
 

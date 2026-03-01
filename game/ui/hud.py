@@ -1,68 +1,77 @@
 """
-ExplorationHUD -- HUD during map exploration.
+ExplorationHUD -- HUD d'exploration avec barre d'outils.
 """
 from panda3d.core import TextNode
-from direct.gui.DirectGui import DirectFrame, DirectLabel
+from direct.gui.DirectGui import DirectFrame, DirectLabel, DirectButton
 
 
 class ExplorationHUD:
-    def __init__(self, app, team=None, zone_name="Exploration"):
+    def __init__(self, app, player_team=None, zone_name="Exploration",
+                 on_pokedex=None, on_team=None, on_heal=None):
         self.app = app
-        self.team = team or []
+        self.player_team = player_team or []
         self.zone_name = zone_name
-        self.hud_frame = None
-        self.zone_label = None
-        self.team_labels = []
+        self.on_pokedex = on_pokedex
+        self.on_team = on_team
+        self.on_heal = on_heal
+
         self.encounter_hint = None
+        self.toolbar_frame = None
 
     def setup(self):
-        self.hud_frame = DirectFrame(
-            frameColor=(0.05, 0.05, 0.1, 0.7),
-            frameSize=(-1.35, 1.35, -0.08, 0.08),
-            pos=(0, 0, 0.92)
+        self.toolbar_frame = DirectFrame(
+            frameColor=(0.08, 0.08, 0.12, 0.85),
+            frameSize=(-1.35, 1.35, -0.07, 0.07),
+            pos=(0, 0, -0.93)
         )
-        self.zone_label = DirectLabel(
-            text=self.zone_name,
-            text_fg=(1, 1, 1, 1), text_scale=0.04,
-            text_align=TextNode.ALeft,
-            frameColor=(0, 0, 0, 0),
-            pos=(-1.25, 0, -0.01),
-            parent=self.hud_frame
+        btn_style = {
+            "text_scale": 0.045,
+            "frameSize": (-0.2, 0.2, -0.04, 0.05),
+            "relief": 1,
+            "text_fg": (1, 1, 1, 1),
+        }
+        DirectButton(
+            text="Pokedex",
+            frameColor=(0.7, 0.2, 0.2, 1),
+            pos=(-0.5, 0, -0.005),
+            command=self._do_pokedex,
+            parent=self.toolbar_frame,
+            **btn_style
         )
-        self._update_team_display()
+        DirectButton(
+            text="Equipe",
+            frameColor=(0.2, 0.5, 0.8, 1),
+            pos=(0, 0, -0.005),
+            command=self._do_team,
+            parent=self.toolbar_frame,
+            **btn_style
+        )
+        DirectButton(
+            text="Soigner",
+            frameColor=(0.2, 0.7, 0.3, 1),
+            pos=(0.5, 0, -0.005),
+            command=self._do_heal,
+            parent=self.toolbar_frame,
+            **btn_style
+        )
 
-    def _update_team_display(self):
-        for label in self.team_labels:
-            label.destroy()
-        self.team_labels = []
-        for i, poke in enumerate(self.team):
-            hp_ratio = poke.hp_fraction()
-            if poke.is_fainted():
-                color = (0.5, 0.2, 0.2, 1)
-                icon = "X"
-            elif hp_ratio > 0.5:
-                color = (0.2, 0.7, 0.2, 1)
-                icon = "O"
-            elif hp_ratio > 0.2:
-                color = (0.8, 0.7, 0.1, 1)
-                icon = "o"
-            else:
-                color = (0.8, 0.2, 0.1, 1)
-                icon = "!"
-            label = DirectLabel(
-                text=icon,
-                text_fg=color, text_scale=0.05,
-                frameColor=(0, 0, 0, 0),
-                pos=(0.5 + i * 0.12, 0, -0.01),
-                parent=self.hud_frame
-            )
-            self.team_labels.append(label)
+    def _do_pokedex(self):
+        if self.on_pokedex:
+            self.on_pokedex()
+
+    def _do_team(self):
+        if self.on_team:
+            self.on_team()
+
+    def _do_heal(self):
+        if self.on_heal:
+            self.on_heal()
 
     def show_encounter_hint(self, pokemon_name):
         if self.encounter_hint:
             self.encounter_hint.destroy()
         self.encounter_hint = DirectLabel(
-            text=f"Press E to battle {pokemon_name}!",
+            text=f"[E] Combat  [F] Capture  -  {pokemon_name}",
             text_fg=(1, 0.9, 0.2, 1), text_scale=0.06,
             frameColor=(0, 0, 0, 0.6),
             pos=(0, 0, -0.2),
@@ -73,12 +82,31 @@ class ExplorationHUD:
             self.encounter_hint.destroy()
             self.encounter_hint = None
 
+    def show_heal_message(self):
+        if hasattr(self, '_heal_msg') and self._heal_msg:
+            self._heal_msg.destroy()
+        self._heal_msg = DirectLabel(
+            text="Tous les Pokemon sont soignes !",
+            text_fg=(0.3, 1, 0.3, 1), text_scale=0.06,
+            frameColor=(0, 0, 0, 0.6),
+            pos=(0, 0, 0.1),
+        )
+        self.app.taskMgr.doMethodLater(2.0, self._hide_heal_msg, "hide_heal_msg")
+
+    def _hide_heal_msg(self, task):
+        if hasattr(self, '_heal_msg') and self._heal_msg:
+            self._heal_msg.destroy()
+            self._heal_msg = None
+        return task.done
+
     def update(self):
-        self._update_team_display()
+        pass
 
     def cleanup(self):
         self.hide_encounter_hint()
-        for label in self.team_labels:
-            label.destroy()
-        if self.hud_frame:
-            self.hud_frame.destroy()
+        if hasattr(self, '_heal_msg') and self._heal_msg:
+            self._heal_msg.destroy()
+            self._heal_msg = None
+        if self.toolbar_frame:
+            self.toolbar_frame.destroy()
+            self.toolbar_frame = None
