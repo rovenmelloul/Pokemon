@@ -1,0 +1,145 @@
+{
+  "materials": [
+    {
+      "name": "M_koban",
+      "shader_group": "FxDefault01",
+      "render_layer": 0,
+      "shader_index": 0,
+      "texture_maps": [
+        {
+          "sampler": "Tex01WRAP",
+          "texture": "fxmt_ew006_koban_m.png",
+          "tex_index": 0
+        },
+        {
+          "sampler": "LightTableTex",
+          "texture": "fxmt_cmn_lt002_m_lta.png",
+          "tex_index": 1
+        },
+        {
+          "sampler": "HighLightTableTex",
+          "texture": "fxmt_cmn_ht001_m_lta.png",
+          "tex_index": 2
+        },
+        {
+          "sampler": "SpecularTexture",
+          "texture": "fxmt_ew006_koban_hlm_m_lta.png",
+          "tex_index": 3
+        }
+      ],
+      "colors": [
+        {
+          "name": "Tex01_Multiply_Color",
+          "r": 2.0,
+          "g": 2.0,
+          "b": 2.0
+        },
+        {
+          "name": "Shadow_Color",
+          "r": 0.402,
+          "g": 0.271,
+          "b": 0.211
+        },
+        {
+          "name": "HighLight_Color",
+          "r": 4.0,
+          "g": 0.2,
+          "b": 0.12
+        },
+        {
+          "name": "OutLineCol",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        }
+      ],
+      "values": [
+        {
+          "name": "Tex01TranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01TranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01Rotate",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01ScaleU",
+          "value": 1.0
+        },
+        {
+          "name": "Tex01ScaleV",
+          "value": 1.0
+        },
+        {
+          "name": "R0_A1_Tex01_Alpha",
+          "value": 0.0
+        },
+        {
+          "name": "ShadowRange",
+          "value": 1.0
+        },
+        {
+          "name": "HighLightRange",
+          "value": 1.0
+        },
+        {
+          "name": "SpecularPhongPow",
+          "value": 3.0
+        },
+        {
+          "name": "OutLineID",
+          "value": 0.0
+        },
+        {
+          "name": "ProgID",
+          "value": 0.0
+        }
+      ],
+      "switches": [
+        {
+          "name": "NormalEdgeEnable",
+          "value": false
+        },
+        {
+          "name": "OutLineIDEnable",
+          "value": false
+        },
+        {
+          "name": "OutLineColFixed",
+          "value": false
+        }
+      ],
+      "textures_used": [
+        {
+          "sampler": "Tex01WRAP",
+          "texture": "fxmt_ew006_koban_m.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "fxmt_ew006_koban_m.png",
+      "used_sampler": "Tex01WRAP"
+    }
+  ],
+  "meshes": [
+    {
+      "index": 0,
+      "num_vertices": 515,
+      "num_faces": 592,
+      "material_indices": [
+        0
+      ]
+    }
+  ],
+  "texture_names": [
+    "fxmt_ew006_koban_m",
+    "fxmt_cmn_lt002_m_lta",
+    "fxmt_cmn_ht001_m_lta",
+    "fxmt_ew006_koban_hlm_m_lta"
+  ],
+  "hidden_materials": [],
+  "outline_materials": []
+}

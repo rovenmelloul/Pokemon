@@ -1,0 +1,268 @@
+{
+  "materials": [
+    {
+      "name": "ShellBreak",
+      "shader_group": "FxDefault01",
+      "render_layer": 0,
+      "shader_index": 0,
+      "texture_maps": [
+        {
+          "sampler": "Tex01WRAP",
+          "texture": "fxmt_3_shell204_a.png",
+          "tex_index": 0
+        },
+        {
+          "sampler": "HighLightTableTex",
+          "texture": "fxmt_cmn_ht001_m_lta.png",
+          "tex_index": 1
+        },
+        {
+          "sampler": "LightTableTex",
+          "texture": "fxmt_cmn_lt002_m_lta.png",
+          "tex_index": 2
+        }
+      ],
+      "colors": [
+        {
+          "name": "Tex01_Multiply_Color",
+          "r": 0.3764,
+          "g": 0.3764,
+          "b": 0.3764
+        },
+        {
+          "name": "LastConstantColor",
+          "r": 0.0445,
+          "g": 0.0198,
+          "b": 0.0722
+        },
+        {
+          "name": "HighLight_Color",
+          "r": 0.5972,
+          "g": 0.402,
+          "b": 0.6038
+        },
+        {
+          "name": "Shadow_Color",
+          "r": 0.346,
+          "g": 0.346,
+          "b": 0.346
+        },
+        {
+          "name": "FresnelColor",
+          "r": 1.0,
+          "g": 0.4811,
+          "b": 0.43
+        }
+      ],
+      "values": [
+        {
+          "name": "Tex01TranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01TranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01Rotate",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01ScaleU",
+          "value": 1.0
+        },
+        {
+          "name": "Tex01ScaleV",
+          "value": 1.0
+        },
+        {
+          "name": "R0_A1_Tex01_Alpha",
+          "value": 0.0
+        },
+        {
+          "name": "LastConstantAlpha",
+          "value": 1.0
+        },
+        {
+          "name": "Add0_Multi1_LastCons",
+          "value": 0.0
+        },
+        {
+          "name": "HighLightRange",
+          "value": 1.2
+        },
+        {
+          "name": "ShadowRange",
+          "value": 1.0
+        },
+        {
+          "name": "Def0_OneMin1_FreCol",
+          "value": 1.0
+        },
+        {
+          "name": "FresnelPowerCol",
+          "value": 1.0
+        },
+        {
+          "name": "FresnelStrengthCol",
+          "value": 10.0
+        }
+      ],
+      "switches": [],
+      "textures_used": [
+        {
+          "sampler": "Tex01WRAP",
+          "texture": "fxmt_3_shell204_a.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "fxmt_3_shell204_a.png",
+      "used_sampler": "Tex01WRAP"
+    }
+  ],
+  "meshes": [
+    {
+      "index": 0,
+      "num_vertices": 213,
+      "num_faces": 162,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 1,
+      "num_vertices": 546,
+      "num_faces": 388,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "num_vertices": 362,
+      "num_faces": 394,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "num_vertices": 185,
+      "num_faces": 152,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 4,
+      "num_vertices": 245,
+      "num_faces": 240,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 5,
+      "num_vertices": 360,
+      "num_faces": 374,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 6,
+      "num_vertices": 241,
+      "num_faces": 208,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 7,
+      "num_vertices": 226,
+      "num_faces": 218,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 8,
+      "num_vertices": 213,
+      "num_faces": 162,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 9,
+      "num_vertices": 600,
+      "num_faces": 388,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 10,
+      "num_vertices": 362,
+      "num_faces": 394,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 11,
+      "num_vertices": 251,
+      "num_faces": 236,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 12,
+      "num_vertices": 185,
+      "num_faces": 152,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 13,
+      "num_vertices": 269,
+      "num_faces": 241,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 14,
+      "num_vertices": 312,
+      "num_faces": 374,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 15,
+      "num_vertices": 236,
+      "num_faces": 208,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 16,
+      "num_vertices": 226,
+      "num_faces": 218,
+      "material_indices": [
+        0
+      ]
+    }
+  ],
+  "texture_names": [
+    "fxmt_3_shell204_a",
+    "fxmt_cmn_ht001_m_lta",
+    "fxmt_cmn_lt002_m_lta"
+  ],
+  "hidden_materials": [],
+  "outline_materials": []
+}

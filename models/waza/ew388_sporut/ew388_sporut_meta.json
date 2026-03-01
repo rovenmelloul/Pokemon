@@ -1,0 +1,204 @@
+{
+  "materials": [
+    {
+      "name": "leaf2",
+      "shader_group": "FxDefault01",
+      "render_layer": 0,
+      "shader_index": 0,
+      "texture_maps": [
+        {
+          "sampler": "Tex01WRAP",
+          "texture": "fxmt_0_object203_a.png",
+          "tex_index": 0
+        }
+      ],
+      "colors": [
+        {
+          "name": "ConstantColor01",
+          "r": 0.0895,
+          "g": 0.3787,
+          "b": 0.0425
+        },
+        {
+          "name": "OutLineCol",
+          "r": 0.0228,
+          "g": 0.0908,
+          "b": 0.0168
+        }
+      ],
+      "values": [
+        {
+          "name": "OutLineID",
+          "value": 0.0
+        },
+        {
+          "name": "ProgID",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01TranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01TranslateV",
+          "value": 1.0
+        },
+        {
+          "name": "Tex01Rotate",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01ScaleU",
+          "value": -1.0
+        },
+        {
+          "name": "Tex01ScaleV",
+          "value": 0.877256
+        },
+        {
+          "name": "R0_A1_Tex01_Alpha",
+          "value": 1.0
+        }
+      ],
+      "switches": [
+        {
+          "name": "NormalEdgeEnable",
+          "value": true
+        },
+        {
+          "name": "OutLineIDEnable",
+          "value": false
+        },
+        {
+          "name": "OutLineColFixed",
+          "value": true
+        }
+      ],
+      "textures_used": [
+        {
+          "sampler": "Tex01WRAP",
+          "texture": "fxmt_0_object203_a.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "fxmt_0_object203_a.png",
+      "used_sampler": "Tex01WRAP"
+    },
+    {
+      "name": "leaf",
+      "shader_group": "FxDefault01",
+      "render_layer": 0,
+      "shader_index": 1,
+      "texture_maps": [
+        {
+          "sampler": "Tex01WRAP",
+          "texture": "fxmt_0_object202_a.png",
+          "tex_index": 1
+        }
+      ],
+      "colors": [
+        {
+          "name": "ConstantColor01",
+          "r": 0.0895,
+          "g": 0.3787,
+          "b": 0.0425
+        },
+        {
+          "name": "OutLineCol",
+          "r": 0.0228,
+          "g": 0.0908,
+          "b": 0.0168
+        }
+      ],
+      "values": [
+        {
+          "name": "Tex01TranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01TranslateV",
+          "value": 1.0
+        },
+        {
+          "name": "Tex01Rotate",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01ScaleU",
+          "value": -1.0
+        },
+        {
+          "name": "Tex01ScaleV",
+          "value": 0.875
+        },
+        {
+          "name": "R0_A1_Tex01_Alpha",
+          "value": 1.0
+        },
+        {
+          "name": "OutLineID",
+          "value": 0.0
+        },
+        {
+          "name": "ProgID",
+          "value": 0.0
+        }
+      ],
+      "switches": [
+        {
+          "name": "NormalEdgeEnable",
+          "value": true
+        },
+        {
+          "name": "OutLineIDEnable",
+          "value": false
+        },
+        {
+          "name": "OutLineColFixed",
+          "value": true
+        }
+      ],
+      "textures_used": [
+        {
+          "sampler": "Tex01WRAP",
+          "texture": "fxmt_0_object202_a.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "fxmt_0_object202_a.png",
+      "used_sampler": "Tex01WRAP"
+    }
+  ],
+  "meshes": [
+    {
+      "index": 0,
+      "num_vertices": 37,
+      "num_faces": 55,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 1,
+      "num_vertices": 77,
+      "num_faces": 112,
+      "material_indices": [
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "num_vertices": 54,
+      "num_faces": 78,
+      "material_indices": [
+        0
+      ]
+    }
+  ],
+  "texture_names": [
+    "fxmt_0_object203_a",
+    "fxmt_0_object202_a"
+  ],
+  "hidden_materials": [],
+  "outline_materials": []
+}

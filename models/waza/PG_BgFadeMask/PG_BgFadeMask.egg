@@ -1,0 +1,99 @@
+<CoordinateSystem> { Y-Up }
+
+<Comment> { "Pokemon SwSh: PG_BgFadeMask" }
+
+<Material> M_Mask {
+  <Scalar> diffr { 1.0000 }
+  <Scalar> diffg { 1.0000 }
+  <Scalar> diffb { 1.0000 }
+}
+<Texture> M_Mask_tex {
+  "fxmt_3_white202_a.png"
+  <Scalar> envtype { modulate }
+  <Scalar> format { rgb }
+  <Scalar> wrapu { repeat }
+  <Scalar> wrapv { repeat }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear }
+  <Scalar> alpha { off }
+}
+
+<Group> PG_BgFadeMask {
+  <Dart> { 1 }
+
+  <Joint> top_group {
+    <Transform> {
+      <Matrix4> {
+        1.00000000 0.00000000 0.00000000 0.00000000
+        0.00000000 1.00000000 0.00000000 0.00000000
+        0.00000000 0.00000000 1.00000000 0.00000000
+        0.00000000 0.00000000 0.00000000 1.00000000
+      }
+    }
+    <Joint> Origin {
+      <Transform> {
+        <Matrix4> {
+          1.00000000 0.00000000 0.00000000 0.00000000
+          0.00000000 1.00000000 0.00000000 0.00000000
+          0.00000000 0.00000000 1.00000000 0.00000000
+          0.00000000 0.00000000 0.00000000 1.00000000
+        }
+      }
+      <Joint> Translucent_Group {
+        <Transform> {
+          <Matrix4> {
+            1.00000000 0.00000000 0.00000000 0.00000000
+            0.00000000 1.00000000 0.00000000 0.00000000
+            0.00000000 0.00000000 1.00000000 0.00000000
+            0.00000000 0.00000000 0.00000000 1.00000000
+          }
+        }
+        <Joint> Mask {
+          <Transform> {
+            <Matrix4> {
+              1.00000000 0.00000000 0.00000000 0.00000000
+              0.00000000 0.00000031 1.00000000 0.00000000
+              0.00000000 -1.00000000 0.00000031 0.00000000
+              0.00000000 0.00000000 0.00000000 1.00000000
+            }
+          }
+        }
+      }
+    }
+  }
+
+  <VertexPool> vpool_0 {
+    <Vertex> 0 {
+      -8.000000 -0.000000 4.500000
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.000000 0.000000 }
+    }
+    <Vertex> 1 {
+      8.000000 -0.000000 4.500000
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 1.000000 0.000000 }
+    }
+    <Vertex> 2 {
+      -8.000000 0.000000 -4.500000
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 0.000000 0.562500 }
+    }
+    <Vertex> 3 {
+      8.000000 0.000000 -4.500000
+      <Normal> { 0.000000 1.000000 0.000000 }
+      <UV> { 1.000000 0.562500 }
+    }
+  }
+
+  <Polygon> {
+    <MRef> { M_Mask }
+    <TRef> { M_Mask_tex }
+    <VertexRef> { 0 1 2 <Ref> { vpool_0 } }
+  }
+  <Polygon> {
+    <MRef> { M_Mask }
+    <TRef> { M_Mask_tex }
+    <VertexRef> { 2 1 3 <Ref> { vpool_0 } }
+  }
+
+}

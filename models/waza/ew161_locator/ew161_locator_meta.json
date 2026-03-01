@@ -1,0 +1,76 @@
+{
+  "materials": [
+    {
+      "name": "ShaderfxShader1",
+      "shader_group": "FxDefault01",
+      "render_layer": 0,
+      "shader_index": 0,
+      "texture_maps": [
+        {
+          "sampler": "Tex01WRAP",
+          "texture": "fxmt_0_circle001_m.png",
+          "tex_index": 0
+        }
+      ],
+      "colors": [
+        {
+          "name": "Tex01_Multiply_Color",
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0
+        }
+      ],
+      "values": [
+        {
+          "name": "Tex01TranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01TranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01Rotate",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01ScaleU",
+          "value": 1.0
+        },
+        {
+          "name": "Tex01ScaleV",
+          "value": 1.0
+        },
+        {
+          "name": "R0_A1_Tex01_Alpha",
+          "value": 0.0
+        }
+      ],
+      "switches": [],
+      "textures_used": [
+        {
+          "sampler": "Tex01WRAP",
+          "texture": "fxmt_0_circle001_m.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "fxmt_0_circle001_m.png",
+      "used_sampler": "Tex01WRAP"
+    }
+  ],
+  "meshes": [
+    {
+      "index": 0,
+      "num_vertices": 4,
+      "num_faces": 2,
+      "material_indices": [
+        0
+      ]
+    }
+  ],
+  "texture_names": [
+    "fxmt_0_circle001_m"
+  ],
+  "hidden_materials": [],
+  "outline_materials": []
+}

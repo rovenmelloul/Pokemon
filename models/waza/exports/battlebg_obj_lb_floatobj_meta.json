@@ -1,0 +1,1629 @@
+{
+  "materials": [
+    {
+      "name": "battlebg_obj_lb_floatobj01_shadow01_tp",
+      "shader_group": "FieldDefaultShader",
+      "render_layer": 0,
+      "shader_index": 0,
+      "texture_maps": [
+        {
+          "sampler": "BaseColor0",
+          "texture": "battlebg_obj_lb_floatobj01_shadow01_alb.png",
+          "tex_index": 0
+        },
+        {
+          "sampler": "ProjectionMap",
+          "texture": "battlebg_obj_lb_floatobj01_projection01_ao.png",
+          "tex_index": 1
+        }
+      ],
+      "colors": [
+        {
+          "name": "EmissionConstant",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "ProjectionConstant",
+          "r": 0.5,
+          "g": 0.5,
+          "b": 0.5
+        }
+      ],
+      "values": [
+        {
+          "name": "TranslateU0",
+          "value": 0.0
+        },
+        {
+          "name": "TranslateV0",
+          "value": 0.0
+        },
+        {
+          "name": "RotateUV0",
+          "value": 0.0
+        },
+        {
+          "name": "ScaleU0",
+          "value": 1.0
+        },
+        {
+          "name": "ScaleV0",
+          "value": 1.0
+        },
+        {
+          "name": "OpacityScale",
+          "value": 1.0
+        },
+        {
+          "name": "EmissionIntensity",
+          "value": 1.0
+        },
+        {
+          "name": "PrjScrollSpeedU",
+          "value": 2.0
+        },
+        {
+          "name": "PrjTranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "PrjScrollSpeedV",
+          "value": 2.0
+        },
+        {
+          "name": "PrjTranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "PrjRotateUV",
+          "value": 0.0
+        },
+        {
+          "name": "PrjScaleU",
+          "value": 0.007
+        },
+        {
+          "name": "PrjScaleV",
+          "value": 0.007
+        }
+      ],
+      "switches": [],
+      "textures_used": [
+        {
+          "sampler": "BaseColor0",
+          "texture": "battlebg_obj_lb_floatobj01_shadow01_alb.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "battlebg_obj_lb_floatobj01_shadow01_alb.png",
+      "used_sampler": "BaseColor0"
+    },
+    {
+      "name": "battlebg_obj_lb_floatobj01_crown01_bld",
+      "shader_group": "FieldDefaultShader",
+      "render_layer": 0,
+      "shader_index": 1,
+      "texture_maps": [
+        {
+          "sampler": "DiffuseProbe",
+          "texture": "battlebg_obj_lb_floatobj01_env01_diffuse_prb.png",
+          "tex_index": 2
+        },
+        {
+          "sampler": "SpecularProbe",
+          "texture": "battlebg_obj_lb_floatobj01_env01_specular_prb.png",
+          "tex_index": 3
+        },
+        {
+          "sampler": "RoughnessMap",
+          "texture": "battlebg_obj_lb_floatobj01_crown01_rgn.png",
+          "tex_index": 4
+        },
+        {
+          "sampler": "BaseColor0",
+          "texture": "battlebg_obj_lb_floatobj01_crown01_alb.png",
+          "tex_index": 5
+        },
+        {
+          "sampler": "AOMap",
+          "texture": "battlebg_obj_lb_floatobj01_crown05_alb.png",
+          "tex_index": 6
+        },
+        {
+          "sampler": "BaseColor1",
+          "texture": "battlebg_obj_lb_floatobj01_crownlogo01_alb.png",
+          "tex_index": 7
+        },
+        {
+          "sampler": "DepthBuffer",
+          "texture": "DepthBuffer.png",
+          "tex_index": 8
+        }
+      ],
+      "colors": [
+        {
+          "name": "SpecularColor0Constant",
+          "r": 0.073,
+          "g": 0.059,
+          "b": 0.033
+        },
+        {
+          "name": "RimColor",
+          "r": 0.7725,
+          "g": 0.9255,
+          "b": 0.9686
+        }
+      ],
+      "values": [
+        {
+          "name": "MetallicConstant",
+          "value": 0.25
+        },
+        {
+          "name": "ProbeIntensity",
+          "value": 0.5
+        },
+        {
+          "name": "SpecularProbeMipLevels",
+          "value": 7.0
+        },
+        {
+          "name": "TranslateU0",
+          "value": 0.0
+        },
+        {
+          "name": "TranslateV0",
+          "value": 0.0
+        },
+        {
+          "name": "RotateUV0",
+          "value": 0.0
+        },
+        {
+          "name": "ScaleU0",
+          "value": 1.0
+        },
+        {
+          "name": "ScaleV0",
+          "value": 1.0
+        },
+        {
+          "name": "RimIntensity",
+          "value": 0.8
+        },
+        {
+          "name": "RimPower",
+          "value": 6.0
+        },
+        {
+          "name": "OpacityScale",
+          "value": 1.0
+        },
+        {
+          "name": "LayerMaskScale",
+          "value": 0.6
+        },
+        {
+          "name": "TranslateU1",
+          "value": 0.0
+        },
+        {
+          "name": "TranslateV1",
+          "value": 0.0
+        },
+        {
+          "name": "RotateUV1",
+          "value": 0.0
+        },
+        {
+          "name": "ScaleU1",
+          "value": 1.0
+        },
+        {
+          "name": "ScaleV1",
+          "value": 1.0
+        },
+        {
+          "name": "LayerMaskPower",
+          "value": 1.0
+        },
+        {
+          "name": "ShadowNormalBias",
+          "value": 0.0
+        },
+        {
+          "name": "ShadowFadeLength",
+          "value": 5000.0
+        },
+        {
+          "name": "ShadowFadePow",
+          "value": 16.0
+        },
+        {
+          "name": "ShadowBias",
+          "value": 0.002
+        },
+        {
+          "name": "ShadowSamplingScale",
+          "value": 2.0
+        },
+        {
+          "name": "SlopeScaledDepthBias",
+          "value": 0.0
+        },
+        {
+          "name": "DepthBiasClamp",
+          "value": 1.0
+        },
+        {
+          "name": "CascadeLevel",
+          "value": 1.0
+        }
+      ],
+      "switches": [],
+      "textures_used": [
+        {
+          "sampler": "DiffuseProbe",
+          "texture": "battlebg_obj_lb_floatobj01_env01_diffuse_prb.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "battlebg_obj_lb_floatobj01_env01_diffuse_prb.png",
+      "used_sampler": "DiffuseProbe"
+    },
+    {
+      "name": "battlebg_obj_lb_floatobj01_crown03",
+      "shader_group": "FieldDefaultShader",
+      "render_layer": 0,
+      "shader_index": 2,
+      "texture_maps": [
+        {
+          "sampler": "DiffuseProbe",
+          "texture": "battlebg_obj_lb_floatobj01_env01_diffuse_prb.png",
+          "tex_index": 2
+        },
+        {
+          "sampler": "SpecularProbe",
+          "texture": "battlebg_obj_lb_floatobj01_env01_specular_prb.png",
+          "tex_index": 3
+        },
+        {
+          "sampler": "RoughnessMap",
+          "texture": "battlebg_obj_lb_floatobj01_crown03_rgn.png",
+          "tex_index": 9
+        },
+        {
+          "sampler": "BaseColor0",
+          "texture": "battlebg_obj_lb_floatobj01_crown03_alb.png",
+          "tex_index": 10
+        },
+        {
+          "sampler": "EmissionMap",
+          "texture": "battlebg_obj_lb_floatobj01_crown03_emn.png",
+          "tex_index": 11
+        }
+      ],
+      "colors": [
+        {
+          "name": "SpecularColor0Constant",
+          "r": 0.073,
+          "g": 0.059,
+          "b": 0.033
+        },
+        {
+          "name": "RimColor",
+          "r": 0.7725,
+          "g": 0.9255,
+          "b": 0.9686
+        }
+      ],
+      "values": [
+        {
+          "name": "MetallicConstant",
+          "value": 0.25
+        },
+        {
+          "name": "ProbeIntensity",
+          "value": 0.5
+        },
+        {
+          "name": "SpecularProbeMipLevels",
+          "value": 7.0
+        },
+        {
+          "name": "TranslateU0",
+          "value": 0.0
+        },
+        {
+          "name": "TranslateV0",
+          "value": 0.01
+        },
+        {
+          "name": "RotateUV0",
+          "value": 0.01
+        },
+        {
+          "name": "ScaleU0",
+          "value": 1.0
+        },
+        {
+          "name": "ScaleV0",
+          "value": 1.0
+        },
+        {
+          "name": "RimIntensity",
+          "value": 0.8
+        },
+        {
+          "name": "RimPower",
+          "value": 6.0
+        },
+        {
+          "name": "OpacityScale",
+          "value": 1.0
+        },
+        {
+          "name": "EmissionIntensity",
+          "value": 2.0
+        }
+      ],
+      "switches": [],
+      "textures_used": [
+        {
+          "sampler": "DiffuseProbe",
+          "texture": "battlebg_obj_lb_floatobj01_env01_diffuse_prb.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "battlebg_obj_lb_floatobj01_env01_diffuse_prb.png",
+      "used_sampler": "DiffuseProbe"
+    },
+    {
+      "name": "battlebg_obj_lb_floatobj01_metal01",
+      "shader_group": "FieldDefaultShader",
+      "render_layer": 0,
+      "shader_index": 3,
+      "texture_maps": [
+        {
+          "sampler": "BaseColor0",
+          "texture": "battlebg_obj_lb_floatobj01_metal01_alb.png",
+          "tex_index": 12
+        },
+        {
+          "sampler": "DiffuseProbe",
+          "texture": "battlebg_obj_lb_floatobj01_env01_diffuse_prb.png",
+          "tex_index": 2
+        },
+        {
+          "sampler": "SpecularProbe",
+          "texture": "battlebg_obj_lb_floatobj01_env01_specular_prb.png",
+          "tex_index": 3
+        },
+        {
+          "sampler": "RoughnessMap",
+          "texture": "battlebg_obj_lb_floatobj01_metal01_rgn.png",
+          "tex_index": 13
+        },
+        {
+          "sampler": "EmissionMap",
+          "texture": "battlebg_obj_lb_floatobj01_metal01_emn.png",
+          "tex_index": 14
+        }
+      ],
+      "colors": [
+        {
+          "name": "SpecularColor0Constant",
+          "r": 0.0269,
+          "g": 0.0181,
+          "b": 0.0157
+        },
+        {
+          "name": "EmissionConstant",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        }
+      ],
+      "values": [
+        {
+          "name": "TranslateU0",
+          "value": 0.0
+        },
+        {
+          "name": "TranslateV0",
+          "value": 0.0
+        },
+        {
+          "name": "RotateUV0",
+          "value": 0.0
+        },
+        {
+          "name": "ScaleU0",
+          "value": 1.0
+        },
+        {
+          "name": "ScaleV0",
+          "value": 1.0
+        },
+        {
+          "name": "ProbeIntensity",
+          "value": 0.5
+        },
+        {
+          "name": "SpecularProbeMipLevels",
+          "value": 7.0
+        },
+        {
+          "name": "OpacityScale",
+          "value": 1.0
+        },
+        {
+          "name": "EmissionIntensity",
+          "value": 1.6
+        },
+        {
+          "name": "MetallicConstant",
+          "value": 0.0
+        }
+      ],
+      "switches": [],
+      "textures_used": [
+        {
+          "sampler": "BaseColor0",
+          "texture": "battlebg_obj_lb_floatobj01_metal01_alb.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "battlebg_obj_lb_floatobj01_metal01_alb.png",
+      "used_sampler": "BaseColor0"
+    },
+    {
+      "name": "battlebg_obj_lb_floatobj01_box01_bld",
+      "shader_group": "FieldDefaultShader",
+      "render_layer": 0,
+      "shader_index": 4,
+      "texture_maps": [
+        {
+          "sampler": "DiffuseProbe",
+          "texture": "battlebg_obj_lb_floatobj01_env01_diffuse_prb.png",
+          "tex_index": 2
+        },
+        {
+          "sampler": "SpecularProbe",
+          "texture": "battlebg_obj_lb_floatobj01_env01_specular_prb.png",
+          "tex_index": 3
+        },
+        {
+          "sampler": "RoughnessMap",
+          "texture": "battlebg_obj_lb_floatobj01_box01_rgn.png",
+          "tex_index": 15
+        },
+        {
+          "sampler": "NormalMap0",
+          "texture": "battlebg_obj_lb_floatobj01_box01_nrm.png",
+          "tex_index": 16
+        },
+        {
+          "sampler": "MetallicMap",
+          "texture": "battlebg_obj_lb_floatobj01_box01_mtl.png",
+          "tex_index": 17
+        },
+        {
+          "sampler": "ProjectionMap",
+          "texture": "battlebg_obj_lb_floatobj01_projection01_ao.png",
+          "tex_index": 1
+        },
+        {
+          "sampler": "BaseColor0",
+          "texture": "battlebg_obj_lb_floatobj01_box01_alb.png",
+          "tex_index": 18
+        }
+      ],
+      "colors": [
+        {
+          "name": "SpecularColor0Constant",
+          "r": 0.073,
+          "g": 0.059,
+          "b": 0.033
+        },
+        {
+          "name": "ProjectionConstant",
+          "r": 0.5,
+          "g": 0.5,
+          "b": 0.5
+        }
+      ],
+      "values": [
+        {
+          "name": "ProbeIntensity",
+          "value": 0.5
+        },
+        {
+          "name": "SpecularProbeMipLevels",
+          "value": 6.0
+        },
+        {
+          "name": "OpacityScale",
+          "value": 1.0
+        },
+        {
+          "name": "TranslateU0",
+          "value": 0.0
+        },
+        {
+          "name": "TranslateV0",
+          "value": 0.0
+        },
+        {
+          "name": "RotateUV0",
+          "value": 0.0
+        },
+        {
+          "name": "ScaleU0",
+          "value": 1.0
+        },
+        {
+          "name": "ScaleV0",
+          "value": 1.0
+        },
+        {
+          "name": "NormalHeight0",
+          "value": 1.0
+        },
+        {
+          "name": "PrjScrollSpeedU",
+          "value": 2.0
+        },
+        {
+          "name": "PrjTranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "PrjScrollSpeedV",
+          "value": 2.0
+        },
+        {
+          "name": "PrjTranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "PrjRotateUV",
+          "value": 0.0
+        },
+        {
+          "name": "PrjScaleU",
+          "value": 0.007
+        },
+        {
+          "name": "PrjScaleV",
+          "value": 0.007
+        }
+      ],
+      "switches": [],
+      "textures_used": [
+        {
+          "sampler": "DiffuseProbe",
+          "texture": "battlebg_obj_lb_floatobj01_env01_diffuse_prb.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "battlebg_obj_lb_floatobj01_env01_diffuse_prb.png",
+      "used_sampler": "DiffuseProbe"
+    },
+    {
+      "name": "battlebg_obj_lb_floatobj01_crown02_bld",
+      "shader_group": "FieldDefaultShader",
+      "render_layer": 0,
+      "shader_index": 5,
+      "texture_maps": [
+        {
+          "sampler": "DiffuseProbe",
+          "texture": "battlebg_obj_lb_floatobj01_env01_diffuse_prb.png",
+          "tex_index": 2
+        },
+        {
+          "sampler": "SpecularProbe",
+          "texture": "battlebg_obj_lb_floatobj01_env01_specular_prb.png",
+          "tex_index": 3
+        },
+        {
+          "sampler": "RoughnessMap",
+          "texture": "battlebg_obj_lb_floatobj01_crown02_rgn.png",
+          "tex_index": 19
+        },
+        {
+          "sampler": "BaseColor0",
+          "texture": "battlebg_obj_lb_floatobj01_crown02_alb.png",
+          "tex_index": 20
+        },
+        {
+          "sampler": "AOMap",
+          "texture": "battlebg_obj_lb_floatobj01_crown04_alb.png",
+          "tex_index": 21
+        },
+        {
+          "sampler": "BaseColor1",
+          "texture": "battlebg_obj_lb_floatobj01_crownlogo01_alb.png",
+          "tex_index": 7
+        },
+        {
+          "sampler": "NormalMap0",
+          "texture": "battlebg_obj_lb_floatobj01_crown02_nrm.png",
+          "tex_index": 22
+        },
+        {
+          "sampler": "NormalMap1",
+          "texture": "battlebg_obj_lb_floatobj01_crownlogo01_nrm.png",
+          "tex_index": 23
+        },
+        {
+          "sampler": "DepthBuffer",
+          "texture": "DepthBuffer.png",
+          "tex_index": 8
+        }
+      ],
+      "colors": [
+        {
+          "name": "SpecularColor0Constant",
+          "r": 0.073,
+          "g": 0.059,
+          "b": 0.033
+        },
+        {
+          "name": "RimColor",
+          "r": 0.7725,
+          "g": 0.9255,
+          "b": 0.9686
+        }
+      ],
+      "values": [
+        {
+          "name": "MetallicConstant",
+          "value": 0.25
+        },
+        {
+          "name": "ProbeIntensity",
+          "value": 0.5
+        },
+        {
+          "name": "ShadowFadeLength",
+          "value": 5000.0
+        },
+        {
+          "name": "ShadowFadePow",
+          "value": 16.0
+        },
+        {
+          "name": "ShadowBias",
+          "value": 0.002
+        },
+        {
+          "name": "SpecularProbeMipLevels",
+          "value": 7.0
+        },
+        {
+          "name": "TranslateU0",
+          "value": 0.0
+        },
+        {
+          "name": "TranslateV0",
+          "value": 0.0
+        },
+        {
+          "name": "RotateUV0",
+          "value": 0.0
+        },
+        {
+          "name": "ScaleU0",
+          "value": 1.0
+        },
+        {
+          "name": "ScaleV0",
+          "value": 1.0
+        },
+        {
+          "name": "RimIntensity",
+          "value": 0.8
+        },
+        {
+          "name": "RimPower",
+          "value": 6.0
+        },
+        {
+          "name": "OpacityScale",
+          "value": 1.0
+        },
+        {
+          "name": "LayerMaskScale",
+          "value": 0.6
+        },
+        {
+          "name": "TranslateU1",
+          "value": 0.0
+        },
+        {
+          "name": "TranslateV1",
+          "value": 0.0
+        },
+        {
+          "name": "RotateUV1",
+          "value": 0.0
+        },
+        {
+          "name": "ScaleU1",
+          "value": 1.0
+        },
+        {
+          "name": "ScaleV1",
+          "value": 1.0
+        },
+        {
+          "name": "ShadowNormalBias",
+          "value": 0.0
+        },
+        {
+          "name": "LayerMaskPower",
+          "value": 1.0
+        },
+        {
+          "name": "NormalHeight0",
+          "value": 1.0
+        },
+        {
+          "name": "NormalHeight1",
+          "value": 1.0
+        },
+        {
+          "name": "ShadowSamplingScale",
+          "value": 2.0
+        },
+        {
+          "name": "SlopeScaledDepthBias",
+          "value": 0.0
+        },
+        {
+          "name": "DepthBiasClamp",
+          "value": 1.0
+        },
+        {
+          "name": "CascadeLevel",
+          "value": 1.0
+        }
+      ],
+      "switches": [],
+      "textures_used": [
+        {
+          "sampler": "DiffuseProbe",
+          "texture": "battlebg_obj_lb_floatobj01_env01_diffuse_prb.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "battlebg_obj_lb_floatobj01_env01_diffuse_prb.png",
+      "used_sampler": "DiffuseProbe"
+    },
+    {
+      "name": "battlebg_obj_lb_floatobj01_crownedge01_tp",
+      "shader_group": "FieldDefaultShader",
+      "render_layer": 0,
+      "shader_index": 6,
+      "texture_maps": [
+        {
+          "sampler": "BaseColor0",
+          "texture": "battlebg_obj_lb_floatobj01_crownedge01_alb.png",
+          "tex_index": 24
+        },
+        {
+          "sampler": "DiffuseProbe",
+          "texture": "battlebg_obj_lb_floatobj01_env01_diffuse_prb.png",
+          "tex_index": 2
+        },
+        {
+          "sampler": "SpecularProbe",
+          "texture": "battlebg_obj_lb_floatobj01_env01_specular_prb.png",
+          "tex_index": 3
+        },
+        {
+          "sampler": "RoughnessMap",
+          "texture": "battlebg_obj_lb_floatobj01_crownedge01_rgn.png",
+          "tex_index": 25
+        },
+        {
+          "sampler": "NormalMap0",
+          "texture": "battlebg_obj_lb_floatobj01_crownedge01_nrm.png",
+          "tex_index": 26
+        }
+      ],
+      "colors": [
+        {
+          "name": "SpecularColor0Constant",
+          "r": 0.073,
+          "g": 0.059,
+          "b": 0.033
+        }
+      ],
+      "values": [
+        {
+          "name": "TranslateU0",
+          "value": 0.0
+        },
+        {
+          "name": "TranslateV0",
+          "value": 0.0
+        },
+        {
+          "name": "RotateUV0",
+          "value": 0.0
+        },
+        {
+          "name": "ScaleU0",
+          "value": 1.0
+        },
+        {
+          "name": "ScaleV0",
+          "value": 1.0
+        },
+        {
+          "name": "OpacityScale",
+          "value": 1.0
+        },
+        {
+          "name": "MetallicConstant",
+          "value": 0.0
+        },
+        {
+          "name": "ProbeIntensity",
+          "value": 0.5
+        },
+        {
+          "name": "SpecularProbeMipLevels",
+          "value": 7.0
+        },
+        {
+          "name": "DiscardValue",
+          "value": 0.0
+        },
+        {
+          "name": "NormalHeight0",
+          "value": 1.0
+        }
+      ],
+      "switches": [],
+      "textures_used": [
+        {
+          "sampler": "BaseColor0",
+          "texture": "battlebg_obj_lb_floatobj01_crownedge01_alb.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "battlebg_obj_lb_floatobj01_crownedge01_alb.png",
+      "used_sampler": "BaseColor0"
+    }
+  ],
+  "meshes": [
+    {
+      "index": 0,
+      "num_vertices": 68,
+      "num_faces": 60,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 1,
+      "num_vertices": 72,
+      "num_faces": 54,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "num_vertices": 162,
+      "num_faces": 120,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "num_vertices": 52,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 4,
+      "num_vertices": 18,
+      "num_faces": 20,
+      "material_indices": [
+        1,
+        2
+      ]
+    },
+    {
+      "index": 5,
+      "num_vertices": 172,
+      "num_faces": 128,
+      "material_indices": [
+        2,
+        3
+      ]
+    },
+    {
+      "index": 6,
+      "num_vertices": 28,
+      "num_faces": 24,
+      "material_indices": [
+        4
+      ]
+    },
+    {
+      "index": 7,
+      "num_vertices": 28,
+      "num_faces": 24,
+      "material_indices": [
+        4
+      ]
+    },
+    {
+      "index": 8,
+      "num_vertices": 28,
+      "num_faces": 24,
+      "material_indices": [
+        4
+      ]
+    },
+    {
+      "index": 9,
+      "num_vertices": 124,
+      "num_faces": 160,
+      "material_indices": [
+        4
+      ]
+    },
+    {
+      "index": 10,
+      "num_vertices": 124,
+      "num_faces": 160,
+      "material_indices": [
+        4
+      ]
+    },
+    {
+      "index": 11,
+      "num_vertices": 120,
+      "num_faces": 128,
+      "material_indices": [
+        4
+      ]
+    },
+    {
+      "index": 12,
+      "num_vertices": 124,
+      "num_faces": 160,
+      "material_indices": [
+        4
+      ]
+    },
+    {
+      "index": 13,
+      "num_vertices": 105,
+      "num_faces": 108,
+      "material_indices": [
+        4
+      ]
+    },
+    {
+      "index": 14,
+      "num_vertices": 105,
+      "num_faces": 108,
+      "material_indices": [
+        4
+      ]
+    },
+    {
+      "index": 15,
+      "num_vertices": 105,
+      "num_faces": 108,
+      "material_indices": [
+        4
+      ]
+    },
+    {
+      "index": 16,
+      "num_vertices": 56,
+      "num_faces": 52,
+      "material_indices": [
+        2,
+        5
+      ]
+    },
+    {
+      "index": 17,
+      "num_vertices": 45,
+      "num_faces": 52,
+      "material_indices": [
+        6
+      ]
+    },
+    {
+      "index": 18,
+      "num_vertices": 15,
+      "num_faces": 16,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 19,
+      "num_vertices": 8,
+      "num_faces": 6,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 20,
+      "num_vertices": 8,
+      "num_faces": 6,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 21,
+      "num_vertices": 8,
+      "num_faces": 6,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 22,
+      "num_vertices": 8,
+      "num_faces": 6,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 23,
+      "num_vertices": 8,
+      "num_faces": 6,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 24,
+      "num_vertices": 8,
+      "num_faces": 6,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 25,
+      "num_vertices": 8,
+      "num_faces": 6,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 26,
+      "num_vertices": 12,
+      "num_faces": 12,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 27,
+      "num_vertices": 8,
+      "num_faces": 6,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 28,
+      "num_vertices": 8,
+      "num_faces": 6,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 29,
+      "num_vertices": 8,
+      "num_faces": 6,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 30,
+      "num_vertices": 148,
+      "num_faces": 128,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 31,
+      "num_vertices": 90,
+      "num_faces": 68,
+      "material_indices": [
+        2,
+        3
+      ]
+    },
+    {
+      "index": 32,
+      "num_vertices": 34,
+      "num_faces": 28,
+      "material_indices": [
+        2,
+        5
+      ]
+    },
+    {
+      "index": 33,
+      "num_vertices": 27,
+      "num_faces": 32,
+      "material_indices": [
+        6
+      ]
+    },
+    {
+      "index": 34,
+      "num_vertices": 26,
+      "num_faces": 20,
+      "material_indices": [
+        2,
+        5
+      ]
+    },
+    {
+      "index": 35,
+      "num_vertices": 20,
+      "num_faces": 23,
+      "material_indices": [
+        6
+      ]
+    },
+    {
+      "index": 36,
+      "num_vertices": 105,
+      "num_faces": 108,
+      "material_indices": [
+        4
+      ]
+    },
+    {
+      "index": 37,
+      "num_vertices": 105,
+      "num_faces": 108,
+      "material_indices": [
+        4
+      ]
+    },
+    {
+      "index": 38,
+      "num_vertices": 105,
+      "num_faces": 108,
+      "material_indices": [
+        4
+      ]
+    },
+    {
+      "index": 39,
+      "num_vertices": 105,
+      "num_faces": 108,
+      "material_indices": [
+        4
+      ]
+    },
+    {
+      "index": 40,
+      "num_vertices": 124,
+      "num_faces": 160,
+      "material_indices": [
+        4
+      ]
+    },
+    {
+      "index": 41,
+      "num_vertices": 124,
+      "num_faces": 160,
+      "material_indices": [
+        4
+      ]
+    },
+    {
+      "index": 42,
+      "num_vertices": 124,
+      "num_faces": 160,
+      "material_indices": [
+        4
+      ]
+    },
+    {
+      "index": 43,
+      "num_vertices": 124,
+      "num_faces": 160,
+      "material_indices": [
+        4
+      ]
+    },
+    {
+      "index": 44,
+      "num_vertices": 119,
+      "num_faces": 128,
+      "material_indices": [
+        4
+      ]
+    },
+    {
+      "index": 45,
+      "num_vertices": 28,
+      "num_faces": 24,
+      "material_indices": [
+        4
+      ]
+    },
+    {
+      "index": 46,
+      "num_vertices": 8,
+      "num_faces": 6,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 47,
+      "num_vertices": 42,
+      "num_faces": 44,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 48,
+      "num_vertices": 8,
+      "num_faces": 6,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 49,
+      "num_vertices": 8,
+      "num_faces": 6,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 50,
+      "num_vertices": 8,
+      "num_faces": 6,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 51,
+      "num_vertices": 8,
+      "num_faces": 6,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 52,
+      "num_vertices": 8,
+      "num_faces": 6,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 53,
+      "num_vertices": 8,
+      "num_faces": 6,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 54,
+      "num_vertices": 8,
+      "num_faces": 6,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 55,
+      "num_vertices": 8,
+      "num_faces": 6,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 56,
+      "num_vertices": 8,
+      "num_faces": 6,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 57,
+      "num_vertices": 20,
+      "num_faces": 25,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 58,
+      "num_vertices": 8,
+      "num_faces": 6,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 59,
+      "num_vertices": 145,
+      "num_faces": 100,
+      "material_indices": [
+        2,
+        3
+      ]
+    },
+    {
+      "index": 60,
+      "num_vertices": 65,
+      "num_faces": 52,
+      "material_indices": [
+        2,
+        5
+      ]
+    },
+    {
+      "index": 61,
+      "num_vertices": 46,
+      "num_faces": 57,
+      "material_indices": [
+        6
+      ]
+    },
+    {
+      "index": 62,
+      "num_vertices": 33,
+      "num_faces": 32,
+      "material_indices": [
+        2,
+        5
+      ]
+    },
+    {
+      "index": 63,
+      "num_vertices": 20,
+      "num_faces": 23,
+      "material_indices": [
+        6
+      ]
+    },
+    {
+      "index": 64,
+      "num_vertices": 72,
+      "num_faces": 62,
+      "material_indices": [
+        1,
+        2
+      ]
+    },
+    {
+      "index": 65,
+      "num_vertices": 52,
+      "num_faces": 65,
+      "material_indices": [
+        6
+      ]
+    },
+    {
+      "index": 66,
+      "num_vertices": 124,
+      "num_faces": 160,
+      "material_indices": [
+        4
+      ]
+    },
+    {
+      "index": 67,
+      "num_vertices": 124,
+      "num_faces": 160,
+      "material_indices": [
+        4
+      ]
+    },
+    {
+      "index": 68,
+      "num_vertices": 124,
+      "num_faces": 160,
+      "material_indices": [
+        4
+      ]
+    },
+    {
+      "index": 69,
+      "num_vertices": 28,
+      "num_faces": 24,
+      "material_indices": [
+        4
+      ]
+    },
+    {
+      "index": 70,
+      "num_vertices": 28,
+      "num_faces": 24,
+      "material_indices": [
+        4
+      ]
+    },
+    {
+      "index": 71,
+      "num_vertices": 28,
+      "num_faces": 24,
+      "material_indices": [
+        4
+      ]
+    },
+    {
+      "index": 72,
+      "num_vertices": 28,
+      "num_faces": 24,
+      "material_indices": [
+        4
+      ]
+    },
+    {
+      "index": 73,
+      "num_vertices": 8,
+      "num_faces": 6,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 74,
+      "num_vertices": 8,
+      "num_faces": 6,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 75,
+      "num_vertices": 17,
+      "num_faces": 18,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 76,
+      "num_vertices": 128,
+      "num_faces": 102,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 77,
+      "num_vertices": 8,
+      "num_faces": 6,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 78,
+      "num_vertices": 8,
+      "num_faces": 6,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 79,
+      "num_vertices": 8,
+      "num_faces": 6,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 80,
+      "num_vertices": 8,
+      "num_faces": 6,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 81,
+      "num_vertices": 8,
+      "num_faces": 6,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 82,
+      "num_vertices": 15,
+      "num_faces": 16,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 83,
+      "num_vertices": 8,
+      "num_faces": 6,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 84,
+      "num_vertices": 2252,
+      "num_faces": 2536,
+      "material_indices": [
+        4
+      ]
+    }
+  ],
+  "texture_names": [
+    "battlebg_obj_lb_floatobj01_shadow01_alb",
+    "battlebg_obj_lb_floatobj01_projection01_ao",
+    "battlebg_obj_lb_floatobj01_env01_diffuse_prb",
+    "battlebg_obj_lb_floatobj01_env01_specular_prb",
+    "battlebg_obj_lb_floatobj01_crown01_rgn",
+    "battlebg_obj_lb_floatobj01_crown01_alb",
+    "battlebg_obj_lb_floatobj01_crown05_alb",
+    "battlebg_obj_lb_floatobj01_crownlogo01_alb",
+    "DepthBuffer",
+    "battlebg_obj_lb_floatobj01_crown03_rgn",
+    "battlebg_obj_lb_floatobj01_crown03_alb",
+    "battlebg_obj_lb_floatobj01_crown03_emn",
+    "battlebg_obj_lb_floatobj01_metal01_alb",
+    "battlebg_obj_lb_floatobj01_metal01_rgn",
+    "battlebg_obj_lb_floatobj01_metal01_emn",
+    "battlebg_obj_lb_floatobj01_box01_rgn",
+    "battlebg_obj_lb_floatobj01_box01_nrm",
+    "battlebg_obj_lb_floatobj01_box01_mtl",
+    "battlebg_obj_lb_floatobj01_box01_alb",
+    "battlebg_obj_lb_floatobj01_crown02_rgn",
+    "battlebg_obj_lb_floatobj01_crown02_alb",
+    "battlebg_obj_lb_floatobj01_crown04_alb",
+    "battlebg_obj_lb_floatobj01_crown02_nrm",
+    "battlebg_obj_lb_floatobj01_crownlogo01_nrm",
+    "battlebg_obj_lb_floatobj01_crownedge01_alb",
+    "battlebg_obj_lb_floatobj01_crownedge01_rgn",
+    "battlebg_obj_lb_floatobj01_crownedge01_nrm"
+  ],
+  "hidden_materials": [],
+  "outline_materials": [
+    "battlebg_obj_lb_floatobj01_crownedge01_tp"
+  ]
+}

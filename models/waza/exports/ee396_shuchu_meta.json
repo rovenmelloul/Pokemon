@@ -1,0 +1,96 @@
+{
+  "materials": [
+    {
+      "name": "ee396_shuchu_mat",
+      "shader_group": "DefaultShader",
+      "render_layer": 0,
+      "shader_index": 0,
+      "texture_maps": [
+        {
+          "sampler": "ColorMap",
+          "texture": "shuchu.png",
+          "tex_index": 0
+        },
+        {
+          "sampler": "LightTable",
+          "texture": "shuchu.png",
+          "tex_index": 0
+        },
+        {
+          "sampler": "EmissionMap",
+          "texture": "shuchu.png",
+          "tex_index": 0
+        }
+      ],
+      "colors": [
+        {
+          "name": "LastMultiplyColor",
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0
+        },
+        {
+          "name": "LightTableScale",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        }
+      ],
+      "values": [
+        {
+          "name": "ColorMapTranslateU",
+          "value": 3.0
+        },
+        {
+          "name": "ColorMapTranslateV",
+          "value": 0.5
+        },
+        {
+          "name": "ColorMapRotate",
+          "value": 360.0
+        },
+        {
+          "name": "ColorMapScaleU",
+          "value": 1.0
+        },
+        {
+          "name": "ColorMapScaleV",
+          "value": 1.0
+        },
+        {
+          "name": "LastMultiplyAlpha",
+          "value": 0.1
+        },
+        {
+          "name": "DiscardValuie",
+          "value": 0.011485
+        }
+      ],
+      "switches": [],
+      "textures_used": [
+        {
+          "sampler": "ColorMap",
+          "texture": "shuchu.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "shuchu.png",
+      "used_sampler": "ColorMap"
+    }
+  ],
+  "meshes": [
+    {
+      "index": 0,
+      "num_vertices": 4,
+      "num_faces": 2,
+      "material_indices": [
+        0
+      ]
+    }
+  ],
+  "texture_names": [
+    "shuchu"
+  ],
+  "hidden_materials": [],
+  "outline_materials": []
+}

@@ -1,0 +1,776 @@
+{
+  "materials": [
+    {
+      "name": "M_earth",
+      "shader_group": "FxDefault01",
+      "render_layer": 0,
+      "shader_index": 0,
+      "texture_maps": [
+        {
+          "sampler": "Tex01WRAP",
+          "texture": "fxmt_ew069_earth_m.png",
+          "tex_index": 0
+        },
+        {
+          "sampler": "LightTableTex",
+          "texture": "fxmt_cmn_ht004_m_lta.png",
+          "tex_index": 1
+        },
+        {
+          "sampler": "HighLightTableTex",
+          "texture": "fxmt_cmn_ht004_m_lta.png",
+          "tex_index": 1
+        }
+      ],
+      "colors": [
+        {
+          "name": "Tex01_Multiply_Color",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "Shadow_Color",
+          "r": 0.4117,
+          "g": 0.6028,
+          "b": 1.0
+        },
+        {
+          "name": "HighLight_Color",
+          "r": 0.0,
+          "g": 0.0741,
+          "b": 0.2543
+        },
+        {
+          "name": "FresnelColor",
+          "r": 0.0,
+          "g": 1.0,
+          "b": 2.5371
+        },
+        {
+          "name": "OutLineCol",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        }
+      ],
+      "values": [
+        {
+          "name": "Tex01TranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01TranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01Rotate",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01ScaleU",
+          "value": 1.0
+        },
+        {
+          "name": "Tex01ScaleV",
+          "value": 1.0
+        },
+        {
+          "name": "R0_A1_Tex01_Alpha",
+          "value": 1.0
+        },
+        {
+          "name": "ShadowRange",
+          "value": 1.0
+        },
+        {
+          "name": "HighLightRange",
+          "value": 1.0
+        },
+        {
+          "name": "Def0_OneMin1_FreCol",
+          "value": 0.0
+        },
+        {
+          "name": "FresnelPowerCol",
+          "value": 2.0
+        },
+        {
+          "name": "FresnelStrengthCol",
+          "value": 0.5
+        },
+        {
+          "name": "OutLineID",
+          "value": 0.0
+        },
+        {
+          "name": "ProgID",
+          "value": 0.0
+        }
+      ],
+      "switches": [
+        {
+          "name": "NormalEdgeEnable",
+          "value": false
+        },
+        {
+          "name": "OutLineIDEnable",
+          "value": false
+        },
+        {
+          "name": "OutLineColFixed",
+          "value": false
+        }
+      ],
+      "textures_used": [
+        {
+          "sampler": "Tex01WRAP",
+          "texture": "fxmt_ew069_earth_m.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "fxmt_ew069_earth_m.png",
+      "used_sampler": "Tex01WRAP"
+    },
+    {
+      "name": "M_space",
+      "shader_group": "FxMulti01",
+      "render_layer": 0,
+      "shader_index": 1,
+      "texture_maps": [
+        {
+          "sampler": "Tex01WRAP",
+          "texture": "fxmt_ew069_space_m.png",
+          "tex_index": 2
+        },
+        {
+          "sampler": "Tex02WRAP",
+          "texture": "fxmt_3_color002_m.png",
+          "tex_index": 3
+        },
+        {
+          "sampler": "ColorTexWRAP",
+          "texture": "fxmt_3_col301_t.png",
+          "tex_index": 4
+        }
+      ],
+      "colors": [
+        {
+          "name": "ConstantColor03",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "OutLineCol",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        }
+      ],
+      "values": [
+        {
+          "name": "Tex01_Rot_Volume",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01TranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01TranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01Rotate",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01ScaleU",
+          "value": 5.0
+        },
+        {
+          "name": "Tex01ScaleV",
+          "value": 5.0
+        },
+        {
+          "name": "A_or_1A_Tex01_Alpha",
+          "value": 0.0
+        },
+        {
+          "name": "Tex02_Rot_Volume",
+          "value": 0.0
+        },
+        {
+          "name": "Tex02TranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "Tex02TranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "Tex02Rotate",
+          "value": 0.0
+        },
+        {
+          "name": "Tex02ScaleU",
+          "value": 2.0
+        },
+        {
+          "name": "Tex02ScaleV",
+          "value": 2.0
+        },
+        {
+          "name": "A_or_1A_Tex02_Alpha",
+          "value": 0.0
+        },
+        {
+          "name": "Alpha_Power",
+          "value": 1.0
+        },
+        {
+          "name": "Alpha_Multiply",
+          "value": 1.0
+        },
+        {
+          "name": "Emissive_Intensity",
+          "value": 2.0
+        },
+        {
+          "name": "ColorTexTranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "ColorTexTranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "ColorTexRotate",
+          "value": 0.0
+        },
+        {
+          "name": "ColorTexScaleU",
+          "value": 3.0
+        },
+        {
+          "name": "ColorTexScaleV",
+          "value": 3.0
+        },
+        {
+          "name": "OutLineID",
+          "value": 0.0
+        },
+        {
+          "name": "ProgID",
+          "value": 0.0
+        }
+      ],
+      "switches": [
+        {
+          "name": "NormalEdgeEnable",
+          "value": false
+        },
+        {
+          "name": "OutLineIDEnable",
+          "value": false
+        },
+        {
+          "name": "OutLineColFixed",
+          "value": false
+        }
+      ],
+      "textures_used": [
+        {
+          "sampler": "Tex01WRAP",
+          "texture": "fxmt_ew069_space_m.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "fxmt_ew069_space_m.png",
+      "used_sampler": "Tex01WRAP"
+    },
+    {
+      "name": "M_star",
+      "shader_group": "FxMulti01",
+      "render_layer": 0,
+      "shader_index": 2,
+      "texture_maps": [
+        {
+          "sampler": "Tex01WRAP",
+          "texture": "fxmt_0_point002_m.png",
+          "tex_index": 5
+        },
+        {
+          "sampler": "Tex02WRAP",
+          "texture": "fxmt_3_cloud008_m.png",
+          "tex_index": 6
+        },
+        {
+          "sampler": "ColorTexWRAP",
+          "texture": "fxmt_3_col301_t.png",
+          "tex_index": 4
+        }
+      ],
+      "colors": [
+        {
+          "name": "ConstantColor03",
+          "r": 0.0,
+          "g": 0.26,
+          "b": 1.0
+        },
+        {
+          "name": "OutLineCol",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        }
+      ],
+      "values": [
+        {
+          "name": "Tex01_Rot_Volume",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01TranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01TranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01Rotate",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01ScaleU",
+          "value": 60.0
+        },
+        {
+          "name": "Tex01ScaleV",
+          "value": 30.0
+        },
+        {
+          "name": "A_or_1A_Tex01_Alpha",
+          "value": 0.0
+        },
+        {
+          "name": "Tex02_Rot_Volume",
+          "value": 0.0
+        },
+        {
+          "name": "Tex02TranslateU",
+          "value": 0.016667
+        },
+        {
+          "name": "Tex02TranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "Tex02Rotate",
+          "value": 0.0
+        },
+        {
+          "name": "Tex02ScaleU",
+          "value": 4.0
+        },
+        {
+          "name": "Tex02ScaleV",
+          "value": 2.0
+        },
+        {
+          "name": "A_or_1A_Tex02_Alpha",
+          "value": 0.0
+        },
+        {
+          "name": "Tex02_Alpha",
+          "value": 1.0
+        },
+        {
+          "name": "Tex01_Alpha",
+          "value": 1.0
+        },
+        {
+          "name": "Alpha_Power",
+          "value": 1.0
+        },
+        {
+          "name": "Alpha_Multiply",
+          "value": 1.0
+        },
+        {
+          "name": "Emissive_Intensity",
+          "value": 10.0
+        },
+        {
+          "name": "ColorTexTranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "ColorTexTranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "ColorTexRotate",
+          "value": 0.0
+        },
+        {
+          "name": "ColorTexScaleU",
+          "value": 3.0
+        },
+        {
+          "name": "ColorTexScaleV",
+          "value": 3.0
+        },
+        {
+          "name": "R0_A1_Tex02_Alpha",
+          "value": 0.0
+        },
+        {
+          "name": "OutLineID",
+          "value": 0.0
+        },
+        {
+          "name": "ProgID",
+          "value": 0.0
+        }
+      ],
+      "switches": [
+        {
+          "name": "NormalEdgeEnable",
+          "value": false
+        },
+        {
+          "name": "OutLineIDEnable",
+          "value": false
+        },
+        {
+          "name": "OutLineColFixed",
+          "value": false
+        }
+      ],
+      "textures_used": [
+        {
+          "sampler": "Tex01WRAP",
+          "texture": "fxmt_0_point002_m.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "fxmt_0_point002_m.png",
+      "used_sampler": "Tex01WRAP"
+    },
+    {
+      "name": "M_glow",
+      "shader_group": "FxMulti01",
+      "render_layer": 0,
+      "shader_index": 3,
+      "texture_maps": [
+        {
+          "sampler": "Tex01WRAP",
+          "texture": "fxmt_ew069_glow_m.png",
+          "tex_index": 7
+        }
+      ],
+      "colors": [
+        {
+          "name": "ConstantColor01",
+          "r": 0.0,
+          "g": 0.4192,
+          "b": 1.0
+        },
+        {
+          "name": "OutLineCol",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        }
+      ],
+      "values": [
+        {
+          "name": "Tex01_Rot_Volume",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01TranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01TranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01Rotate",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01ScaleU",
+          "value": 1.0
+        },
+        {
+          "name": "Tex01ScaleV",
+          "value": 1.0
+        },
+        {
+          "name": "A_or_1A_Tex01_Alpha",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01_Alpha",
+          "value": 1.0
+        },
+        {
+          "name": "Alpha_Power",
+          "value": 1.0
+        },
+        {
+          "name": "Alpha_Multiply",
+          "value": 1.0
+        },
+        {
+          "name": "Emissive_Intensity",
+          "value": 4.0
+        },
+        {
+          "name": "OutLineID",
+          "value": 0.0
+        },
+        {
+          "name": "ProgID",
+          "value": 0.0
+        }
+      ],
+      "switches": [
+        {
+          "name": "NormalEdgeEnable",
+          "value": false
+        },
+        {
+          "name": "OutLineIDEnable",
+          "value": false
+        },
+        {
+          "name": "OutLineColFixed",
+          "value": false
+        }
+      ],
+      "textures_used": [
+        {
+          "sampler": "Tex01WRAP",
+          "texture": "fxmt_ew069_glow_m.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "fxmt_ew069_glow_m.png",
+      "used_sampler": "Tex01WRAP"
+    },
+    {
+      "name": "M_cloud",
+      "shader_group": "FxMulti01",
+      "render_layer": 0,
+      "shader_index": 4,
+      "texture_maps": [
+        {
+          "sampler": "Tex01WRAP",
+          "texture": "fxmt_3_cloud008_m.png",
+          "tex_index": 6
+        },
+        {
+          "sampler": "DistortionTexWRAP",
+          "texture": "fxmt_3_cloud007_m.png",
+          "tex_index": 8
+        }
+      ],
+      "colors": [
+        {
+          "name": "ConstantColor01",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "OutLineCol",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        }
+      ],
+      "values": [
+        {
+          "name": "Tex01_Rot_Volume",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01TranslateU",
+          "value": 0.008333
+        },
+        {
+          "name": "Tex01TranslateV",
+          "value": 0.05
+        },
+        {
+          "name": "Tex01Rotate",
+          "value": 0.083333
+        },
+        {
+          "name": "Tex01ScaleU",
+          "value": 2.0
+        },
+        {
+          "name": "Tex01ScaleV",
+          "value": 2.0
+        },
+        {
+          "name": "A_or_1A_Tex01_Alpha",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01_Alpha",
+          "value": 1.0
+        },
+        {
+          "name": "Alpha_Power",
+          "value": 1.0
+        },
+        {
+          "name": "Alpha_Multiply",
+          "value": 1.0
+        },
+        {
+          "name": "Emissive_Intensity",
+          "value": 1.0
+        },
+        {
+          "name": "Def0_OneMin1_FreAlp",
+          "value": 0.0
+        },
+        {
+          "name": "FresnelPowerAlp",
+          "value": 2.0
+        },
+        {
+          "name": "FresnelStrengthAlp",
+          "value": 1.2
+        },
+        {
+          "name": "DistortionTex_Rot_Volume",
+          "value": 0.0
+        },
+        {
+          "name": "DistortionTexTranslateU",
+          "value": -0.016667
+        },
+        {
+          "name": "DistortionTexTranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "DistortionTexRotate",
+          "value": 0.0
+        },
+        {
+          "name": "DistortionTexScaleU",
+          "value": 2.0
+        },
+        {
+          "name": "DistortionTexScaleV",
+          "value": 2.0
+        },
+        {
+          "name": "R0_A1_DisTex_Alpha",
+          "value": 0.0
+        },
+        {
+          "name": "DistortionIntensity",
+          "value": 0.014724
+        },
+        {
+          "name": "OutLineID",
+          "value": 0.0
+        },
+        {
+          "name": "ProgID",
+          "value": 0.0
+        }
+      ],
+      "switches": [
+        {
+          "name": "NormalEdgeEnable",
+          "value": false
+        },
+        {
+          "name": "OutLineIDEnable",
+          "value": false
+        },
+        {
+          "name": "OutLineColFixed",
+          "value": false
+        }
+      ],
+      "textures_used": [
+        {
+          "sampler": "Tex01WRAP",
+          "texture": "fxmt_3_cloud008_m.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "fxmt_3_cloud008_m.png",
+      "used_sampler": "Tex01WRAP"
+    }
+  ],
+  "meshes": [
+    {
+      "index": 0,
+      "num_vertices": 529,
+      "num_faces": 992,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 1,
+      "num_vertices": 1087,
+      "num_faces": 1984,
+      "material_indices": [
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "num_vertices": 1087,
+      "num_faces": 1984,
+      "material_indices": [
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "num_vertices": 4,
+      "num_faces": 2,
+      "material_indices": [
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "num_vertices": 1087,
+      "num_faces": 1984,
+      "material_indices": [
+        4
+      ]
+    }
+  ],
+  "texture_names": [
+    "fxmt_ew069_earth_m",
+    "fxmt_cmn_ht004_m_lta",
+    "fxmt_ew069_space_m",
+    "fxmt_3_color002_m",
+    "fxmt_3_col301_t",
+    "fxmt_0_point002_m",
+    "fxmt_3_cloud008_m",
+    "fxmt_ew069_glow_m",
+    "fxmt_3_cloud007_m"
+  ],
+  "hidden_materials": [],
+  "outline_materials": []
+}

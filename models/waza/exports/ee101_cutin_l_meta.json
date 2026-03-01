@@ -1,0 +1,87 @@
+{
+  "materials": [
+    {
+      "name": "cmn_white_mat",
+      "shader_group": "DefaultShader",
+      "render_layer": 0,
+      "shader_index": 0,
+      "texture_maps": [
+        {
+          "sampler": "ColorMap",
+          "texture": "cmn_white_tex01.png",
+          "tex_index": 0
+        },
+        {
+          "sampler": "LightTable",
+          "texture": "cmn_white_tex01.png",
+          "tex_index": 0
+        }
+      ],
+      "colors": [
+        {
+          "name": "LastMultiplyColor",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "LightTableScale",
+          "r": 0.5289,
+          "g": 0.5289,
+          "b": 0.5289
+        }
+      ],
+      "values": [
+        {
+          "name": "ColorMapTranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "ColorMapTranslateV",
+          "value": 0.5
+        },
+        {
+          "name": "ColorMapRotate",
+          "value": 360.0
+        },
+        {
+          "name": "ColorMapScaleU",
+          "value": 1.0
+        },
+        {
+          "name": "ColorMapScaleV",
+          "value": 1.0
+        },
+        {
+          "name": "LastMultiplyAlpha",
+          "value": 1.0
+        }
+      ],
+      "switches": [],
+      "textures_used": [
+        {
+          "sampler": "ColorMap",
+          "texture": "cmn_white_tex01.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "cmn_white_tex01.png",
+      "used_sampler": "ColorMap"
+    }
+  ],
+  "meshes": [
+    {
+      "index": 0,
+      "num_vertices": 4,
+      "num_faces": 2,
+      "material_indices": [
+        0
+      ]
+    }
+  ],
+  "texture_names": [
+    "cmn_white_tex01"
+  ],
+  "hidden_materials": [],
+  "outline_materials": []
+}

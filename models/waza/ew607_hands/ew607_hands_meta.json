@@ -1,0 +1,119 @@
+{
+  "materials": [
+    {
+      "name": "hand_m",
+      "shader_group": "FxDefault01",
+      "render_layer": 0,
+      "shader_index": 0,
+      "texture_maps": [
+        {
+          "sampler": "LightTableTex",
+          "texture": "fxmt_cmn_lt002_m_lta.png",
+          "tex_index": 0
+        }
+      ],
+      "colors": [
+        {
+          "name": "ConstantColor01",
+          "r": 0.6092,
+          "g": 0.6335,
+          "b": 0.6792
+        },
+        {
+          "name": "Shadow_Color",
+          "r": 0.6643,
+          "g": 0.6643,
+          "b": 0.6643
+        },
+        {
+          "name": "FresnelColor",
+          "r": 0.4277,
+          "g": 0.3783,
+          "b": 0.1721
+        },
+        {
+          "name": "OutLineCol",
+          "r": 0.2138,
+          "g": 0.2138,
+          "b": 0.2138
+        }
+      ],
+      "values": [
+        {
+          "name": "ConstantAlpha01",
+          "value": 1.0
+        },
+        {
+          "name": "ShadowRange",
+          "value": 1.32
+        },
+        {
+          "name": "Def0_OneMin1_FreCol",
+          "value": 0.0
+        },
+        {
+          "name": "FresnelPowerCol",
+          "value": 6.002564
+        },
+        {
+          "name": "FresnelStrengthCol",
+          "value": 6.970875
+        },
+        {
+          "name": "OutLineID",
+          "value": 0.0
+        },
+        {
+          "name": "ProgID",
+          "value": 0.0
+        }
+      ],
+      "switches": [
+        {
+          "name": "NormalEdgeEnable",
+          "value": true
+        },
+        {
+          "name": "OutLineIDEnable",
+          "value": false
+        },
+        {
+          "name": "OutLineColFixed",
+          "value": true
+        }
+      ],
+      "textures_used": [
+        {
+          "sampler": "LightTableTex",
+          "texture": "fxmt_cmn_lt002_m_lta.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "fxmt_cmn_lt002_m_lta.png",
+      "used_sampler": "LightTableTex"
+    }
+  ],
+  "meshes": [
+    {
+      "index": 0,
+      "num_vertices": 1960,
+      "num_faces": 3744,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 1,
+      "num_vertices": 2105,
+      "num_faces": 3744,
+      "material_indices": [
+        0
+      ]
+    }
+  ],
+  "texture_names": [
+    "fxmt_cmn_lt002_m_lta"
+  ],
+  "hidden_materials": [],
+  "outline_materials": []
+}

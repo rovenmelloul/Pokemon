@@ -1,0 +1,107 @@
+{
+  "materials": [
+    {
+      "name": "battlebg_obj_lb_sky02_dawn01",
+      "shader_group": "FieldDefaultShader",
+      "render_layer": 0,
+      "shader_index": 0,
+      "texture_maps": [
+        {
+          "sampler": "BaseColor0",
+          "texture": "battlebg_obj_lb_sky02_dawn01_alb.png",
+          "tex_index": 0
+        },
+        {
+          "sampler": "BaseColor1",
+          "texture": "battlebg_obj_lb_sky02_star01_alb.png",
+          "tex_index": 1
+        }
+      ],
+      "colors": [],
+      "values": [
+        {
+          "name": "TranslateU0",
+          "value": 0.0
+        },
+        {
+          "name": "TranslateV0",
+          "value": 0.000169
+        },
+        {
+          "name": "RotateUV0",
+          "value": 0.0
+        },
+        {
+          "name": "ScaleU0",
+          "value": 1.0
+        },
+        {
+          "name": "ScaleV0",
+          "value": 1.0
+        },
+        {
+          "name": "EmissionIntensity",
+          "value": 3.0
+        },
+        {
+          "name": "OpacityScale",
+          "value": 1.0
+        },
+        {
+          "name": "TranslateU1",
+          "value": 0.0
+        },
+        {
+          "name": "TranslateV1",
+          "value": 0.0
+        },
+        {
+          "name": "RotateUV1",
+          "value": 0.0
+        },
+        {
+          "name": "ScaleU1",
+          "value": 1.0
+        },
+        {
+          "name": "ScaleV1",
+          "value": 1.0
+        },
+        {
+          "name": "LayerMaskPower",
+          "value": 1.0
+        },
+        {
+          "name": "LayerMaskScale",
+          "value": 1.0
+        }
+      ],
+      "switches": [],
+      "textures_used": [
+        {
+          "sampler": "BaseColor0",
+          "texture": "battlebg_obj_lb_sky02_dawn01_alb.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "battlebg_obj_lb_sky02_dawn01_alb.png",
+      "used_sampler": "BaseColor0"
+    }
+  ],
+  "meshes": [
+    {
+      "index": 0,
+      "num_vertices": 777,
+      "num_faces": 1260,
+      "material_indices": [
+        0
+      ]
+    }
+  ],
+  "texture_names": [
+    "battlebg_obj_lb_sky02_dawn01_alb",
+    "battlebg_obj_lb_sky02_star01_alb"
+  ],
+  "hidden_materials": [],
+  "outline_materials": []
+}

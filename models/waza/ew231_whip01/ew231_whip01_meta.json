@@ -1,0 +1,195 @@
+{
+  "materials": [
+    {
+      "name": "sh_base01",
+      "shader_group": "FxDefault01",
+      "render_layer": 0,
+      "shader_index": 0,
+      "texture_maps": [
+        {
+          "sampler": "Tex01CLAMP",
+          "texture": "fxmt_0_cube001_m.png",
+          "tex_index": 0
+        },
+        {
+          "sampler": "LightTableTex",
+          "texture": "fxmt_cmn_lt002_m_lta.png",
+          "tex_index": 1
+        },
+        {
+          "sampler": "HighLightTableTex",
+          "texture": "fxmt_cmn_ht201_a_lta.png",
+          "tex_index": 2
+        },
+        {
+          "sampler": "Tex02WRAP",
+          "texture": "fxmt_3_flow011_m.png",
+          "tex_index": 3
+        }
+      ],
+      "colors": [
+        {
+          "name": "Shadow_Color",
+          "r": 0.294,
+          "g": 0.294,
+          "b": 0.294
+        },
+        {
+          "name": "ConstantColor01",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "ConstantColor02",
+          "r": 0.032,
+          "g": 0.032,
+          "b": 0.032
+        },
+        {
+          "name": "HighLight_Color",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "ConstantColor03",
+          "r": 0.1147,
+          "g": 0.117,
+          "b": 0.1167
+        },
+        {
+          "name": "ConstantColor04",
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0
+        },
+        {
+          "name": "OutLineCol",
+          "r": 0.0071,
+          "g": 0.0096,
+          "b": 0.006
+        }
+      ],
+      "values": [
+        {
+          "name": "Tex01TranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01TranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01Rotate",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01ScaleU",
+          "value": 1.0
+        },
+        {
+          "name": "Tex01ScaleV",
+          "value": 1.0
+        },
+        {
+          "name": "R0_A1_Tex01_Alpha",
+          "value": 0.0
+        },
+        {
+          "name": "ShadowRange",
+          "value": 1.0
+        },
+        {
+          "name": "Main0_Sub1_Tex1",
+          "value": 0.0
+        },
+        {
+          "name": "HighLightRange",
+          "value": 1.0
+        },
+        {
+          "name": "Tex02TranslateU",
+          "value": 0.125509
+        },
+        {
+          "name": "Tex02TranslateV",
+          "value": -0.186576
+        },
+        {
+          "name": "Tex02Rotate",
+          "value": 0.0
+        },
+        {
+          "name": "Tex02ScaleU",
+          "value": 2.0
+        },
+        {
+          "name": "Tex02ScaleV",
+          "value": 1.0
+        },
+        {
+          "name": "R0_A1_Tex02_Alpha",
+          "value": 0.0
+        },
+        {
+          "name": "Tex02ColorScale",
+          "value": 1.0
+        },
+        {
+          "name": "Main0_Sub1_Tex2",
+          "value": 0.0
+        },
+        {
+          "name": "OutLineID",
+          "value": 60.0
+        },
+        {
+          "name": "ProgID",
+          "value": 0.0
+        }
+      ],
+      "switches": [
+        {
+          "name": "NormalEdgeEnable",
+          "value": true
+        },
+        {
+          "name": "OutLineIDEnable",
+          "value": true
+        },
+        {
+          "name": "OutLineColFixed",
+          "value": true
+        }
+      ],
+      "textures_used": [
+        {
+          "sampler": "Tex01CLAMP",
+          "texture": "fxmt_0_cube001_m.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "fxmt_0_cube001_m.png",
+      "used_sampler": "Tex01CLAMP"
+    }
+  ],
+  "meshes": [
+    {
+      "index": 0,
+      "num_vertices": 1087,
+      "num_faces": 1984,
+      "material_indices": [
+        0
+      ]
+    }
+  ],
+  "texture_names": [
+    "fxmt_0_cube001_m",
+    "fxmt_cmn_lt002_m_lta",
+    "fxmt_cmn_ht201_a_lta",
+    "fxmt_3_flow011_m"
+  ],
+  "hidden_materials": [],
+  "outline_materials": []
+}

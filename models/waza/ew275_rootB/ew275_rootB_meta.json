@@ -1,0 +1,125 @@
+{
+  "materials": [
+    {
+      "name": "pasted__ShaderfxShader6",
+      "shader_group": "FxDefault01",
+      "render_layer": 0,
+      "shader_index": 0,
+      "texture_maps": [
+        {
+          "sampler": "Tex01WRAP",
+          "texture": "fxmt_3_root501_y.png",
+          "tex_index": 0
+        },
+        {
+          "sampler": "NormalMap",
+          "texture": "fxmt_3_root501_normal_y.png",
+          "tex_index": 1
+        },
+        {
+          "sampler": "LightTableTex",
+          "texture": "fxmt_cmn_lt001_m_lta.png",
+          "tex_index": 2
+        }
+      ],
+      "colors": [
+        {
+          "name": "ConstantColor01",
+          "r": 0.529,
+          "g": 0.3257,
+          "b": 0.1418
+        },
+        {
+          "name": "OutLineCol",
+          "r": 0.052,
+          "g": 0.0298,
+          "b": 0.0088
+        },
+        {
+          "name": "Shadow_Color",
+          "r": 0.0049,
+          "g": 0.0005,
+          "b": 0.0005
+        }
+      ],
+      "values": [
+        {
+          "name": "OutLineID",
+          "value": 0.0
+        },
+        {
+          "name": "ProgID",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01TranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01TranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01Rotate",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01ScaleU",
+          "value": 1.0
+        },
+        {
+          "name": "Tex01ScaleV",
+          "value": 2.0
+        },
+        {
+          "name": "R0_A1_Tex01_Alpha",
+          "value": 1.0
+        },
+        {
+          "name": "ShadowRange",
+          "value": 0.667
+        }
+      ],
+      "switches": [
+        {
+          "name": "NormalEdgeEnable",
+          "value": true
+        },
+        {
+          "name": "OutLineIDEnable",
+          "value": false
+        },
+        {
+          "name": "OutLineColFixed",
+          "value": true
+        }
+      ],
+      "textures_used": [
+        {
+          "sampler": "Tex01WRAP",
+          "texture": "fxmt_3_root501_y.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "fxmt_3_root501_y.png",
+      "used_sampler": "Tex01WRAP"
+    }
+  ],
+  "meshes": [
+    {
+      "index": 0,
+      "num_vertices": 761,
+      "num_faces": 1422,
+      "material_indices": [
+        0
+      ]
+    }
+  ],
+  "texture_names": [
+    "fxmt_3_root501_y",
+    "fxmt_3_root501_normal_y",
+    "fxmt_cmn_lt001_m_lta"
+  ],
+  "hidden_materials": [],
+  "outline_materials": []
+}

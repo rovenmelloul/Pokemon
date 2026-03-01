@@ -1,7 +1,6 @@
 from direct.task import Task
 from panda3d.core import Point3
 
-from ..player import Player
 
 class Battle:
     def __init__(self, game, player:Player, enemy_pokemon):

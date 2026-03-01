@@ -1,0 +1,204 @@
+{
+  "materials": [
+    {
+      "name": "hasami_MT",
+      "shader_group": "FxDefault01",
+      "render_layer": 0,
+      "shader_index": 0,
+      "texture_maps": [
+        {
+          "sampler": "LightTableTex",
+          "texture": "fxmt_cmn_lt002_m_lta.png",
+          "tex_index": 0
+        },
+        {
+          "sampler": "HighLightTableTex",
+          "texture": "fxmt_cmn_lt002_m_lta.png",
+          "tex_index": 0
+        },
+        {
+          "sampler": "Tex02WRAP",
+          "texture": "fxmt_3_cloud009_m.png",
+          "tex_index": 1
+        },
+        {
+          "sampler": "SpecularTexture",
+          "texture": "fxmt_3_steel201_base_a.png",
+          "tex_index": 2
+        }
+      ],
+      "colors": [
+        {
+          "name": "Shadow_Color",
+          "r": 0.2207,
+          "g": 0.2207,
+          "b": 0.2207
+        },
+        {
+          "name": "ConstantColor01",
+          "r": 0.4155,
+          "g": 0.4234,
+          "b": 0.4709
+        },
+        {
+          "name": "HighLight_Color",
+          "r": 0.212,
+          "g": 0.212,
+          "b": 0.212
+        },
+        {
+          "name": "OutLineCol",
+          "r": 0.0766,
+          "g": 0.083,
+          "b": 0.1144
+        },
+        {
+          "name": "FresnelColor",
+          "r": 0.2763,
+          "g": 0.2763,
+          "b": 0.2763
+        },
+        {
+          "name": "ConstantColor03",
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0
+        }
+      ],
+      "values": [
+        {
+          "name": "ShadowRange",
+          "value": 1.0
+        },
+        {
+          "name": "ConstantAlpha01",
+          "value": 1.0
+        },
+        {
+          "name": "HighLightRange",
+          "value": 0.761904
+        },
+        {
+          "name": "OutLineID",
+          "value": 0.0
+        },
+        {
+          "name": "ProgID",
+          "value": 0.0
+        },
+        {
+          "name": "Def0_OneMin1_FreCol",
+          "value": 1.0
+        },
+        {
+          "name": "FresnelPowerCol",
+          "value": 2.95745
+        },
+        {
+          "name": "FresnelStrengthCol",
+          "value": 30.0
+        },
+        {
+          "name": "Tex02TranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "Tex02TranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "Tex02Rotate",
+          "value": 0.077316
+        },
+        {
+          "name": "Tex02ScaleU",
+          "value": 1.0
+        },
+        {
+          "name": "Tex02ScaleV",
+          "value": 1.52
+        },
+        {
+          "name": "R0_A1_Tex02_Alpha",
+          "value": 0.0
+        },
+        {
+          "name": "Tex02ColorScale",
+          "value": 1.0
+        },
+        {
+          "name": "SpecularPhongPow",
+          "value": 4.0
+        },
+        {
+          "name": "Tex01TranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01TranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01Rotate",
+          "value": 0.642553
+        },
+        {
+          "name": "Tex01ScaleU",
+          "value": 0.5
+        },
+        {
+          "name": "Tex01ScaleV",
+          "value": 0.5
+        }
+      ],
+      "switches": [
+        {
+          "name": "NormalEdgeEnable",
+          "value": true
+        },
+        {
+          "name": "OutLineIDEnable",
+          "value": false
+        },
+        {
+          "name": "OutLineColFixed",
+          "value": true
+        }
+      ],
+      "textures_used": [
+        {
+          "sampler": "LightTableTex",
+          "texture": "fxmt_cmn_lt002_m_lta.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "fxmt_cmn_lt002_m_lta.png",
+      "used_sampler": "LightTableTex"
+    }
+  ],
+  "meshes": [
+    {
+      "index": 0,
+      "num_vertices": 2053,
+      "num_faces": 3292,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 1,
+      "num_vertices": 1669,
+      "num_faces": 2184,
+      "material_indices": [
+        0
+      ]
+    }
+  ],
+  "texture_names": [
+    "fxmt_cmn_lt002_m_lta",
+    "fxmt_3_cloud009_m",
+    "fxmt_3_steel201_base_a"
+  ],
+  "hidden_materials": [],
+  "outline_materials": []
+}

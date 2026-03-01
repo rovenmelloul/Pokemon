@@ -1,0 +1,135 @@
+{
+  "materials": [
+    {
+      "name": "ShaderfxShader",
+      "shader_group": "FxDefault01",
+      "render_layer": 0,
+      "shader_index": 0,
+      "texture_maps": [
+        {
+          "sampler": "Tex02MIRROR",
+          "texture": "fxmt_eg764_0569_object_m.png",
+          "tex_index": 0
+        }
+      ],
+      "colors": [
+        {
+          "name": "ConstantColor01",
+          "r": 0.0143,
+          "g": 0.0143,
+          "b": 0.0143
+        },
+        {
+          "name": "OutLineCol",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "Tex02_Multiply_Color",
+          "r": 0.9999,
+          "g": 0.9999,
+          "b": 1.0
+        },
+        {
+          "name": "FresnelColor",
+          "r": 0.5096,
+          "g": 0.5096,
+          "b": 0.5096
+        }
+      ],
+      "values": [
+        {
+          "name": "OutLineID",
+          "value": 0.0
+        },
+        {
+          "name": "ProgID",
+          "value": 0.0
+        },
+        {
+          "name": "ConstantAlpha01",
+          "value": 1.0
+        },
+        {
+          "name": "Tex02TranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "Tex02TranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "Tex02Rotate",
+          "value": 0.0
+        },
+        {
+          "name": "Tex02ScaleU",
+          "value": 2.0
+        },
+        {
+          "name": "Tex02ScaleV",
+          "value": 1.0
+        },
+        {
+          "name": "R0_A1_Tex02_Alpha",
+          "value": 0.0
+        },
+        {
+          "name": "Tex02ColorScale",
+          "value": 1.0
+        },
+        {
+          "name": "Def0_OneMin1_FreCol",
+          "value": 0.0
+        },
+        {
+          "name": "FresnelPowerCol",
+          "value": 2.0
+        },
+        {
+          "name": "FresnelStrengthCol",
+          "value": 1.0
+        }
+      ],
+      "switches": [
+        {
+          "name": "NormalEdgeEnable",
+          "value": false
+        },
+        {
+          "name": "OutLineIDEnable",
+          "value": false
+        },
+        {
+          "name": "OutLineColFixed",
+          "value": false
+        }
+      ],
+      "textures_used": [
+        {
+          "sampler": "Tex02MIRROR",
+          "texture": "fxmt_eg764_0569_object_m.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "fxmt_eg764_0569_object_m.png",
+      "used_sampler": "Tex02MIRROR"
+    }
+  ],
+  "meshes": [
+    {
+      "index": 0,
+      "num_vertices": 479,
+      "num_faces": 708,
+      "material_indices": [
+        0
+      ]
+    }
+  ],
+  "texture_names": [
+    "fxmt_eg764_0569_object_m"
+  ],
+  "hidden_materials": [],
+  "outline_materials": []
+}

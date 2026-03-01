@@ -1,0 +1,100 @@
+{
+  "materials": [
+    {
+      "name": "ShaderfxShader1",
+      "shader_group": "FxDefault01",
+      "render_layer": 0,
+      "shader_index": 0,
+      "texture_maps": [
+        {
+          "sampler": "LightTableTex",
+          "texture": "fxmt_cmn_ht002_m_lta.png",
+          "tex_index": 0
+        }
+      ],
+      "colors": [
+        {
+          "name": "ConstantColor01",
+          "r": 0.4288,
+          "g": 0.87,
+          "b": 0.1288
+        },
+        {
+          "name": "Shadow_Color",
+          "r": 0.3836,
+          "g": 0.3836,
+          "b": 0.3836
+        },
+        {
+          "name": "FresnelColor",
+          "r": 0.4807,
+          "g": 1.0,
+          "b": 0.0809
+        }
+      ],
+      "values": [
+        {
+          "name": "ConstantAlpha01",
+          "value": 1.0
+        },
+        {
+          "name": "ShadowRange",
+          "value": 0.751848
+        },
+        {
+          "name": "Def0_OneMin1_FreCol",
+          "value": 0.0
+        },
+        {
+          "name": "FresnelPowerCol",
+          "value": 11.0
+        },
+        {
+          "name": "FresnelStrengthCol",
+          "value": 50.0
+        }
+      ],
+      "switches": [],
+      "textures_used": [
+        {
+          "sampler": "LightTableTex",
+          "texture": "fxmt_cmn_ht002_m_lta.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "fxmt_cmn_ht002_m_lta.png",
+      "used_sampler": "LightTableTex"
+    }
+  ],
+  "meshes": [
+    {
+      "index": 0,
+      "num_vertices": 902,
+      "num_faces": 1660,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 1,
+      "num_vertices": 902,
+      "num_faces": 1660,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "num_vertices": 902,
+      "num_faces": 1660,
+      "material_indices": [
+        0
+      ]
+    }
+  ],
+  "texture_names": [
+    "fxmt_cmn_ht002_m_lta"
+  ],
+  "hidden_materials": [],
+  "outline_materials": []
+}

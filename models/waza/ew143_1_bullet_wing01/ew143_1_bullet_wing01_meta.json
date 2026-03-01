@@ -1,0 +1,657 @@
+{
+  "materials": [
+    {
+      "name": "sh_def_fin01",
+      "shader_group": "FxDefault01",
+      "render_layer": 0,
+      "shader_index": 0,
+      "texture_maps": [
+        {
+          "sampler": "Tex01WRAP",
+          "texture": "fxmt_2_object201_a.png",
+          "tex_index": 0
+        },
+        {
+          "sampler": "LightTableTex",
+          "texture": "fxmt_3_white202_a.png",
+          "tex_index": 1
+        }
+      ],
+      "colors": [
+        {
+          "name": "ConstantColor01",
+          "r": 0.872,
+          "g": 0.951,
+          "b": 1.0
+        },
+        {
+          "name": "ConstantColor02",
+          "r": 0.6814,
+          "g": 0.738,
+          "b": 0.758
+        },
+        {
+          "name": "Shadow_Color",
+          "r": 0.436,
+          "g": 0.436,
+          "b": 0.436
+        }
+      ],
+      "values": [
+        {
+          "name": "Tex01TranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01TranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01Rotate",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01ScaleU",
+          "value": 1.0
+        },
+        {
+          "name": "Tex01ScaleV",
+          "value": 1.0
+        },
+        {
+          "name": "R0_A1_Tex01_Alpha",
+          "value": 1.0
+        },
+        {
+          "name": "Main0_Sub1_Tex1",
+          "value": 0.0
+        },
+        {
+          "name": "ShadowRange",
+          "value": 1.0
+        }
+      ],
+      "switches": [],
+      "textures_used": [
+        {
+          "sampler": "Tex01WRAP",
+          "texture": "fxmt_2_object201_a.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "fxmt_2_object201_a.png",
+      "used_sampler": "Tex01WRAP"
+    },
+    {
+      "name": "sh_mult_wing01",
+      "shader_group": "FxDefault01",
+      "render_layer": 0,
+      "shader_index": 1,
+      "texture_maps": [
+        {
+          "sampler": "Tex01WRAP",
+          "texture": "fxmt_3_object203_a.png",
+          "tex_index": 2
+        },
+        {
+          "sampler": "LightTableTex",
+          "texture": "fxmt_3_white202_a.png",
+          "tex_index": 1
+        }
+      ],
+      "colors": [
+        {
+          "name": "ConstantColor01",
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        {
+          "name": "ConstantColor02",
+          "r": 0.1799,
+          "g": 0.4442,
+          "b": 0.4875
+        },
+        {
+          "name": "Shadow_Color",
+          "r": 0.436,
+          "g": 0.436,
+          "b": 0.436
+        }
+      ],
+      "values": [
+        {
+          "name": "Tex01TranslateU",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01TranslateV",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01Rotate",
+          "value": 0.0
+        },
+        {
+          "name": "Tex01ScaleU",
+          "value": 1.5
+        },
+        {
+          "name": "Tex01ScaleV",
+          "value": 1.0
+        },
+        {
+          "name": "R0_A1_Tex01_Alpha",
+          "value": 1.0
+        },
+        {
+          "name": "Main0_Sub1_Tex1",
+          "value": 0.0
+        },
+        {
+          "name": "ShadowRange",
+          "value": 1.0
+        }
+      ],
+      "switches": [],
+      "textures_used": [
+        {
+          "sampler": "Tex01WRAP",
+          "texture": "fxmt_3_object203_a.png",
+          "envtype": "modulate"
+        }
+      ],
+      "used_texture": "fxmt_3_object203_a.png",
+      "used_sampler": "Tex01WRAP"
+    }
+  ],
+  "meshes": [
+    {
+      "index": 0,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 1,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 4,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 5,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 6,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 7,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 8,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 9,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 10,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 11,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 12,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 13,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 14,
+      "num_vertices": 442,
+      "num_faces": 768,
+      "material_indices": [
+        1
+      ]
+    },
+    {
+      "index": 15,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 16,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 17,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 18,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 19,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 20,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 21,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 22,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 23,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 24,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 25,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 26,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 27,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 28,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 29,
+      "num_vertices": 858,
+      "num_faces": 1536,
+      "material_indices": [
+        1
+      ]
+    },
+    {
+      "index": 30,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 31,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 32,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 33,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 34,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 35,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 36,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 37,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 38,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 39,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 40,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 41,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 42,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 43,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 44,
+      "num_vertices": 442,
+      "num_faces": 768,
+      "material_indices": [
+        1
+      ]
+    },
+    {
+      "index": 45,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 46,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 47,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 48,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 49,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 50,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 51,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 52,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 53,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 54,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 55,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 56,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 57,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 58,
+      "num_vertices": 28,
+      "num_faces": 36,
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "index": 59,
+      "num_vertices": 858,
+      "num_faces": 1536,
+      "material_indices": [
+        1
+      ]
+    }
+  ],
+  "texture_names": [
+    "fxmt_2_object201_a",
+    "fxmt_3_white202_a",
+    "fxmt_3_object203_a"
+  ],
+  "hidden_materials": [],
+  "outline_materials": []
+}
