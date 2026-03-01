@@ -138,7 +138,7 @@ class Pokemon:
         self.random_galar_dex = random.randint(0, len(json_all_info) - 1)
         self.name = json_all_info[self.random_galar_dex]["name"]
 
-        api_data = json_all_info[self.random_galar_dex].get("pokemon_data_from_api", {})
+        api_data = json_all_info[self.random_galar_dex].get("pokemon_data_from_api") or {}
         self.type = api_data.get("type", [])
         self.height = kwargs.get("height", None)
         self.weight = kwargs.get("weight", None)
@@ -207,7 +207,7 @@ class Pokemon:
             self.types = combat_data["types"]
         else:
             # Fallback: derive from test.json API data
-            api_data = json_all_info[self.random_galar_dex].get("pokemon_data_from_api", {})
+            api_data = json_all_info[self.random_galar_dex].get("pokemon_data_from_api") or {}
             self.pokedex_id = api_data.get("id_pokemon")
             if api_data.get("stats"):
                 self.base_stats = _api_stats_to_base_stats(api_data["stats"])
