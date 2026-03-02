@@ -93,18 +93,17 @@ class Capture3D:
         self.pokeball = self.app.loader.loadModel("models/pokeball/pokeball.egg")
         self.pokeball.reparentTo(self.app.render)
         self.pokeball.setScale(0.012)
+        self.pokeball.setLightOff()
 
-        c_node = CollisionNode("pokeball_capture")
-        c_node.addSolid(CollisionSphere(0, 0, 0, 1.1))
-        self.ball_col_np = self.pokeball.attachNewNode(c_node)
+        # Collision sphere pour la ball - attachee a render pour ignorer le scale
+        self.ball_col_np = self.app.render.attachNewNode(CollisionNode("pokeball_capture"))
+        self.ball_col_np.node().addSolid(CollisionSphere(0, 0, 0, 0.8))
         self.c_trav.addCollider(self.ball_col_np, self.handler)
 
-        # Collision sphere sur l'ennemi
-        enemy_col = self.enemy_actor.find("**/pokemon_capture_col")
-        if not enemy_col or enemy_col.isEmpty():
-            col_node = CollisionNode("pokemon_capture_col")
-            col_node.addSolid(CollisionSphere(0, 0, 1.5, 2.5))
-            self.enemy_actor.attachNewNode(col_node)
+        # Collision sphere sur l'ennemi - aussi a render pour ignorer le scale
+        self._enemy_col_np = self.app.render.attachNewNode(CollisionNode("pokemon_capture_col"))
+        enemy_pos = self.enemy_actor.getPos(self.app.render)
+        self._enemy_col_np.node().addSolid(CollisionSphere(enemy_pos.x, enemy_pos.y, 1.5, 3.0))
 
         self._place_pokeball()
 
@@ -112,6 +111,9 @@ class Capture3D:
         """Place la pokeball devant la camera."""
         self.pokeball.setPos(self.app.camera, 0, 5.8, -4.4)
         self.pokeball.setQuat(self.app.camera.getQuat())
+        # Sync collision sphere position
+        if self.ball_col_np:
+            self.ball_col_np.setPos(self.pokeball.getPos(self.app.render))
 
     def _reset_ball(self):
         """Reset la ball devant la camera."""
@@ -151,15 +153,17 @@ class Capture3D:
         self.ball_velocity.setZ(self.ball_velocity.getZ() + self.GRAVITY * dt)
         self.pokeball.setPos(self.pokeball.getPos() + self.ball_velocity * dt)
 
+        # Sync collision sphere with pokeball visual
+        if self.ball_col_np:
+            self.ball_col_np.setPos(self.pokeball.getPos(self.app.render))
+
         # Check collisions
         self.c_trav.traverse(self.app.render)
         for entry in self.handler.getEntries():
-            into_path = entry.getIntoNodePath()
-            ancestors = into_path.getAncestors()
-            for anc in ancestors:
-                if anc == self.enemy_actor:
-                    self._on_ball_hit()
-                    return Task.done
+            into_name = entry.getIntoNodePath().node().getName()
+            if into_name == "pokemon_capture_col":
+                self._on_ball_hit()
+                return Task.done
 
         # Ball hors limites -> reset
         if self.pokeball.getZ() < -2 or self.pokeball.getY() > 100:
@@ -238,11 +242,13 @@ class Capture3D:
             self.pokeball.removeNode()
             self.pokeball = None
 
-        # Remove capture collision from enemy
-        if self.enemy_actor and not self.enemy_actor.isEmpty():
-            col = self.enemy_actor.find("**/pokemon_capture_col")
-            if col and not col.isEmpty():
-                col.removeNode()
+        # Remove collision nodes from render
+        if self.ball_col_np:
+            self.ball_col_np.removeNode()
+            self.ball_col_np = None
+        if hasattr(self, '_enemy_col_np') and self._enemy_col_np:
+            self._enemy_col_np.removeNode()
+            self._enemy_col_np = None
 
         if self.success_text:
             self.success_text.destroy()

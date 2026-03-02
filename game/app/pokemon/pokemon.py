@@ -98,6 +98,13 @@ if os.path.exists(_combat_db_path):
         if _p.get("model_id"):
             _combat_db[_p["model_id"]] = _p
 
+# Build pokedex_id -> test.json index mapping
+_api_by_national_dex = {}
+for _idx, _entry in enumerate(json_all_info):
+    ndex = _entry.get("national_dex")
+    if ndex is not None:
+        _api_by_national_dex[ndex] = _idx
+
 # Load moves database
 from core.move import Move
 Move.load_moves()
@@ -332,6 +339,80 @@ class Pokemon:
             self.anim_ctrl.play(idle, loop=True)
 
         self._create_ground_circle()
+
+    def spawn_from_pokedex(self, pokedex_id, level, is_shiny):
+        """Create a Pokemon from a Pokedex entry (for team swap)."""
+        # Find combat data from pokemons.json
+        combat_data = _combat_db.get(pokedex_id)
+        if not combat_data:
+            print(f"[Pokemon] No combat data for pokedex_id={pokedex_id}")
+            return False
+
+        # Find matching test.json entry by national_dex
+        api_idx = _api_by_national_dex.get(pokedex_id)
+
+        self.pokedex_id = pokedex_id
+        self.name = combat_data["name"]
+        self.types = combat_data["types"]
+        self.level = level
+        self.lvl = level
+        self.is_shiny = is_shiny
+        self.base_stats = combat_data["base_stats"]
+        self.capture_rate = combat_data.get("capture_rate", 45)
+        self.base_xp = combat_data.get("base_xp", 64)
+        self.learnset = combat_data.get("learnset", [])
+
+        # Reload model with correct shiny state if needed
+        new_model_folder = combat_data.get("model_id", self.model_folder)
+        if new_model_folder != self.model_folder or self.is_shiny != is_shiny:
+            # Destroy old model
+            if self.anim_ctrl:
+                self.anim_ctrl.destroy()
+                self.anim_ctrl = None
+            if self.sdk_pokemon:
+                self.sdk_pokemon.destroy()
+                self.sdk_pokemon = None
+            if self.animated_character:
+                self.animated_character.removeNode()
+
+            self.model_folder = new_model_folder
+            self.is_shiny = is_shiny
+            self.animated_character = self._load_model()
+            self.animated_character.reparentTo(self.show_base.render)
+
+        # Hide the 3D model (team Pokemon are not visible on map)
+        self.animated_character.hide()
+        self.animated_character.setScale(0.05)
+
+        # Calculate stats
+        ivs = 15
+        self.stats = {}
+        for stat_name in ["hp", "attack", "defense", "sp_attack", "sp_defense", "speed"]:
+            base = self.base_stats.get(stat_name, 50)
+            self.stats[stat_name] = _calculate_stat(base, ivs, 0, self.level, stat_name == "hp")
+        self.current_hp = self.stats["hp"]
+
+        # Auto-generate moveset
+        self.moves = []
+        if self.learnset:
+            available = [e for e in self.learnset if e["level"] <= self.level]
+            available.sort(key=lambda x: x["level"], reverse=True)
+            for entry in available[:4]:
+                try:
+                    self.moves.append(Move.get_by_id(entry["move_id"]))
+                except KeyError:
+                    pass
+        if not self.moves:
+            try:
+                self.moves = [Move.get_by_id(1)]
+            except KeyError:
+                pass
+
+        self.type_ = self.types[0].capitalize() if self.types else "Normal"
+        self.status = None
+
+        print(f"[Pokemon] Spawned from Pokedex: {self.name} Nv.{self.level} {'(shiny)' if self.is_shiny else ''}")
+        return True
 
     def draw_name_tag(self):
         from panda3d.core import CardMaker, TransparencyAttrib

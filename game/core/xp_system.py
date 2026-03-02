@@ -1,5 +1,5 @@
 """
-XPSystem -- XP gain, level-up and auto-evolution.
+XPSystem -- Gain d'XP, montee de niveau et evolution automatique.
 """
 import json
 import os
@@ -85,6 +85,8 @@ class XPSystem:
                     pokemon.capture_rate = new_data.get("capture_rate", pokemon.capture_rate)
                     pokemon.learnset = new_data.get("learnset", pokemon.learnset)
                     pokemon.model_id = new_data.get("model_id")
+                    if pokemon.model_id:
+                        pokemon.model_folder = pokemon.model_id
                     old_hp = pokemon.stats["hp"]
                     pokemon.stats = pokemon._calculate_stats()
                     hp_diff = pokemon.stats["hp"] - old_hp
@@ -102,11 +104,11 @@ class XPSystem:
         messages = []
         for evt in events:
             if evt["type"] == "xp":
-                messages.append(f"  +{evt['amount']} XP!")
+                messages.append(f"  +{evt['amount']} XP !")
             elif evt["type"] == "level_up":
-                messages.append(f"  Level up! Now Lv.{evt['new_level']}!")
+                messages.append(f"  Niveau superieur ! Maintenant Nv.{evt['new_level']} !")
             elif evt["type"] == "new_move":
-                messages.append(f"  Learned {evt['move'].name}!")
+                messages.append(f"  A appris {evt['move'].name} !")
             elif evt["type"] == "evolution":
-                messages.append(f"  {evt['from']} evolved into {evt['to']}!")
+                messages.append(f"  {evt['from']} evolue en {evt['to']} !")
         return messages

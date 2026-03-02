@@ -1,0 +1,72 @@
+{
+    "effects": [
+        {"name": "Tackle", "type": "normal", "style": "contact", "model": "PG_sphere", "scale": 0.12, "duration": 0.6, "color": [0.9, 0.9, 0.7, 1.0], "origin_bone": "EffShoot01_01", "target_bone": "EffCenter01"},
+        {"name": "Scratch", "type": "normal", "style": "contact", "model": "ew168_hand01", "scale": 0.12, "duration": 0.5, "color": [0.9, 0.9, 0.8, 1.0], "origin_bone": "EffAttack01_01", "target_bone": "EffCenter01"},
+        {"name": "Pound", "type": "normal", "style": "contact", "model": "ew252_hand", "scale": 0.12, "duration": 0.5, "color": [0.9, 0.9, 0.7, 1.0], "origin_bone": "EffAttack01_01", "target_bone": "EffCenter01"},
+        {"name": "Quick Attack", "type": "normal", "style": "projectile", "model": "ew246_bullet", "scale": 0.12, "duration": 0.4, "color": [1.0, 1.0, 0.8, 1.0], "origin_bone": "EffShoot01_01", "target_bone": "EffCenter01"},
+        {"name": "Hyper Beam", "type": "normal", "style": "beam", "model": "ew058_at_beam", "scale": 0.12, "duration": 1.2, "color": [1.0, 0.9, 0.5, 1.0], "origin_bone": "EffMouth01", "target_bone": "EffCenter01"},
+        {"name": "Body Slam", "type": "normal", "style": "contact", "model": "PG_sphere", "scale": 0.18, "duration": 0.6, "color": [0.9, 0.8, 0.6, 1.0], "origin_bone": "EffCenter01", "target_bone": "EffCenter01"},
+
+        {"name": "Ember", "type": "fire", "style": "projectile", "model": "PG_sphere", "scale": 0.12, "duration": 0.5, "color": [1.0, 0.4, 0.1, 1.0], "origin_bone": "EffMouth01", "target_bone": "EffCenter01"},
+        {"name": "Flamethrower", "type": "fire", "style": "beam", "model": "ew069_beam", "scale": 0.12, "duration": 1.0, "color": [1.0, 0.5, 0.1, 1.0], "origin_bone": "EffMouth01", "target_bone": "EffCenter01"},
+        {"name": "Fire Blast", "type": "fire", "style": "beam", "model": "ew058_at_beam", "scale": 0.15, "duration": 1.2, "color": [1.0, 0.3, 0.0, 1.0], "origin_bone": "EffMouth01", "target_bone": "EffCenter01"},
+        {"name": "Fire Punch", "type": "fire", "style": "contact", "model": "ew168_hand01", "scale": 0.12, "duration": 0.5, "color": [1.0, 0.4, 0.1, 1.0], "origin_bone": "EffAttack01_01", "target_bone": "EffCenter01"},
+
+        {"name": "Water Gun", "type": "water", "style": "beam", "model": "ew069_beam", "scale": 0.10, "duration": 0.7, "color": [0.2, 0.5, 1.0, 1.0], "origin_bone": "EffMouth01", "target_bone": "EffCenter01"},
+        {"name": "Surf", "type": "water", "style": "ground", "model": "ew089_floor", "scale": 0.15, "duration": 1.0, "color": [0.2, 0.6, 1.0, 1.0], "origin_bone": "EffCenter01", "target_bone": "EffCenter01"},
+        {"name": "Hydro Pump", "type": "water", "style": "beam", "model": "ew058_at_beam", "scale": 0.15, "duration": 1.2, "color": [0.1, 0.4, 1.0, 1.0], "origin_bone": "EffMouth01", "target_bone": "EffCenter01"},
+        {"name": "Bubble Beam", "type": "water", "style": "projectile", "model": "PG_sphere", "scale": 0.10, "duration": 0.6, "color": [0.3, 0.7, 1.0, 1.0], "origin_bone": "EffMouth01", "target_bone": "EffCenter01"},
+
+        {"name": "Thunder Shock", "type": "electric", "style": "projectile", "model": "PG_sphere", "scale": 0.12, "duration": 0.5, "color": [1.0, 0.9, 0.2, 1.0], "origin_bone": "EffShoot01_01", "target_bone": "EffCenter01"},
+        {"name": "Thunderbolt", "type": "electric", "style": "beam", "model": "ew035_line01", "scale": 0.12, "duration": 0.8, "color": [1.0, 0.9, 0.1, 1.0], "origin_bone": "EffOverHead01", "target_bone": "EffCenter01"},
+        {"name": "Thunder", "type": "electric", "style": "beam", "model": "ew058_at_beam", "scale": 0.15, "duration": 1.0, "color": [1.0, 0.8, 0.0, 1.0], "origin_bone": "EffOverHead01", "target_bone": "EffCenter01"},
+
+        {"name": "Vine Whip", "type": "grass", "style": "contact", "model": "ew231_whip01", "scale": 0.12, "duration": 0.5, "color": [0.2, 0.8, 0.3, 1.0], "origin_bone": "EffAttack01_01", "target_bone": "EffCenter01"},
+        {"name": "Razor Leaf", "type": "grass", "style": "projectile", "model": "ew447_df_grass01", "scale": 0.12, "duration": 0.5, "color": [0.3, 0.9, 0.2, 1.0], "origin_bone": "EffShoot01_01", "target_bone": "EffCenter01"},
+        {"name": "Solar Beam", "type": "grass", "style": "beam", "model": "ew069_beam", "scale": 0.15, "duration": 1.2, "color": [0.5, 1.0, 0.2, 1.0], "origin_bone": "EffMouth01", "target_bone": "EffCenter01"},
+        {"name": "Seed Bomb", "type": "grass", "style": "projectile", "model": "ew246_bullet", "scale": 0.12, "duration": 0.5, "color": [0.4, 0.7, 0.2, 1.0], "origin_bone": "EffShoot01_01", "target_bone": "EffCenter01"},
+
+        {"name": "Ice Beam", "type": "ice", "style": "beam", "model": "ew069_beam", "scale": 0.12, "duration": 0.9, "color": [0.4, 0.8, 1.0, 1.0], "origin_bone": "EffMouth01", "target_bone": "EffCenter01"},
+        {"name": "Blizzard", "type": "ice", "style": "beam", "model": "ew058_at_beam", "scale": 0.15, "duration": 1.2, "color": [0.5, 0.9, 1.0, 1.0], "origin_bone": "EffMouth01", "target_bone": "EffCenter01"},
+        {"name": "Ice Punch", "type": "ice", "style": "contact", "model": "ew168_hand01", "scale": 0.12, "duration": 0.5, "color": [0.4, 0.8, 1.0, 1.0], "origin_bone": "EffAttack01_01", "target_bone": "EffCenter01"},
+
+        {"name": "Karate Chop", "type": "fighting", "style": "contact", "model": "ew252_hand", "scale": 0.12, "duration": 0.5, "color": [0.8, 0.3, 0.2, 1.0], "origin_bone": "EffAttack01_01", "target_bone": "EffCenter01"},
+        {"name": "Low Kick", "type": "fighting", "style": "contact", "model": "ew490_foot", "scale": 0.12, "duration": 0.5, "color": [0.8, 0.3, 0.15, 1.0], "origin_bone": "EffFoot01", "target_bone": "EffCenter01"},
+        {"name": "Close Combat", "type": "fighting", "style": "contact", "model": "ew270_hands", "scale": 0.15, "duration": 0.6, "color": [0.9, 0.3, 0.1, 1.0], "origin_bone": "EffAttack01_01", "target_bone": "EffCenter01"},
+
+        {"name": "Poison Sting", "type": "poison", "style": "projectile", "model": "ew040_needle", "scale": 0.10, "duration": 0.5, "color": [0.6, 0.2, 0.8, 1.0], "origin_bone": "EffShoot01_01", "target_bone": "EffCenter01"},
+        {"name": "Sludge Bomb", "type": "poison", "style": "projectile", "model": "PG_sphere", "scale": 0.12, "duration": 0.6, "color": [0.5, 0.1, 0.7, 1.0], "origin_bone": "EffShoot01_01", "target_bone": "EffCenter01"},
+
+        {"name": "Earthquake", "type": "ground", "style": "ground", "model": "ew069_earth", "scale": 0.18, "duration": 1.0, "color": [0.7, 0.5, 0.2, 1.0], "origin_bone": "EffCenter01", "target_bone": "EffCenter01"},
+        {"name": "Dig", "type": "ground", "style": "ground", "model": "eg770_c01_iwa01", "scale": 0.12, "duration": 0.8, "color": [0.7, 0.6, 0.3, 1.0], "origin_bone": "EffCenter01", "target_bone": "EffCenter01"},
+
+        {"name": "Wing Attack", "type": "flying", "style": "contact", "model": "ew143_0_at_wing01", "scale": 0.12, "duration": 0.5, "color": [0.5, 0.6, 0.9, 1.0], "origin_bone": "EffAttack01_01", "target_bone": "EffCenter01"},
+        {"name": "Air Slash", "type": "flying", "style": "projectile", "model": "ew143_1_bullet_wing01", "scale": 0.12, "duration": 0.5, "color": [0.5, 0.7, 1.0, 1.0], "origin_bone": "EffShoot01_01", "target_bone": "EffCenter01"},
+
+        {"name": "Psychic", "type": "psychic", "style": "projectile", "model": "PG_sphere", "scale": 0.15, "duration": 0.8, "color": [1.0, 0.3, 0.7, 1.0], "origin_bone": "EffHeadCenter01", "target_bone": "EffCenter01"},
+        {"name": "Confusion", "type": "psychic", "style": "projectile", "model": "ew020_ringM", "scale": 0.12, "duration": 0.6, "color": [0.9, 0.4, 0.8, 1.0], "origin_bone": "EffHeadCenter01", "target_bone": "EffCenter01"},
+
+        {"name": "Bug Bite", "type": "bug", "style": "contact", "model": "ew141_tooth", "scale": 0.12, "duration": 0.5, "color": [0.5, 0.7, 0.2, 1.0], "origin_bone": "EffMouth01", "target_bone": "EffCenter01"},
+
+        {"name": "Rock Slide", "type": "rock", "style": "projectile", "model": "digda_rock", "scale": 0.12, "duration": 0.7, "color": [0.7, 0.5, 0.3, 1.0], "origin_bone": "EffOverHead01", "target_bone": "EffCenter01"},
+
+        {"name": "Shadow Ball", "type": "ghost", "style": "projectile", "model": "PG_sphere", "scale": 0.12, "duration": 0.7, "color": [0.4, 0.2, 0.6, 1.0], "origin_bone": "EffShoot01_01", "target_bone": "EffCenter01"},
+
+        {"name": "Dragon Claw", "type": "dragon", "style": "contact", "model": "ew168_hand01", "scale": 0.12, "duration": 0.5, "color": [0.4, 0.2, 0.9, 1.0], "origin_bone": "EffAttack01_01", "target_bone": "EffCenter01"},
+        {"name": "Dragon Pulse", "type": "dragon", "style": "beam", "model": "ew069_beam", "scale": 0.12, "duration": 0.9, "color": [0.5, 0.2, 1.0, 1.0], "origin_bone": "EffMouth01", "target_bone": "EffCenter01"},
+
+        {"name": "Bite", "type": "dark", "style": "contact", "model": "ew141_tooth", "scale": 0.12, "duration": 0.5, "color": [0.3, 0.2, 0.2, 1.0], "origin_bone": "EffMouth01", "target_bone": "EffCenter01"},
+        {"name": "Crunch", "type": "dark", "style": "contact", "model": "ew141_tooth", "scale": 0.15, "duration": 0.5, "color": [0.4, 0.2, 0.3, 1.0], "origin_bone": "EffMouth01", "target_bone": "EffCenter01"},
+
+        {"name": "Iron Tail", "type": "steel", "style": "contact", "model": "ew021_tailM", "scale": 0.12, "duration": 0.5, "color": [0.6, 0.6, 0.7, 1.0], "origin_bone": "EffAttack01_01", "target_bone": "EffCenter01"},
+        {"name": "Flash Cannon", "type": "steel", "style": "beam", "model": "ew058_at_beam", "scale": 0.12, "duration": 0.9, "color": [0.7, 0.7, 0.8, 1.0], "origin_bone": "EffMouth01", "target_bone": "EffCenter01"},
+
+        {"name": "Moonblast", "type": "fairy", "style": "projectile", "model": "PG_sphere", "scale": 0.15, "duration": 0.7, "color": [0.9, 0.5, 0.7, 1.0], "origin_bone": "EffShoot01_01", "target_bone": "EffCenter01"},
+        {"name": "Dazzling Gleam", "type": "fairy", "style": "self_buff", "model": "ew020_ringM", "scale": 0.15, "duration": 0.8, "color": [1.0, 0.7, 0.9, 1.0], "origin_bone": "EffCenter01", "target_bone": "EffCenter01"},
+
+        {"name": "Leech Seed", "type": "grass", "style": "projectile", "model": "ew388_sporut", "scale": 0.10, "duration": 0.6, "color": [0.3, 0.7, 0.2, 1.0], "origin_bone": "EffShoot01_01", "target_bone": "EffCenter01"},
+        {"name": "Sleep Powder", "type": "grass", "style": "projectile", "model": "ew388_sporut", "scale": 0.12, "duration": 0.8, "color": [0.4, 0.8, 0.5, 1.0], "origin_bone": "EffShoot01_01", "target_bone": "EffCenter01"},
+        {"name": "Thunder Wave", "type": "electric", "style": "projectile", "model": "ew035_line01", "scale": 0.10, "duration": 0.6, "color": [1.0, 0.9, 0.3, 1.0], "origin_bone": "EffShoot01_01", "target_bone": "EffCenter01"},
+        {"name": "Toxic", "type": "poison", "style": "projectile", "model": "PG_sphere", "scale": 0.10, "duration": 0.6, "color": [0.5, 0.1, 0.6, 1.0], "origin_bone": "EffShoot01_01", "target_bone": "EffCenter01"}
+    ]
+}

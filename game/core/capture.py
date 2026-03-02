@@ -1,5 +1,5 @@
 """
-CaptureSystem -- Official Gen 3+ capture formula.
+CaptureSystem -- Formule de capture officielle Gen 3+.
 """
 import math
 import random
@@ -29,7 +29,7 @@ class CaptureSystem:
         if ball_type == "masterball":
             return {
                 "success": True, "shakes": 4, "ball_type": ball_type,
-                "message": f"{pokemon.name} was caught with the Master Ball!"
+                "message": f"{pokemon.name} est capture avec la Master Ball !"
             }
         max_hp = pokemon.stats["hp"]
         cur_hp = pokemon.current_hp
@@ -41,7 +41,7 @@ class CaptureSystem:
         if a >= 255:
             return {
                 "success": True, "shakes": 4, "ball_type": ball_type,
-                "message": f"Gotcha! {pokemon.name} was caught!"
+                "message": f"Gotcha ! {pokemon.name} est capture !"
             }
         if a <= 0:
             b = 0
@@ -56,17 +56,17 @@ class CaptureSystem:
         if shakes == 4:
             return {
                 "success": True, "shakes": 4, "ball_type": ball_type,
-                "message": f"Gotcha! {pokemon.name} was caught!"
+                "message": f"Gotcha ! {pokemon.name} est capture !"
             }
         shake_messages = {
-            0: f"Oh no! {pokemon.name} broke free immediately!",
-            1: f"Aww! So close! {pokemon.name} broke free!",
-            2: f"Hmm... {pokemon.name} broke free!",
-            3: f"So close! {pokemon.name} broke free at the last moment!"
+            0: f"Oh non ! {pokemon.name} s'est libere immediatement !",
+            1: f"Presque ! {pokemon.name} s'est libere !",
+            2: f"Hmm... {pokemon.name} s'est libere !",
+            3: f"Si proche ! {pokemon.name} s'est libere au dernier moment !"
         }
         return {
             "success": False, "shakes": shakes, "ball_type": ball_type,
-            "message": shake_messages.get(shakes, f"{pokemon.name} broke free!")
+            "message": shake_messages.get(shakes, f"{pokemon.name} s'est libere !")
         }
 
     @staticmethod

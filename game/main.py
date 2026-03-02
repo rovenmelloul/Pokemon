@@ -11,6 +11,9 @@ GAME_DIR = os.path.dirname(os.path.abspath(__file__))
 if GAME_DIR not in sys.path:
     sys.path.insert(0, GAME_DIR)
 
+from panda3d.core import loadPrcFileData
+loadPrcFileData('', 'load-display p3tinydisplay')
+
 from direct.showbase.ShowBase import ShowBase
 from panda3d.core import (
     Filename, getModelPath, Point3, Vec4,

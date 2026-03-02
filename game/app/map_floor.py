@@ -34,8 +34,10 @@ class MapFloor:
     """Async mega-tile map. Each mega = CHUNK x CHUNK stitched OSM tiles."""
 
     UA = "PokemonGoGame/1.0 (Panda3D; educational)"
-    CHUNK = 3          # 3x3 = 9 tiles per mega (was 5x5=25)
+    CHUNK = 3          # 3x3 = 9 tiles per mega
     TILE_PX = 512
+    TEX_SIZE = 512     # Downscale mega textures to this size
+    VIEW_RANGE = 2     # Load megas in a (2*R+1)x(2*R+1) grid = 5x5 = 25 megas
 
     def __init__(self, show_base, lat=48.8584, lon=2.2945, zoom=17,
                  style="voyager_nolabels", tile_size=25.0, **_kw):
@@ -68,16 +70,16 @@ class MapFloor:
 
         # Loading screen
         self._loading_text = OnscreenText(
-            text="Loading map...",
+            text="Chargement de la carte...",
             pos=(0, 0), scale=0.08,
             fg=(1, 1, 1, 1), shadow=(0, 0, 0, 1),
             mayChange=True,
         )
 
-        # Load only the central mega-tile synchronously (~2-3s with 9 tiles)
-        print("[Map] Loading central tile...")
+        # Load only the central mega-tile synchronously
+        print("[Carte] Chargement de la tuile centrale...")
         self._load_single_sync(self._omx, self._omy)
-        print(f"[Map] Central mega loaded. Requesting neighbors async...")
+        print("[Carte] Tuile centrale chargee. Chargement des voisines...")
 
         # Remove loading text
         if self._loading_text:
@@ -126,6 +128,8 @@ class MapFloor:
                         mega.paste(Image.open(rp).convert('RGB'), (dx * P, dy * P))
                     except Exception:
                         pass
+        # Downscale in PIL (fast) before saving
+        mega = mega.resize((self.TEX_SIZE, self.TEX_SIZE), Image.LANCZOS)
         mega.save(mp, format='JPEG', quality=85)
         return mp
 
@@ -161,8 +165,9 @@ class MapFloor:
         self._megas[(mx, my)] = node
 
     def _needed_megas(self, cmx, cmy):
-        """5x5 grid of megas to compensate for smaller chunk size."""
-        return {(cmx + dx, cmy + dy) for dx in range(-2, 3) for dy in range(-2, 3)}
+        """Grid of megas around the camera. VIEW_RANGE=2 -> 5x5 = 25 megas."""
+        r = self.VIEW_RANGE
+        return {(cmx + dx, cmy + dy) for dx in range(-r, r + 1) for dy in range(-r, r + 1)}
 
     def _load_single_sync(self, mx, my):
         """Load a single mega-tile synchronously."""
@@ -192,12 +197,12 @@ class MapFloor:
         return tx // self.CHUNK, ty // self.CHUNK
 
     def _tick(self, task):
-        for _ in range(4):
-            if not self._ready:
-                break
-            mx, my, path = self._ready.popleft()
-            if (mx, my) not in self._megas:
-                self._make_mega_node(mx, my, path)
+        # Process up to 2 megas per frame for faster loading
+        for _ in range(2):
+            if self._ready:
+                mx, my, path = self._ready.popleft()
+                if (mx, my) not in self._megas:
+                    self._make_mega_node(mx, my, path)
 
         cam = self.base.camera.getPos(self.base.render)
         c = self._world_to_mega(cam.getX(), cam.getY())

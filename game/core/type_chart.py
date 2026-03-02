@@ -1,5 +1,5 @@
 """
-TypeChart -- Type effectiveness table (Gen 8, 18 types).
+TypeChart -- Table d'efficacite des types (Gen 8, 18 types).
 """
 import json
 import os
@@ -35,9 +35,9 @@ class TypeChart:
     @classmethod
     def get_effectiveness_message(cls, multiplier):
         if multiplier == 0:
-            return "It doesn't affect the enemy Pokemon..."
+            return "Ca n'affecte pas le Pokemon ennemi..."
         elif multiplier < 1:
-            return "It's not very effective..."
+            return "Ce n'est pas tres efficace..."
         elif multiplier > 1:
-            return "It's super effective!"
+            return "C'est super efficace !"
         return None

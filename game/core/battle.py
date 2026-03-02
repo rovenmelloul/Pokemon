@@ -1,5 +1,5 @@
 """
-BattleSystem -- Turn-based 1v1 combat system (Gen 5+ damage formula).
+BattleSystem -- Systeme de combat tour par tour (formule Gen 5+).
 """
 import random
 from .pokemon_stats import PokemonStats
@@ -12,6 +12,10 @@ class BattleSystem:
         self.team_player = team_player
         self.team_enemy = team_enemy
         self.active_player = team_player[0]
+        for p in team_player:
+            if not p.is_fainted():
+                self.active_player = p
+                break
         self.active_enemy = team_enemy[0]
         self.is_wild = is_wild
         self.battle_log = []
@@ -51,7 +55,7 @@ class BattleSystem:
     def execute_turn(self, player_action, enemy_action):
         self.turn_count += 1
         self.battle_log = []
-        self.log(f"\n====== Turn {self.turn_count} ======")
+        self.log(f"\n====== Tour {self.turn_count} ======")
 
         if player_action["type"] == "switch":
             self._do_switch("player", player_action["pokemon_index"])
@@ -60,11 +64,11 @@ class BattleSystem:
 
         if player_action["type"] == "run":
             if self.is_wild:
-                self.log("You fled the battle!")
+                self.log("Vous avez fui le combat !")
                 self.is_over = True
                 return self.battle_log
             else:
-                self.log("Can't run from a trainer battle!")
+                self.log("Impossible de fuir un combat dresseur !")
 
         actions = []
         if player_action["type"] == "attack":
@@ -81,8 +85,8 @@ class BattleSystem:
                 continue
             self._execute_attack(side, attacker, defender, move)
             if defender.is_fainted():
-                opp = "enemy" if side == "player" else "your"
-                self.log(f"  -> {defender.name} ({opp}) fainted!")
+                opp = "ennemi" if side == "player" else "allie"
+                self.log(f"  -> {defender.name} ({opp}) est K.O. !")
                 self._handle_faint(side)
                 if self.is_over:
                     break
@@ -94,42 +98,42 @@ class BattleSystem:
         return self.battle_log
 
     def _execute_attack(self, side, attacker, defender, move):
-        owner = "Your" if side == "player" else "Enemy"
-        self.log(f"{owner} {attacker.name} uses {move.name}!")
+        owner = "Votre" if side == "player" else "L'ennemi"
+        self.log(f"{owner} {attacker.name} utilise {move.name} !")
 
         if not move.use():
-            self.log(f"  No PP left for {move.name}!")
+            self.log(f"  Plus de PP pour {move.name} !")
             return
 
         if attacker.status == "paralysis" and random.randint(1, 4) == 1:
-            self.log(f"  {attacker.name} is paralyzed and can't move!")
+            self.log(f"  {attacker.name} est paralyse et ne peut pas bouger !")
             return
         if attacker.status == "sleep":
             if random.randint(1, 3) == 1:
                 attacker.clear_status()
-                self.log(f"  {attacker.name} woke up!")
+                self.log(f"  {attacker.name} se reveille !")
             else:
-                self.log(f"  {attacker.name} is fast asleep...")
+                self.log(f"  {attacker.name} dort profondement...")
                 return
         if attacker.status == "freeze":
             if random.randint(1, 5) == 1:
                 attacker.clear_status()
-                self.log(f"  {attacker.name} thawed out!")
+                self.log(f"  {attacker.name} degele !")
             else:
-                self.log(f"  {attacker.name} is frozen solid!")
+                self.log(f"  {attacker.name} est gele !")
                 return
 
         if not self.accuracy_check(move):
-            self.log(f"  The attack missed!")
+            self.log(f"  L'attaque a echoue !")
             return
 
         if move.is_damaging():
             damage, is_critical, type_mult = self.calculate_damage(attacker, defender, move)
             defender.take_damage(damage)
-            self.log(f"  -> {damage} damage to {defender.name}! "
-                     f"(HP: {defender.current_hp}/{defender.stats['hp']})")
+            self.log(f"  -> {damage} degats a {defender.name} ! "
+                     f"(PV: {defender.current_hp}/{defender.stats['hp']})")
             if is_critical:
-                self.log(f"  * Critical hit!")
+                self.log(f"  * Coup critique !")
             eff_msg = TypeChart.get_effectiveness_message(type_mult)
             if eff_msg:
                 self.log(f"  {eff_msg}")
@@ -139,13 +143,13 @@ class BattleSystem:
                 if defender.status is None:
                     defender.set_status(move.effect)
                     status_names = {
-                        "poison": "poisoned",
-                        "burn": "burned",
-                        "paralysis": "paralyzed",
-                        "sleep": "fell asleep",
-                        "freeze": "frozen"
+                        "poison": "empoisonne",
+                        "burn": "brule",
+                        "paralysis": "paralyse",
+                        "sleep": "s'est endormi",
+                        "freeze": "gele"
                     }
-                    self.log(f"  {defender.name} is {status_names[move.effect]}!")
+                    self.log(f"  {defender.name} est {status_names[move.effect]} !")
 
     def _apply_status_damage(self, pokemon, side):
         if pokemon.is_fainted() or pokemon.status is None:
@@ -153,13 +157,13 @@ class BattleSystem:
         if pokemon.status == "poison":
             dmg = max(1, pokemon.stats["hp"] // 8)
             pokemon.take_damage(dmg)
-            self.log(f"  {pokemon.name} is hurt by poison! (-{dmg} HP)")
+            self.log(f"  {pokemon.name} souffre du poison ! (-{dmg} PV)")
         elif pokemon.status == "burn":
             dmg = max(1, pokemon.stats["hp"] // 16)
             pokemon.take_damage(dmg)
-            self.log(f"  {pokemon.name} is hurt by burn! (-{dmg} HP)")
+            self.log(f"  {pokemon.name} souffre de la brulure ! (-{dmg} PV)")
         if pokemon.is_fainted():
-            self.log(f"  -> {pokemon.name} fainted from status!")
+            self.log(f"  -> {pokemon.name} est K.O. a cause du statut !")
             self._handle_faint(side)
 
     def _do_switch(self, side, pokemon_index):
@@ -173,14 +177,14 @@ class BattleSystem:
             return
         new_pokemon = team[pokemon_index]
         if new_pokemon.is_fainted():
-            self.log(f"  {new_pokemon.name} is fainted and can't battle!")
+            self.log(f"  {new_pokemon.name} est K.O. et ne peut pas combattre !")
             return
         if side == "player":
             self.active_player = new_pokemon
-            self.log(f"  {old.name}, come back! Go, {new_pokemon.name}!")
+            self.log(f"  {old.name}, reviens ! Go, {new_pokemon.name} !")
         else:
             self.active_enemy = new_pokemon
-            self.log(f"  Enemy recalls {old.name} and sends {new_pokemon.name}!")
+            self.log(f"  L'ennemi rappelle {old.name} et envoie {new_pokemon.name} !")
 
     def switch_player_pokemon(self, pokemon_index):
         if pokemon_index < 0 or pokemon_index >= len(self.team_player):
@@ -189,7 +193,7 @@ class BattleSystem:
         if poke.is_fainted():
             return False
         self.active_player = poke
-        self.log(f"  Go, {poke.name}!")
+        self.log(f"  Go, {poke.name} !")
         return True
 
     def _handle_faint(self, attacking_side):
@@ -198,16 +202,16 @@ class BattleSystem:
             if not alive_enemy:
                 self.is_over = True
                 self.winner = "player"
-                self.log("You won the battle!")
+                self.log("Vous avez gagne le combat !")
             else:
                 self.active_enemy = alive_enemy[0]
-                self.log(f"  Enemy sends {alive_enemy[0].name}!")
+                self.log(f"  L'ennemi envoie {alive_enemy[0].name} !")
         else:
             alive_player = [p for p in self.team_player if not p.is_fainted()]
             if not alive_player:
                 self.is_over = True
                 self.winner = "enemy"
-                self.log("You lost the battle...")
+                self.log("Vous avez perdu le combat...")
 
     def get_available_switches(self, side="player"):
         team = self.team_player if side == "player" else self.team_enemy
