@@ -317,6 +317,11 @@ class BattleScene3D(DirectObject):
 
     # ---- Intro ----
 
+    @property
+    def sound(self):
+        """Get SoundManager from app if available."""
+        return getattr(self.app, 'sound_manager', None)
+
     def _play_intro(self):
         name = self.battle.active_enemy.name
         text = f"Un {name} sauvage apparait !" if self.is_wild else "Combat dresseur !"
@@ -377,17 +382,20 @@ class BattleScene3D(DirectObject):
                 self.player_anim, "ba20_buturi", "ba20", loop=False)))
         intervals.append(Wait(0.3))
 
-        # Fire waza effect: player -> enemy
+        # Fire waza effect + sound: player -> enemy
         if player_move:
-            # Capture move in closure
             pm = player_move
-            intervals.append(Func(lambda: self._fire_effect(
-                pm, self.player_model_node, self.enemy_model_node)))
+            intervals.append(Func(lambda: [
+                self._fire_effect(pm, self.player_model_node, self.enemy_model_node),
+                self.sound and self.sound.play_attack_sfx(pm.type)
+            ]))
         intervals.append(Wait(0.6))
 
-        # Enemy takes damage animation
-        intervals.append(Func(lambda: self._play_anim(
-            self.enemy_anim, "ba30_damage", "ba30", "damage", loop=False)))
+        # Enemy takes damage animation + hit sound
+        intervals.append(Func(lambda: [
+            self._play_anim(self.enemy_anim, "ba30_damage", "ba30", "damage", loop=False),
+            self.sound and self.sound.play_sfx('hit')
+        ]))
         intervals.append(Wait(0.5))
 
         # Show battle messages
@@ -406,16 +414,20 @@ class BattleScene3D(DirectObject):
                 self.enemy_anim, "ba20_buturi", "ba21_tokusyu", "ba20", "ba21", loop=False)))
         intervals.append(Wait(0.3))
 
-        # Fire waza effect: enemy -> player
+        # Fire waza effect + sound: enemy -> player
         if enemy_move:
             em = enemy_move
-            intervals.append(Func(lambda: self._fire_effect(
-                em, self.enemy_model_node, self.player_model_node)))
+            intervals.append(Func(lambda: [
+                self._fire_effect(em, self.enemy_model_node, self.player_model_node),
+                self.sound and self.sound.play_attack_sfx(em.type)
+            ]))
         intervals.append(Wait(0.6))
 
-        # Player takes damage animation
-        intervals.append(Func(lambda: self._play_anim(
-            self.player_anim, "ba30_damage", "ba30", "damage", loop=False)))
+        # Player takes damage animation + hit sound
+        intervals.append(Func(lambda: [
+            self._play_anim(self.player_anim, "ba30_damage", "ba30", "damage", loop=False),
+            self.sound and self.sound.play_sfx('hit')
+        ]))
         intervals.append(Wait(0.5))
 
         # Check faint animations

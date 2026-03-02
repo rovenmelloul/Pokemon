@@ -11,8 +11,6 @@ GAME_DIR = os.path.dirname(os.path.abspath(__file__))
 if GAME_DIR not in sys.path:
     sys.path.insert(0, GAME_DIR)
 
-from panda3d.core import loadPrcFileData
-loadPrcFileData('', 'load-display p3tinydisplay')
 
 from direct.showbase.ShowBase import ShowBase
 from panda3d.core import (
@@ -22,12 +20,20 @@ from panda3d.core import (
 )
 from engine.state_manager import GameState, StateManager
 from gui.main_menu import MainMenu
+from core.save_manager import SaveManager
+from core.sound_manager import SoundManager
 
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 
 NUM_WILD_POKEMON = 5
-PLAYER_TEAM_SIZE = 3
 ENCOUNTER_DISTANCE = 12.0
+
+# Sword/Shield starters
+STARTERS = [
+    (810, 10, False),  # Grookey
+    (813, 10, False),  # Scorbunny
+    (816, 10, False),  # Sobble
+]
 
 
 def detect_gps():
@@ -65,14 +71,26 @@ class MyApp(ShowBase):
         self._nearby_pokemon = None
         self._swap_slot_index = None
         self._capture_3d = None
+        self.current_slot = None
+
+        # Audio
+        self.sound_manager = SoundManager(self)
 
         # Menu principal
-        self._main_menu = MainMenu(self, on_start=self._start_game)
+        self._main_menu = MainMenu(
+            self,
+            on_new_game=self._new_game,
+            on_load_game=self._load_game,
+        )
         self._main_menu.draw_main_menu()
 
-    def _start_game(self):
-        """Callback du menu Start: charge tout le jeu."""
-        # Detruire le menu
+    # ---- New Game (starters) ----
+
+    def _new_game(self, slot_num):
+        """Start a new game with Sword/Shield starters."""
+        self.current_slot = slot_num
+        self.sound_manager.play_sfx('menu_select')
+
         if self._main_menu:
             self._main_menu.destroy()
             self._main_menu = None
@@ -81,7 +99,6 @@ class MyApp(ShowBase):
         from app.pokemon.pokemon import Pokemon
         from app.map_floor import MapFloor
         from engine.encounter import EncounterSystem
-        from engine.battle_scene import BattleScene3D
         from core.pokedex import Pokedex
         from ui.hud import ExplorationHUD
 
@@ -100,15 +117,22 @@ class MyApp(ShowBase):
         self.player.spawn_self()
         self.player.key_bindings()
 
-        # Equipe du joueur (persistante, dans la poche)
+        # Equipe du joueur: 3 starters
         self.player_team = []
-        for i in range(PLAYER_TEAM_SIZE):
+        for pokedex_id, level, is_shiny in STARTERS:
             poke = Pokemon(self)
-            poke.spawn_random_pokemon()
-            poke.animated_character.hide()
-            if poke._ground_circle:
-                poke._ground_circle.hide()
+            success = poke.spawn_from_pokedex(pokedex_id, level, is_shiny)
+            if not success:
+                poke.spawn_random_pokemon()
+                poke.animated_character.hide()
+                if poke._ground_circle:
+                    poke._ground_circle.hide()
             self.player_team.append(poke)
+
+            # Mark caught in pokedex
+            if self.pokedex and poke.pokedex_id:
+                self.pokedex.mark_caught(poke.pokedex_id, level=poke.level, is_shiny=poke.is_shiny)
+
         print(f"[Equipe] Votre equipe: {', '.join(p.name + ' Nv.' + str(p.level) for p in self.player_team)}")
 
         # Pokemon sauvages
@@ -119,7 +143,7 @@ class MyApp(ShowBase):
             poke.draw_name_tag()
             self.wild_pokemon.append(poke)
 
-        # HUD avec callbacks toolbar
+        # HUD
         self.hud = ExplorationHUD(
             self, player_team=self.player_team,
             on_pokedex=self._open_pokedex,
@@ -128,22 +152,155 @@ class MyApp(ShowBase):
         )
         self.hud.setup()
 
-        # Etat rencontre
         self._nearby_pokemon = None
         self._swap_slot_index = None
 
-        # Raccourcis clavier
         self.accept("e", self._try_battle)
         self.accept("f", self._try_capture)
         self.accept("p", self._toggle_pokedex)
         self.accept("t", self._toggle_team)
 
-        # Tache de proximite
         self.taskMgr.add(self._proximity_check_task, "proximity_check")
 
-        # Passer en exploration
         self.state_mgr.change_state(GameState.EXPLORATION)
-        print("[Jeu] Partie lancee !")
+        print("[Jeu] Nouvelle partie lancee !")
+
+        # Auto-save immediately
+        self._auto_save()
+
+    # ---- Load Game ----
+
+    def _load_game(self, slot_num):
+        """Load an existing save and resume game."""
+        self.sound_manager.play_sfx('menu_select')
+        save_data = SaveManager.load(slot_num)
+        if not save_data:
+            print(f"[Load] Slot {slot_num} vide ou corrompu, demarrage nouvelle partie")
+            self._new_game(slot_num)
+            return
+
+        self.current_slot = slot_num
+
+        if self._main_menu:
+            self._main_menu.destroy()
+            self._main_menu = None
+
+        from app.player.player_instance import Player
+        from app.pokemon.pokemon import Pokemon
+        from app.map_floor import MapFloor
+        from engine.encounter import EncounterSystem
+        from core.pokedex import Pokedex
+        from core.move import Move
+        from ui.hud import ExplorationHUD
+
+        self.pokedex = Pokedex()
+        self.encounter_sys = EncounterSystem()
+
+        # Restore pokedex state
+        pokedex_data = save_data.get("pokedex", {})
+        for pid_str, pdata in pokedex_data.items():
+            pid = int(pid_str)
+            if pid in self.pokedex.entries:
+                self.pokedex.entries[pid]["status"] = pdata.get("status", "unknown")
+                self.pokedex.entries[pid]["level"] = pdata.get("level", 0)
+                self.pokedex.entries[pid]["is_shiny"] = pdata.get("is_shiny", False)
+
+        # Carte
+        lat, lon = detect_gps()
+        self.map_floor = MapFloor(
+            self, lat=lat, lon=lon, zoom=17,
+            style="voyager_nolabels", cartoon=True,
+        )
+
+        # Joueur
+        self.player = Player(self)
+        self.player.spawn_self()
+        self.player.key_bindings()
+
+        # Restore player position
+        player_data = save_data.get("player", {})
+        pos = player_data.get("position", [0, 0, 0])
+        heading = player_data.get("heading", 0)
+        self.player.control_node.setPos(Point3(pos[0], pos[1], pos[2]))
+        self.player.control_node.setH(heading)
+
+        # Restore team
+        self.player_team = []
+        for poke_data in save_data.get("team", []):
+            poke = Pokemon(self)
+            pokedex_id = poke_data.get("pokedex_id")
+            level = poke_data.get("level", 10)
+            is_shiny = poke_data.get("is_shiny", False)
+
+            success = poke.spawn_from_pokedex(pokedex_id, level, is_shiny)
+            if not success:
+                poke.spawn_random_pokemon()
+                poke.animated_character.hide()
+                if poke._ground_circle:
+                    poke._ground_circle.hide()
+
+            # Restore HP, XP, status
+            poke.current_hp = poke_data.get("current_hp", poke.stats.get("hp", 1))
+            poke.xp = poke_data.get("xp", 0)
+            poke.status = poke_data.get("status", None)
+
+            # Restore moves with current PP
+            saved_moves = poke_data.get("moves", [])
+            if saved_moves:
+                poke.moves = []
+                for mdata in saved_moves:
+                    try:
+                        move = Move.get_by_id(mdata["id"])
+                        move.current_pp = mdata.get("current_pp", move.max_pp)
+                        poke.moves.append(move)
+                    except KeyError:
+                        pass
+                if not poke.moves:
+                    try:
+                        poke.moves = [Move.get_by_id(1)]
+                    except KeyError:
+                        pass
+
+            self.player_team.append(poke)
+
+        print(f"[Equipe] Equipe chargee: {', '.join(p.name + ' Nv.' + str(p.level) for p in self.player_team)}")
+
+        # Pokemon sauvages (fresh random)
+        self.wild_pokemon = []
+        for i in range(NUM_WILD_POKEMON):
+            poke = Pokemon(self)
+            poke.spawn_random_pokemon()
+            poke.draw_name_tag()
+            self.wild_pokemon.append(poke)
+
+        # HUD
+        self.hud = ExplorationHUD(
+            self, player_team=self.player_team,
+            on_pokedex=self._open_pokedex,
+            on_team=self._open_team,
+            on_heal=self._heal_team,
+        )
+        self.hud.setup()
+
+        self._nearby_pokemon = None
+        self._swap_slot_index = None
+
+        self.accept("e", self._try_battle)
+        self.accept("f", self._try_capture)
+        self.accept("p", self._toggle_pokedex)
+        self.accept("t", self._toggle_team)
+
+        self.taskMgr.add(self._proximity_check_task, "proximity_check")
+
+        self.state_mgr.change_state(GameState.EXPLORATION)
+        print(f"[Jeu] Partie chargee depuis slot {slot_num} !")
+
+    # ---- Auto-save ----
+
+    def _auto_save(self):
+        """Save current state to current slot."""
+        if self.current_slot and self.player:
+            SaveManager.save(self.current_slot, self)
 
     def _setup_sky(self):
         """Create a sky sphere with a panoramic texture."""
@@ -248,6 +405,8 @@ class MyApp(ShowBase):
         self.player.key_map = {k: False for k in self.player.key_map}
 
         # Scene de combat sur la carte
+        self.sound_manager.play_sfx('battle_start')
+
         self.battle_scene = BattleScene3D(
             self, self.player_team, enemy_poke,
             self.pokedex,
@@ -260,6 +419,11 @@ class MyApp(ShowBase):
 
     def _on_battle_end(self, winner):
         from app.pokemon.pokemon import Pokemon
+
+        if winner == "player":
+            self.sound_manager.play_sfx('victory')
+        elif winner == "enemy":
+            self.sound_manager.play_sfx('defeat')
 
         if self.battle_scene:
             self.battle_scene.cleanup()
@@ -279,6 +443,9 @@ class MyApp(ShowBase):
         self._nearby_pokemon = None
 
         self._restore_exploration()
+
+        # Auto-save after battle
+        self._auto_save()
 
     # ---- Capture 3D (F) ----
 
@@ -302,6 +469,7 @@ class MyApp(ShowBase):
         self._capture_3d = Capture3D(
             self, enemy.animated_character, enemy, self._on_capture_result
         )
+        self._capture_3d.sound_manager = self.sound_manager
         self._capture_3d.start()
 
     def _on_capture_result(self, success):
@@ -314,6 +482,7 @@ class MyApp(ShowBase):
         enemy = self._nearby_pokemon
 
         if success and enemy:
+            self.sound_manager.play_sfx('capture_success')
             # Pokedex update
             if self.pokedex and enemy.pokedex_id:
                 self.pokedex.mark_caught(
@@ -336,6 +505,10 @@ class MyApp(ShowBase):
 
         self._nearby_pokemon = None
         self._restore_exploration()
+
+        # Auto-save after capture
+        if success:
+            self._auto_save()
 
     # ---- Restauration exploration ----
 
@@ -473,6 +646,9 @@ class MyApp(ShowBase):
         # Return to exploration
         self.state_mgr.change_state(GameState.EXPLORATION)
 
+        # Auto-save after swap
+        self._auto_save()
+
     def _close_swap_pokedex(self):
         """Called when swap Pokedex is closed without selection (cancel)."""
         if hasattr(self, '_pokedex_ui') and self._pokedex_ui:
@@ -486,10 +662,14 @@ class MyApp(ShowBase):
     def _heal_team(self):
         if not self.state_mgr.is_state(GameState.EXPLORATION):
             return
+        self.sound_manager.play_sfx('heal')
         for p in self.player_team:
             p.full_restore()
         print("[Equipe] Tous les Pokemon sont soignes !")
         self.hud.show_heal_message()
+
+        # Auto-save after heal
+        self._auto_save()
 
 
 app = MyApp()

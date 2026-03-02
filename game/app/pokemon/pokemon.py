@@ -414,6 +414,20 @@ class Pokemon:
         print(f"[Pokemon] Spawned from Pokedex: {self.name} Nv.{self.level} {'(shiny)' if self.is_shiny else ''}")
         return True
 
+
+    def to_save_dict(self):
+        """Serialize Pokemon state for save file."""
+        return {
+            "pokedex_id": self.pokedex_id,
+            "name": self.name,
+            "level": self.level,
+            "xp": self.xp,
+            "current_hp": self.current_hp,
+            "status": self.status,
+            "is_shiny": self.is_shiny,
+            "moves": [{"id": m.id, "current_pp": m.current_pp} for m in self.moves],
+        }
+
     def draw_name_tag(self):
         from panda3d.core import CardMaker, TransparencyAttrib
 

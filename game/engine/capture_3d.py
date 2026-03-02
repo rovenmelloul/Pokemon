@@ -37,6 +37,7 @@ class Capture3D:
         self.success_text = None
         self._hint_text = None
         self._active = False
+        self.sound_manager = None  # Set by main.py
 
         # Positions sauvegardees
         self._saved_enemy_pos = None
@@ -54,7 +55,7 @@ class Capture3D:
 
         # Teleporter le pokemon devant la camera (position fixe)
         self.enemy_actor.setPos(0, 25, 0)
-        self.enemy_actor.setHpr(180, 0, 0)
+        self.enemy_actor.setHpr(0, 0, 0)
 
         # Camera fixe derriere le joueur
         self.app.camera.reparentTo(self.app.render)
@@ -145,6 +146,8 @@ class Capture3D:
             local_vel = Vec3(dx * 42, 48 + dy * 28, dy * 58)
             cam_quat = self.app.camera.getQuat(self.app.render)
             self.ball_velocity = cam_quat.xform(local_vel)
+            if self.sound_manager:
+                self.sound_manager.play_sfx('pokeball_throw')
             self.app.taskMgr.add(self._physics_task, "capture_ball_physics")
         self.is_dragging = False
 
@@ -174,6 +177,8 @@ class Capture3D:
 
     def _on_ball_hit(self):
         """Ball touche le Pokemon -> capture automatique."""
+        if self.sound_manager:
+            self.sound_manager.play_sfx('pokeball_hit')
         self.app.taskMgr.remove("capture_ball_physics")
         self.app.taskMgr.remove("capture_camera_task")
         self.app.ignore("mouse1")
@@ -205,6 +210,8 @@ class Capture3D:
         capture_seq.start()
 
     def _shake_ball(self):
+        if self.sound_manager:
+            self.sound_manager.play_sfx('pokeball_shake')
         shake = Sequence(
             LerpHprInterval(self.pokeball, 0.08, Vec3(0, 0, 25)),
             LerpHprInterval(self.pokeball, 0.08, Vec3(0, 0, -25)),

@@ -4,7 +4,7 @@ import math
 import os
 import urllib.request
 from collections import deque
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from panda3d.core import (
     Texture, PNMImage, CardMaker, Filename,
@@ -34,10 +34,11 @@ class MapFloor:
     """Async mega-tile map. Each mega = CHUNK x CHUNK stitched OSM tiles."""
 
     UA = "PokemonGoGame/1.0 (Panda3D; educational)"
-    CHUNK = 3          # 3x3 = 9 tiles per mega
+    CHUNK = 3
     TILE_PX = 512
-    TEX_SIZE = 512     # Downscale mega textures to this size
-    VIEW_RANGE = 2     # Load megas in a (2*R+1)x(2*R+1) grid = 5x5 = 25 megas
+    TEX_SIZE = 512
+    VIEW_RANGE = 2      # Spawn range: 5x5 = 25 megas
+    DESPAWN_RANGE = 3   # Keep buffer: 7x7 = 49 max before despawn
 
     def __init__(self, show_base, lat=48.8584, lon=2.2945, zoom=17,
                  style="voyager_nolabels", tile_size=25.0, **_kw):
@@ -68,6 +69,13 @@ class MapFloor:
         self._ready = deque()
         self._executor = ThreadPoolExecutor(max_workers=8)
 
+        # Shared HTTP opener with keep-alive
+        self._opener = urllib.request.build_opener()
+        self._opener.addheaders = [('User-Agent', self.UA)]
+
+        # Pool for parallel tile downloads within a mega
+        self._dl_pool = ThreadPoolExecutor(max_workers=9)
+
         # Loading screen
         self._loading_text = OnscreenText(
             text="Chargement de la carte...",
@@ -76,20 +84,18 @@ class MapFloor:
             mayChange=True,
         )
 
-        # Load only the central mega-tile synchronously
         print("[Carte] Chargement de la tuile centrale...")
         self._load_single_sync(self._omx, self._omy)
         print("[Carte] Tuile centrale chargee. Chargement des voisines...")
 
-        # Remove loading text
         if self._loading_text:
             self._loading_text.destroy()
             self._loading_text = None
 
-        # Request the surrounding megas asynchronously
         self._request_async(self._omx, self._omy)
-
         show_base.taskMgr.add(self._tick, "map_floor_tick")
+
+    # ---- Tile download ----
 
     def _download_tile(self, tx, ty):
         rp = os.path.join(self._raw_dir, f"{self.zoom}_{tx}_{ty}.png")
@@ -97,8 +103,8 @@ class MapFloor:
             return rp
         url = self.tile_url.format(z=self.zoom, x=tx, y=ty)
         try:
-            req = urllib.request.Request(url, headers={'User-Agent': self.UA})
-            data = urllib.request.urlopen(req, timeout=15).read()
+            resp = self._opener.open(url, timeout=5)
+            data = resp.read()
             with open(rp, 'wb') as f:
                 f.write(data)
             return rp
@@ -106,10 +112,13 @@ class MapFloor:
             print(f"[Map] tile ({tx},{ty}) failed: {e}")
             return None
 
+    # ---- Mega build (background thread) ----
+
     def _mega_path(self, mx, my):
         return os.path.join(self._mega_dir, f"{self.zoom}_{mx}_{my}.jpg")
 
     def _build_mega(self, mx, my):
+        """Build mega-tile JPEG on disk. Returns path. Runs in background thread."""
         mp = self._mega_path(mx, my)
         if os.path.exists(mp):
             return mp
@@ -119,19 +128,32 @@ class MapFloor:
         P = self.TILE_PX
         base_tx, base_ty = mx * C, my * C
 
+        # Download 9 tiles in parallel
+        tile_coords = [(base_tx + dx, base_ty + dy) for dy in range(C) for dx in range(C)]
+        grid_coords = [(dx, dy) for dy in range(C) for dx in range(C)]
+        futures = {
+            self._dl_pool.submit(self._download_tile, tx, ty): gc
+            for (tx, ty), gc in zip(tile_coords, grid_coords)
+        }
+        tile_paths = {}
+        for future in as_completed(futures):
+            tile_paths[futures[future]] = future.result()
+
         mega = Image.new('RGB', (C * P, C * P), (251, 248, 243))
         for dy in range(C):
             for dx in range(C):
-                rp = self._download_tile(base_tx + dx, base_ty + dy)
+                rp = tile_paths.get((dx, dy))
                 if rp:
                     try:
                         mega.paste(Image.open(rp).convert('RGB'), (dx * P, dy * P))
                     except Exception:
                         pass
-        # Downscale in PIL (fast) before saving
+
         mega = mega.resize((self.TEX_SIZE, self.TEX_SIZE), Image.LANCZOS)
         mega.save(mp, format='JPEG', quality=85)
         return mp
+
+    # ---- Node creation (main thread, lightweight) ----
 
     def _make_mega_node(self, mx, my, cache_path):
         pnm = PNMImage()
@@ -144,6 +166,7 @@ class MapFloor:
         tex.setWrapV(Texture.WMClamp)
         tex.setMinfilter(Texture.FTLinearMipmapLinear)
         tex.setMagfilter(Texture.FTLinear)
+        tex.setCompression(Texture.CMOn)
 
         cm = CardMaker(f"mega_{mx}_{my}")
         cm.setFrame(0, 1, 0, 1)
@@ -162,23 +185,37 @@ class MapFloor:
             0,
         )
         node.setLightOff()
+        # NO flattenStrong() - it was causing per-tile freezes
         self._megas[(mx, my)] = node
 
+    # ---- Range helpers ----
+
     def _needed_megas(self, cmx, cmy):
-        """Grid of megas around the camera. VIEW_RANGE=2 -> 5x5 = 25 megas."""
         r = self.VIEW_RANGE
         return {(cmx + dx, cmy + dy) for dx in range(-r, r + 1) for dy in range(-r, r + 1)}
 
+    def _keep_megas(self, cmx, cmy):
+        """Larger range for despawn buffer - avoids spawn/despawn churn at edges."""
+        r = self.DESPAWN_RANGE
+        return {(cmx + dx, cmy + dy) for dx in range(-r, r + 1) for dy in range(-r, r + 1)}
+
+    # ---- Sync load (startup only) ----
+
     def _load_single_sync(self, mx, my):
-        """Load a single mega-tile synchronously."""
         path = self._build_mega(mx, my)
         if path:
             self._make_mega_node(mx, my, path)
 
+    # ---- Async pipeline ----
+
     def _request_async(self, cmx, cmy):
-        needed = self._needed_megas(cmx, cmy)
-        for k in [k for k in self._megas if k not in needed]:
+        # Despawn only beyond DESPAWN_RANGE (buffer zone)
+        keep = self._keep_megas(cmx, cmy)
+        for k in [k for k in self._megas if k not in keep]:
             self._megas.pop(k).removeNode()
+
+        # Request new tiles within VIEW_RANGE
+        needed = self._needed_megas(cmx, cmy)
         for k in needed:
             if k not in self._megas and k not in self._pending:
                 self._pending.add(k)
@@ -196,13 +233,14 @@ class MapFloor:
         ty = self.origin_ty - int(math.floor(wy / s + 0.5))
         return tx // self.CHUNK, ty // self.CHUNK
 
+    # ---- Per-frame tick ----
+
     def _tick(self, task):
-        # Process up to 2 megas per frame for faster loading
-        for _ in range(2):
-            if self._ready:
-                mx, my, path = self._ready.popleft()
-                if (mx, my) not in self._megas:
-                    self._make_mega_node(mx, my, path)
+        # Process exactly 1 mega per frame to spread load and avoid freezes
+        if self._ready:
+            mx, my, path = self._ready.popleft()
+            if (mx, my) not in self._megas:
+                self._make_mega_node(mx, my, path)
 
         cam = self.base.camera.getPos(self.base.render)
         c = self._world_to_mega(cam.getX(), cam.getY())
@@ -215,6 +253,7 @@ class MapFloor:
     def destroy(self):
         self.base.taskMgr.remove("map_floor_tick")
         self._executor.shutdown(wait=False)
+        self._dl_pool.shutdown(wait=False)
         self.root.removeNode()
         self._megas.clear()
         if self._loading_text:
